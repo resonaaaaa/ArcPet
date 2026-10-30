@@ -1,0 +1,1 @@
+PASS: 624 animation, behavior, layout and settings checks. Core uses no WPF assemblies.

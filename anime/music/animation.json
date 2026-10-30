@@ -1,0 +1,137 @@
+{
+  "label": "听音乐",
+  "frame_count": 32,
+  "loop": true,
+  "duration_ms": 2880,
+  "handoff_frames": [],
+  "frames": [
+    {
+      "file": "000.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "001.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "002.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "003.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "004.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "005.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "006.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "007.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "008.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "009.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "010.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "011.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "012.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "013.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "014.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "015.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "016.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "017.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "018.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "019.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "020.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "021.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "022.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "023.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "024.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "025.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "026.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "027.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "028.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "029.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "030.png",
+      "duration_ms": 90
+    },
+    {
+      "file": "031.png",
+      "duration_ms": 90
+    }
+  ]
+}

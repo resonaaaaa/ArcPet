@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 112 112" shape-rendering="crispEdges">
+  <title>Independent cloud: small</title>
+  <defs>
+    <path id="small" d="M14 88H18V89H20V91H22V93H23V96H22V98H19V99H15V98H12V99H10V98H8V96H8V93H10V91H12V89H14Z" />
+    <clipPath id="small-clip">
+      <use href="#small" />
+    </clipPath>
+  </defs>
+  <g>
+    <use href="#small" fill="#fffdf7" />
+    <g fill="#e9dfce">
+      <path clip-path="url(#small-clip)" d="M20 95H24V100H11V98H18V97H20Z" />
+    </g>
+    <use href="#small" fill="none" stroke="#3d302d" stroke-width="1" stroke-linejoin="miter" />
+  </g>
+</svg>

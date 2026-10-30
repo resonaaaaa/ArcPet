@@ -1,0 +1,132 @@
+{
+  "label": "跳舞",
+  "frame_count": 30,
+  "drawn_pose_count": 16,
+  "loop": true,
+  "duration_ms": 1000,
+  "speed_multiplier": 1.2,
+  "source_duration_ms": 1200,
+  "mirror_of": null,
+  "frames": [
+    {
+      "file": "000.png",
+      "duration_ms": 250
+    },
+    {
+      "file": "001.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "002.png",
+      "duration_ms": 16
+    },
+    {
+      "file": "003.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "004.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "005.png",
+      "duration_ms": 16
+    },
+    {
+      "file": "006.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "007.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "008.png",
+      "duration_ms": 16
+    },
+    {
+      "file": "009.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "010.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "011.png",
+      "duration_ms": 16
+    },
+    {
+      "file": "012.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "013.png",
+      "duration_ms": 25
+    },
+    {
+      "file": "014.png",
+      "duration_ms": 25
+    },
+    {
+      "file": "015.png",
+      "duration_ms": 250
+    },
+    {
+      "file": "016.png",
+      "duration_ms": 25
+    },
+    {
+      "file": "017.png",
+      "duration_ms": 25
+    },
+    {
+      "file": "018.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "019.png",
+      "duration_ms": 16
+    },
+    {
+      "file": "020.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "021.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "022.png",
+      "duration_ms": 16
+    },
+    {
+      "file": "023.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "024.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "025.png",
+      "duration_ms": 16
+    },
+    {
+      "file": "026.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "027.png",
+      "duration_ms": 17
+    },
+    {
+      "file": "028.png",
+      "duration_ms": 16
+    },
+    {
+      "file": "029.png",
+      "duration_ms": 17
+    }
+  ]
+}

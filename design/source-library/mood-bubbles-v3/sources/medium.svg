@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 112 112" shape-rendering="crispEdges">
+  <title>Independent cloud: medium</title>
+  <defs>
+    <path id="medium" d="M25 70H31V71H34V73H36V73H39V75H41V78H40V81H38V82H37V85H34V87H30V86H27V88H23V87H21V85H19V85H17V83H17V80H18V78H20V77H20V74H22V72H25Z" />
+    <clipPath id="medium-clip">
+      <use href="#medium" />
+    </clipPath>
+  </defs>
+  <g>
+    <use href="#medium" fill="#fffdf7" />
+    <g fill="#e9dfce">
+      <path clip-path="url(#medium-clip)" d="M35 82H42V89H23V86H32V85H35Z" />
+    </g>
+    <use href="#medium" fill="none" stroke="#3d302d" stroke-width="1" stroke-linejoin="miter" />
+  </g>
+</svg>

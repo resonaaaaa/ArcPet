@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" shape-rendering="crispEdges">
+  <title>书本 · 32 像素稿</title>
+  <path fill="#3d302d" d="M3 7H12V8H15V10H17V8H20V7H29V25H20V26H17V28H15V26H12V25H3Z"/>
+  <path fill="#478fbe" d="M4 9H12V10H15V13H17V10H20V9H28V24H20V25H17V27H15V25H12V24H4Z"/>
+  <path fill="#fff2ce" d="M4 8H12V9H15V23H12V22H4Z"/>
+  <path fill="#f1dfb5" d="M17 10H20V8H28V22H20V23H17Z"/>
+  <path fill="#fff7df" d="M18 11H21V9H27V11H21V12H18Z"/>
+  <path fill="#cdbb98" d="M13 10H15V23H13V21H12V20H13Z"/>
+  <rect fill="#3d302d" x="15" y="10" width="2" height="16"/>
+  <rect fill="#9c8c71" x="6" y="11" width="5" height="1"/>
+  <rect fill="#9c8c71" x="6" y="14" width="6" height="1"/>
+  <rect fill="#9c8c71" x="6" y="17" width="5" height="1"/>
+  <rect fill="#9c8c71" x="21" y="12" width="5" height="1"/>
+  <rect fill="#9c8c71" x="20" y="15" width="6" height="1"/>
+  <rect fill="#9c8c71" x="20" y="18" width="5" height="1"/>
+  <path fill="#286381" d="M4 23H12V24H15V26H14V25H11V24H4ZM18 25H20V24H28V23H26V24H20V25Z"/>
+</svg>

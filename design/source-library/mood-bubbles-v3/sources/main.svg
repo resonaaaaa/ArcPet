@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 112 112" shape-rendering="crispEdges">
+  <title>Independent cloud: main</title>
+  <defs>
+    <path id="main" d="M 62 23 H 70 V 24 H 72 V 25 H 73 V 27 H 74 V 29 H 75 V 28 H 77 V 26 H 81 V 27 H 83 V 28 H 84 V 30 H 85 V 33 H 84 V 35 H 86 V 34 H 88 V 36 H 90 V 38 H 91 V 41 H 91 V 44 H 90 V 46 H 88 V 47 H 87 V 48 H 89 V 49 H 90 V 51 H 91 V 54 H 90 V 57 H 88 V 59 H 86 V 60 H 83 V 59 H 82 V 61 H 80 V 62 H 77 V 62 H 75 V 61 H 74 V 60 H 73 V 62 H 71 V 64 H 67 V 64 H 64 V 63 H 63 V 61 H 61 V 60 H 60 V 61 H 58 V 62 H 54 V 62 H 51 V 61 H 50 V 59 H 49 V 57 H 47 V 58 H 45 V 58 H 43 V 56 H 42 V 53 H 42 V 50 H 43 V 48 H 45 V 47 H 46 V 46 H 44 V 45 H 42 V 43 H 41 V 40 H 42 V 38 H 43 V 36 H 45 V 34 H 48 V 34 H 50 V 35 H 49 V 33 H 49 V 31 H 49 V 29 H 51 V 27 H 54 V 26 H 57 V 26 H 59 V 28 H 60 V 29 H 61 V 26 H 61 V 24 H 62 Z" />
+    <clipPath id="main-clip">
+      <use href="#main" />
+    </clipPath>
+  </defs>
+  <g>
+    <use href="#main" fill="#fffdf7" />
+    <g fill="#e9dfce">
+      <path clip-path="url(#main-clip)" d="M 86 53 H 91 V 64 H 63 V 62 H 73 V 61 H 81 V 60 H 84 V 58 H 86 Z" />
+    </g>
+    <use href="#main" fill="none" stroke="#3d302d" stroke-width="1" stroke-linejoin="miter" />
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+# Local preferences and generated runtime/package copies
+/data/
+/dist/
+/exports/
+/history/
+/app/.build/
+**/__pycache__/
+*.pyc
+*.pending.webp
+*.tmp
+.vs/
+.idea/
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.key
+
+# Machine-specific maintenance inventories; keep portable build/test evidence
+/docs/*
+!/docs/asset-baseline-v0.13.json
+!/docs/RELEASE-v0.14.md
+!/docs/desktop-v0.14-validation/
+/docs/desktop-v0.14-validation/*
+!/docs/desktop-v0.14-validation/core-tests.txt
+!/docs/desktop-v0.14-validation/routed-input.json
+!/docs/desktop-v0.14-validation/mood-window.json
+!/docs/desktop-v0.14-validation/rocket-window.json
+!/docs/desktop-v0.14-validation/dance-window.json
+
+# Generated pose-location reports (source drawings and prompts stay tracked)
+/design/actions-v12/docs/*metrics.json
+/design/actions-v12/docs/verification.json

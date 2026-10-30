@@ -1,0 +1,49 @@
+{
+  "label": "蹲姿：满蓄力火焰循环",
+  "frame_count": 9,
+  "duration_ms": 450,
+  "loop": true,
+  "frame_size": [
+    320,
+    440
+  ],
+  "handoff_frames": [],
+  "frames": [
+    {
+      "file": "000.png",
+      "duration_ms": 50
+    },
+    {
+      "file": "001.png",
+      "duration_ms": 50
+    },
+    {
+      "file": "002.png",
+      "duration_ms": 50
+    },
+    {
+      "file": "003.png",
+      "duration_ms": 50
+    },
+    {
+      "file": "004.png",
+      "duration_ms": 50
+    },
+    {
+      "file": "005.png",
+      "duration_ms": 50
+    },
+    {
+      "file": "006.png",
+      "duration_ms": 50
+    },
+    {
+      "file": "007.png",
+      "duration_ms": 50
+    },
+    {
+      "file": "008.png",
+      "duration_ms": 50
+    }
+  ]
+}

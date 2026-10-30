@@ -1,0 +1,47 @@
+{
+  "mode": "built-in imagegen",
+  "api_fallback": false,
+  "requests": [
+    {
+      "name": "four body keys",
+      "output": "sources/sway-first-keys.png",
+      "status": "rejected proportions"
+    },
+    {
+      "name": "compact keys",
+      "output": "sources/sway-corrected-keys.png",
+      "status": "pose reference only"
+    },
+    {
+      "name": "full atlas",
+      "output": "sources/sway-first-atlas.png",
+      "status": "rejected excessive crouching/cropping"
+    },
+    {
+      "name": "full correction",
+      "output": null,
+      "status": "rejected; raw remains in generated_images"
+    },
+    {
+      "name": "square body",
+      "output": "sources/sway-square-atlas.png",
+      "status": "rejected head tilt"
+    },
+    {
+      "name": "level heads",
+      "output": "sources/sway-final-atlas.png",
+      "status": "rejected insufficient front sway"
+    },
+    {
+      "name": "front correction",
+      "output": null,
+      "status": "rejected body not corrected"
+    },
+    {
+      "name": "preserve approved body",
+      "prompt": "Precise identity-preserving edit of IMAGE1, the APPROVED animated 16-pose 4x4 dance sheet. PRESERVE ALL SIXTEEN BODY POSES EXACTLY: torso inclination, head center coordinates, shoulder/hip relative positions, knee bends and boot positions must be unchanged. In original sheet the first pose leans back and last pose leans strongly forward. This full body sway MUST remain, do not neutralize it or center heads in their cells. Edit ONLY these appearance details: warmer richer golden blond hair matching original character image2, caramel brown shadows instead of pale cream; slightly taller head outline without moving eye centers or changing head width; single cat tail gently changes curl shape as it follows the dance. Keep EVERY original eye center, head horizontal orientation, hands, white blouse, navy skirt and chunky brown boots. Thin original brown outlines. The model must NOT create near-identical standing poses. Cell1 head center left of hips, cell16 head center well to right of hips exactly as original image1. All intermediates preserve ORIGINAL image1 movement step for step. Preserve uniform scale, layout and transparent background. No text, no decoration. Treat this as a COLOR AND HAIR/TAIL DETAIL EDIT, not a choreography redesign.",
+      "output": "sources/preserved-body-atlas.png",
+      "status": "selected for export"
+    }
+  ]
+}

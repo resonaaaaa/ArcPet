@@ -1,0 +1,144 @@
+{
+  "version": "v12-dance-body-sway-mirror",
+  "frame_size": [
+    320,
+    320
+  ],
+  "pixel_format": "RGBA",
+  "method": "Built-in imagegen redraw, uniform scale, exact reflection and independent facing selection",
+  "actions": {
+    "idle": {
+      "path": "anime/idle/animation.json",
+      "label": "待机",
+      "frame_count": 30,
+      "loop": true,
+      "duration_ms": 2100
+    },
+    "sleep": {
+      "path": "anime/sleep/animation.json",
+      "label": "睡觉",
+      "frame_count": 30,
+      "loop": true,
+      "duration_ms": 3000
+    },
+    "think": {
+      "path": "anime/think/animation.json",
+      "label": "思考",
+      "frame_count": 60,
+      "loop": true,
+      "duration_ms": 6000
+    },
+    "icecream": {
+      "path": "anime/icecream/animation.json",
+      "label": "吃冰淇淋",
+      "frame_count": 30,
+      "loop": true,
+      "duration_ms": 2700
+    },
+    "click_down": {
+      "path": "anime/click_down/animation.json",
+      "label": "按下：开始蹲下",
+      "frame_count": 30,
+      "loop": false,
+      "duration_ms": 600
+    },
+    "click_hold": {
+      "path": "anime/click_hold/animation.json",
+      "label": "按住：蓄力循环",
+      "frame_count": 30,
+      "loop": true,
+      "duration_ms": 1500
+    },
+    "click_release": {
+      "path": "anime/click_release/animation.json",
+      "label": "松开：弹跳落地",
+      "frame_count": 30,
+      "loop": false,
+      "duration_ms": 900
+    },
+    "music": {
+      "path": "anime/music/animation.json",
+      "label": "听音乐",
+      "frame_count": 32,
+      "loop": true,
+      "duration_ms": 2880
+    },
+    "exercise": {
+      "path": "anime/exercise/animation.json",
+      "label": "做操",
+      "frame_count": 224,
+      "loop": true,
+      "duration_ms": 17920
+    },
+    "skateboard_left": {
+      "path": "anime/skateboard_left/animation.json",
+      "label": "滑板向左",
+      "frame_count": 34,
+      "loop": true,
+      "duration_ms": 2980
+    },
+    "skateboard_right": {
+      "path": "anime/skateboard_right/animation.json",
+      "label": "滑板向右（镜像修订）",
+      "frame_count": 34,
+      "loop": true,
+      "duration_ms": 2980
+    },
+    "calling": {
+      "path": "anime/calling/animation.json",
+      "label": "打电话",
+      "frame_count": 40,
+      "loop": true,
+      "duration_ms": 3200
+    },
+    "rocket_charge": {
+      "path": "anime/rocket_charge/animation.json",
+      "label": "蹲姿：整脸渐红",
+      "frame_count": 9,
+      "loop": false,
+      "duration_ms": 770
+    },
+    "rocket_hold": {
+      "path": "anime/rocket_hold/animation.json",
+      "label": "蹲姿：满蓄力火焰循环",
+      "frame_count": 9,
+      "loop": true,
+      "duration_ms": 450
+    },
+    "rocket_launch": {
+      "path": "anime/rocket_launch/animation.json",
+      "label": "红脸起身发射",
+      "frame_count": 6,
+      "loop": false,
+      "duration_ms": 480
+    },
+    "rocket_flight": {
+      "path": "anime/rocket_flight/animation.json",
+      "label": "平静火箭飞行",
+      "frame_count": 7,
+      "loop": true,
+      "duration_ms": 280
+    },
+    "rocket_land": {
+      "path": "anime/rocket_land/animation.json",
+      "label": "返回：冷却与恢复站姿",
+      "frame_count": 45,
+      "loop": false,
+      "duration_ms": 1800
+    },
+    "dance": {
+      "path": "anime/dance/animation.json",
+      "label": "跳舞",
+      "frame_count": 30,
+      "loop": true,
+      "duration_ms": 1000
+    },
+    "dance_mirrored": {
+      "path": "anime/dance_mirrored/animation.json",
+      "label": "跳舞（镜像）",
+      "frame_count": 30,
+      "loop": true,
+      "duration_ms": 1000
+    }
+  }
+}

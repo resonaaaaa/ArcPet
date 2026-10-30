@@ -1,0 +1,37 @@
+{
+  "label": "红脸起身发射",
+  "frame_count": 6,
+  "duration_ms": 480,
+  "loop": false,
+  "frame_size": [
+    320,
+    440
+  ],
+  "handoff_frames": [],
+  "frames": [
+    {
+      "file": "000.png",
+      "duration_ms": 50
+    },
+    {
+      "file": "001.png",
+      "duration_ms": 80
+    },
+    {
+      "file": "002.png",
+      "duration_ms": 100
+    },
+    {
+      "file": "003.png",
+      "duration_ms": 100
+    },
+    {
+      "file": "004.png",
+      "duration_ms": 100
+    },
+    {
+      "file": "005.png",
+      "duration_ms": 50
+    }
+  ]
+}

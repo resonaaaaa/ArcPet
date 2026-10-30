@@ -1,0 +1,15 @@
+{
+  "on_mouse_down": "click_down",
+  "after_click_down": {
+    "still_pressed": "click_hold",
+    "already_released": "click_release"
+  },
+  "during_click_hold": {
+    "while_pressed": "repeat click_hold",
+    "on_mouse_up": "click_release"
+  },
+  "after_click_release": "idle",
+  "hold_loop_frames": 30,
+  "shared_pose_frame": "click_hold/000.png",
+  "note": "Mouse-up during descent is queued until the shared crouched endpoint. A production player may add a short return-to-anchor blend when leaving hold at another phase."
+}

@@ -1,0 +1,41 @@
+{
+  "label": "平静火箭飞行",
+  "frame_count": 7,
+  "duration_ms": 280,
+  "loop": true,
+  "frame_size": [
+    320,
+    440
+  ],
+  "handoff_frames": [],
+  "frames": [
+    {
+      "file": "000.png",
+      "duration_ms": 40
+    },
+    {
+      "file": "001.png",
+      "duration_ms": 40
+    },
+    {
+      "file": "002.png",
+      "duration_ms": 40
+    },
+    {
+      "file": "003.png",
+      "duration_ms": 40
+    },
+    {
+      "file": "004.png",
+      "duration_ms": 40
+    },
+    {
+      "file": "005.png",
+      "duration_ms": 40
+    },
+    {
+      "file": "006.png",
+      "duration_ms": 40
+    }
+  ]
+}

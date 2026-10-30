@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" shape-rendering="crispEdges">
+  <title>问号 · 32 像素稿</title>
+  <path fill="#3d302d" d="M11 3H22V5H25V14H22V17H19V22H12V16H15V13H18V10H19V8H13V11H7V7H8V5H11Z"/>
+  <path fill="#f6ca58" d="M11 4H22V6H24V13H21V16H18V21H13V17H16V14H19V11H20V7H12V10H8V7H9V6H11Z"/>
+  <path fill="#ffe9a0" d="M11 4H21V5H12V7H10V9H8V7H9V6H11Z"/>
+  <path fill="#d69b36" d="M23 7H24V13H21V16H18V21H16V17H17V15H20V12H22V9H23Z"/>
+  <rect fill="#3d302d" x="12" y="25" width="7" height="5"/>
+  <rect fill="#f6ca58" x="13" y="26" width="5" height="3"/>
+  <rect fill="#ffe9a0" x="13" y="26" width="3" height="1"/>
+  <rect fill="#d69b36" x="17" y="27" width="1" height="2"/>
+</svg>

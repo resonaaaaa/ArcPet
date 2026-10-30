@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "icons": [
+    {
+      "id": "question",
+      "label": "问号",
+      "category": "A"
+    },
+    {
+      "id": "book",
+      "label": "书本",
+      "category": "A"
+    },
+    {
+      "id": "chatgpt",
+      "label": "ChatGPT",
+      "category": "A"
+    },
+    {
+      "id": "forest",
+      "label": "森林",
+      "category": "A"
+    },
+    {
+      "id": "python",
+      "label": "Python",
+      "category": "A"
+    },
+    {
+      "id": "heart",
+      "label": "爱心",
+      "category": "B"
+    },
+    {
+      "id": "headphones",
+      "label": "头戴式耳机",
+      "category": "B"
+    },
+    {
+      "id": "skateboard",
+      "label": "滑板",
+      "category": "B"
+    },
+    {
+      "id": "fish",
+      "label": "鱼",
+      "category": "C"
+    },
+    {
+      "id": "bird",
+      "label": "小鸟",
+      "category": "C"
+    },
+    {
+      "id": "rice",
+      "label": "一碗米饭",
+      "category": "C"
+    },
+    {
+      "id": "plane",
+      "label": "飞机",
+      "category": "C"
+    },
+    {
+      "id": "gamepad",
+      "label": "游戏手柄",
+      "category": "C"
+    },
+    {
+      "id": "sun",
+      "label": "太阳",
+      "category": "C"
+    },
+    {
+      "id": "icecream",
+      "label": "冰激凌",
+      "category": "C"
+    }
+  ],
+  "coordinates": "relative to 320px pet canvas; negative y extends above pet without resizing it",
+  "clouds": [
+    {
+      "id": "small",
+      "file": "clouds/small.png",
+      "x": 69,
+      "y": 28,
+      "width": 36,
+      "height": 28,
+      "start_ms": 0,
+      "fade_ms": 180
+    },
+    {
+      "id": "medium",
+      "file": "clouds/medium.png",
+      "x": 87,
+      "y": -8,
+      "width": 54,
+      "height": 42,
+      "start_ms": 140,
+      "fade_ms": 200
+    },
+    {
+      "id": "main",
+      "file": "clouds/main.png",
+      "x": 135,
+      "y": -102,
+      "width": 106,
+      "height": 88,
+      "start_ms": 300,
+      "fade_ms": 240
+    }
+  ],
+  "icon": {
+    "x": 157,
+    "y": -90,
+    "width": 64,
+    "height": 64
+  },
+  "bounds": {
+    "x": 0,
+    "y": -104,
+    "width": 320,
+    "height": 164
+  }
+}
