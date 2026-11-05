@@ -1,0 +1,121 @@
+{
+  "loop": false,
+  "frame_count": 21,
+  "duration_ms": 1040,
+  "frames": [
+    {
+      "file": "000.png",
+      "duration_ms": 40,
+      "source_pose": "anchor"
+    },
+    {
+      "file": "001.png",
+      "duration_ms": 40,
+      "source_pose": 0
+    },
+    {
+      "file": "002.png",
+      "duration_ms": 40,
+      "source_pose": 1
+    },
+    {
+      "file": "003.png",
+      "duration_ms": 40,
+      "source_pose": 2
+    },
+    {
+      "file": "004.png",
+      "duration_ms": 40,
+      "source_pose": 3
+    },
+    {
+      "file": "005.png",
+      "duration_ms": 40,
+      "source_pose": 4
+    },
+    {
+      "file": "006.png",
+      "duration_ms": 40,
+      "source_pose": 5
+    },
+    {
+      "file": "007.png",
+      "duration_ms": 40,
+      "source_pose": 6
+    },
+    {
+      "file": "008.png",
+      "duration_ms": 40,
+      "source_pose": 7
+    },
+    {
+      "file": "009.png",
+      "duration_ms": 60,
+      "source_pose": 8
+    },
+    {
+      "file": "010.png",
+      "duration_ms": 40,
+      "source_pose": 9
+    },
+    {
+      "file": "011.png",
+      "duration_ms": 40,
+      "source_pose": 10
+    },
+    {
+      "file": "012.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "land-bridge",
+        0
+      ]
+    },
+    {
+      "file": "013.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "land-bridge",
+        1
+      ]
+    },
+    {
+      "file": "014.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "land-bridge",
+        2
+      ]
+    },
+    {
+      "file": "015.png",
+      "duration_ms": 40,
+      "source_pose": 11
+    },
+    {
+      "file": "016.png",
+      "duration_ms": 40,
+      "source_pose": 12
+    },
+    {
+      "file": "017.png",
+      "duration_ms": 40,
+      "source_pose": 13
+    },
+    {
+      "file": "018.png",
+      "duration_ms": 40,
+      "source_pose": 14
+    },
+    {
+      "file": "019.png",
+      "duration_ms": 40,
+      "source_pose": 15
+    },
+    {
+      "file": "020.png",
+      "duration_ms": 220,
+      "source_pose": "idle"
+    }
+  ]
+}

@@ -26,6 +26,7 @@ namespace ArcPet.Desktop
         private readonly RocketArtworkWindow rocketArtwork;
         private readonly VerticalFlight flight=new VerticalFlight();
         private BitmapSource rocketFrame;
+        private bool dragArtwork;
         private string flightMonitor;
         private readonly string smokeOutput;
         private readonly string diagnosticMode;
@@ -33,7 +34,7 @@ namespace ArcPet.Desktop
         private readonly StartupRegistration startup;
         private System.Drawing.Icon petIcon;
         private readonly PreferencesSaveQueue preferencesWriter;
-        private readonly HorizontalTravel travel;
+        private HorizontalTravel travel;
         private readonly IDictionary<string,AnimationClip> clips;
         private readonly Dictionary<MovementMode,MenuItem> movementMenu=new Dictionary<MovementMode,MenuItem>();
         private readonly Dictionary<MovementMode,Forms.ToolStripMenuItem> trayMovement=new Dictionary<MovementMode,Forms.ToolStripMenuItem>();
@@ -53,6 +54,8 @@ namespace ArcPet.Desktop
         private string gesture;
         private bool gestureMoved;
         private Point initialPointer;
+        private Point latestPointer;
+        private long gestureStarted;
         private double initialLeft, initialTop, initialScale, anchorX, anchorY;
         private bool started, finished;
         private int smokeStage;
@@ -69,10 +72,9 @@ namespace ArcPet.Desktop
             this.preferencesStore=preferencesStore;this.diagnosticMode=diagnosticMode;
             this.startup=startup;
             this.clips=clips;
-            if(clips.ContainsKey("skateboard_left") && clips.ContainsKey("skateboard_right"))travel=new HorizontalTravel(clips["skateboard_left"],clips["skateboard_right"]);
             preferencesWriter=new PreferencesSaveQueue(preferencesStore);
             cache = new FrameCache(clips.Values);
-            Title = "ArcPet 0.14 · 桌宠"; Width = 320; Height = 320;
+            Title = "ArcPet 0.18 · 桌宠"; Width = 320; Height = 320;
             using(var stream=typeof(PetWindow).Assembly.GetManifestResourceStream("ArcPet.Icon"))
             {
                 if(stream==null)throw new InvalidDataException("缺少猫姬图标资源。");
@@ -88,7 +90,7 @@ namespace ArcPet.Desktop
             Content = sprite;
             mood=new MoodBubbleWindow(this,Path.Combine(Path.GetDirectoryName(typeof(PetWindow).Assembly.Location),"assets/moods"),new RandomSource());
             rocketArtwork=new RocketArtworkWindow(this);
-            IsVisibleChanged+=delegate {mood.Controller.SetAvailable(IsVisible,Now);mood.Render(Now);rocketArtwork.Render(rocketFrame);};
+            IsVisibleChanged+=delegate {mood.Controller.SetAvailable(IsVisible,Now);mood.Render(Now);RenderExtendedArtwork();};
             CreateContextMenu();
             MouseLeftButtonDown += OnPrimaryDown;
             MouseLeftButtonUp += OnPrimaryUp;
@@ -103,12 +105,12 @@ namespace ArcPet.Desktop
             { if (gesture == "resize" && (e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl)) EndGesture(true); };
             player.FrameChanged += OnFrameChanged;
             behavior.PlaybackRequested += OnPlaybackRequested;
-            behavior.SkateRequested += OnSkateRequested;
+            behavior.TravelRequested += OnTravelRequested;
             behavior.RocketRequested += OnRocketRequested;
             timer = new DispatcherTimer(DispatcherPriority.Render) { Interval = TimeSpan.FromMilliseconds(16) };
             timer.Tick += OnTick;
-            LocationChanged += delegate { ScheduleSave();mood.Render(Now);rocketArtwork.Render(rocketFrame); };
-            SizeChanged += delegate { ScheduleSave();mood.Render(Now);rocketArtwork.Render(rocketFrame); };
+            LocationChanged += delegate { ScheduleSave();mood.Render(Now);RenderExtendedArtwork(); };
+            SizeChanged += delegate { ScheduleSave();mood.Render(Now);RenderExtendedArtwork(); };
             Closing += delegate { RestoreFlightOrigin();SavePreferences(); preferencesWriter.Flush(); };
             Closed += OnClosed;
         }
@@ -135,7 +137,7 @@ namespace ArcPet.Desktop
         }
         private void CreateTray()
         {
-            tray = new Forms.NotifyIcon { Icon = petIcon, Text = "ArcPet 0.14 · 双击显示或隐藏桌宠", Visible = true };
+            tray = new Forms.NotifyIcon { Icon = petIcon, Text = "ArcPet 0.18 · 双击显示或隐藏桌宠", Visible = true };
             var menu = new Forms.ContextMenuStrip();
             trayLock = new Forms.ToolStripMenuItem("锁定"); trayLock.Click += delegate { Dispatch(ToggleLock); };
             trayVisibility = new Forms.ToolStripMenuItem(); trayVisibility.Click += delegate { Dispatch(ToggleVisibility); };
@@ -209,14 +211,16 @@ namespace ArcPet.Desktop
         }
         private void OnPrimaryDown(object sender, MouseButtonEventArgs e)
         {
-            if (gesture != null || behavior.Touch(Now)) { e.Handled = true; return; }
+            if (gesture != null || behavior.Touch(Now) || behavior.IsDragAnimation) { e.Handled = true; return; }
             BeginPrimaryGesture(PointerInScreenDips(e),(Keyboard.Modifiers & ModifierKeys.Control)!=0);
             CaptureMouse(); e.Handled = true;
         }
         private void BeginPrimaryGesture(Point pointer,bool control)
         {
+            if (behavior.IsDragAnimation) return;
             gestureMoved = false;
-            initialPointer = pointer;
+            initialPointer = latestPointer = pointer;
+            gestureStarted = Now;
             initialLeft = Left; initialTop = Top; initialScale = layout.Scale;
             anchorX = Left + Width * 135 / 320; anchorY = Top + Height * 292 / 320;
             if (behavior.IsLocked) { gesture = "click"; behavior.PrimaryDown(Now, initialPointer.X, initialPointer.Y); }
@@ -238,30 +242,44 @@ namespace ArcPet.Desktop
         }
         private void UpdatePointerPosition(Point current)
         {
-            if(gesture!="resize" && gesture!="drag")return;
+            if(gesture!="resize" && gesture!="drag" && gesture!="lift")return;
+            TryBeginDragLift();
+            latestPointer = current;
             behavior.Touch(Now);
             double dx=current.X-initialPointer.X,dy=current.Y-initialPointer.Y;
             if(!gestureMoved && dx*dx+dy*dy>PetBehaviorController.DoubleClickDistance*PetBehaviorController.DoubleClickDistance)
             {gestureMoved=true;behavior.CancelPress(Now);}
+            if (gesture == "drag") return;
             if (gesture == "resize") layout.ResizeFrom(initialScale, initialPointer.Y, current.Y, anchorX, anchorY);
             else layout.MoveTo(initialLeft + current.X - initialPointer.X, initialTop + current.Y - initialPointer.Y);
             ApplyLayout();
+        }
+        private void TryBeginDragLift()
+        {
+            long now = Now;
+            if (gesture != "drag" || now - gestureStarted < PetBehaviorController.LongPressMilliseconds ||
+                !behavior.BeginDragLift(now)) return;
+            // Keep the current pet position if the pointer moved before the hold qualified.
+            initialPointer = latestPointer;
+            gesture = "lift";
         }
         private void OnPrimaryUp(object sender, MouseButtonEventArgs e)
         { EndGesture(false); behavior.Touch(Now); e.Handled = true; }
         private void EndGesture(bool cancelled)
         {
+            if (!cancelled) TryBeginDragLift();
             string previous = gesture; gesture = null;
             if (IsMouseCaptured) ReleaseMouseCapture();
             if (previous == "click") { if (cancelled) behavior.CancelPress(Now); else behavior.PrimaryUp(Now); }
             else if (previous != null)
             {
                 behavior.SetBusy(false, Now);
-                if(previous=="drag" && !cancelled && !gestureMoved)behavior.PrimaryUp(Now);
+                if (previous=="lift") behavior.EndDragLift(Now, player.CurrentFrameIndex);
+                else if(previous=="drag" && !cancelled && !gestureMoved)behavior.PrimaryUp(Now);
                 else behavior.CancelPress(Now);
             }
             // Clicks do not change preferences. Never force disk I/O in input dispatch.
-            if((previous=="drag" || previous=="resize") &&
+            if((previous=="lift" || previous=="resize") &&
                 (Left!=initialLeft || Top!=initialTop || layout.Scale!=initialScale))SavePreferences();
         }
         private void ApplyLayout()
@@ -326,7 +344,7 @@ namespace ArcPet.Desktop
             // chosen clip, so it can never pause or enqueue the pet's playback.
             mood.Controller.Enter(behavior.Phase,e.Clip.Id,e.Clip.Id=="think" ? clips["think"].DurationMilliseconds : 0,Now);
             mood.Render(Now);
-            if(travel!=null && travel.IsActive && behavior.Phase!="skate")
+            if(travel!=null && travel.IsActive && !behavior.IsTraveling)
             {travel.Stop();travelMonitor=null;SavePreferences();}
             if (smokeOutput != null) phaseLog.Add(Now.ToString(CultureInfo.InvariantCulture) + ":" + behavior.Phase);
             player.Play(e.Clip);
@@ -335,13 +353,17 @@ namespace ArcPet.Desktop
         {
             BitmapSource frame=cache.Get(e.Frame.AssetPath);
             rocketFrame=frame.PixelHeight>320 ? frame : null;
+            dragArtwork = e.Clip.Id.StartsWith("drag_", StringComparison.Ordinal);
             if(rocketFrame==null)sprite.Source=frame;
-            sprite.Opacity=rocketFrame==null?1:0;rocketArtwork.Render(rocketFrame);renderedAction=e.Clip.Id;
+            sprite.Opacity=rocketFrame==null?1:0;RenderExtendedArtwork();renderedAction=e.Clip.Id;
             if (e.Clip.Id == "idle") idleSeen.Add(e.FrameIndex);
         }
+        private void RenderExtendedArtwork()
+        { rocketArtwork.Render(rocketFrame, dragArtwork ? -32 : 0, dragArtwork ? -64 : 0); }
         private void OnTick(object sender, EventArgs e)
         {
             RefreshTravelAvailability();
+            TryBeginDragLift();
             behavior.Tick(Now);
             UpdateTravel();
             UpdateFlight();
@@ -354,14 +376,18 @@ namespace ArcPet.Desktop
             else if(diagnosticMode=="--interrupt-test")InterruptTick();
             else if(diagnosticMode=="--settings-test-write" || diagnosticMode=="--settings-test-read")SettingsRestartTick();
         }
-        private TravelArea GetTravelArea(string monitor,out string selected)
+        private TravelArea GetTravelArea(string monitor,out string selected,string action=null)
         {
-            selected=null;if(travel==null || layout==null)return null;
+            selected=null;if(layout==null)return null;
             var areas=GetDisplayAreas();DisplayArea area=null;
             if(monitor==null)area=PlacementPolicy.Choose(areas,Left,Top,layout.Size);
             else foreach(var candidate in areas)if(candidate.Name==monitor){area=candidate;break;}
             if(area==null)return null;selected=area.Name;
-            Rect footprint=cache.VisibleBounds(clips["skateboard_left"]);footprint.Union(cache.VisibleBounds(clips["skateboard_right"]));
+            Rect footprint=Rect.Empty;
+            foreach(string kind in new[]{"skateboard","walk"})
+                if((action==null || action==kind) && clips.ContainsKey(kind+"_left") && clips.ContainsKey(kind+"_right"))
+                {footprint.Union(cache.VisibleBounds(clips[kind+"_left"]));footprint.Union(cache.VisibleBounds(clips[kind+"_right"]));}
+            if(footprint.IsEmpty)return null;
             double pixelToDip=SystemParameters.PrimaryScreenWidth/Forms.Screen.PrimaryScreen.Bounds.Width;
             // Keep the full transparent window inside the area as well, so restoring
             // its persisted position never has to shift it back onto the display.
@@ -372,25 +398,28 @@ namespace ArcPet.Desktop
         private double CharacterWidth {get{return cache.VisibleBounds(clips["idle"]).Width*layout.Scale;}}
         private void RefreshTravelAvailability()
         {
-            string monitor;TravelArea area=GetTravelArea(travelMonitor,out monitor);
-            behavior.TravelAvailable=IsVisible && layout!=null && travel!=null && HorizontalTravel.CanStart(area,Left,CharacterWidth);
+            string monitor;TravelArea area=GetTravelArea(travelMonitor,out monitor,behavior.TravelAction);
+            behavior.TravelAvailable=IsVisible && layout!=null && HorizontalTravel.CanStart(area,Left,CharacterWidth);
         }
-        private void OnSkateRequested(object sender,EventArgs e)
+        private void OnTravelRequested(object sender,TravelRequestedEventArgs e)
         {
-            if(travel==null || behavior.IsLocked || !IsVisible)return;
-            string monitor;TravelArea area=GetTravelArea(null,out monitor);
-            if(!travel.Start(behavior.TravelMode,area,Left,Top,CharacterWidth,Now))return;
-            travelMonitor=monitor;behavior.BeginSkating(travel.Direction,Now);
-            if(behavior.Phase!="skate"){travel.Stop();travelMonitor=null;}
+            if(behavior.IsLocked || !IsVisible)return;
+            string left=e.Action+"_left",right=e.Action+"_right";
+            if(!clips.ContainsKey(left) || !clips.ContainsKey(right))return;
+            string monitor;TravelArea area=GetTravelArea(null,out monitor,e.Action);
+            var next=new HorizontalTravel(clips[left],clips[right]);
+            if(!next.Start(behavior.TravelMode,area,Left,Top,CharacterWidth,Now))return;
+            travel=next;travelMonitor=monitor;behavior.BeginTravel(e.Action,travel.Direction,Now);
+            if(!behavior.IsTraveling){travel.Stop();travelMonitor=null;}
         }
         private void UpdateTravel()
         {
             if(travel==null || !travel.IsActive)return;
-            if(behavior.IsLocked || !IsVisible){behavior.StopSkating(Now);return;}
-            string monitor;TravelStep step=travel.Update(Now,GetTravelArea(travelMonitor,out monitor));
+            if(behavior.IsLocked || !IsVisible){behavior.StopTravel(Now);return;}
+            string monitor;TravelStep step=travel.Update(Now,GetTravelArea(travelMonitor,out monitor,behavior.TravelAction));
             layout.MoveTo(step.Left,step.Top);ApplyLayout();
-            if(step.Finished){travelMonitor=null;behavior.StopSkating(Now);SavePreferences();}
-            else if(step.DirectionChanged)behavior.ChangeSkateDirection(travel.Direction,Now);
+            if(step.Finished){travelMonitor=null;behavior.StopTravel(Now);SavePreferences();}
+            else if(step.DirectionChanged)behavior.ChangeTravelDirection(travel.Direction,Now);
         }
         private void OnRocketRequested(object sender,EventArgs e)
         {
@@ -572,7 +601,7 @@ namespace ArcPet.Desktop
             mood.Close();
             rocketArtwork.Close();
             behavior.PlaybackRequested -= OnPlaybackRequested;
-            behavior.SkateRequested -= OnSkateRequested;
+            behavior.TravelRequested -= OnTravelRequested;
             behavior.RocketRequested -= OnRocketRequested;
             player.FrameChanged -= OnFrameChanged; player.Stop();
             if (tray != null) { tray.Visible=false; if(tray.ContextMenuStrip!=null)tray.ContextMenuStrip.Dispose(); tray.Dispose(); }

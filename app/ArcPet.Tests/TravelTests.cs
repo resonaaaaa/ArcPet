@@ -44,7 +44,7 @@ internal static class TravelTests
     }
     public static void Run(string assets,string scratch,Action<bool,string> check)
     {
-        all=new JsonAnimationCatalog(assets).LoadAll();check(all.Count==19,"all nineteen registered clips load");
+        all=new JsonAnimationCatalog(assets).LoadAll();check(all.Count==25,"all twenty-five registered clips load");
         var padded=new TravelArea(0,1600,40,50);
         check(padded.SafeMinimum==40 && padded.SafeMaximum==1550,"asymmetric visible padding retains100px margins while preserving the full restorable window bounds");
         check(all["music"].Frames.Count==32 && all["exercise"].Frames.Count==224,"approved music/exercise frame counts retained");
@@ -67,14 +67,14 @@ internal static class TravelTests
         }
         foreach(bool locked in new[]{false,true})foreach(MovementMode mode in new[]{MovementMode.Off,MovementMode.Long,MovementMode.Short})
         {
-            var p=Pet(4,locked,mode);int requests=0;p.SkateRequested+=delegate{requests++;p.BeginSkating(1,60000);};p.Tick(60000);
+            var p=Pet(4,locked,mode);int requests=0;p.TravelRequested+=delegate{requests++;p.BeginTravel("skateboard",1,60000);};p.Tick(60000);
             bool eligible=!locked && mode!=MovementMode.Off;
-            check((p.Phase=="skate")==eligible && requests==(eligible?1:0),"skate eligibility requires enabled movement AND unlocked state");
+            check((p.Phase=="travel")==eligible && requests==(eligible?1:0),"skate eligibility requires enabled movement AND unlocked state");
         }
         foreach(string input in new[]{"single","double","hold","right","wheel","drag","lock","hide","mode"})
         {
-            var p=Pet(4,false,MovementMode.Short);p.SkateRequested+=delegate{p.BeginSkating(-1,60000);};p.Tick(60000);
-            check(p.Phase=="skate" && p.CurrentClip.Id=="skateboard_left","skate request uses chosen directional clip");
+            var p=Pet(4,false,MovementMode.Short);p.TravelRequested+=delegate{p.BeginTravel("skateboard",-1,60000);};p.Tick(60000);
+            check(p.Phase=="travel" && p.CurrentClip.Id=="skateboard_left","skate request uses chosen directional clip");
             if(input=="single" || input=="double" || input=="hold")p.PrimaryDown(60100);
             else if(input=="right")p.SecondaryDown(60100);
             else if(input=="drag")p.SetBusy(true,60100);
@@ -86,8 +86,8 @@ internal static class TravelTests
         }
         var nearBed=Pet(3,true,MovementMode.Off);nearBed.Tick(290000);
         check(nearBed.Phase=="automatic" && nearBed.CurrentClip.Id=="exercise","sleep deadline no longer excludes long random batches");
-        var asleep=Pet(4,false,MovementMode.Long);asleep.SkateRequested+=delegate{asleep.BeginSkating(1,60000);};asleep.Tick(60000);asleep.Tick(300000);
-        check(asleep.Phase=="skate","five minute inactivity queues sleep behind prolonged travel");
+        var asleep=Pet(4,false,MovementMode.Long);asleep.TravelRequested+=delegate{asleep.BeginTravel("skateboard",1,60000);};asleep.Tick(60000);asleep.Tick(300000);
+        check(asleep.Phase=="travel","five minute inactivity queues sleep behind prolonged travel");
         Trip(check,MovementMode.Short,new TravelArea(0,4000,100),800,200,1);
         Trip(check,MovementMode.Short,new TravelArea(-4000,0,100),-800,200,-1);
         Trip(check,MovementMode.Short,new TravelArea(0,800,100),400,200,1);

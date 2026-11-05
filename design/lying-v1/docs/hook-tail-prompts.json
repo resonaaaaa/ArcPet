@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-02",
+  "mode": "built-in imagegen",
+  "prompts": [
+    {
+      "purpose": "selected tip editing",
+      "prompt": "Use case: precise-object-edit. EDIT the attached animation sprite sheet in-place. It contains EXACTLY20 isolated tail drawings in5columns by4rows, fixed roots and progressively changing lean. Change ONLY THE TERMINAL TOP QUARTER of each tail: add a clearly visible, soft rounded small HOOK at the tail tip, like the end of a relaxed cat tail. Last25percent bends smoothly about70degrees to the right of its local shaft tangent, making an open J-shaped tip, NOT a closed spiral. Keep the lower75percent of EVERY shaft, its exact lean angle, root position, scale, overall height, thin brown outline, pale peach-golden flat fill and very light narrow tan shade as closely unchanged as possible. Tail tips must visibly curve, not remain straight rounded sticks. Curve direction is consistent across all20poses; only very mild flex between adjacent poses. Preserve exact20sprite/5x4grid arrangement and ample transparent gaps. This is one chronological animation: row1left-to-right thenrow2 etc; lastcell repeats firstpose for reference. Do not reset pose angles at rowboundaries, do not add randomdifferent curls. Keep roots fixed, preserve broad LEFT-to-RIGHT sweep of supplied drawings. Genuinely transparent background, no black background, no grid, no text, numbers, body, extras, motion streaks or castshadow. Draw all20tips individually, coherent lengths/thickness/style, no raster rotation.",
+      "selected_output": "sources/tail-hook-atlas.png"
+    },
+    {
+      "purpose": "additional transparency cleanup trial; not selected (first output already contains alpha)",
+      "prompt": "Use case: background-extraction. Remove the entire brown glowing background from this sprite sheet. Keep ONLY the20 pale peach cat tails with curved tips and their thin outlines, preserving exactly20tails in5columns4rows and their pose/scale/gridpositions. Completely transparent actual alpha0 between all tails, including the open inner hooks, no brown haze, no shadow, no checkerboard drawn in image. Flatten any leftover glow into simple solid pale golden-peach tail fill with very subtle light tan narrow edge shade. NO orange glow, no gradients or thick dark outlines. Keep tail anatomy and continuous hook-tip style coherent across20poses. Output transparent PNG sprite sheet, samecomposition, not a newbackground."
+    }
+  ],
+  "selection": "5 columns x4 rows; use first19 separately drawn poses. Return reverses same19poses,36frames total. Lastcell unused duplicate.",
+  "processing": "Transparent connected region extraction, uniform whole-drawing scale, root alignment, static body composition. No rotation, warping, blending or synthetic pose drawing."
+}

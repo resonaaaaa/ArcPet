@@ -1,0 +1,66 @@
+{
+  "scope": "Rejected walk v2 assets and unused v3 intermediate drawings only",
+  "removed": [
+    {
+      "path": "design/walk-v2/anime",
+      "bytes": 1850641.0
+    },
+    {
+      "path": "design/walk-v2/sources",
+      "bytes": 2825560.0
+    },
+    {
+      "path": "design/walk-v2/layers",
+      "bytes": 661040.0
+    },
+    {
+      "path": "design/walk-v2/frames-contact.png",
+      "bytes": 391054
+    },
+    {
+      "path": "design/walk-v2/preview.gif",
+      "bytes": 727842
+    },
+    {
+      "path": "design/walk-v2/preview.webp",
+      "bytes": 1632110
+    },
+    {
+      "path": "design/walk-v2/size-comparison.png",
+      "bytes": 110309
+    },
+    {
+      "path": "design/walk-v2/gait-proof.png",
+      "bytes": 63967
+    },
+    {
+      "path": "design/walk-v2/docs/gait-guide.png",
+      "bytes": 695424
+    },
+    {
+      "path": "tools/build_walk_v2.py",
+      "bytes": 10817
+    },
+    {
+      "path": "tools/prepare_walk_v3_guide.py",
+      "bytes": 751
+    },
+    {
+      "path": "design/walk-v3/sources/keys.png",
+      "bytes": 1364517
+    },
+    {
+      "path": "design/walk-v3/sources/half.png",
+      "bytes": 1377567
+    },
+    {
+      "path": "design/walk-v3/sources/between.png",
+      "bytes": 1410786
+    },
+    {
+      "path": "design/walk-v3/docs/keys-contact.png",
+      "bytes": 342933
+    }
+  ],
+  "bytes_freed": 13465318.0
+}

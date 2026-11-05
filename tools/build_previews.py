@@ -3,9 +3,10 @@ from pathlib import Path
 import json
 from PIL import Image
 R=Path(__file__).resolve().parent.parent
-def main():
+def main(only=None):
     manifest=json.loads((R/'manifest.json').read_text(encoding='utf8'));records=[]
     for name,action in manifest['actions'].items():
+        if only and name not in only:continue
         clip_path=R/action['path'];clip=json.loads(clip_path.read_text(encoding='utf8'))
         frames=[Image.open(clip_path.parent/f['file']).convert('RGBA') for f in clip['frames']]
         times=[f['duration_ms'] for f in clip['frames']];dest=R/f'previews/{name}.webp'
@@ -21,5 +22,7 @@ def main():
     for name,a in manifest['actions'].items():html+=f'<article><h2>{a["label"]}</h2><img src="previews/{name}.webp"><p>{a["frame_count"]}帧 · {a["duration_ms"]/1000:.2f}秒</p></article>'
     (R/'preview.html').write_text(html+'</main>',encoding='utf8')
     (R/'docs/preview-encoding.json').write_text(json.dumps({'preview_only':True,'quality':90,'records':records},ensure_ascii=False,indent=2),encoding='utf8')
-    print('Verified19 lightweight previews; all source PNGs unchanged.')
-if __name__=='__main__':main()
+    print('Verified'+str(len(records))+' lightweight previews; all source PNGs unchanged.')
+if __name__=='__main__':
+    import sys
+    main(set(sys.argv[1:]) or None)

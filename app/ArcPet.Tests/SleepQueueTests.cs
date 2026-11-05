@@ -17,11 +17,11 @@ internal static class SleepQueueTests
         foreach(MovementMode mode in new[]{MovementMode.Long,MovementMode.Short})
         foreach(int direction in new[]{-1,1})
         {
-            var pet=Create(4,mode);pet.SkateRequested+=delegate{pet.BeginSkating(direction,290000);};
+            var pet=Create(4,mode);pet.TravelRequested+=delegate{pet.BeginTravel("skateboard",direction,290000);};
             pet.Tick(290000);var original=pet.CurrentClip;int requests=0;pet.PlaybackRequested+=delegate{requests++;};
             pet.Tick(300000);pet.Tick(310000);
-            check(pet.Phase=="skate" && Object.ReferenceEquals(original,pet.CurrentClip) && requests==0,"sleep waits for active long/short skating in either direction");
-            pet.StopSkating(310100);
+            check(pet.Phase=="travel" && Object.ReferenceEquals(original,pet.CurrentClip) && requests==0,"sleep waits for active long/short skating in either direction");
+            pet.StopTravel(310100);
             check(pet.IsSleeping && requests==1,"completed skating enters queued sleep directly without idle or another random action");
             pet.Tick(430099);check(pet.IsSleeping,"queued sleep still lasts its complete two minutes");
             pet.Tick(430100);check(pet.Phase=="idle" && pet.LastInteraction==430100,"queued sleep naturally wakes with a fresh inactivity period");
@@ -57,7 +57,7 @@ internal static class SleepQueueTests
         }
         foreach(string input in new[]{"left","right","wheel","mode","sleep-off"})
         {
-            var pet=Create(4,MovementMode.Long);pet.SkateRequested+=delegate{pet.BeginSkating(1,290000);};pet.Tick(290000);pet.Tick(300000);
+            var pet=Create(4,MovementMode.Long);pet.TravelRequested+=delegate{pet.BeginTravel("skateboard",1,290000);};pet.Tick(290000);pet.Tick(300000);
             if(input=="left")pet.PrimaryDown(300100);
             else if(input=="right")pet.SecondaryDown(300100);
             else if(input=="mode")pet.SetMovementMode(MovementMode.Off,300100);

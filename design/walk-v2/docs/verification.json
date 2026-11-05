@@ -1,0 +1,1136 @@
+{
+  "frame_count": 32,
+  "drawn_gait_poses": 16,
+  "drawn_hair_poses": 8,
+  "drawn_tail_poses": 8,
+  "gait_cycle_ms": 960,
+  "preview_cycle_ms": 1920,
+  "angle": "right-facing45-degree three-quarter sideview, not frontal",
+  "upper_body_fixed_artwork": true,
+  "upper_body_bob_px": [
+    0,
+    0,
+    1,
+    1,
+    0,
+    -1,
+    -1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    -1,
+    -1,
+    0
+  ],
+  "body_scale": 0.18724559023066487,
+  "body_position": [
+    65,
+    42
+  ],
+  "waist_x": 139.0,
+  "leg_scale_per_sheet": {
+    "cycle": 0.33976833976833976
+  },
+  "gait_phases": [
+    {
+      "phase": 0,
+      "sheet": "cycle",
+      "pose": 0,
+      "scale": 0.33976833976833976,
+      "translation": [
+        90,
+        204
+      ],
+      "waist_y": 205,
+      "boot_color_centers": {
+        "near": [
+          166.73533619456367,
+          271.6094420600858
+        ],
+        "far": [
+          128.5956204379562,
+          271.04306569343066
+        ]
+      }
+    },
+    {
+      "phase": 1,
+      "sheet": "cycle",
+      "pose": 8,
+      "scale": 0.33976833976833976,
+      "translation": [
+        90,
+        204
+      ],
+      "waist_y": 205,
+      "boot_color_centers": {
+        "near": [
+          167.1025641025641,
+          272.75783475783476
+        ],
+        "far": [
+          126.91222805701426,
+          271.311327831958
+        ]
+      }
+    },
+    {
+      "phase": 2,
+      "sheet": "cycle",
+      "pose": 1,
+      "scale": 0.33976833976833976,
+      "translation": [
+        106,
+        204
+      ],
+      "waist_y": 205,
+      "boot_color_centers": {
+        "near": [
+          150.78858024691357,
+          273.04938271604937
+        ],
+        "far": [
+          133.9587727708533,
+          268.81303930968363
+        ]
+      }
+    },
+    {
+      "phase": 3,
+      "sheet": "cycle",
+      "pose": 9,
+      "scale": 0.33976833976833976,
+      "translation": [
+        106,
+        203
+      ],
+      "waist_y": 204,
+      "boot_color_centers": {
+        "near": [
+          149.77041602465331,
+          274.6949152542373
+        ],
+        "far": [
+          134.47435897435898,
+          267.4437869822485
+        ]
+      }
+    },
+    {
+      "phase": 4,
+      "sheet": "cycle",
+      "pose": 2,
+      "scale": 0.33976833976833976,
+      "translation": [
+        106,
+        203
+      ],
+      "waist_y": 204,
+      "boot_color_centers": {
+        "near": [
+          126.2546689303905,
+          273.92190152801356
+        ],
+        "far": [
+          156.84850926672038,
+          265.7671232876712
+        ]
+      }
+    },
+    {
+      "phase": 5,
+      "sheet": "cycle",
+      "pose": 10,
+      "scale": 0.33976833976833976,
+      "translation": [
+        106,
+        203
+      ],
+      "waist_y": 204,
+      "boot_color_centers": {
+        "near": [
+          129.01628664495115,
+          274.5407166123779
+        ],
+        "far": [
+          160.06714801444042,
+          266.028880866426
+        ]
+      }
+    },
+    {
+      "phase": 6,
+      "sheet": "cycle",
+      "pose": 3,
+      "scale": 0.33976833976833976,
+      "translation": [
+        90,
+        204
+      ],
+      "waist_y": 205,
+      "boot_color_centers": {
+        "near": [
+          111.1987041036717,
+          269.43628509719224
+        ],
+        "far": [
+          147.99188007495314,
+          273.93504059962527
+        ]
+      }
+    },
+    {
+      "phase": 7,
+      "sheet": "cycle",
+      "pose": 11,
+      "scale": 0.33976833976833976,
+      "translation": [
+        89,
+        203
+      ],
+      "waist_y": 204,
+      "boot_color_centers": {
+        "near": [
+          108.86876155268023,
+          268.42329020332716
+        ],
+        "far": [
+          151.8663400979706,
+          274.7116864940518
+        ]
+      }
+    },
+    {
+      "phase": 8,
+      "sheet": "cycle",
+      "pose": 4,
+      "scale": 0.33976833976833976,
+      "translation": [
+        91,
+        203
+      ],
+      "waist_y": 204,
+      "boot_color_centers": {
+        "near": [
+          111.62,
+          265.1933333333333
+        ],
+        "far": [
+          148.90025412960608,
+          274.04574332909783
+        ]
+      }
+    },
+    {
+      "phase": 9,
+      "sheet": "cycle",
+      "pose": 12,
+      "scale": 0.33976833976833976,
+      "translation": [
+        88,
+        203
+      ],
+      "waist_y": 204,
+      "boot_color_centers": {
+        "near": [
+          108.70443349753694,
+          265.13300492610836
+        ],
+        "far": [
+          148.36631183469004,
+          273.9561678146525
+        ]
+      }
+    },
+    {
+      "phase": 10,
+      "sheet": "cycle",
+      "pose": 5,
+      "scale": 0.33976833976833976,
+      "translation": [
+        97,
+        203
+      ],
+      "waist_y": 204,
+      "boot_color_centers": {
+        "near": [
+          140.1399798590131,
+          267.80664652567975
+        ],
+        "far": [
+          133.84787735849056,
+          270.79716981132077
+        ]
+      }
+    },
+    {
+      "phase": 11,
+      "sheet": "cycle",
+      "pose": 13,
+      "scale": 0.33976833976833976,
+      "translation": [
+        99,
+        203
+      ],
+      "waist_y": 204,
+      "boot_color_centers": {
+        "near": null,
+        "far": [
+          138.84943940202882,
+          269.31980779498133
+        ]
+      }
+    },
+    {
+      "phase": 12,
+      "sheet": "cycle",
+      "pose": 6,
+      "scale": 0.33976833976833976,
+      "translation": [
+        106,
+        203
+      ],
+      "waist_y": 204,
+      "boot_color_centers": {
+        "near": [
+          171.9264214046823,
+          261.81939799331104
+        ],
+        "far": [
+          140.53576437587657,
+          273.56381486676014
+        ]
+      }
+    },
+    {
+      "phase": 13,
+      "sheet": "cycle",
+      "pose": 14,
+      "scale": 0.33976833976833976,
+      "translation": [
+        104,
+        202
+      ],
+      "waist_y": 203,
+      "boot_color_centers": {
+        "near": [
+          170.3036253776435,
+          262.5664652567976
+        ],
+        "far": [
+          139.65397242284965,
+          273.93171372291533
+        ]
+      }
+    },
+    {
+      "phase": 14,
+      "sheet": "cycle",
+      "pose": 7,
+      "scale": 0.33976833976833976,
+      "translation": [
+        92,
+        202
+      ],
+      "waist_y": 203,
+      "boot_color_centers": {
+        "near": [
+          165.49232914923292,
+          272.4323570432357
+        ],
+        "far": [
+          129.0513347022587,
+          271.7775496235455
+        ]
+      }
+    },
+    {
+      "phase": 15,
+      "sheet": "cycle",
+      "pose": 15,
+      "scale": 0.33976833976833976,
+      "translation": [
+        92,
+        201
+      ],
+      "waist_y": 202,
+      "boot_color_centers": {
+        "near": [
+          167.32396251673362,
+          271.6599732262383
+        ],
+        "far": [
+          129.26228373702423,
+          271.1612456747405
+        ]
+      }
+    }
+  ],
+  "pose_bounds": [
+    [
+      65,
+      40,
+      204,
+      293
+    ],
+    [
+      65,
+      40,
+      204,
+      293
+    ],
+    [
+      65,
+      41,
+      204,
+      293
+    ],
+    [
+      65,
+      41,
+      204,
+      293
+    ],
+    [
+      65,
+      40,
+      204,
+      293
+    ],
+    [
+      65,
+      39,
+      204,
+      293
+    ],
+    [
+      65,
+      39,
+      204,
+      293
+    ],
+    [
+      65,
+      40,
+      204,
+      293
+    ],
+    [
+      65,
+      40,
+      204,
+      293
+    ],
+    [
+      65,
+      40,
+      204,
+      293
+    ],
+    [
+      65,
+      41,
+      204,
+      293
+    ],
+    [
+      65,
+      41,
+      204,
+      293
+    ],
+    [
+      65,
+      40,
+      204,
+      293
+    ],
+    [
+      65,
+      39,
+      204,
+      293
+    ],
+    [
+      65,
+      39,
+      204,
+      293
+    ],
+    [
+      65,
+      40,
+      204,
+      293
+    ],
+    [
+      65,
+      40,
+      204,
+      293
+    ],
+    [
+      65,
+      40,
+      204,
+      293
+    ],
+    [
+      65,
+      41,
+      204,
+      293
+    ],
+    [
+      65,
+      41,
+      204,
+      293
+    ],
+    [
+      65,
+      41,
+      204,
+      293
+    ],
+    [
+      65,
+      40,
+      204,
+      293
+    ],
+    [
+      65,
+      40,
+      204,
+      293
+    ],
+    [
+      65,
+      41,
+      204,
+      293
+    ],
+    [
+      65,
+      42,
+      204,
+      293
+    ],
+    [
+      65,
+      42,
+      204,
+      293
+    ],
+    [
+      65,
+      43,
+      204,
+      293
+    ],
+    [
+      65,
+      43,
+      204,
+      293
+    ],
+    [
+      65,
+      40,
+      204,
+      293
+    ],
+    [
+      65,
+      39,
+      204,
+      293
+    ],
+    [
+      65,
+      39,
+      204,
+      293
+    ],
+    [
+      65,
+      40,
+      204,
+      293
+    ]
+  ],
+  "source_crop_audit": {
+    "body": {
+      "original_size": [
+        1254,
+        1254
+      ],
+      "crop_box": [
+        264,
+        101,
+        1005,
+        1033
+      ],
+      "main_area": 448669,
+      "main_bbox": [
+        266,
+        103,
+        1003,
+        1031
+      ],
+      "removed_opaque_pixels": 0,
+      "removed_regions": []
+    },
+    "cycle": [
+      {
+        "key": 0,
+        "source_bounds": [
+          28,
+          52,
+          324,
+          308
+        ],
+        "crop": [
+          25,
+          49,
+          327,
+          311
+        ],
+        "accepted": true
+      },
+      {
+        "key": 1,
+        "source_bounds": [
+          373,
+          51,
+          569,
+          308
+        ],
+        "crop": [
+          370,
+          48,
+          572,
+          311
+        ],
+        "accepted": true
+      },
+      {
+        "key": 2,
+        "source_bounds": [
+          684,
+          52,
+          933,
+          310
+        ],
+        "crop": [
+          681,
+          49,
+          936,
+          313
+        ],
+        "accepted": true
+      },
+      {
+        "key": 3,
+        "source_bounds": [
+          954,
+          51,
+          1245,
+          307
+        ],
+        "crop": [
+          951,
+          48,
+          1248,
+          310
+        ],
+        "accepted": true
+      },
+      {
+        "key": 4,
+        "source_bounds": [
+          30,
+          355,
+          312,
+          613
+        ],
+        "crop": [
+          27,
+          352,
+          315,
+          616
+        ],
+        "accepted": true
+      },
+      {
+        "key": 5,
+        "source_bounds": [
+          355,
+          355,
+          588,
+          615
+        ],
+        "crop": [
+          352,
+          352,
+          591,
+          618
+        ],
+        "accepted": true
+      },
+      {
+        "key": 6,
+        "source_bounds": [
+          684,
+          355,
+          943,
+          615
+        ],
+        "crop": [
+          681,
+          352,
+          946,
+          618
+        ],
+        "accepted": true
+      },
+      {
+        "key": 7,
+        "source_bounds": [
+          956,
+          354,
+          1244,
+          615
+        ],
+        "crop": [
+          953,
+          351,
+          1247,
+          618
+        ],
+        "accepted": true
+      },
+      {
+        "key": 8,
+        "source_bounds": [
+          27,
+          670,
+          324,
+          927
+        ],
+        "crop": [
+          24,
+          667,
+          327,
+          930
+        ],
+        "accepted": true
+      },
+      {
+        "key": 9,
+        "source_bounds": [
+          375,
+          669,
+          576,
+          928
+        ],
+        "crop": [
+          372,
+          666,
+          579,
+          931
+        ],
+        "accepted": true
+      },
+      {
+        "key": 10,
+        "source_bounds": [
+          682,
+          670,
+          939,
+          930
+        ],
+        "crop": [
+          679,
+          667,
+          942,
+          933
+        ],
+        "accepted": true
+      },
+      {
+        "key": 11,
+        "source_bounds": [
+          952,
+          670,
+          1250,
+          930
+        ],
+        "crop": [
+          949,
+          667,
+          1253,
+          933
+        ],
+        "accepted": true
+      },
+      {
+        "key": 12,
+        "source_bounds": [
+          23,
+          968,
+          316,
+          1226
+        ],
+        "crop": [
+          20,
+          965,
+          319,
+          1229
+        ],
+        "accepted": true
+      },
+      {
+        "key": 13,
+        "source_bounds": [
+          356,
+          967,
+          586,
+          1226
+        ],
+        "crop": [
+          353,
+          964,
+          589,
+          1229
+        ],
+        "accepted": true
+      },
+      {
+        "key": 14,
+        "source_bounds": [
+          680,
+          968,
+          944,
+          1231
+        ],
+        "crop": [
+          677,
+          965,
+          947,
+          1234
+        ],
+        "accepted": true
+      },
+      {
+        "key": 15,
+        "source_bounds": [
+          956,
+          968,
+          1250,
+          1232
+        ],
+        "crop": [
+          953,
+          965,
+          1253,
+          1235
+        ],
+        "accepted": true
+      }
+    ],
+    "details": [
+      {
+        "key": 0,
+        "source_bounds": [
+          96,
+          93,
+          275,
+          273
+        ],
+        "crop": [
+          93,
+          90,
+          278,
+          276
+        ],
+        "accepted": true
+      },
+      {
+        "key": 1,
+        "source_bounds": [
+          455,
+          81,
+          647,
+          273
+        ],
+        "crop": [
+          452,
+          78,
+          650,
+          276
+        ],
+        "accepted": true
+      },
+      {
+        "key": 2,
+        "source_bounds": [
+          814,
+          75,
+          1012,
+          273
+        ],
+        "crop": [
+          811,
+          72,
+          1015,
+          276
+        ],
+        "accepted": true
+      },
+      {
+        "key": 3,
+        "source_bounds": [
+          1176,
+          77,
+          1374,
+          274
+        ],
+        "crop": [
+          1173,
+          74,
+          1377,
+          277
+        ],
+        "accepted": true
+      },
+      {
+        "key": 4,
+        "source_bounds": [
+          104,
+          336,
+          320,
+          534
+        ],
+        "crop": [
+          101,
+          333,
+          323,
+          537
+        ],
+        "accepted": true
+      },
+      {
+        "key": 5,
+        "source_bounds": [
+          461,
+          338,
+          673,
+          533
+        ],
+        "crop": [
+          458,
+          335,
+          676,
+          536
+        ],
+        "accepted": true
+      },
+      {
+        "key": 6,
+        "source_bounds": [
+          807,
+          341,
+          1011,
+          534
+        ],
+        "crop": [
+          804,
+          338,
+          1014,
+          537
+        ],
+        "accepted": true
+      },
+      {
+        "key": 7,
+        "source_bounds": [
+          1173,
+          345,
+          1361,
+          531
+        ],
+        "crop": [
+          1170,
+          342,
+          1364,
+          534
+        ],
+        "accepted": true
+      },
+      {
+        "key": 8,
+        "source_bounds": [
+          73,
+          623,
+          334,
+          785
+        ],
+        "crop": [
+          70,
+          620,
+          337,
+          788
+        ],
+        "accepted": true
+      },
+      {
+        "key": 9,
+        "source_bounds": [
+          423,
+          609,
+          689,
+          783
+        ],
+        "crop": [
+          420,
+          606,
+          692,
+          786
+        ],
+        "accepted": true
+      },
+      {
+        "key": 10,
+        "source_bounds": [
+          765,
+          594,
+          1041,
+          781
+        ],
+        "crop": [
+          762,
+          591,
+          1044,
+          784
+        ],
+        "accepted": true
+      },
+      {
+        "key": 11,
+        "source_bounds": [
+          1121,
+          606,
+          1397,
+          780
+        ],
+        "crop": [
+          1118,
+          603,
+          1400,
+          783
+        ],
+        "accepted": true
+      },
+      {
+        "key": 12,
+        "source_bounds": [
+          68,
+          874,
+          337,
+          1042
+        ],
+        "crop": [
+          65,
+          871,
+          340,
+          1045
+        ],
+        "accepted": true
+      },
+      {
+        "key": 13,
+        "source_bounds": [
+          428,
+          875,
+          690,
+          1043
+        ],
+        "crop": [
+          425,
+          872,
+          693,
+          1046
+        ],
+        "accepted": true
+      },
+      {
+        "key": 14,
+        "source_bounds": [
+          783,
+          873,
+          1046,
+          1042
+        ],
+        "crop": [
+          780,
+          870,
+          1049,
+          1045
+        ],
+        "accepted": true
+      },
+      {
+        "key": 15,
+        "source_bounds": [
+          1142,
+          878,
+          1401,
+          1042
+        ],
+        "crop": [
+          1139,
+          875,
+          1404,
+          1045
+        ],
+        "accepted": true
+      }
+    ]
+  },
+  "upper_body_opaque_pixels_identical_after_translation": true,
+  "max_adjacent_upper_body_shift_px": 1,
+  "alternating_near_far_lead_checked": true,
+  "both_free_boots_lift_in_passing_checked": true,
+  "proportion_revision": {
+    "head_width_px": 138,
+    "previous_head_width_px": 160,
+    "lower_body_target_height_px": 88,
+    "mouth": "skin-colored protruding pout",
+    "legs": "redrawn thicker legs and chunky brown boots"
+  },
+  "source_sha256": {
+    "hair-tail.png": "7587ce67d83313c2eb25a67a14dd2158961001f921785612756edc03cb99b28f",
+    "legs-cycle.png": "57eaf36a175437d5871ae87fb525c1f07ae7b3bfe5692ebfadd3f6c5d3a8ee2c",
+    "upper-body.png": "e957c66470bbf156305f35af61d80d8477edfa410a33c311bb69aa4c69d8af33"
+  },
+  "seam_mean_rgba_difference": 1.1775439453125,
+  "max_internal_mean_rgba_difference": 6.2460205078125,
+  "runtime_integrated": false,
+  "rotations": false,
+  "shape_warps": false,
+  "synthetic_inbetweens": false,
+  "limitations": "Boot-color centroids are only an inspection aid. Visual approval of gait and angle is pending.",
+  "gif": {
+    "frames": 32,
+    "duration_ms": 1920
+  },
+  "webp": {
+    "frames": 32,
+    "duration_ms": 1920
+  }
+}

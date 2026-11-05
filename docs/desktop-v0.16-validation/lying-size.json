@@ -1,0 +1,304 @@
+{
+  "accepted_design": "design/lying-v1",
+  "source_head_warm_bounds": [
+    95,
+    159,
+    242,
+    265
+  ],
+  "idle_head_warm_bounds": [
+    57,
+    53,
+    217,
+    190
+  ],
+  "measurement": "Warm hair/ear pixel bounding box in recorded head ROI; visual comparison required.",
+  "source_head_width_px": 147,
+  "target_head_width_px": 160,
+  "runtime_head_warm_bounds": [
+    58,
+    148,
+    217,
+    275
+  ],
+  "runtime_head_width_px": 159,
+  "requested_scale": 1.08843537414966,
+  "actual_uniform_scale": 1.0875,
+  "whole_canvas_resize": [
+    348,
+    348
+  ],
+  "translation": [
+    -46,
+    -25
+  ],
+  "source_ground": 291,
+  "target_ground": 292,
+  "runtime_ground_values": [
+    292
+  ],
+  "head_center_target_x": 137.0,
+  "head_center_runtime_x": 137.5,
+  "single_transform_for_all_frames": true,
+  "frame_count": 36,
+  "duration_ms": 1600,
+  "output_bounds": [
+    [
+      10,
+      116,
+      219,
+      292
+    ],
+    [
+      12,
+      115,
+      219,
+      292
+    ],
+    [
+      11,
+      115,
+      219,
+      292
+    ],
+    [
+      15,
+      113,
+      219,
+      292
+    ],
+    [
+      20,
+      110,
+      219,
+      292
+    ],
+    [
+      20,
+      104,
+      219,
+      292
+    ],
+    [
+      20,
+      100,
+      219,
+      292
+    ],
+    [
+      20,
+      103,
+      219,
+      292
+    ],
+    [
+      20,
+      98,
+      219,
+      292
+    ],
+    [
+      20,
+      99,
+      219,
+      292
+    ],
+    [
+      20,
+      101,
+      219,
+      292
+    ],
+    [
+      20,
+      101,
+      219,
+      292
+    ],
+    [
+      20,
+      104,
+      219,
+      292
+    ],
+    [
+      20,
+      105,
+      219,
+      292
+    ],
+    [
+      20,
+      108,
+      219,
+      292
+    ],
+    [
+      20,
+      113,
+      219,
+      292
+    ],
+    [
+      20,
+      117,
+      219,
+      292
+    ],
+    [
+      20,
+      117,
+      219,
+      292
+    ],
+    [
+      20,
+      114,
+      219,
+      292
+    ],
+    [
+      20,
+      117,
+      219,
+      292
+    ],
+    [
+      20,
+      117,
+      219,
+      292
+    ],
+    [
+      20,
+      113,
+      219,
+      292
+    ],
+    [
+      20,
+      108,
+      219,
+      292
+    ],
+    [
+      20,
+      105,
+      219,
+      292
+    ],
+    [
+      20,
+      104,
+      219,
+      292
+    ],
+    [
+      20,
+      101,
+      219,
+      292
+    ],
+    [
+      20,
+      101,
+      219,
+      292
+    ],
+    [
+      20,
+      99,
+      219,
+      292
+    ],
+    [
+      20,
+      98,
+      219,
+      292
+    ],
+    [
+      20,
+      103,
+      219,
+      292
+    ],
+    [
+      20,
+      100,
+      219,
+      292
+    ],
+    [
+      20,
+      104,
+      219,
+      292
+    ],
+    [
+      20,
+      110,
+      219,
+      292
+    ],
+    [
+      15,
+      113,
+      219,
+      292
+    ],
+    [
+      11,
+      115,
+      219,
+      292
+    ],
+    [
+      12,
+      115,
+      219,
+      292
+    ]
+  ],
+  "accepted_source_sha256": {
+    "000.png": "4c6a2d42559a91b6f934adf31d0b93d9be1a9fb6efe95fadcc805c0d1bc259c6",
+    "001.png": "481b3215da26fb900137ad068e8a7ebb97d143bb632fedd664a12866e8b3a7fd",
+    "002.png": "7ea6e5947e131782518eff5a394cea5313d7c3583bcf7af304897b23105d7ddc",
+    "003.png": "121dbea29b6317c62818b3ff73eac76b17ea45f29ec992227c4bb1be83cfef75",
+    "004.png": "2ad16861b9f1d56a854e4b66ec32532c6dc2b4f5a6d4b190079f352d91a578ca",
+    "005.png": "af0487f460fef6a4ba86fb969d507842195973746240bbb271952c2d4ffcf1c6",
+    "006.png": "0f0319271b3496f1ff371d016a28fff9d3cbe9f2c5fbb5d60f36b219f614e578",
+    "007.png": "d4e18dc3f5be41bf0ab9d25bf5e1e2cbad3d29a91a4572dbc9e37a8dabaa10a2",
+    "008.png": "40ccdc74c3a4220a79ebf8798fa30081a22101eb5e3338469fdc2b5484c5db06",
+    "009.png": "2c47f9e0777c4f4041ac9ffbb514e7160d6abc7a7956087518993d62ae0e13d9",
+    "010.png": "51752772f08650b6f1d299daf20124e4066bb78f3531fe177ff6dadb8f07f9bc",
+    "011.png": "b4792d6475f70c29602707d0f8fc486267dfd9fdb3560310c313da82b0eea179",
+    "012.png": "5fa40e6437ff434dd0cf715bf4dfc50049be6281568cb70c85253f1244765710",
+    "013.png": "a9a5e2067962cf219ae36cdd92951c914bf23afe9b4cdb8f9457096e864dadb1",
+    "014.png": "4450107e18de3c3e2b2c60b0cde501055bc707cda44fae1e32cb9f900387352d",
+    "015.png": "9719a9b09becf96acca4e90ffbd80a15e4b950bfffefd4f4ff4d8d1b0f481283",
+    "016.png": "edd2a4f226faa8876a4010ae147d8ae0505a0d19aa251de18736914d621f6de1",
+    "017.png": "00a716748ecf343083f3bf973cf3dc5f207ec44786a87c228c2fc25254b5c670",
+    "018.png": "8a3602cd73dafda57ba2d4be57a94ec9d1a59c105f2004b45e90b7aa0cda7a98",
+    "019.png": "00a716748ecf343083f3bf973cf3dc5f207ec44786a87c228c2fc25254b5c670",
+    "020.png": "edd2a4f226faa8876a4010ae147d8ae0505a0d19aa251de18736914d621f6de1",
+    "021.png": "9719a9b09becf96acca4e90ffbd80a15e4b950bfffefd4f4ff4d8d1b0f481283",
+    "022.png": "4450107e18de3c3e2b2c60b0cde501055bc707cda44fae1e32cb9f900387352d",
+    "023.png": "a9a5e2067962cf219ae36cdd92951c914bf23afe9b4cdb8f9457096e864dadb1",
+    "024.png": "5fa40e6437ff434dd0cf715bf4dfc50049be6281568cb70c85253f1244765710",
+    "025.png": "b4792d6475f70c29602707d0f8fc486267dfd9fdb3560310c313da82b0eea179",
+    "026.png": "51752772f08650b6f1d299daf20124e4066bb78f3531fe177ff6dadb8f07f9bc",
+    "027.png": "2c47f9e0777c4f4041ac9ffbb514e7160d6abc7a7956087518993d62ae0e13d9",
+    "028.png": "40ccdc74c3a4220a79ebf8798fa30081a22101eb5e3338469fdc2b5484c5db06",
+    "029.png": "d4e18dc3f5be41bf0ab9d25bf5e1e2cbad3d29a91a4572dbc9e37a8dabaa10a2",
+    "030.png": "0f0319271b3496f1ff371d016a28fff9d3cbe9f2c5fbb5d60f36b219f614e578",
+    "031.png": "af0487f460fef6a4ba86fb969d507842195973746240bbb271952c2d4ffcf1c6",
+    "032.png": "2ad16861b9f1d56a854e4b66ec32532c6dc2b4f5a6d4b190079f352d91a578ca",
+    "033.png": "121dbea29b6317c62818b3ff73eac76b17ea45f29ec992227c4bb1be83cfef75",
+    "034.png": "7ea6e5947e131782518eff5a394cea5313d7c3583bcf7af304897b23105d7ddc",
+    "035.png": "481b3215da26fb900137ad068e8a7ebb97d143bb632fedd664a12866e8b3a7fd"
+  },
+  "accepted_artwork_modified": false,
+  "pose_rotation": false,
+  "pose_warp": false
+}

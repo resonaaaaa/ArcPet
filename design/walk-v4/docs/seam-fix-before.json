@@ -1,0 +1,105 @@
+{
+  "frames_sha256": {
+    "000.png": "9fe49a67aa0814f7bcc3dfd4ab35ceb730aebe0714107e8177cc91cdc27884db",
+    "001.png": "b5e092d6aa2fd00c2fcb197d1ff7a0442d022a52b48448189a9303e2e2103141",
+    "002.png": "324727531a2a969ba380a66ec51af4c70d7b14c1963182a468eb25ccb1bf06b6",
+    "003.png": "d7b996c1a505c78a0c6d821684fb5e4fbfdaa8b551e9fd86ac3ecf6c179f1ffe",
+    "004.png": "44cfc6591e9709e54ea421d80764183a063b053a2848f8548554488b1fa0e13d",
+    "005.png": "ecb040b882124a8c09b5a6fe4013083ede8d9f153f1ae44ce5515819c92d6659",
+    "006.png": "f6d3ffbbd64ad022ec2192670aea5cb935194ca7ee7b2468c5c063a1d3251d7f",
+    "007.png": "3476a746d0ca55d7262d408c3e78322833f578afbc7a63e9841e3c40522eab7e",
+    "008.png": "1eec735242d128b430473bd8563d1d2ac4541b9889c7535a6c23279fdc803832",
+    "009.png": "6c9271d5db6d81a20b1dd3828c9dd0aad638ada16ebc8c6500ef652a18a88efe",
+    "010.png": "491b4dce971094eaa6e401ab0fcbd50d12600f4ab18eb3d8dec7df4558d4e339",
+    "011.png": "2c19e824f86a24e655c6c060100f9d62e459c98617a433908407a93eb6f4a6fb",
+    "012.png": "2a16cabe5dbfcbec1f7b697972e261db67125a148fbb5b64fae432be8b3a5c29",
+    "013.png": "e2e77a9a139ef8bc6688802c97715d4fa90e95246e320538a9ffc1eedcfbb175",
+    "014.png": "fd38b5524e912f242ece2103e42912148edff8236ee83c1b66cae8013679f024",
+    "015.png": "8b7848821eaa6f764155c3a78b612b06094010cd8421fa18b28eebe5127304b0",
+    "016.png": "c3e9d35f098eba91e591de0f966d3ec0d66e9d0472643a73843f53e7305cc354",
+    "017.png": "cf05038bf68b257af96b4e843088d727026b56feb589ee54f4f2477f90740a39",
+    "018.png": "bc6366ae990964aebc741585a3b29dda4f1cd0cc785cc5e0e79ea22d067498a8",
+    "019.png": "752153005120cded881493cb39101aa676185ac0b6d9fa446450f15e6b10c278",
+    "020.png": "ee977e6d0121daaa4ad4c112c7e2fbf6d7b86ad160bcbeeef376d26f29cacb98",
+    "021.png": "259f76cfa5318a085953017cd88a61be0e7ea97030062c5e96abe31037b3177d",
+    "022.png": "13db1ac93c682d943234b4d8a913ac08bd9e87ecc0541269c854810e0cbf6b0c",
+    "023.png": "0a0a32e6039548e089822083fbd6cfbcb71031ef848e01d7ca72033ed149b9e2",
+    "024.png": "b228c4f6bbe3b4fb921e99be78344fd8796dff1cd809a468a33554e0ebb36bbd",
+    "025.png": "ae8703983f16c3ddafe3e72b6ecaaf6ebb413cddb9eedecd57ae2132838a75e8",
+    "026.png": "ba39ab419f818b381c795afa30fbb016588e097a20a5bed8649da5d4cf37b30c",
+    "027.png": "c45f53ce4b6e430708739d1b8510e818f6b9628dfb1b5da21b05c41e347c5581",
+    "028.png": "a712a81b2696b2d84518a9d5a7347dd2b40819e089958780191c7188b13438f5",
+    "029.png": "19292e48bd28f184dd064afbdf217b50f2056bcf34d6c26c3ef6f818619264de"
+  },
+  "first_frame": {
+    "file": "000.png",
+    "duration_ms": 40,
+    "source_sheet": "first-half",
+    "source_pose": 0,
+    "scale": 0.8602150537634409,
+    "translation": [
+      66,
+      49
+    ],
+    "head_width_px": 144,
+    "hip_px": [
+      154.0,
+      223.0
+    ],
+    "neck_px": [
+      154.0,
+      172
+    ],
+    "neck_to_hip_x_px": 0.0,
+    "ground_y": 292
+  },
+  "second_frame": {
+    "file": "001.png",
+    "duration_ms": 40,
+    "source_sheet": "first-half",
+    "source_pose": 1,
+    "scale": 0.8602150537634409,
+    "translation": [
+      67,
+      50
+    ],
+    "head_width_px": 144,
+    "hip_px": [
+      154.0,
+      223.0
+    ],
+    "neck_px": [
+      153.0,
+      173
+    ],
+    "neck_to_hip_x_px": -1.0,
+    "ground_y": 292
+  },
+  "last_frame": {
+    "file": "029.png",
+    "duration_ms": 40,
+    "source_sheet": "second-half",
+    "source_pose": 12,
+    "scale": 0.8279879768212947,
+    "translation": [
+      68,
+      61
+    ],
+    "head_width_px": 143,
+    "hip_px": [
+      153.5,
+      226.5
+    ],
+    "neck_px": [
+      154.0,
+      178
+    ],
+    "neck_to_hip_x_px": 0.5,
+    "ground_y": 292
+  },
+  "source_sha256": {
+    "first-half.png": "e429de1f41074ad27108e8813a8e0bd9c3ae1e6e4e9a717fc92badbb3d90afe3",
+    "second-half.png": "35e422b80e7447f242c96e6a5a2424b36e1c88a77e353c6549b54dd9fa161f19"
+  },
+  "diagnosis": "First collar y172 versus final y178; first top alpha49 versus final61. Correct first two whole-character drawings while keeping other28 frames unchanged."
+}

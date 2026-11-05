@@ -41,7 +41,7 @@ internal static class MoodTests
         check(m.Generation==gen+1 && b!=a && m.StartedAt==1006000 && m.Opacity(1006000,300,240)==0,"thinking boundary replaces and restarts entrance with different content");
         m.Tick(1012000);check(m.Generation==gen+2 && m.ContentId!=b,"third cycle gets a third bubble");
         m.Enter("idle","idle",0,1018000);check(!m.IsVisible && m.NextIdleAt==1048000,"final thinking cycle exits without extra bubble");
-        foreach(string phase in new[]{"sleep","down","hold","hold_return","release","skate"})
+        foreach(string phase in new[]{"sleep","down","hold","hold_return","release","travel"})
         {
             m.Enter("automatic","think",6000,0);m.Enter(phase,"other",0,10);m.Tick(900000);
             check(!m.IsVisible,"bubble excluded from "+phase);

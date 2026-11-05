@@ -1,0 +1,19 @@
+{
+  "size": [
+    409,
+    498
+  ],
+  "frames": 8,
+  "durations_ms": [
+    120,
+    120,
+    120,
+    120,
+    120,
+    120,
+    120,
+    120
+  ],
+  "loop_ms": 960,
+  "role": "motion, expression, rhythm only; existing ArcPet defines outfit and drawing style"
+}

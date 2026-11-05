@@ -1,0 +1,47 @@
+{
+  "mode": "built-in image_gen; no API fallback",
+  "prompt_record_note": "Original verbatim prompts were unavailable after context continuation. The following is a reconstructed specification, not a verbatim tool-call transcript.",
+  "specification": {
+    "subject": "Complete Neco-Arc character, right-facing 45-degree three-quarter side view; closed eyes, protruding pout, hands behind back.",
+    "style": "Match reference/OIP-C.webp and user baseline: warm blonde angular bob, fine brown outlines, simple flat cel shading, white high-neck shirt, navy skirt, thick charcoal legs, chunky brown boots, gold tail.",
+    "motion": "Upright chest and neck over pelvis, relaxed short stride. Alternate near and far support; bend the free knee while passing, lift and roll heels, keep near limb foreground and far limb behind. Subtle hair, shirt hem, skirt and tail follow-through.",
+    "invariants": "Draw complete character in every pose. Same head shape, torso length, limb volume and viewing angle. Ample transparent gutters and no cropped ears, hair, tail or soles. No body-part compositing, pose warps, rotations or blended inbetweens."
+  },
+  "selected_sources": [
+    {
+      "file": "docs/upright-keys.png",
+      "role": "Four upright contact/passing keys, reference only",
+      "generated_file": "exec-b42982e1-f0c6-4ac1-83fd-213f4ea076c7.png"
+    },
+    {
+      "file": "sources/first-half.png",
+      "role": "16 whole-character first-half poses",
+      "generated_file": "exec-03cf6f69-d868-43eb-8300-87bb31441a20.png"
+    },
+    {
+      "file": "sources/second-half.png",
+      "role": "16 complementary whole-character poses matched to first-half proportions",
+      "generated_file": "exec-eac0520e-4b90-4a12-ab15-6bf86b696e04.png"
+    }
+  ],
+  "rejected": [
+    {
+      "candidate": "initial 32-pose full sheet",
+      "reason": "Depth and right-edge crop issues"
+    },
+    {
+      "candidate": "initial complementary half",
+      "reason": "Torso length mismatch"
+    },
+    {
+      "candidate": "six gap drawings",
+      "reason": "Pose and torso mismatch"
+    },
+    {
+      "candidate": "four revised gap drawings",
+      "reason": "Flattened head and head-height discontinuity; not used despite width checks"
+    }
+  ],
+  "selection": "30 distinct whole-character drawings. Source order in anime/animation.json; omit first-half pose2 and second-half pose1, reassign next-half poses13-15.",
+  "approval": "Visual approval pending; numerical checks do not certify anatomy or smoothness."
+}

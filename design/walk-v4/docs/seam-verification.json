@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-03",
+  "changed_frames": [
+    "000.png",
+    "001.png"
+  ],
+  "unchanged_frames": 28,
+  "frames": 30,
+  "duration_ms": 1200,
+  "neck_y_before_first_second_last": [
+    172,
+    173,
+    178
+  ],
+  "neck_y_after_first_second_last": [
+    175,
+    175,
+    178
+  ],
+  "first_last_neck_gap_before_px": 6,
+  "first_last_neck_gap_after_px": 3,
+  "seam_difference_before": 10.74197021484375,
+  "seam_difference_after": 5.9898583984375,
+  "processing": "Two built-in whole-character drawing edits, uniform full-figure scale and hip/boot alignment; no local code deformation or layered anatomy. Other28 PNGs byte-identical.",
+  "limitations": "Neck color centroid and pixel difference are diagnostics; visual loop approval pending.",
+  "first_last_top_gap_before_px": 12,
+  "first_last_top_gap_after_px": 1,
+  "first_last_top_y_after": [
+    62,
+    61
+  ]
+}

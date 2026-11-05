@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-02",
+  "mode": "built-in imagegen",
+  "references": [
+    {
+      "path": "reference/OIP-C.webp",
+      "role": "character design and line/color style"
+    },
+    {
+      "path": "anime/idle/000.png",
+      "role": "current pet costume, proportions and size"
+    },
+    {
+      "path": "design/walk-v1/reference/contact.png",
+      "role": "supplied GIF expression, gait and rhythm only"
+    }
+  ],
+  "selected": [
+    {
+      "source": "sources/walk-keys.png",
+      "prompt": "Create16frame walk-cycle sprite sheet, EXACT4columns4rows square canvas. Each cell fullbody small Neco-Arc, same scale; character occupies70%ofcellheight, EMPTY TRANSPARENT padding all4sides, entire boots/ears/tail visible. Existing ArcPet character fromreference1and2: thin muted brown anime outlines, angular warm blonde hair, white highneck long-sleeve shirt, navy skirt, charcoal tights, chunky darkbrown boots, golden cat tail, large head with consistent taller face. Reference3walking GIF contact for expression and gait ONLY, no pixelart no bluecoat no purple skirt. Closed horizontal relaxed eyes, little VERTICAL3-shaped pouting lips (not wcatmouth), arms clasped behindback. Nearfrontal slight3/4right, head nearly level, uprightbody. One full natural two-step walk IN PLACE, rowmajor. Poses0leftheel forwardcontact;1weightdown;2rightlegpassing bentknee;3rightknee forward;4rightheelcontact lefttoepush;5weightdownright;6leftlegpassesbent;7leftkneeup;8leftheelcontact;9weightdownleft;10rightlegpasses;11rightkneeup;12rightheelcontact;13weightdownright;14leftlegpasses;15leftheelapproachesinitialcontact. This is relaxed heel-to-toe walking, not highkicks/marching, nolegfusion. Boots alternate leading clearly. Body natural small weightbob, hair tips/skirt hem gently sway with delayed followthrough, supple tail. Headsize/limblengths same across all16; clothes actually flex. Flat clean golden/navy/white palette matches primary reference. No scene, shadows, text, grid lines or props. Transparent PNG, square4x4sheet. First/last adjacent for seamlessloop."
+    },
+    {
+      "source": "sources/walk-inbetweens.png",
+      "prompt": "Edit attached16pose walking sprite sheet by drawing16 INBETWEEN poses, same4columns4rows and scale, transparent. Each outputcell is halfway through the motion between inputcell i and inputcell i+1 (rowmajor, lastcell between final andfirst). Preserve EXACT character appearance, headskull size/angle, golden hair palette, thin lines, white highneck top, navy skirt, charcoal legs, brownboots, closed eyelids and small puckered lip outline. Arms remain clasped behindback, tailbehindleft. Draw slight intermediate hair and skirt followthrough too. Critical legwork: WALK naturally, bent free knee travels past planted leg then extends, alternate left/right leading leg across cycle; do not just reuse same stiff boots. Keep ground baseline and bodycenter fixed, small natural bob. Neighboring images must be veryclose matching drawings, not differently sized designs. All fullbody drawings have at least12px empty padding inside cells, including hairtop and bothbootsoles, no cropping on any imageedge, especiallylastrow. Exact4x4 square sheet16completeisolatedsprites, no text numbers grid scenery shadows props gradients, genuinealpha0 background."
+    }
+  ],
+  "discarded_trials": [
+    "Initial portrait sheet contained28 instead of32figures.",
+    "Landscape32-frame candidate touched canvas boundary at final soles; not used.",
+    "Reframing candidate shortened finalrow; not used."
+  ],
+  "method": "Actual drawn poses. Transparent extraction, uniform scale per source sheet, hip/ground translation. No rotations, warps, synthesized pose interpolation or reverse walking.",
+  "status": "Design preview only, pending visual approval."
+}

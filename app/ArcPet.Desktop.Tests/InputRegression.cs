@@ -29,7 +29,7 @@ internal sealed class SlowPreferences : IPreferencesStore
 internal sealed class FixedRandom : IRandomSource
 {
     public int Choice;
-    public int Next(int min,int max){return min==0 ? Choice : 60000;}
+    public int Next(int min,int max){return min==0 ? Choice%max : 60000;}
 }
 internal static class InputRegression
 {
@@ -87,7 +87,7 @@ internal static class InputRegression
         Call("RefreshTravelAvailability");
         var offset=type.GetField("diagnosticTimeOffset",BindingFlags.Instance|BindingFlags.NonPublic);
         offset.SetValue(window,(long)offset.GetValue(window)+60001);behavior.Tick(Now);Pump(80);
-        Check(behavior.Phase=="skate","eligible random selection starts actual sliding window");
+        Check(behavior.Phase=="travel","eligible random selection starts actual sliding window");
     }
     [STAThread]
     public static int Main(string[] args)
@@ -132,11 +132,23 @@ internal static class InputRegression
                         Check((string)type.GetField("gesture",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(window)=="drag","unlocked pointer-down starts the production drag adapter");
                         var start=(Point)type.GetField("initialPointer",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(window);
                         double oldLeft=window.Left,oldTop=window.Top;images=frameEvents;
-                        Call("UpdatePointerPosition",new Point(start.X+18,start.Y+12));Pump(650);
-                        Check(window.Left!=oldLeft && window.Top!=oldTop,"unlocked drag updates actual window layout");
-                        Check(frameEvents>images && behavior.Phase=="automatic","random frames advance while unlocked window moves");
+                        Call("UpdatePointerPosition",new Point(start.X+18,start.Y+12));
+                        Check(window.Left==oldLeft && window.Top==oldTop && behavior.Phase=="automatic","motion before the hold threshold leaves window position and playback intact");
+                        Pump(choice==0 ? 1400 : 650);
+                        Check(behavior.Phase==(choice==0 ? "drag_hold" : "drag_lift") && frameEvents>images,"unlocked long press plays lift and then loops the held artwork");
+                        Check(window.Left==oldLeft && window.Top==oldTop,"qualifying a hold rebases the pointer without snapping");
+                        Call("UpdatePointerPosition",new Point(start.X+46,start.Y+34));
+                        Check(Math.Abs(window.Left-oldLeft-28)<1 && Math.Abs(window.Top-oldTop-22)<1,"held pet follows pointer in both axes, delta "+(window.Left-oldLeft)+", "+(window.Top-oldTop));
+                        var artwork=(Window)type.GetField("rocketArtwork",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(window);
+                        Check(artwork.IsVisible && artwork.Width==window.Width*384/320 &&
+                            Math.Abs(artwork.Left-(window.Left-window.Width*32/320))<1 &&
+                            Math.Abs(artwork.Top-(window.Top-window.Width*64/320))<1,"expanded artwork follows pet with the approved anchor");
+                        double releaseX=window.Left,releaseY=window.Top;
                         MouseEvent(false,MouseButton.Left);
-                        Check(behavior.Phase=="automatic" && requests==before,"unlocked hold does not pause or preempt random action");
+                        Check(behavior.Phase=="drag_settle" || behavior.Phase=="drag_land","release from lift or hold transitions to landing");
+                        Pump(1380);
+                        Check(behavior.Phase=="idle" && !artwork.IsVisible && window.Left==releaseX && window.Top==releaseY,"landing finishes at the selected position");
+                        Automatic(choice,false);before=requests;
                         Click();Pump(70);Click();Check(behavior.Phase=="automatic" && behavior.CurrentClip.Id.StartsWith("dance",StringComparison.Ordinal) && requests==before+1,"unlocked double click preempts directly with dance");FinishDance();
                     }
                     else
@@ -187,8 +199,8 @@ internal static class InputRegression
                 object travel=type.GetField("travel",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(window);
                 double origin=(double)travel.GetType().GetProperty("OriginLeft").GetValue(travel,null),top=window.Top;
                 string firstDirection=behavior.CurrentClip.Id;bool turned=false,horizontal=true;var trip=Stopwatch.StartNew();
-                while(behavior.Phase=="skate" && trip.ElapsedMilliseconds<22000)
-                {Pump(40);horizontal &= Math.Abs(window.Top-top)<.001;if(behavior.Phase=="skate" && behavior.CurrentClip.Id!=firstDirection)turned=true;}
+                while(behavior.Phase=="travel" && trip.ElapsedMilliseconds<22000)
+                {Pump(40);horizontal &= Math.Abs(window.Top-top)<.001;if(behavior.Phase=="travel" && behavior.CurrentClip.Id!=firstDirection)turned=true;}
                 Check(behavior.Phase=="idle" && turned && horizontal && Math.Abs(window.Left-origin)<1,"actual short sliding window reverses and returns to its original horizontal position");
                 foreach(int choice in new[]{2,3,4})
                 {
@@ -229,7 +241,7 @@ internal static class InputRegression
                 long end=(long)typeof(PetBehaviorController).GetField("phaseStarted",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(behavior)+original.DurationMilliseconds;
                 var offset=type.GetField("diagnosticTimeOffset",BindingFlags.Instance|BindingFlags.NonPublic);
                 offset.SetValue(window,(long)offset.GetValue(window)+end-Now+1);Call("OnTick",null,EventArgs.Empty);
-                Check(behavior.IsSleeping && (string)type.GetField("renderedAction",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(window)=="sleep" && requests==before+1,"ordinary window switches directly to queued sleep after its configured complete loops");
+                Check(behavior.IsSleeping && (string)type.GetField("renderedAction",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(window)==behavior.CurrentClip.Id && requests==before+1,"ordinary window switches directly to selected sleep drawing after its configured complete loops");
             }
             foreach(MovementMode mode in new[]{MovementMode.Long,MovementMode.Short})
             {
@@ -239,10 +251,10 @@ internal static class InputRegression
                 typeof(PetBehaviorController).GetProperty("SleepEnabled").SetValue(behavior,true,null);
                 typeof(PetBehaviorController).GetProperty("LastInteraction").SetValue(behavior,Now-PetBehaviorController.InactivityMilliseconds+100,null);
                 string first=behavior.CurrentClip.Id;bool turned=false,horizontal=true;before=requests;
-                Pump(180);Check(behavior.Phase=="skate" && requests==before,"window travel is not stopped at the sleep deadline");
+                Pump(180);Check(behavior.Phase=="travel" && requests==before,"window travel is not stopped at the sleep deadline");
                 var trip=Stopwatch.StartNew();
-                while(behavior.Phase=="skate" && trip.ElapsedMilliseconds<24000)
-                {Pump(40);horizontal &= Math.Abs(window.Top-top)<.001;if(behavior.Phase=="skate" && behavior.CurrentClip.Id!=first)turned=true;}
+                while(behavior.Phase=="travel" && trip.ElapsedMilliseconds<24000)
+                {Pump(40);horizontal &= Math.Abs(window.Top-top)<.001;if(behavior.Phase=="travel" && behavior.CurrentClip.Id!=first)turned=true;}
                 Check(behavior.IsSleeping && (string)type.GetField("renderedAction",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(window)=="sleep" && horizontal,"completed actual travel enters sleep with constant horizontal height");
                 if(mode==MovementMode.Short)Check(turned && Math.Abs(window.Left-origin)<1,"queued sleep waits for the entire short return trip, not just its outward leg");
                 else Check(!turned && Math.Abs(window.Left-origin)>10,"queued sleep waits until long travel reaches its natural edge");

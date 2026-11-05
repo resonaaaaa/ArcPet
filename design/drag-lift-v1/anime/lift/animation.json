@@ -1,0 +1,145 @@
+{
+  "loop": false,
+  "frame_count": 18,
+  "duration_ms": 740,
+  "frames": [
+    {
+      "file": "000.png",
+      "duration_ms": 60,
+      "source_pose": "idle"
+    },
+    {
+      "file": "001.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-head",
+        0
+      ]
+    },
+    {
+      "file": "002.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-head",
+        1
+      ]
+    },
+    {
+      "file": "003.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-head",
+        2
+      ]
+    },
+    {
+      "file": "004.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-head",
+        3
+      ]
+    },
+    {
+      "file": "005.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-head",
+        4
+      ]
+    },
+    {
+      "file": "006.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-head",
+        5
+      ]
+    },
+    {
+      "file": "007.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-head",
+        6
+      ]
+    },
+    {
+      "file": "008.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-head",
+        7
+      ]
+    },
+    {
+      "file": "009.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-head",
+        8
+      ]
+    },
+    {
+      "file": "010.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-head",
+        9
+      ]
+    },
+    {
+      "file": "011.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-head",
+        10
+      ]
+    },
+    {
+      "file": "012.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-head",
+        11
+      ]
+    },
+    {
+      "file": "013.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-bridge-head",
+        0
+      ]
+    },
+    {
+      "file": "014.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-bridge-head",
+        1
+      ]
+    },
+    {
+      "file": "015.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-bridge-head",
+        2
+      ]
+    },
+    {
+      "file": "016.png",
+      "duration_ms": 40,
+      "source_pose": [
+        "lift-bridge-head",
+        3
+      ]
+    },
+    {
+      "file": "017.png",
+      "duration_ms": 40,
+      "source_pose": "anchor"
+    }
+  ]
+}

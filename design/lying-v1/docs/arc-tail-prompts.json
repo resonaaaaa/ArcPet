@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-02",
+  "mode": "built-in imagegen",
+  "input": "docs/tail-tip-edit-input.png",
+  "output": "sources/tail-arc-atlas.png",
+  "prompt": "Use case: precise-object-edit. Edit attached sprite sheet of20cat tails, exactly5columns4rows, transparent background. Change the SHAPE OF THE WHOLE LENGTH of each tail into a very gentle smooth single arc, like a softly bowed slender banana. Curvature is evenly distributed from the root all the way to the rounded tip. The centerline should bow to its RIGHT by approximately10percent of the root-to-tip length at midpoint, then smoothly meet the tip. This is a shallow open C curve, total tangent change around40degrees across the ENTIRE length. CRITICAL: the tip just ends smoothly along the same broad arc; NO hook, NO cane, NO curled end, NO questionmark, NO spiral, NO kink, NO concentrated end bend. Keep the source ROOT AND TIP locations and each tail's existing general lean as closely as possible, and preserve constant anatomical length/thickness and every gridcell. The source sheet records a broad left-to-right swing: preserve the progression across19poses; last20thcell repeats firstpose. All20arcs should keep the same gentle bowed character, barely flexing between neighboring poses; do not vary curve styles. Thin muted brown line, flat pale warm peach/gold fill, very faint narrow light tan underside only, matching source palette, no glow/gradient. Draw individually coherent intermediate poses. Keep generous alpha0 gaps between every tail, genuine transparentbackground, no text labels panels grid body props or castshadows. Do not draw rigid straight sticks; make the gradual curve visible along whole length, not just the terminal quarter.",
+  "selection": "5columns x4rows; first19 actual drawn poses used, final repeat not used. Reverse same group to complete36frames.",
+  "processing": "Extract alpha connected regions; scale entire individual drawings uniformly to stabilize anatomical length; align tail root; composite fixed body. No rotation, warp, blend or synthetic intermediate.",
+  "timing": "Preserve all36 durations from docs/pre-hook-layout.json;1600ms total.",
+  "replaces": "terminal hook design rejected by user"
+}

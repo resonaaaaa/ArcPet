@@ -1,0 +1,4 @@
+2026-11-03
+package_desktop_v0_16.py --verify-only
+PASS: current runtime, canonical assets and release checks match; no ZIP generated.
+Design only: walk-v4 is not integrated.

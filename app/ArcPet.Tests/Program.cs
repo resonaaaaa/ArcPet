@@ -44,11 +44,13 @@ internal static class Program
             SettingsTests.Run(args[0],args[1],Check);
             SaveQueueTests.Run(Check);
             TravelTests.Run(args[0],args[1],Check);
+            WalkTravelTests.Run(args[0],Check);
             StartupTests.Run(Check);
             SleepQueueTests.Run(args[0],Check);
             MoodTests.Run(args[0],Check);
             RocketTests.Run(args[0],Check);
             DanceTests.Run(args[0],Check);
+            LyingTests.Run(args[0],Check);
             Console.WriteLine("PASS: " + checks + " animation, behavior, layout and settings checks. Core uses no WPF assemblies."); return 0;
         }
         catch(Exception e) { Console.Error.WriteLine(e); return 1; }

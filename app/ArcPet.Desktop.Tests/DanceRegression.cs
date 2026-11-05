@@ -85,9 +85,10 @@ internal static class DanceRegression
                 else
                 {
                     Call("BeginPrimaryGesture",new Point(100,100),false);Pump(650);Call("EndGesture",false);
-                    Check(Object.ReferenceEquals(batch,pet.CurrentClip),"unlocked stationary long press does not interrupt dance");
+                    Check(pet.Phase=="drag_settle" || pet.Phase=="drag_land","unlocked stationary long press interrupts dance and releases into landing");
+                    Reset(false);Double();batch=pet.CurrentClip;
                     Call("BeginPrimaryGesture",new Point(100,100),false);Call("UpdatePointerPosition",new Point(125,115));Call("EndGesture",false);
-                    Check(Object.ReferenceEquals(batch,pet.CurrentClip),"unlocked drag preserves dance and cancels tap recognition");
+                    Check(Object.ReferenceEquals(batch,pet.CurrentClip),"pointer motion before the hold threshold preserves dance and cancels tap recognition");
                     Click();Check(Object.ReferenceEquals(batch,pet.CurrentClip),"click after drag cannot reuse the drag as a tap");
                     Call("BeginPrimaryGesture",new Point(100,100),true);Call("UpdatePointerPosition",new Point(100,90));Call("EndGesture",false);
                     Check(Object.ReferenceEquals(batch,pet.CurrentClip),"Ctrl resize preserves dance and clears double-click history");

@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference='Stop'
 $arcRoot=Split-Path -Parent $PSScriptRoot
 $arcStable=(Resolve-Path -LiteralPath (Join-Path $arcRoot 'dist/ArcPet-v0.9')).Path
-$arcStage=(Resolve-Path -LiteralPath (Join-Path $arcRoot 'dist/ArcPet-v0.14')).Path
+$arcStage=(Resolve-Path -LiteralPath (Join-Path $arcRoot 'dist/ArcPet-v0.18')).Path
 $arcExe=Join-Path $arcStable 'ArcPet.Preview.exe'
-$arcEvidence=Join-Path $arcRoot 'docs/desktop-v0.14-validation'
+$arcEvidence=Join-Path $arcRoot 'docs/desktop-v0.18-validation'
 $arcValidation=Get-Content -LiteralPath (Join-Path $arcEvidence 'validation.json') -Raw -Encoding UTF8 | ConvertFrom-Json
-if($arcValidation.core_checks -lt 624 -or $arcValidation.routed_window_checks -lt 138 -or $arcValidation.mood_window_checks -lt 19 -or $arcValidation.rocket_window_checks -lt 16 -or $arcValidation.dance_window_checks -lt 31){throw 'Patch checks are incomplete'}
+if($arcValidation.core_checks -lt 823 -or $arcValidation.routed_window_checks -lt 138 -or $arcValidation.mood_window_checks -lt 19 -or $arcValidation.rocket_window_checks -lt 16 -or $arcValidation.dance_window_checks -lt 31 -or $arcValidation.sleep_variant_window_checks -lt 54 -or $arcValidation.travel_window_checks -lt 136){throw 'Patch checks are incomplete'}
 foreach($arcHash in $arcValidation.binary_sha256.PSObject.Properties){
     if((Get-FileHash -LiteralPath (Join-Path $arcStage $arcHash.Name) -Algorithm SHA256).Hash -ne $arcHash.Value){throw 'Staged binary differs from verified release'}
 }
@@ -13,7 +13,7 @@ foreach($arcAssetHash in $arcValidation.runtime_asset_sha256.PSObject.Properties
     if((Get-FileHash -LiteralPath (Join-Path $arcStage ('assets/'+$arcAssetHash.Name)) -Algorithm SHA256).Hash -ne $arcAssetHash.Value){throw 'Staged mood asset differs from verified release'}
 }
 $arcFiles=@('ArcPet.Animation.dll','ArcPet.Behavior.dll','ArcPet.Settings.dll','ArcPet.Preview.exe','ArcPet.Preview.exe.config','使用说明.txt')
-$arcBackup=Join-Path $arcRoot 'app/.build/update-backup-v0.14'
+$arcBackup=Join-Path $arcRoot 'app/.build/update-backup-v0.18'
 New-Item -ItemType Directory -Path $arcBackup -Force | Out-Null
 foreach($arcName in $arcFiles){Copy-Item -LiteralPath (Join-Path $arcStable $arcName) -Destination $arcBackup -Force}
 Copy-Item -LiteralPath (Join-Path $arcStable 'assets') -Destination $arcBackup -Recurse -Force
@@ -44,7 +44,7 @@ foreach($arcProcess in $arcRunning){
         [uint32]$arcOwner=0;[void][ArcPetPatchWindows]::GetWindowThreadProcessId($arcHandle,[ref]$arcOwner)
         if($arcOwner -eq $arcProcessId){
             $arcTitle=[Text.StringBuilder]::new(256);[void][ArcPetPatchWindows]::GetWindowText($arcHandle,$arcTitle,256)
-            if($arcTitle.ToString().StartsWith('ArcPet ')){$arcWindows.Add($arcHandle)}
+            if($arcTitle.ToString().EndsWith('· 桌宠')){$arcWindows.Add($arcHandle)}
         }
         return $true
     }
@@ -85,7 +85,7 @@ if($null -ne $arcSavedPreferences){
 }
 $arcStartupAfter=Read-ArcStartup
 $arcHandoff=@{
-    version='0.14';stable_path=$arcExe;gracefully_closed_instances=$arcRunning.Count
+    version='0.18';stable_path=$arcExe;gracefully_closed_instances=$arcRunning.Count
     restarted=($null -ne $arcNewProcess);running_pid=if($arcNewProcess){$arcNewProcess.Id}else{$null}
     actual_file_version=[Diagnostics.FileVersionInfo]::GetVersionInfo($arcExe).FileVersion
     startup_registration_unchanged=($arcStartupBefore -eq $arcStartupAfter)

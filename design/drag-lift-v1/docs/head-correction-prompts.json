@@ -1,0 +1,21 @@
+{
+  "mode": "built-in imagegen",
+  "edits": {
+    "lift": {
+      "inputs": [
+        "design/drag-lift-v1/sources/lift.png",
+        "anime/idle/000.png"
+      ],
+      "prompt": "Edit image 1, a full-body transparent Neco-Arc animation atlas. Keep layout, each pose, collar stretch, arms, torso, boots and tail sizes and timing, costume, face expression and thin muted brown linework. Correct ONLY head-size inconsistency. Image 2 is the model reference for the large head and large oval white eyes. Increase the ENTIRE head (face, hair, ears, eyes, jaw together) by approximately 5 percent about the neck attachment; preserve each original angle and hair silhouette, head proportions, neck attachment, and red slit pupils. This is a subtle correction, not a new design. Every head must read the same size as its neighbor. Keep all complete figures separated with generous transparent margins, especially top hair and feet, no floor or background, no hook, no text. Exact 4 columns by 3 rows, twelve sprites. Prioritize the middle row (lift from ground to feet dangling); the heads there must not shrink. Preserve the progressing boots and lowering sleeves from image 1.",
+      "output": "lift-head.png"
+    },
+    "lift-bridge": {
+      "inputs": [
+        "design/drag-lift-v1/sources/lift-bridge.png",
+        "design/drag-lift-v1/anime/hold/000.png"
+      ],
+      "prompt": "Edit image 1, a full-body transparent Neco-Arc animation atlas. Keep layout, each pose, collar stretch, arms, torso, boots and tail sizes and timing, costume, face expression and thin muted brown linework. Correct ONLY head-size inconsistency. Image 2 is the model reference for the large head and large oval white eyes. Increase the ENTIRE head (face, hair, ears, eyes, jaw together) by approximately 5 percent about the neck attachment; preserve each original angle and hair silhouette, head proportions, neck attachment, and red slit pupils. This is a subtle correction, not a new design. Every head must read the same size as its neighbor. Keep all complete figures separated with generous transparent margins, especially top hair and feet, no floor or background, no hook, no text. Exactly 2 columns by 2 rows, four sprites. All four heads need the correction to join the suspended pose with no size pop.",
+      "output": "lift-bridge-head.png"
+    }
+  }
+}

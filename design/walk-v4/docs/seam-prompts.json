@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-03",
+  "mode": "built-in image_gen",
+  "intent": "precise-object-edit",
+  "prompts": [
+    {
+      "output": "sources/seam-000.png",
+      "generated_file": "exec-5a4e2dec-e761-491c-a340-77ae50798bb3.png",
+      "prompt": "Edit the FIRST image only: this existing 320x320 transparent Neco-Arc walking sprite is the exact target, not a redesign. Images2 and3 are adjacent chronological walking poses and define the correct resting head height and hair silhouette. Fix a tiny loop seam: in image1 the neck/face is about6 pixels too HIGH and the ahoge top about12 pixels too HIGH compared with image2. Redraw the upper body subtly so the closed eyes, pout, neck and head settle about5-6px LOWER, neck/collar near y177 and ahoge highest point near y60, smoothly matching image2's head proportions. Keep image1's EXACT gait pose and all leg/boot identities, near/far occlusion, skirt position, tail, hands behind back. Both boots and ground remain exactly where they are; do not globally translate or resize the character. Preserve the entire lower body from skirt down. Same head width and rounded skull shape, warm pale-golden angular bob, thin brown lines, simple white highneck top with simple gray cel shadow, navy skirt, chunky brown boots, thick charcoal legs. Retain image1's facing and facial features; change only the tiny neck/head-height excess, not clothing design or camera. Draw ONE complete edited sprite centered in the SAME320x320 framing with ample transparent padding. True RGBA transparent background, no floor, no text, no grid, no duplicates. The effect should be the same character at the next slight weight-settle point, not squash/stretch or lean. Do not broaden or flatten head.",
+      "inputs": [
+        "original anime/000.png, reproducible from sources/first-half.png pose0",
+        "anime/029.png",
+        "anime/002.png"
+      ]
+    },
+    {
+      "output": "sources/seam-001.png",
+      "generated_file": "exec-6141efb5-ba20-4843-89cc-54e2fa94e856.png",
+      "prompt": "Edit FIRST image only: exact existing Neco-Arc walking pose with lowered leading boot. Image2 is the newly corrected preceding pose; image3 is the following pose. These are the SAME character and style. Fix only the excess head/neck height in image1 so it joins image2 then image3 without a vertical jump. Use image2's EXACT skull height/width, same warm pale-golden bob, same ahoge height, same forehead and closed eyes and puckered lips. Neck and face should be about5px lower than first image; high ahoge about10px lower. Keep image1's existing stride: foreground mediumbrown boot pointing forward/right and slightlymorevertical than image2; darkbrown rearboot behind, same skirt and fixed ground. Preserve image1's lower body gait and ankle positions, foreground/far occlusion, tail, white simple highnecktop, navy skirt, thick charcoal legs and chunky brown boots. Do not change viewing angle, headsize, proportions, palette or fine brown lineweight. Simple existing celshading, no new fabric detail, no gloss or gradient. Redraw complete figure together with minor natural settling of shoulder and shirt. Head/face height should sit BETWEEN image2 and3 with at most1px difference, not taller. Do not globally translate figure; soles stay at current height. ONE complete edited fullbody sprite in exact320x320 framing, alpha transparent, ample clear padding. No text, floor or duplicates.",
+      "inputs": [
+        "original anime/001.png, reproducible from sources/first-half.png pose1",
+        "normalized first replacement at head_width143",
+        "anime/002.png"
+      ]
+    }
+  ],
+  "processing": "Complete-figure source drawings; alpha component extraction, uniform normalization to head widths145 and143px, hip x154 and boot ground292. Replace frames0 and1 only; preserve other28 frames and 40ms timing."
+}

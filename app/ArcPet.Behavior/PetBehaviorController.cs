@@ -15,6 +15,11 @@ namespace ArcPet.Behavior
         public AnimationClip Clip { get; private set; }
         public PlaybackRequestedEventArgs(AnimationClip clip) { Clip = clip; }
     }
+    public sealed class TravelRequestedEventArgs : EventArgs
+    {
+        public string Action {get;private set;}
+        public TravelRequestedEventArgs(string action){Action=action;}
+    }
     // Input/time in, playback requests out. No window, timer or image dependencies.
     public sealed class PetBehaviorController
     {
@@ -39,12 +44,16 @@ namespace ArcPet.Behavior
         private long lastShortRelease = -1;
         private double pressX, pressY, lastTapX, lastTapY;
         public event EventHandler<PlaybackRequestedEventArgs> PlaybackRequested;
-        public event EventHandler SkateRequested;
+        public event EventHandler<TravelRequestedEventArgs> TravelRequested;
         public event EventHandler RocketRequested;
         public bool IsRocket {get{return Phase!=null && Phase.StartsWith("rocket",StringComparison.Ordinal);}}
         private bool RocketAvailable {get{return clips.ContainsKey("rocket_charge") && clips.ContainsKey("rocket_hold") && clips.ContainsKey("rocket_launch") && clips.ContainsKey("rocket_flight") && clips.ContainsKey("rocket_land");}}
         public MovementMode TravelMode {get;private set;}
         public bool TravelAvailable {get;set;}
+        public string TravelAction {get;private set;}
+        public bool IsTraveling {get{return Phase=="travel";}}
+        public bool IsDragAnimation
+        { get { return Phase == "drag_lift" || Phase == "drag_hold" || Phase == "drag_settle" || Phase == "drag_land"; } }
         public string Phase { get; private set; }
         public bool IsLocked { get; private set; }
         public bool SleepEnabled { get; private set; }
@@ -81,19 +90,26 @@ namespace ArcPet.Behavior
         }
         private bool SleepDue(long now)
         { return SleepEnabled && now - LastInteraction >= InactivityMilliseconds; }
+        private void EnterSleep(long now)
+        {
+            // Both drawings share the same sleep state, wake inputs and deadline.
+            // Choose only on entry; never reroll during an active sleep session.
+            string id = clips.ContainsKey("lying") && random.Next(0, 3) == 0 ? "lying" : "sleep";
+            Play("sleep", clips[id], now);
+        }
         private void CompleteRandomAction(long now)
         {
             // Evaluate eligibility at completion, so activity or disabling sleep
             // cancels an outdated request. Never insert an idle/random clip first.
             if (SleepDue(now) && !busy && !pendingPress)
-                Play("sleep", clips["sleep"], now);
+                EnterSleep(now);
             else EnterIdle(now);
         }
         public bool Touch(long now)
         {
             LastInteraction = now;
             // Travel has its own any-input interruption rule. Ordinary animation does not.
-            if(Phase=="skate") {StopSkating(now);return true;}
+            if(IsTraveling) {StopTravel(now);return true;}
             // Ordinary activity updates inactivity only. Qualified gestures own preemption.
             if (!IsSleeping) return false;
             pressed = false; pendingPress = false; ClearTapHistory();
@@ -101,20 +117,24 @@ namespace ArcPet.Behavior
         }
         public void SetMovementMode(MovementMode value,long now)
         {Touch(now);TravelMode=Enum.IsDefined(typeof(MovementMode),value) ? value : MovementMode.Off;}
-        public void BeginSkating(int direction,long now)
+        private bool HasTravelAction(string action)
+        {return (action=="skateboard" || action=="walk") && clips.ContainsKey(action+"_left") && clips.ContainsKey(action+"_right");}
+        public void BeginTravel(string action,int direction,long now)
         {
-            if(IsLocked || TravelMode==MovementMode.Off || !TravelAvailable || busy || Phase!="idle")return;
-            pressed=pendingPress=false;ClearTapHistory();ChangeSkateDirection(direction,now);
+            if(IsLocked || TravelMode==MovementMode.Off || !TravelAvailable || busy || Phase!="idle" || !HasTravelAction(action))return;
+            TravelAction=action;
+            pressed=pendingPress=false;ClearTapHistory();ChangeTravelDirection(direction,now);
         }
-        public void ChangeSkateDirection(int direction,long now)
+        public void ChangeTravelDirection(int direction,long now)
         {
-            if(IsLocked || TravelMode==MovementMode.Off || busy || (Phase!="idle" && Phase!="skate"))return;
-            string id=direction>0 ? "skateboard_right" : "skateboard_left";
-            if(clips.ContainsKey(id))Play("skate",clips[id],now);
+            if(IsLocked || TravelMode==MovementMode.Off || busy || (Phase!="idle" && !IsTraveling) || !HasTravelAction(TravelAction))return;
+            string id=TravelAction+(direction>0 ? "_right" : "_left");
+            Play("travel",clips[id],now);
         }
-        public void StopSkating(long now)
+        public void StopTravel(long now)
         {
-            if(Phase!="skate")return;
+            if(!IsTraveling)return;
+            TravelAction=null;
             pressed=pendingPress=false;ClearTapHistory();CompleteRandomAction(now);
         }
         public void SetLocked(bool value, long now)
@@ -129,6 +149,41 @@ namespace ArcPet.Behavior
         {
             Touch(now); busy = value;
             if (!value && Phase == "idle") ScheduleAutomatic(now);
+        }
+        public bool BeginDragLift(long now)
+        {
+            if (IsLocked || (Phase != "idle" && Phase != "automatic") ||
+                !clips.ContainsKey("drag_lift") || !clips.ContainsKey("drag_hold") || !clips.ContainsKey("drag_land"))
+                return false;
+            CancelPress(now);
+            LastInteraction = now;
+            Play("drag_lift", clips["drag_lift"], now);
+            return true;
+        }
+        public void EndDragLift(long now, int displayedFrame)
+        {
+            LastInteraction = now;
+            if (Phase != "drag_lift" && Phase != "drag_hold") return;
+            AnimationClip source = CurrentClip;
+            int index = Math.Max(0, Math.Min(displayedFrame, source.Frames.Count - 1));
+            var frames = new List<AnimationFrame>();
+            if (Phase == "drag_lift")
+            {
+                for (int i = index; i < source.Frames.Count; i++)
+                    frames.Add(new AnimationFrame(source.Frames[i].AssetPath, 10));
+            }
+            else if (index <= source.Frames.Count / 2)
+            {
+                for (int i = index; i > 0; i--)
+                    frames.Add(new AnimationFrame(source.Frames[i].AssetPath, 16));
+            }
+            else
+            {
+                for (int i = index; i < source.Frames.Count; i++)
+                    frames.Add(new AnimationFrame(source.Frames[i].AssetPath, 16));
+            }
+            if (frames.Count == 0) Play("drag_land", clips["drag_land"], now);
+            else Play("drag_settle", new AnimationClip(source.Id, false, frames), now);
         }
         private void ClearTapHistory()
         { lastShortRelease = -1; secondTapCandidate = false; }
@@ -257,6 +312,14 @@ namespace ArcPet.Behavior
         {if(!IsRocket)return;pressed=pendingPress=false;ClearTapHistory();LastInteraction=now;EnterIdle(now);}
         public void Tick(long now)
         {
+            if (IsDragAnimation)
+            {
+                if (now - phaseStarted < phaseDuration) return;
+                if (Phase == "drag_lift") Play("drag_hold", clips["drag_hold"], now);
+                else if (Phase == "drag_settle") Play("drag_land", clips["drag_land"], now);
+                else if (Phase == "drag_land") CompleteRandomAction(now);
+                return;
+            }
             if (!pressed && lastShortRelease >= 0 && now - lastShortRelease > DoubleClickMilliseconds)
                 ClearTapHistory();
             if (IsLocked && pendingPress && pressed && now - pressStarted >= LongPressMilliseconds &&
@@ -280,8 +343,8 @@ namespace ArcPet.Behavior
                 return;
             }
             // The movement controller owns the entire trip, including its return
-            // leg. Bedtime cannot preempt it; StopSkating settles deferred sleep.
-            if(Phase=="skate")return;
+            // leg. Bedtime cannot preempt it; StopTravel settles deferred sleep.
+            if(IsTraveling)return;
             if (Phase == "down")
             {
                 if (now - phaseStarted >= phaseDuration)
@@ -308,19 +371,24 @@ namespace ArcPet.Behavior
                 return;
             }
             if (SleepDue(now))
-            { Play("sleep", clips["sleep"], now); return; }
+            { EnterSleep(now); return; }
             if (now >= NextAutomaticAt)
             {
                 var choices=new List<string>();
                 foreach(string action in new[]{"icecream","think","music","exercise"})
                     if(clips.ContainsKey(action))choices.Add(action);
-                if(!IsLocked && TravelMode!=MovementMode.Off && TravelAvailable && clips.ContainsKey("skateboard_left") && clips.ContainsKey("skateboard_right"))choices.Add("skate");
+                var travelActions=new List<string>();
+                foreach(string action in new[]{"skateboard","walk"})if(HasTravelAction(action))travelActions.Add(action);
+                if(!IsLocked && TravelMode!=MovementMode.Off && TravelAvailable && travelActions.Count>0)choices.Add("travel");
                 if(clips.ContainsKey("calling"))choices.Add("calling");
                 if(choices.Count==0){NextAutomaticAt=LastInteraction+InactivityMilliseconds;return;}
                 string id=choices[random.Next(0,choices.Count)];
-                if(id=="skate")
+                if(id=="travel")
                 {
-                    var handler=SkateRequested;if(handler!=null)handler(this,EventArgs.Empty);
+                    // One movement slot preserves its existing frequency. Roll the
+                    // artwork once per trip, never again when changing direction.
+                    string action=travelActions[random.Next(0,travelActions.Count)];
+                    var handler=TravelRequested;if(handler!=null)handler(this,new TravelRequestedEventArgs(action));
                     if(Phase=="idle")ScheduleAutomatic(now);
                     return;
                 }

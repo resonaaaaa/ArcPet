@@ -23,11 +23,11 @@ namespace ArcPet.Desktop
             RenderOptions.SetBitmapScalingMode(artwork,BitmapScalingMode.HighQuality);Content=artwork;
             SourceInitialized+=delegate{IntPtr h=new WindowInteropHelper(this).Handle;SetWindowLong(h,-20,GetWindowLong(h,-20)|0x20|0x08000000|0x80);};
         }
-        internal void Render(BitmapSource frame)
+        internal void Render(BitmapSource frame, int offsetX = 0, int offsetY = 0)
         {
             if(frame==null || !pet.IsVisible){if(IsVisible)Hide();return;}
             if(Owner==null)Owner=pet;
-            double scale=pet.Width/320.0;Left=pet.Left;Top=pet.Top;Width=frame.PixelWidth*scale;Height=frame.PixelHeight*scale;Topmost=pet.Topmost;
+            double scale=pet.Width/320.0;Left=pet.Left+offsetX*scale;Top=pet.Top+offsetY*scale;Width=frame.PixelWidth*scale;Height=frame.PixelHeight*scale;Topmost=pet.Topmost;
             artwork.Source=frame;if(!IsVisible)Show();
         }
     }

@@ -1,0 +1,2 @@
+PASS: 823 animation, behavior, layout and settings checks. Core uses no WPF assemblies.
+Built: E:\projects\ArcPet\dist\ArcPet-v0.18\ArcPet.Preview.exe

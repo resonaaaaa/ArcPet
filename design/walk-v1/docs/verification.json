@@ -1,0 +1,1194 @@
+{
+  "frame_count": 32,
+  "drawn_poses": 32,
+  "loop_ms": 1920,
+  "base_uniform_scale": 0.8,
+  "ground_y": 292,
+  "size_method": "Median hair width approximately160px; one uniform size correction for entire second sheet",
+  "sheet_scale_units": {
+    "key": 1.0,
+    "between": 0.9770491803278688
+  },
+  "source_crop_audit": {
+    "key": [
+      {
+        "key": 0,
+        "source_bounds": [
+          65,
+          9,
+          268,
+          304
+        ],
+        "crop": [
+          62,
+          6,
+          271,
+          307
+        ],
+        "accepted": true
+      },
+      {
+        "key": 1,
+        "source_bounds": [
+          375,
+          9,
+          572,
+          303
+        ],
+        "crop": [
+          372,
+          6,
+          575,
+          306
+        ],
+        "accepted": true
+      },
+      {
+        "key": 2,
+        "source_bounds": [
+          690,
+          7,
+          887,
+          305
+        ],
+        "crop": [
+          687,
+          4,
+          890,
+          308
+        ],
+        "accepted": true
+      },
+      {
+        "key": 3,
+        "source_bounds": [
+          998,
+          4,
+          1203,
+          306
+        ],
+        "crop": [
+          995,
+          1,
+          1206,
+          309
+        ],
+        "accepted": true
+      },
+      {
+        "key": 4,
+        "source_bounds": [
+          68,
+          319,
+          274,
+          616
+        ],
+        "crop": [
+          65,
+          316,
+          277,
+          619
+        ],
+        "accepted": true
+      },
+      {
+        "key": 5,
+        "source_bounds": [
+          368,
+          317,
+          575,
+          616
+        ],
+        "crop": [
+          365,
+          314,
+          578,
+          619
+        ],
+        "accepted": true
+      },
+      {
+        "key": 6,
+        "source_bounds": [
+          685,
+          317,
+          898,
+          618
+        ],
+        "crop": [
+          682,
+          314,
+          901,
+          621
+        ],
+        "accepted": true
+      },
+      {
+        "key": 7,
+        "source_bounds": [
+          1003,
+          322,
+          1205,
+          617
+        ],
+        "crop": [
+          1000,
+          319,
+          1208,
+          620
+        ],
+        "accepted": true
+      },
+      {
+        "key": 8,
+        "source_bounds": [
+          57,
+          633,
+          270,
+          929
+        ],
+        "crop": [
+          54,
+          630,
+          273,
+          932
+        ],
+        "accepted": true
+      },
+      {
+        "key": 9,
+        "source_bounds": [
+          372,
+          632,
+          579,
+          930
+        ],
+        "crop": [
+          369,
+          629,
+          582,
+          933
+        ],
+        "accepted": true
+      },
+      {
+        "key": 10,
+        "source_bounds": [
+          687,
+          634,
+          893,
+          929
+        ],
+        "crop": [
+          684,
+          631,
+          896,
+          932
+        ],
+        "accepted": true
+      },
+      {
+        "key": 11,
+        "source_bounds": [
+          992,
+          634,
+          1199,
+          929
+        ],
+        "crop": [
+          989,
+          631,
+          1202,
+          932
+        ],
+        "accepted": true
+      },
+      {
+        "key": 12,
+        "source_bounds": [
+          67,
+          941,
+          276,
+          1242
+        ],
+        "crop": [
+          64,
+          938,
+          279,
+          1245
+        ],
+        "accepted": true
+      },
+      {
+        "key": 13,
+        "source_bounds": [
+          374,
+          940,
+          580,
+          1241
+        ],
+        "crop": [
+          371,
+          937,
+          583,
+          1244
+        ],
+        "accepted": true
+      },
+      {
+        "key": 14,
+        "source_bounds": [
+          687,
+          943,
+          899,
+          1241
+        ],
+        "crop": [
+          684,
+          940,
+          902,
+          1244
+        ],
+        "accepted": true
+      },
+      {
+        "key": 15,
+        "source_bounds": [
+          998,
+          943,
+          1205,
+          1241
+        ],
+        "crop": [
+          995,
+          940,
+          1208,
+          1244
+        ],
+        "accepted": true
+      }
+    ],
+    "between": [
+      {
+        "key": 0,
+        "source_bounds": [
+          67,
+          7,
+          271,
+          313
+        ],
+        "crop": [
+          64,
+          4,
+          274,
+          316
+        ],
+        "accepted": true
+      },
+      {
+        "key": 1,
+        "source_bounds": [
+          381,
+          7,
+          584,
+          313
+        ],
+        "crop": [
+          378,
+          4,
+          587,
+          316
+        ],
+        "accepted": true
+      },
+      {
+        "key": 2,
+        "source_bounds": [
+          694,
+          7,
+          899,
+          313
+        ],
+        "crop": [
+          691,
+          4,
+          902,
+          316
+        ],
+        "accepted": true
+      },
+      {
+        "key": 3,
+        "source_bounds": [
+          1007,
+          8,
+          1213,
+          313
+        ],
+        "crop": [
+          1004,
+          5,
+          1216,
+          316
+        ],
+        "accepted": true
+      },
+      {
+        "key": 4,
+        "source_bounds": [
+          65,
+          320,
+          275,
+          623
+        ],
+        "crop": [
+          62,
+          317,
+          278,
+          626
+        ],
+        "accepted": true
+      },
+      {
+        "key": 5,
+        "source_bounds": [
+          381,
+          319,
+          587,
+          622
+        ],
+        "crop": [
+          378,
+          316,
+          590,
+          625
+        ],
+        "accepted": true
+      },
+      {
+        "key": 6,
+        "source_bounds": [
+          694,
+          319,
+          900,
+          623
+        ],
+        "crop": [
+          691,
+          316,
+          903,
+          626
+        ],
+        "accepted": true
+      },
+      {
+        "key": 7,
+        "source_bounds": [
+          1006,
+          319,
+          1213,
+          623
+        ],
+        "crop": [
+          1003,
+          316,
+          1216,
+          626
+        ],
+        "accepted": true
+      },
+      {
+        "key": 8,
+        "source_bounds": [
+          61,
+          630,
+          274,
+          936
+        ],
+        "crop": [
+          58,
+          627,
+          277,
+          939
+        ],
+        "accepted": true
+      },
+      {
+        "key": 9,
+        "source_bounds": [
+          375,
+          630,
+          586,
+          936
+        ],
+        "crop": [
+          372,
+          627,
+          589,
+          939
+        ],
+        "accepted": true
+      },
+      {
+        "key": 10,
+        "source_bounds": [
+          691,
+          630,
+          900,
+          938
+        ],
+        "crop": [
+          688,
+          627,
+          903,
+          941
+        ],
+        "accepted": true
+      },
+      {
+        "key": 11,
+        "source_bounds": [
+          1005,
+          630,
+          1213,
+          936
+        ],
+        "crop": [
+          1002,
+          627,
+          1216,
+          939
+        ],
+        "accepted": true
+      },
+      {
+        "key": 12,
+        "source_bounds": [
+          67,
+          943,
+          275,
+          1245
+        ],
+        "crop": [
+          64,
+          940,
+          278,
+          1248
+        ],
+        "accepted": true
+      },
+      {
+        "key": 13,
+        "source_bounds": [
+          379,
+          944,
+          588,
+          1243
+        ],
+        "crop": [
+          376,
+          941,
+          591,
+          1246
+        ],
+        "accepted": true
+      },
+      {
+        "key": 14,
+        "source_bounds": [
+          692,
+          942,
+          904,
+          1247
+        ],
+        "crop": [
+          689,
+          939,
+          907,
+          1250
+        ],
+        "accepted": true
+      },
+      {
+        "key": 15,
+        "source_bounds": [
+          1008,
+          944,
+          1214,
+          1247
+        ],
+        "crop": [
+          1005,
+          941,
+          1217,
+          1250
+        ],
+        "accepted": true
+      }
+    ]
+  },
+  "source_metrics": [
+    {
+      "sheet": "key",
+      "pose": 0,
+      "bounds": [
+        3,
+        3,
+        206,
+        298
+      ],
+      "height": 295,
+      "hip_x": 116.54483761512361,
+      "hair_width": 195
+    },
+    {
+      "sheet": "between",
+      "pose": 0,
+      "bounds": [
+        3,
+        3,
+        207,
+        309
+      ],
+      "height": 306,
+      "hip_x": 120.71917148362235,
+      "hair_width": 199
+    },
+    {
+      "sheet": "key",
+      "pose": 1,
+      "bounds": [
+        3,
+        3,
+        200,
+        297
+      ],
+      "height": 294,
+      "hip_x": 116.76614310645724,
+      "hair_width": 189
+    },
+    {
+      "sheet": "between",
+      "pose": 1,
+      "bounds": [
+        3,
+        3,
+        206,
+        309
+      ],
+      "height": 306,
+      "hip_x": 119.01693227091633,
+      "hair_width": 198
+    },
+    {
+      "sheet": "key",
+      "pose": 2,
+      "bounds": [
+        3,
+        3,
+        200,
+        301
+      ],
+      "height": 298,
+      "hip_x": 115.67837837837838,
+      "hair_width": 190
+    },
+    {
+      "sheet": "between",
+      "pose": 2,
+      "bounds": [
+        3,
+        3,
+        208,
+        309
+      ],
+      "height": 306,
+      "hip_x": 120.11821705426357,
+      "hair_width": 199
+    },
+    {
+      "sheet": "key",
+      "pose": 3,
+      "bounds": [
+        3,
+        3,
+        208,
+        305
+      ],
+      "height": 302,
+      "hip_x": 114.93094883258817,
+      "hair_width": 198
+    },
+    {
+      "sheet": "between",
+      "pose": 3,
+      "bounds": [
+        3,
+        3,
+        209,
+        308
+      ],
+      "height": 305,
+      "hip_x": 118.56493178372915,
+      "hair_width": 200
+    },
+    {
+      "sheet": "key",
+      "pose": 4,
+      "bounds": [
+        3,
+        3,
+        209,
+        300
+      ],
+      "height": 297,
+      "hip_x": 119.52319201995013,
+      "hair_width": 200
+    },
+    {
+      "sheet": "between",
+      "pose": 4,
+      "bounds": [
+        3,
+        3,
+        213,
+        306
+      ],
+      "height": 303,
+      "hip_x": 124.63373253493015,
+      "hair_width": 205
+    },
+    {
+      "sheet": "key",
+      "pose": 5,
+      "bounds": [
+        3,
+        3,
+        210,
+        302
+      ],
+      "height": 299,
+      "hip_x": 120.10436634717784,
+      "hair_width": 198
+    },
+    {
+      "sheet": "between",
+      "pose": 5,
+      "bounds": [
+        3,
+        3,
+        209,
+        306
+      ],
+      "height": 303,
+      "hip_x": 118.02317380352645,
+      "hair_width": 200
+    },
+    {
+      "sheet": "key",
+      "pose": 6,
+      "bounds": [
+        3,
+        3,
+        216,
+        304
+      ],
+      "height": 301,
+      "hip_x": 116.84726522187823,
+      "hair_width": 204
+    },
+    {
+      "sheet": "between",
+      "pose": 6,
+      "bounds": [
+        3,
+        3,
+        209,
+        307
+      ],
+      "height": 304,
+      "hip_x": 115.87282708142726,
+      "hair_width": 201
+    },
+    {
+      "sheet": "key",
+      "pose": 7,
+      "bounds": [
+        3,
+        3,
+        205,
+        298
+      ],
+      "height": 295,
+      "hip_x": 116.5546218487395,
+      "hair_width": 195
+    },
+    {
+      "sheet": "between",
+      "pose": 7,
+      "bounds": [
+        3,
+        3,
+        210,
+        307
+      ],
+      "height": 304,
+      "hip_x": 120.9197562214322,
+      "hair_width": 202
+    },
+    {
+      "sheet": "key",
+      "pose": 8,
+      "bounds": [
+        3,
+        3,
+        216,
+        299
+      ],
+      "height": 296,
+      "hip_x": 126.23514972999509,
+      "hair_width": 206
+    },
+    {
+      "sheet": "between",
+      "pose": 8,
+      "bounds": [
+        3,
+        3,
+        216,
+        309
+      ],
+      "height": 306,
+      "hip_x": 124.30522088353413,
+      "hair_width": 208
+    },
+    {
+      "sheet": "key",
+      "pose": 9,
+      "bounds": [
+        3,
+        3,
+        210,
+        301
+      ],
+      "height": 298,
+      "hip_x": 121.18128938439166,
+      "hair_width": 199
+    },
+    {
+      "sheet": "between",
+      "pose": 9,
+      "bounds": [
+        3,
+        3,
+        214,
+        309
+      ],
+      "height": 306,
+      "hip_x": 125.43509127789046,
+      "hair_width": 204
+    },
+    {
+      "sheet": "key",
+      "pose": 10,
+      "bounds": [
+        3,
+        3,
+        209,
+        298
+      ],
+      "height": 295,
+      "hip_x": 118.66168623265742,
+      "hair_width": 200
+    },
+    {
+      "sheet": "between",
+      "pose": 10,
+      "bounds": [
+        3,
+        3,
+        212,
+        311
+      ],
+      "height": 308,
+      "hip_x": 122.30326295585412,
+      "hair_width": 202
+    },
+    {
+      "sheet": "key",
+      "pose": 11,
+      "bounds": [
+        3,
+        3,
+        210,
+        298
+      ],
+      "height": 295,
+      "hip_x": 118.79483037156704,
+      "hair_width": 200
+    },
+    {
+      "sheet": "between",
+      "pose": 11,
+      "bounds": [
+        3,
+        3,
+        211,
+        309
+      ],
+      "height": 306,
+      "hip_x": 119.02345741968384,
+      "hair_width": 202
+    },
+    {
+      "sheet": "key",
+      "pose": 12,
+      "bounds": [
+        3,
+        3,
+        212,
+        304
+      ],
+      "height": 301,
+      "hip_x": 119.91103865859338,
+      "hair_width": 202
+    },
+    {
+      "sheet": "between",
+      "pose": 12,
+      "bounds": [
+        3,
+        3,
+        211,
+        305
+      ],
+      "height": 302,
+      "hip_x": 121.7950780880265,
+      "hair_width": 203
+    },
+    {
+      "sheet": "key",
+      "pose": 13,
+      "bounds": [
+        3,
+        3,
+        209,
+        304
+      ],
+      "height": 301,
+      "hip_x": 122.64779220779221,
+      "hair_width": 200
+    },
+    {
+      "sheet": "between",
+      "pose": 13,
+      "bounds": [
+        3,
+        3,
+        212,
+        302
+      ],
+      "height": 299,
+      "hip_x": 124.44693281402142,
+      "hair_width": 203
+    },
+    {
+      "sheet": "key",
+      "pose": 14,
+      "bounds": [
+        3,
+        3,
+        215,
+        301
+      ],
+      "height": 298,
+      "hip_x": 119.03711886875828,
+      "hair_width": 204
+    },
+    {
+      "sheet": "between",
+      "pose": 14,
+      "bounds": [
+        3,
+        3,
+        215,
+        308
+      ],
+      "height": 305,
+      "hip_x": 121.87004103967168,
+      "hair_width": 206
+    },
+    {
+      "sheet": "key",
+      "pose": 15,
+      "bounds": [
+        3,
+        3,
+        210,
+        301
+      ],
+      "height": 298,
+      "hip_x": 123.92156862745098,
+      "hair_width": 199
+    },
+    {
+      "sheet": "between",
+      "pose": 15,
+      "bounds": [
+        3,
+        3,
+        209,
+        306
+      ],
+      "height": 303,
+      "hip_x": 119.52044609665427,
+      "hair_width": 200
+    }
+  ],
+  "pose_bounds": [
+    [
+      44,
+      53,
+      210,
+      294
+    ],
+    [
+      43,
+      50,
+      207,
+      294
+    ],
+    [
+      44,
+      55,
+      205,
+      295
+    ],
+    [
+      45,
+      50,
+      207,
+      294
+    ],
+    [
+      45,
+      52,
+      205,
+      295
+    ],
+    [
+      43,
+      50,
+      208,
+      294
+    ],
+    [
+      45,
+      49,
+      213,
+      295
+    ],
+    [
+      45,
+      51,
+      210,
+      294
+    ],
+    [
+      42,
+      53,
+      211,
+      295
+    ],
+    [
+      40,
+      52,
+      209,
+      294
+    ],
+    [
+      41,
+      51,
+      210,
+      295
+    ],
+    [
+      45,
+      52,
+      210,
+      294
+    ],
+    [
+      44,
+      48,
+      219,
+      294
+    ],
+    [
+      47,
+      52,
+      212,
+      294
+    ],
+    [
+      44,
+      54,
+      210,
+      295
+    ],
+    [
+      42,
+      53,
+      207,
+      295
+    ],
+    [
+      37,
+      52,
+      211,
+      294
+    ],
+    [
+      40,
+      51,
+      211,
+      295
+    ],
+    [
+      41,
+      52,
+      210,
+      295
+    ],
+    [
+      39,
+      50,
+      208,
+      294
+    ],
+    [
+      43,
+      53,
+      212,
+      294
+    ],
+    [
+      41,
+      49,
+      209,
+      294
+    ],
+    [
+      43,
+      53,
+      211,
+      294
+    ],
+    [
+      44,
+      50,
+      210,
+      294
+    ],
+    [
+      42,
+      48,
+      212,
+      294
+    ],
+    [
+      42,
+      54,
+      209,
+      295
+    ],
+    [
+      40,
+      49,
+      208,
+      295
+    ],
+    [
+      41,
+      56,
+      208,
+      294
+    ],
+    [
+      43,
+      52,
+      216,
+      295
+    ],
+    [
+      42,
+      52,
+      211,
+      295
+    ],
+    [
+      38,
+      51,
+      208,
+      294
+    ],
+    [
+      45,
+      53,
+      209,
+      295
+    ]
+  ],
+  "first_last_mean_rgba_difference": 7.676787109375,
+  "max_internal_mean_rgba_difference": 13.7841162109375,
+  "adjacent_mean_rgba_differences": [
+    9.37978515625,
+    11.842705078125,
+    12.30498779296875,
+    7.7617919921875,
+    7.63948974609375,
+    12.102451171875,
+    9.81009033203125,
+    13.7841162109375,
+    11.83937744140625,
+    9.47265869140625,
+    9.9859619140625,
+    10.85248779296875,
+    9.75533935546875,
+    8.02287353515625,
+    8.3591796875,
+    10.144599609375,
+    8.33642578125,
+    9.4623046875,
+    8.9501416015625,
+    9.116796875,
+    9.7496923828125,
+    8.64829345703125,
+    7.7901513671875,
+    8.448671875,
+    7.5683837890625,
+    8.65015869140625,
+    6.85832763671875,
+    11.2696875,
+    8.67139892578125,
+    7.43319091796875,
+    7.36427001953125,
+    7.676787109375
+  ],
+  "source_sha256": {
+    "walk-inbetweens.png": "abe20288eeb78345ff3cb970803b553343d24e1fcc63270feeef2212b900a255",
+    "walk-keys.png": "9bdc110c4fe1f4dd700e62198237cea36edffb1d2962363b91d0f3f4385be10e"
+  },
+  "runtime_integrated": false,
+  "reverse_playback": false,
+  "synthetic_interpolation": false,
+  "limitations": "Geometry checks cannot certify artistic quality or a physically correct gait; visual review pending.",
+  "gif": {
+    "decoded_frames": 32,
+    "duration_ms": 1920
+  },
+  "webp": {
+    "decoded_frames": 32,
+    "duration_ms": 1920
+  }
+}

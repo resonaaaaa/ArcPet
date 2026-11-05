@@ -1,0 +1,90 @@
+{
+  "scope": "Rejected walk v1 and unused v2 intermediate art only",
+  "removed": [
+    {
+      "path": "design/walk-v1/anime",
+      "bytes": 1909730.0
+    },
+    {
+      "path": "design/walk-v1/sources",
+      "bytes": 3285048.0
+    },
+    {
+      "path": "design/walk-v1/frames-contact.png",
+      "bytes": 713604
+    },
+    {
+      "path": "design/walk-v1/preview.gif",
+      "bytes": 748423
+    },
+    {
+      "path": "design/walk-v1/preview.webp",
+      "bytes": 1715330
+    },
+    {
+      "path": "design/walk-v1/size-comparison.png",
+      "bytes": 109730
+    },
+    {
+      "path": "design/walk-v2/sources/legs-contact.png",
+      "bytes": 1350651
+    },
+    {
+      "path": "design/walk-v2/sources/legs-passing.png",
+      "bytes": 1322188
+    },
+    {
+      "path": "design/walk-v2/sources/legs-between.png",
+      "bytes": 695424
+    },
+    {
+      "path": "design/walk-v2/docs/gait-key-input.png",
+      "bytes": 266092
+    },
+    {
+      "path": "design/walk-v2/docs/extraction.json",
+      "bytes": 4484
+    },
+    {
+      "path": "tools/build_walk_preview.py",
+      "bytes": 7839
+    },
+    {
+      "path": "tools/prepare_walk_v2.py",
+      "bytes": 1814
+    },
+    {
+      "path": "design/walk-v2/layers/leg-key-00.png",
+      "bytes": 34051
+    },
+    {
+      "path": "design/walk-v2/layers/leg-key-01.png",
+      "bytes": 29585
+    },
+    {
+      "path": "design/walk-v2/layers/leg-key-02.png",
+      "bytes": 27873
+    },
+    {
+      "path": "design/walk-v2/layers/leg-key-03.png",
+      "bytes": 35865
+    },
+    {
+      "path": "design/walk-v2/layers/leg-key-04.png",
+      "bytes": 33667
+    },
+    {
+      "path": "design/walk-v2/layers/leg-key-05.png",
+      "bytes": 29812
+    },
+    {
+      "path": "design/walk-v2/layers/leg-key-06.png",
+      "bytes": 30414
+    },
+    {
+      "path": "design/walk-v2/layers/leg-key-07.png",
+      "bytes": 35138
+    }
+  ],
+  "bytes_freed": 12386762.0
+}

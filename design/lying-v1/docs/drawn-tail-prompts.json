@@ -1,0 +1,34 @@
+{
+  "mode": "built-in imagegen",
+  "api_fallback": false,
+  "prompts": [
+    {
+      "source": "sources/tail-drawn-trial.png",
+      "prompt": "Draw EXACTLY32 DISTINCT hand-drawn cat tail animation frames on a transparent SPRITE SHEET,8columns x4rows, uniform cells, chronological reading order, one full seamless1.6second tail swish cycle. Reference1 is authoritative original Neco Arc flat cel STYLE and PALETTE only. No character/head/legs; ONLY tails. Warm light golden-tan tail matching reference, THIN muted brown outline, shadow only a VERY NARROW pale tan underside strip covering no more than10percent of tail area. NOT dark brown thick underside; no gradients, shine or texture. Every tail has same length/thickness and fixed ROOT at RIGHT side of cell, pointing LEFT. SAME root location and root tangent in all cells, small straight root section remains immobile. Tail is soft flexible, NOT a rigid J rotating: redraw centerline curve in EVERY frame, base nearly still, middle bows and unfolds, tip follows a few frames behind. Tip moves in a broad clear vertical ARC to LEFT of root: frame1 low-left extended gentle S, frame9 high-left raised with middle bending, frame17 lower-left on return with tip lag, frame25 near-low-left soft curl preparing next upswing; frame32 is a near-neighbor of frame1, not a different end pose. Full smooth cyclic figure-of-eight-like tip follow-through, visibly larger swish, flexible evolving S/J shapes, no kinks, no sudden shrink/length change, no alternating duplicate shapes, no rigid whole-tail rotation. Draw all32 actual intermediate curves, enough small differences for smooth playback. Tail root at upper-right/center-right has same orientation, root width same; only flexing distal tail changes. Each entire tail safely inside its cell with generous padding, no touching cells/borders. No words/numbers/grid/background/watermarks. Exact32 complete isolated tails in8x4 grid. Keep light original colors and minimal flat shadow consistent across entire sheet.",
+      "selected_indices": [
+        22
+      ]
+    },
+    {
+      "source": "sources/tail-drawn-atlas.png",
+      "prompt": "Production tail sprite animation, EXACT32 separate complete tail drawings arranged FOUR columns and EIGHT rows on a TALL canvas. Reference1 supplies the desired LIGHT flat colors (thin pale underside shadow only), not its inconsistent motion. Reference2 character style. Every tail extends LEFT from a FIXED root at RIGHT, same root tangent/width, same length. Draw a continuous FLEXIBLE swish, NOT rigid rotation. TOP FOUR ROWS (16frames) slowly bend from LOW-left tip to HIGH-left tip; BOTTOM FOUR ROWS(16frames) follow through and return from HIGH-left to LOW-left. Each row exactly4 distinct consecutive SMALL inbetweens; row1 tip at root height/gentle S; row2 tip slightly higher, midtail begins bow; row3 midtail bows higher and tip follows; row4 tip reaches highest with loose J curve; row5 tip near highest but midtail begins relaxing first; row6 tip comes down later while middle uncurls; row7 lower still, S curve; row8 returns low-left gentle S and near initial contour. Frame32 close neighbor of frame1. Tip travel vertical range about HALF the tail's length. This is a soft fleshy cat tail: middle flexes before tip, subtle delayed curl of tip, never angular kink, never whole straight shape rotating. Root section points horizontally left and doesn't move. All32 drawn poses must advance motion, no full row of repeated stationary tails. Warm light golden-tan flat fill, very thin PALE tan underside shade under10percent area, NO heavy brown band, NO gradient/texture. Thin muted brown outlines. Every tail fully contained in own cell with20percent padding left/right/top/bottom, no boundary crop, generous gaps. Actual transparent background, no labels/text/grid. FOUR COLUMNS EIGHT ROWS exactly32 tails, same drawing size in all cells, chronological order.",
+      "selected_indices": "0..31"
+    },
+    {
+      "source": "sources/tail-drawn-bridges.png",
+      "prompt": "Draw8 distinct cat tail animation INBETWEEN poses,4columns2rows, transparent background. Match EXACTLIGHT GOLD fill and thin pale underside shade of reference sheet. Only tails, same length/thickness, fixed ROOT at RIGHT with horizontal tangent, tail extends LEFT. Root at same per-cell location. Top row4tails: gentle soft S curve with rounded LEFT TIP slightly BELOW root by about15percent of total tail length. All4 are close neighbors but middle andtip curvature vary subtly, not identical duplicates. Bottom row4tails: soft S/J transitioning with LEFT TIP slightly ABOVE root by about10percent of total tail length. These fill small gaps between low and midraised phases in reference, NOT extreme raised poses. Every full tail individually drawn, subtle lagging flexible tip, NO rigid rotations. Fixed root tangent, same overall length, no gradients, no heavy dark brown shade. Very narrow pale tan shadow strip below10percent area, thin muted brown outline. 20percent clear padding in EACH cell, especially RIGHT root margin, fully contained cutouts no crop. No text/labels/grid. EXACT8tails4x2.",
+      "selected_indices": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "rotation": false,
+  "shape_warp": false,
+  "notes": "Each animation frame maps to a distinct actual drawn pose; only transparent extraction, uniform per-sheet scaling and root alignment are used."
+}

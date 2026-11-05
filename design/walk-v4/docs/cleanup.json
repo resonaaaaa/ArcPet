@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-03",
+  "reason": "Rejected v3 art and unused v4 gap drawings; preserve history text, references and current v4",
+  "items": [
+    {
+      "path": "design/walk-v3/anime",
+      "files": 33,
+      "bytes": 2091225
+    },
+    {
+      "path": "design/walk-v3/sources",
+      "files": 1,
+      "bytes": 1445717
+    },
+    {
+      "path": "design/walk-v3/preview.gif",
+      "files": 1,
+      "bytes": 804486
+    },
+    {
+      "path": "design/walk-v3/preview.webp",
+      "files": 1,
+      "bytes": 1856640
+    },
+    {
+      "path": "design/walk-v3/frames-contact.png",
+      "files": 1,
+      "bytes": 753750
+    },
+    {
+      "path": "design/walk-v3/gait-proof.png",
+      "files": 1,
+      "bytes": 135631
+    },
+    {
+      "path": "design/walk-v3/size-comparison.png",
+      "files": 1,
+      "bytes": 114208
+    },
+    {
+      "path": "design/walk-v3/docs/inbetween-guide.png",
+      "files": 1,
+      "bytes": 925704
+    },
+    {
+      "path": "tools/build_walk_v3.py",
+      "files": 1,
+      "bytes": 8672
+    },
+    {
+      "path": "design/walk-v4/sources/gaps.png",
+      "files": 1,
+      "bytes": 950070
+    },
+    {
+      "path": "design/walk-v4/docs/gap-pairs.png",
+      "files": 1,
+      "bytes": 673475
+    },
+    {
+      "path": "tools/prepare_walk_v4_gaps.py",
+      "files": 1,
+      "bytes": 943
+    }
+  ],
+  "bytes_freed": 9760521.0,
+  "protected": "Formal anime, app, dist, data, approved other designs unchanged"
+}
