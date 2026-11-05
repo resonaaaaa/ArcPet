@@ -53,7 +53,7 @@ python -B tools/package_desktop_v0_18.py --verify-only
 
 按需生成当前分发包：`python -B tools/package_desktop_v0_18.py`，默认从已安装目录打包到exports/ArcPet-v0.18.zip；可用--source指定已验证的构建目录。生成后按需要分发，不长期保存多个副本。构建验证后清理临时目录和app/.build。
 
-当前检查共1229项，包括823项核心和406项窗口回归。核对了拎起前的按住阈值、双轴拖动、扩展画布锚点、提前松手与悬挂松手落地。25段动画共891帧通过资产检查。[核心检查记录](docs/desktop-v0.18-validation/core-tests.txt) · [窗口检查](docs/desktop-v0.18-validation/routed-input.json)
+当前检查共1231项，包括823项核心和408项窗口回归。核对了拎起前的按住阈值、双轴拖动、扩展画布锚点、提前松手与悬挂松手落地。25段动画共891帧通过资产检查。[核心检查记录](docs/desktop-v0.18-validation/core-tests.txt) · [窗口检查](docs/desktop-v0.18-validation/routed-input.json)
 
 每次更新维护本README、[RAEDME记录](RAEDME.md)及[TODO](TODO.md)。
 
@@ -115,4 +115,4 @@ python -B tools/package_desktop_v0_18.py --verify-only
 
 ## 0.18 · 长按拎起与拖动
 
-解锁时按住猫姬左键满500毫秒即可拖动，松手后在选定位置落地。快速松手时会缩短剩余拎起动作，悬挂时松手会沿当前摆动返回落地起点。扩展画布按原角色比例绘制，给头顶离地动作留出空间。
+解锁时按住猫姬左键满500毫秒即可拎起。猫姬在拎起开始后的约240毫秒内把后领移到光标下，之后每帧都对准后领抓点。松手后在选定位置落地。快速松手时会缩短剩余拎起动作，悬挂时松手会沿当前摆动返回落地起点。扩展画布按原角色比例绘制，给头顶离地动作留出空间。

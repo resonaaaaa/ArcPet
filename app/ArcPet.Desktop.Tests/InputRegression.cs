@@ -128,18 +128,29 @@ internal static class InputRegression
                     {
                         // A routed event cannot change the physical Mouse.LeftButton state.
                         // Drive the production movement adapter without native capture here.
-                        Call("BeginPrimaryGesture",new Point(100,100),false);
+                        Call("BeginPrimaryGesture",new Point(window.Left+window.Width*.55,window.Top+window.Height*.68),false);
                         Check((string)type.GetField("gesture",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(window)=="drag","unlocked pointer-down starts the production drag adapter");
                         var start=(Point)type.GetField("initialPointer",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(window);
                         double oldLeft=window.Left,oldTop=window.Top;images=frameEvents;
                         Call("UpdatePointerPosition",new Point(start.X+18,start.Y+12));
                         Check(window.Left==oldLeft && window.Top==oldTop && behavior.Phase=="automatic","motion before the hold threshold leaves window position and playback intact");
-                        Pump(choice==0 ? 1400 : 650);
+                        Pump(choice==0 ? 1400 : 820);
                         Check(behavior.Phase==(choice==0 ? "drag_hold" : "drag_lift") && frameEvents>images,"unlocked long press plays lift and then loops the held artwork");
-                        Check(window.Left==oldLeft && window.Top==oldTop,"qualifying a hold rebases the pointer without snapping");
-                        Call("UpdatePointerPosition",new Point(start.X+46,start.Y+34));
-                        Check(Math.Abs(window.Left-oldLeft-28)<1 && Math.Abs(window.Top-oldTop-22)<1,"held pet follows pointer in both axes, delta "+(window.Left-oldLeft)+", "+(window.Top-oldTop));
                         var artwork=(Window)type.GetField("rocketArtwork",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(window);
+                        var anchors=(Point[])type.GetField(choice==0 ? "HoldCollar" : "LiftCollar",BindingFlags.Static|BindingFlags.NonPublic).GetValue(null);
+                        double scale=window.Width/320;
+                        Point collar=anchors[player.CurrentFrameIndex];
+                        Check(Math.Abs(artwork.Left+collar.X*scale-start.X-18)<1 &&
+                            Math.Abs(artwork.Top+collar.Y*scale-start.Y-12)<1,"stationary pointer catches the collar after lift alignment");
+                        double alignedLeft=window.Left,alignedTop=window.Top;
+                        Call("UpdatePointerPosition",new Point(start.X+46,start.Y+34));
+                        Check(Math.Abs(window.Left-alignedLeft-28)<1 && Math.Abs(window.Top-alignedTop-22)<1,"held collar follows pointer in both axes");
+                        int previousFrame=player.CurrentFrameIndex;
+                        Pump(110);
+                        collar=anchors[player.CurrentFrameIndex];
+                        Check(player.CurrentFrameIndex!=previousFrame &&
+                            Math.Abs(artwork.Left+collar.X*scale-start.X-46)<1 &&
+                            Math.Abs(artwork.Top+collar.Y*scale-start.Y-34)<1,"collar stays under stationary pointer across animation frames");
                         Check(artwork.IsVisible && artwork.Width==window.Width*384/320 &&
                             Math.Abs(artwork.Left-(window.Left-window.Width*32/320))<1 &&
                             Math.Abs(artwork.Top-(window.Top-window.Width*64/320))<1,"expanded artwork follows pet with the approved anchor");

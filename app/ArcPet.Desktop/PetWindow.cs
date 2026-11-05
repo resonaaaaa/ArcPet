@@ -18,6 +18,23 @@ namespace ArcPet.Desktop
 {
     internal sealed class PetWindow : Window
     {
+        private const int CollarAlignMilliseconds = 240;
+        // The visible collar tip in each approved 384 × 384 artwork frame.
+        private static readonly Point[] LiftCollar =
+        {
+            new Point(205,249), new Point(210,246), new Point(214,240), new Point(220,235),
+            new Point(220,230), new Point(222,217), new Point(222,210), new Point(224,195),
+            new Point(222,188), new Point(225,179), new Point(225,171), new Point(227,163),
+            new Point(227,158), new Point(225,163), new Point(224,162), new Point(223,161),
+            new Point(223,161), new Point(216,178)
+        };
+        private static readonly Point[] HoldCollar =
+        {
+            new Point(216,178), new Point(218,177), new Point(218,177), new Point(218,178),
+            new Point(216,179), new Point(213,178), new Point(215,179), new Point(217,178),
+            new Point(219,181), new Point(218,180), new Point(217,180), new Point(216,181),
+            new Point(217,179), new Point(216,179), new Point(216,178), new Point(217,178)
+        };
         private readonly IAnimationPlayer player;
         private readonly PetBehaviorController behavior;
         private readonly FrameCache cache;
@@ -243,15 +260,19 @@ namespace ArcPet.Desktop
         private void UpdatePointerPosition(Point current)
         {
             if(gesture!="resize" && gesture!="drag" && gesture!="lift")return;
-            TryBeginDragLift();
             latestPointer = current;
+            TryBeginDragLift();
             behavior.Touch(Now);
+            if (gesture == "lift")
+            {
+                UpdateLiftPosition(Now);
+                return;
+            }
             double dx=current.X-initialPointer.X,dy=current.Y-initialPointer.Y;
             if(!gestureMoved && dx*dx+dy*dy>PetBehaviorController.DoubleClickDistance*PetBehaviorController.DoubleClickDistance)
             {gestureMoved=true;behavior.CancelPress(Now);}
             if (gesture == "drag") return;
-            if (gesture == "resize") layout.ResizeFrom(initialScale, initialPointer.Y, current.Y, anchorX, anchorY);
-            else layout.MoveTo(initialLeft + current.X - initialPointer.X, initialTop + current.Y - initialPointer.Y);
+            layout.ResizeFrom(initialScale, initialPointer.Y, current.Y, anchorX, anchorY);
             ApplyLayout();
         }
         private void TryBeginDragLift()
@@ -259,12 +280,34 @@ namespace ArcPet.Desktop
             long now = Now;
             if (gesture != "drag" || now - gestureStarted < PetBehaviorController.LongPressMilliseconds ||
                 !behavior.BeginDragLift(now)) return;
-            // Keep the current pet position if the pointer moved before the hold qualified.
+            // Blend from the current grab offset so qualifying the hold does not teleport the pet.
             initialPointer = latestPointer;
+            gestureStarted = now;
             gesture = "lift";
         }
+        private void UpdateLiftPosition(long now)
+        {
+            if (gesture != "lift") return;
+            Point[] points = behavior.Phase == "drag_hold" ? HoldCollar : LiftCollar;
+            int frame = Math.Max(0, Math.Min(player.CurrentFrameIndex, points.Length - 1));
+            Point collar = points[frame];
+            double t = Math.Min(1, (now - gestureStarted) / (double)CollarAlignMilliseconds);
+            double blend = t * t * (3 - 2 * t);
+            double oldX = initialPointer.X - initialLeft;
+            double oldY = initialPointer.Y - initialTop;
+            double gripX = (collar.X - 32) * layout.Scale;
+            double gripY = (collar.Y - 64) * layout.Scale;
+            layout.MoveTo(latestPointer.X - (oldX + (gripX - oldX) * blend),
+                          latestPointer.Y - (oldY + (gripY - oldY) * blend));
+            ApplyLayout();
+        }
         private void OnPrimaryUp(object sender, MouseButtonEventArgs e)
-        { EndGesture(false); behavior.Touch(Now); e.Handled = true; }
+        {
+            if (gesture == "lift" && IsMouseCaptured) UpdatePointerPosition(PointerInScreenDips(e));
+            EndGesture(false);
+            behavior.Touch(Now);
+            e.Handled = true;
+        }
         private void EndGesture(bool cancelled)
         {
             if (!cancelled) TryBeginDragLift();
@@ -369,6 +412,7 @@ namespace ArcPet.Desktop
             UpdateFlight();
             mood.Controller.Tick(Now);mood.Render(Now);
             if (IsVisible) player.Update();
+            UpdateLiftPosition(Now);
             if(saveAfter>=0 && Now>=saveAfter)SavePreferences();
             string saveError=preferencesWriter.TakeError();
             if(saveError!=null)NotifySettingsIssue("设置未能保存，本次仍可继续使用。"+saveError);
