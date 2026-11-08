@@ -1,0 +1,195 @@
+{
+  "reading": {
+    "materials": {
+      "hair": {
+        "pixels": 5888,
+        "median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ]
+      },
+      "skin": {
+        "pixels": 1017,
+        "median_rgb": [
+          246.0,
+          222.0,
+          209.0
+        ]
+      },
+      "white": {
+        "pixels": 332,
+        "median_rgb": [
+          245.0,
+          242.0,
+          240.0
+        ]
+      },
+      "navy": {
+        "pixels": 565,
+        "median_rgb": [
+          89.0,
+          94.0,
+          112.0
+        ]
+      },
+      "boots": {
+        "pixels": 1320,
+        "median_rgb": [
+          107.0,
+          84.0,
+          77.0
+        ]
+      }
+    },
+    "geometry": {
+      "head_bbox_diagnostic": [
+        131,
+        76,
+        331,
+        260
+      ],
+      "head_width_diagnostic": 200,
+      "eye_center_y": 218.38831615120276,
+      "hair_patch_median_rgb": [
+        238.0,
+        193.0,
+        157.0
+      ],
+      "skin_components_diagnostic": [
+        {
+          "area": 438,
+          "bbox": [
+            156,
+            282,
+            186,
+            308
+          ],
+          "center": [
+            171.0,
+            295.0
+          ]
+        },
+        {
+          "area": 416,
+          "bbox": [
+            273,
+            282,
+            304,
+            309
+          ],
+          "center": [
+            288.5,
+            295.5
+          ]
+        },
+        {
+          "area": 320,
+          "bbox": [
+            299,
+            262,
+            316,
+            311
+          ],
+          "center": [
+            307.5,
+            286.5
+          ]
+        }
+      ]
+    }
+  },
+  "rejected_pause_v2": {
+    "materials": {
+      "hair": {
+        "pixels": 5718,
+        "median_rgb": [
+          251.0,
+          218.0,
+          178.0
+        ]
+      },
+      "skin": {
+        "pixels": 1275,
+        "median_rgb": [
+          255.0,
+          233.0,
+          213.0
+        ]
+      },
+      "white": {
+        "pixels": 1158,
+        "median_rgb": [
+          254.0,
+          253.0,
+          253.0
+        ]
+      },
+      "navy": {
+        "pixels": 311,
+        "median_rgb": [
+          36.0,
+          38.0,
+          53.0
+        ]
+      }
+    },
+    "geometry": {
+      "head_bbox_diagnostic": [
+        132,
+        69,
+        332,
+        247
+      ],
+      "head_width_diagnostic": 200,
+      "eye_center_y": 204.77155172413794,
+      "hair_patch_median_rgb": [
+        251.0,
+        218.0,
+        178.0
+      ],
+      "skin_components_diagnostic": [
+        {
+          "area": 745,
+          "bbox": [
+            301,
+            262,
+            320,
+            316
+          ],
+          "center": [
+            310.5,
+            289.0
+          ]
+        },
+        {
+          "area": 267,
+          "bbox": [
+            261,
+            305,
+            297,
+            323
+          ],
+          "center": [
+            279.0,
+            314.0
+          ]
+        },
+        {
+          "area": 261,
+          "bbox": [
+            262,
+            296,
+            295,
+            311
+          ],
+          "center": [
+            278.5,
+            303.5
+          ]
+        }
+      ]
+    }
+  },
+  "finding": "Pause v2 was mapped to model illustration instead of approved reading palette; skull and face raised too much, skirt darkened. New artwork must use reading as primary model."
+}

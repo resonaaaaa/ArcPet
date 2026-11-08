@@ -1,0 +1,34 @@
+{
+  "bytes": 4807954.0,
+  "files": [
+    {
+      "bytes": 1600460,
+      "path": "design/pomodoro-v3/sources/reading-breath.png"
+    },
+    {
+      "bytes": 1829611,
+      "path": "design/pomodoro-v3/sources/reading-page.png"
+    },
+    {
+      "bytes": 371960,
+      "path": "design/pomodoro-v3/docs/reading-calibration.png"
+    },
+    {
+      "bytes": 562557,
+      "path": "design/pomodoro-v3/docs/reading-calibration-all.png"
+    },
+    {
+      "bytes": 148003,
+      "path": "design/pomodoro-v3/docs/reading-test-0.png"
+    },
+    {
+      "bytes": 147962,
+      "path": "design/pomodoro-v3/docs/reading-test-1.png"
+    },
+    {
+      "bytes": 147401,
+      "path": "design/pomodoro-v3/docs/reading-test-15.png"
+    }
+  ],
+  "reason": "Unselected phase-by-phase reading candidates and temporary comparisons; unified source retained"
+}

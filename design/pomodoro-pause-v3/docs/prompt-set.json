@@ -1,0 +1,224 @@
+{
+  "mode": "built-in",
+  "reference": "design/pomodoro-reading-v3/anime/reading/000.png",
+  "status": "pending user visual review",
+  "prompts": [
+    {
+      "name": "close",
+      "prompt": "Use case: identity-preserve. Edit target image1 is the approved ArcPet reading animation frame repeated on a 4-column 2-row sprite template; image2 is the same approved frame at full size. Redraw an animation atlas with EXACTLY that character identity, palette, shape and scene coordinates. Eight chronologically ordered COMPLETE SCENES (left to right top then bottom), transparent background. Keep the original 4x2 cell layout and ample gutters. Every pose redraw the entire connected cat, never composite body parts. Keep the approved warm tan-gold hair with muted brown shadow, peach face, thin brown ink, oval wide eyes with red vertical pupils; head's complete silhouette including cowlick spans y76..260 and x133..331 in each 448 square. Eyes centered around y219. Same head width/height, neck, shoulder width, short thick legs, brown boots y365..424. Do not make head higher, flatter, or smaller. Maintain precise reference colors: NOT pale yellow, NOT whitewashed skin, NOT pure bright white shirt. Same simple white high-neck shirt, navy skirt. Draw subtle actual sleeve/chest breathing with no head bob. Props unchanged: wooden table y320..435, lamp left switched off, tiny white daisies right, stool below, tail visible right.\nAnimation: beginning of pause, cat seated BEHIND desk. Start matches the approved open-book reading pose exactly. Over eight closely spaced poses both round paws gradually close the green book by bringing covers together, then gently tip the CLOSED book forward toward tabletop. Frame1 book fully open same as reference. Frame2-4 progressively close covers, frame5 book nearly closed, frame6 closed upright, frame7 tilted forward halfway, frame8 almost flat just above tabletop. Do NOT shrink book; maintain physical size while foreshortening. Exactly two paws, natural connected white sleeves, fingers hold book during movement. Do not raise head or eyes yet; same reading gaze. No extra hands, no textured fills, no grain, no halo or painted checkerboard. Original reference is absolute color/proportion authority; no new stylization. Output 1792x896 or same 2:1 ratio."
+    },
+    {
+      "name": "chin",
+      "prompt": "Use case identity-preserve. Input1 approved reading original is ABSOLUTE authority for color, headshape and body proportions. Input2 complete scene end of closing book. Input3 repeats input2 in a 4-column 2-row template. Edit to produce 8 chronological COMPLETE SCENES, transparent background. Keep exact original palette warm muted gold [239,193,157], face peach [246,222,209], shirt offwhite [245,242,240], skirt muted navy [89,94,112], boots brown [107,84,77]. NOT pale lemon hair or white skin or black skirt. Same thin brown cel outlines, smooth clean solid fills. Keep the entire cat as one coherent drawing every pose, no bodypart assembly.\nContinue motion: closed green book finishes lowering to its ORIGINAL resting place centered x230 y312, width76,height22 on the tabletop. Frames1-2 both round paws gently set book down flat. Frame3 fingers release book, book remains stationary. Frame4 left paw (VIEWER LEFT) lifts above table. Frame5 paw halfway between book and left cheek. Frame6 paw near cheek, elbow lands on table. Frame7 paw touches cheek. Frame8 chin rests comfortably on viewer-left paw while viewer-right round paw stays on table right of book. EXACTLY two paws, sleeves attached. Cat seated behind desk. Subtle actual sleeve/chest changes with motion. Look up toward viewer naturally through eyes and a 2-3pixel chin lift, NOT by moving whole skull 15pixels. Skull top including cowlick y76, head width200, eyes centered y217..219 remain stable, same neck length, thick short legs and brown boots. Avoid suddenly smaller head, higher face, lengthened torso, changed costume. Match original white HIGH NECK not an open V-neck, no buttons or ribbing. Tail remains visible as a soft curve behind flowers. Table, lamp OFF, daisies and stool identical geometry and positions to original reference; no prop drift. Closed book stays fixed after frame2. Frame8 will be starting pose for chin-rest idle. 4x2 equal square cells same template, 2:1 atlas. No text, no extra props, no colorful outlines, no grain, no checkerboard."
+    },
+    {
+      "name": "chin-model",
+      "prompt": "Use case identity-preserve, precise-object-edit. EDIT ONLY THE POSE of the complete cat in this approved ArcPet reading scene. This is NOT a redesign. Keep this EXACT head shape, head position, golden hair silhouette, eye size and red pupils, face size, face position, ears, cowlick, proportions, palette and ink style. Keep camera, torso scale, seat, legs and brown boots unchanged. Retain muted gold hair and light peach skin and warm offwhite shirt. Keep cat seated behind the table. Pose change: the cat has CLOSED its book and placed it flat on the center tabletop (closed green book width76/448, y301..325/448). Its VIEWER LEFT paw now supports the lower left cheek, left elbow on tabletop; the VIEWER RIGHT paw rests on tabletop just right of book. EXACTLY two paws. Redraw whole coherent connected character, never detach or resize head/limbs. Keep skull in the original position: DO NOT raise, tilt, enlarge, shrink, flatten or lift the head. Gaze remains directed outward horizontally as in original. White simple high-neck shirt, not a Vneck, no decorative seams. Tail curves behind flowers on viewer right. Everything else remains exactly as original: desk, lamp OFF, daisies, chair. Clean cel fills no grain. Transparent background. Single complete scene with same framing and generous margins. Match original unchanged head closely, do not lift chin or stretch torso."
+    },
+    {
+      "name": "loop-a",
+      "prompt": "Use case identity-preserve. Input1 is the APPROVED READING original and absolute character style/palette authority. Input2 is the newly drawn whole-cat chin-rest model whose head and eyes align with the original; input3 is its 4x2 template. Create 8 COMPLETE WHOLE-CAT SCENES in that same 4-column 2-row atlas, chronological top row then bottom row. Maintain EXACT original scene size/camera/desk and model pose in each square cell. All cats seated behind desk, viewer-LEFT paw under cheek with elbow on desktop, viewer-RIGHT paw beside closed book. Exactly two connected paws and simple offwhite high-neck sleeves. Entire cat drawn coherently EACH frame, no detached or individually transformed parts.\nCritical identity invariants: head silhouette x132..330,y77..260 and eyes y218 on a448 canvas. NO upward head creep, no different eye shape, no flatter skull, no body growing/shrinking. No head bob. Maintain original warm muted gold [239,193,157], peach [246,222,209], warm offwhite [245,242,240], muted navy [89,94,112], brown boots [107,84,77], thin soft brown linework like approved reading. Never switch to pale yellow, whitewashed face, dark black skirt, saturated orange hair or heavy outlines. Clean painted fills, no grains/white speckles/colored background noise.\nReal subtle breathing: draw a1pixel rise/fall in upper chest and shoulder/sleeve folds, chin remains supported, elbow stationary. Tail is naturally curved and moves gently as described, drawn together with whole cat; no mechanical rotation. Lamp OFF, table, stool, daisies and CLOSED book stationary and IDENTICAL in size and position. Closed book at x192..268,y301..325 on448canvas. No book drift, no third hand, no chair/boots changing scale. Transparent background. Entire scene fits cell with unchanged margins;4x2 atlas at2:1 ratio.\nEight close inbetween poses, tail upper curved arc gently sweeps from neutral beside flowers toward viewer-left by16logical pixels over8poses, no shape twitch. Soft inhalation starts then settles. Eyes OPEN every frame."
+    },
+    {
+      "name": "loop-b",
+      "prompt": "Use case identity-preserve. Input1 is the APPROVED READING original and absolute character style/palette authority. Input2 is the newly drawn whole-cat chin-rest model whose head and eyes align with the original; input3 is its 4x2 template. Create 8 COMPLETE WHOLE-CAT SCENES in that same 4-column 2-row atlas, chronological top row then bottom row. Maintain EXACT original scene size/camera/desk and model pose in each square cell. All cats seated behind desk, viewer-LEFT paw under cheek with elbow on desktop, viewer-RIGHT paw beside closed book. Exactly two connected paws and simple offwhite high-neck sleeves. Entire cat drawn coherently EACH frame, no detached or individually transformed parts.\nCritical identity invariants: head silhouette x132..330,y77..260 and eyes y218 on a448 canvas. NO upward head creep, no different eye shape, no flatter skull, no body growing/shrinking. No head bob. Maintain original warm muted gold [239,193,157], peach [246,222,209], warm offwhite [245,242,240], muted navy [89,94,112], brown boots [107,84,77], thin soft brown linework like approved reading. Never switch to pale yellow, whitewashed face, dark black skirt, saturated orange hair or heavy outlines. Clean painted fills, no grains/white speckles/colored background noise.\nReal subtle breathing: draw a1pixel rise/fall in upper chest and shoulder/sleeve folds, chin remains supported, elbow stationary. Tail is naturally curved and moves gently as described, drawn together with whole cat; no mechanical rotation. Lamp OFF, table, stool, daisies and CLOSED book stationary and IDENTICAL in size and position. Closed book at x192..268,y301..325 on448canvas. No book drift, no third hand, no chair/boots changing scale. Transparent background. Entire scene fits cell with unchanged margins;4x2 atlas at2:1 ratio.\nEight close inbetween poses, tail upper curved arc gently returns from viewer-left16pixels to the model neutral position. No curl flips, continuous slow soft curve. Soft exhalation. Eyes OPEN every frame."
+    },
+    {
+      "name": "loop-c",
+      "prompt": "Use case identity-preserve. Input1 is the APPROVED READING original and absolute character style/palette authority. Input2 is the newly drawn whole-cat chin-rest model whose head and eyes align with the original; input3 is its 4x2 template. Create 8 COMPLETE WHOLE-CAT SCENES in that same 4-column 2-row atlas, chronological top row then bottom row. Maintain EXACT original scene size/camera/desk and model pose in each square cell. All cats seated behind desk, viewer-LEFT paw under cheek with elbow on desktop, viewer-RIGHT paw beside closed book. Exactly two connected paws and simple offwhite high-neck sleeves. Entire cat drawn coherently EACH frame, no detached or individually transformed parts.\nCritical identity invariants: head silhouette x132..330,y77..260 and eyes y218 on a448 canvas. NO upward head creep, no different eye shape, no flatter skull, no body growing/shrinking. No head bob. Maintain original warm muted gold [239,193,157], peach [246,222,209], warm offwhite [245,242,240], muted navy [89,94,112], brown boots [107,84,77], thin soft brown linework like approved reading. Never switch to pale yellow, whitewashed face, dark black skirt, saturated orange hair or heavy outlines. Clean painted fills, no grains/white speckles/colored background noise.\nReal subtle breathing: draw a1pixel rise/fall in upper chest and shoulder/sleeve folds, chin remains supported, elbow stationary. Tail is naturally curved and moves gently as described, drawn together with whole cat; no mechanical rotation. Lamp OFF, table, stool, daisies and CLOSED book stationary and IDENTICAL in size and position. Closed book at x192..268,y301..325 on448canvas. No book drift, no third hand, no chair/boots changing scale. Transparent background. Entire scene fits cell with unchanged margins;4x2 atlas at2:1 ratio.\nEight close inbetween poses, tail upper curved arc gently sweeps from model neutral toward viewer-RIGHT by20logical pixels over8poses, slightly extends beyond flowers. Same gentle curved shape, no twitch. Soft inhalation. Eyes OPEN every frame."
+    },
+    {
+      "name": "loop-d",
+      "prompt": "Use case identity-preserve. Input1 is the APPROVED READING original and absolute character style/palette authority. Input2 is the newly drawn whole-cat chin-rest model whose head and eyes align with the original; input3 is its 4x2 template. Create 8 COMPLETE WHOLE-CAT SCENES in that same 4-column 2-row atlas, chronological top row then bottom row. Maintain EXACT original scene size/camera/desk and model pose in each square cell. All cats seated behind desk, viewer-LEFT paw under cheek with elbow on desktop, viewer-RIGHT paw beside closed book. Exactly two connected paws and simple offwhite high-neck sleeves. Entire cat drawn coherently EACH frame, no detached or individually transformed parts.\nCritical identity invariants: head silhouette x132..330,y77..260 and eyes y218 on a448 canvas. NO upward head creep, no different eye shape, no flatter skull, no body growing/shrinking. No head bob. Maintain original warm muted gold [239,193,157], peach [246,222,209], warm offwhite [245,242,240], muted navy [89,94,112], brown boots [107,84,77], thin soft brown linework like approved reading. Never switch to pale yellow, whitewashed face, dark black skirt, saturated orange hair or heavy outlines. Clean painted fills, no grains/white speckles/colored background noise.\nReal subtle breathing: draw a1pixel rise/fall in upper chest and shoulder/sleeve folds, chin remains supported, elbow stationary. Tail is naturally curved and moves gently as described, drawn together with whole cat; no mechanical rotation. Lamp OFF, table, stool, daisies and CLOSED book stationary and IDENTICAL in size and position. Closed book at x192..268,y301..325 on448canvas. No book drift, no third hand, no chair/boots changing scale. Transparent background. Entire scene fits cell with unchanged margins;4x2 atlas at2:1 ratio.\nEight close inbetween poses, tail upper curved arc gently returns from viewer-RIGHT20pixels to model neutral, finish matching model exact. Soft exhalation. A single short blink: pose1-2 open, pose3 eyelids half-close, pose4 fully closed with two CLEAR fine dark curved eyelid lines on peach lids, pose5 half-open, pose6-8 open. No blank eye ovals, do not move skull or cowlick during blink."
+    },
+    {
+      "name": "chin-grid",
+      "prompt": "Edit target image1 is a precisely arranged 4-column 2-row atlas of identical full scenes. KEEP THIS EXACT GRID, same margins, same furniture coordinates and same cat head coordinates in all eight cells. The cat must stay the same overall size and head position as image1. Input2 is the approved original color/shape reference. Input3 shows intended final chin-rest arm pose; use ONLY its arm pose, retain image1 skull position and proportions. Output exactly4columns2rows,1792x896 or2:1ratio, transparent background.\nDraw WHOLE COMPLETE CAT each frame as coherent connected character with two paws, no assembly. Change only the gradual arm/book gesture: frame1 same as image1; frame2 book rests flat on table original x192..268,y301..325 per448cell; frame3 hands release book, still beside it; frame4 viewer-LEFT paw rises one third way toward cheek; frame5 half way; frame6 almost reaches cheek; frame7 contacts cheek; frame8 chin supported by left paw with elbow on desk, viewer-right paw rests beside book. Book and furniture stationary after2. No head raise/tilt/size change: keep head/cowlick top y76, eye center y218, face bottom260, same200pixel head width as approved scene. Keep short thick legs, skirt and boots matching original. Original muted gold, peach skin, warm offwhite highneck top, navy skirt/brown boots, thin soft brown ink. Not saturated orange/pale yellow, not a black skirt, not an open Vneck or patterned shirt. Subtle drawn shoulder/sleeve motion. Clean solid fills, no texture/grain/noise. LampOFF,daisies,desk,chair identical to image1 in allcells. Do not crop cowlick, don't enlarge top row scenes. This is a continuity edit of the template, NOT a new composition."
+    },
+    {
+      "name": "loop-a-clean",
+      "prompt": "Use case precise-object-edit / identity-preserve. This is an existing 4-column 2-row complete animation atlas. Preserve each cell's EXACT WHOLE CAT geometry, pose, head silhouette, eyes, tail shape, breathing variation, scale, position, colors and ink. DO NOT redesign or regenerate different proportions. Change ONE thing: REMOVE THE CLOSED GREEN BOOK from every scene, leaving the cat's naturally connected simple white high-neck shirt and lower sleeve visible behind the vacated area. Do not move either paw. The book is being exported as a separate fixed PROP and will be composited back at its original tabletop location. Maintain exactly2hands and cat as complete coherent drawing, no head/limb assembly. Preserve the desk surface under the removed book; no book remnants, no floating pages, no new prop. Everything else stays identical: chin on VIEWER-LEFT paw, right paw resting, hair and face position, natural curved tail, thick boots, desk, off lamp, daisies and chair. Keep precisely same4x2 grid/cell dimensions and margins, transparent background, no new outlines/background/texture/noise. Preserve blink state in each cell including half/closed eyelids if present. This is only book removal with small revealed garment reconstruction; not an animation redesign."
+    },
+    {
+      "name": "loop-b-clean",
+      "prompt": "Use case precise-object-edit / identity-preserve. This is an existing 4-column 2-row complete animation atlas. Preserve each cell's EXACT WHOLE CAT geometry, pose, head silhouette, eyes, tail shape, breathing variation, scale, position, colors and ink. DO NOT redesign or regenerate different proportions. Change ONE thing: REMOVE THE CLOSED GREEN BOOK from every scene, leaving the cat's naturally connected simple white high-neck shirt and lower sleeve visible behind the vacated area. Do not move either paw. The book is being exported as a separate fixed PROP and will be composited back at its original tabletop location. Maintain exactly2hands and cat as complete coherent drawing, no head/limb assembly. Preserve the desk surface under the removed book; no book remnants, no floating pages, no new prop. Everything else stays identical: chin on VIEWER-LEFT paw, right paw resting, hair and face position, natural curved tail, thick boots, desk, off lamp, daisies and chair. Keep precisely same4x2 grid/cell dimensions and margins, transparent background, no new outlines/background/texture/noise. Preserve blink state in each cell including half/closed eyelids if present. This is only book removal with small revealed garment reconstruction; not an animation redesign."
+    },
+    {
+      "name": "loop-c-clean",
+      "prompt": "Use case precise-object-edit / identity-preserve. This is an existing 4-column 2-row complete animation atlas. Preserve each cell's EXACT WHOLE CAT geometry, pose, head silhouette, eyes, tail shape, breathing variation, scale, position, colors and ink. DO NOT redesign or regenerate different proportions. Change ONE thing: REMOVE THE CLOSED GREEN BOOK from every scene, leaving the cat's naturally connected simple white high-neck shirt and lower sleeve visible behind the vacated area. Do not move either paw. The book is being exported as a separate fixed PROP and will be composited back at its original tabletop location. Maintain exactly2hands and cat as complete coherent drawing, no head/limb assembly. Preserve the desk surface under the removed book; no book remnants, no floating pages, no new prop. Everything else stays identical: chin on VIEWER-LEFT paw, right paw resting, hair and face position, natural curved tail, thick boots, desk, off lamp, daisies and chair. Keep precisely same4x2 grid/cell dimensions and margins, transparent background, no new outlines/background/texture/noise. Preserve blink state in each cell including half/closed eyelids if present. This is only book removal with small revealed garment reconstruction; not an animation redesign."
+    },
+    {
+      "name": "loop-d-clean",
+      "prompt": "Use case precise-object-edit / identity-preserve. This is an existing 4-column 2-row complete animation atlas. Preserve each cell's EXACT WHOLE CAT geometry, pose, head silhouette, eyes, tail shape, breathing variation, scale, position, colors and ink. DO NOT redesign or regenerate different proportions. Change ONE thing: REMOVE THE CLOSED GREEN BOOK from every scene, leaving the cat's naturally connected simple white high-neck shirt and lower sleeve visible behind the vacated area. Do not move either paw. The book is being exported as a separate fixed PROP and will be composited back at its original tabletop location. Maintain exactly2hands and cat as complete coherent drawing, no head/limb assembly. Preserve the desk surface under the removed book; no book remnants, no floating pages, no new prop. Everything else stays identical: chin on VIEWER-LEFT paw, right paw resting, hair and face position, natural curved tail, thick boots, desk, off lamp, daisies and chair. Keep precisely same4x2 grid/cell dimensions and margins, transparent background, no new outlines/background/texture/noise. Preserve blink state in each cell including half/closed eyelids if present. This is only book removal with small revealed garment reconstruction; not an animation redesign."
+    },
+    {
+      "name": "loop-a-clean-nochair",
+      "prompt": "Precise-object-edit. Edit this existing 4-column2-row transparent animation atlas. Remove ONLY THE WOODEN STOOL/CHAIR visible behind the cat's skirt and boots in each of the8cells. Make the stool's seat rim and both slanted wooden stool legs transparent. KEEP the larger DESK/TABLE and its two vertical legs unchanged. Cat remains sitting in exactly the same position; the identical original stool will be composited back later as a fixed background prop. CRITICAL: preserve entire cat in every cell EXACTLY as drawn, including connected head and neck, whole body, NAVY SKIRT, two thick dark legs, both BROWN BOOTS WITH ALL OUTLINES, arms/paws, hair, eye/blink pose, naturally curved tail, all proportions and colors. Never erase boot pixels or cut holes into boots; never shrink or scale body parts. This is only wooden chair/stool removal. If removing it reveals tiny areas behind the cat, leave transparent. No character redesign, no new book or props. Preserve the 4x2 layout, same cell framing/margins, original tabletop/lamp/daisies, and transparent background. Whole cat stays coherent, nothing separated/repositioned."
+    },
+    {
+      "name": "loop-b-clean-nochair",
+      "prompt": "Precise-object-edit. Edit this existing 4-column2-row transparent animation atlas. Remove ONLY THE WOODEN STOOL/CHAIR visible behind the cat's skirt and boots in each of the8cells. Make the stool's seat rim and both slanted wooden stool legs transparent. KEEP the larger DESK/TABLE and its two vertical legs unchanged. Cat remains sitting in exactly the same position; the identical original stool will be composited back later as a fixed background prop. CRITICAL: preserve entire cat in every cell EXACTLY as drawn, including connected head and neck, whole body, NAVY SKIRT, two thick dark legs, both BROWN BOOTS WITH ALL OUTLINES, arms/paws, hair, eye/blink pose, naturally curved tail, all proportions and colors. Never erase boot pixels or cut holes into boots; never shrink or scale body parts. This is only wooden chair/stool removal. If removing it reveals tiny areas behind the cat, leave transparent. No character redesign, no new book or props. Preserve the 4x2 layout, same cell framing/margins, original tabletop/lamp/daisies, and transparent background. Whole cat stays coherent, nothing separated/repositioned."
+    },
+    {
+      "name": "loop-c-clean-nochair",
+      "prompt": "Precise-object-edit. Edit this existing 4-column2-row transparent animation atlas. Remove ONLY THE WOODEN STOOL/CHAIR visible behind the cat's skirt and boots in each of the8cells. Make the stool's seat rim and both slanted wooden stool legs transparent. KEEP the larger DESK/TABLE and its two vertical legs unchanged. Cat remains sitting in exactly the same position; the identical original stool will be composited back later as a fixed background prop. CRITICAL: preserve entire cat in every cell EXACTLY as drawn, including connected head and neck, whole body, NAVY SKIRT, two thick dark legs, both BROWN BOOTS WITH ALL OUTLINES, arms/paws, hair, eye/blink pose, naturally curved tail, all proportions and colors. Never erase boot pixels or cut holes into boots; never shrink or scale body parts. This is only wooden chair/stool removal. If removing it reveals tiny areas behind the cat, leave transparent. No character redesign, no new book or props. Preserve the 4x2 layout, same cell framing/margins, original tabletop/lamp/daisies, and transparent background. Whole cat stays coherent, nothing separated/repositioned."
+    },
+    {
+      "name": "loop-d-clean-nochair",
+      "prompt": "Precise-object-edit. Edit this existing 4-column2-row transparent animation atlas. Remove ONLY THE WOODEN STOOL/CHAIR visible behind the cat's skirt and boots in each of the8cells. Make the stool's seat rim and both slanted wooden stool legs transparent. KEEP the larger DESK/TABLE and its two vertical legs unchanged. Cat remains sitting in exactly the same position; the identical original stool will be composited back later as a fixed background prop. CRITICAL: preserve entire cat in every cell EXACTLY as drawn, including connected head and neck, whole body, NAVY SKIRT, two thick dark legs, both BROWN BOOTS WITH ALL OUTLINES, arms/paws, hair, eye/blink pose, naturally curved tail, all proportions and colors. Never erase boot pixels or cut holes into boots; never shrink or scale body parts. This is only wooden chair/stool removal. If removing it reveals tiny areas behind the cat, leave transparent. No character redesign, no new book or props. Preserve the 4x2 layout, same cell framing/margins, original tabletop/lamp/daisies, and transparent background. Whole cat stays coherent, nothing separated/repositioned."
+    },
+    {
+      "name": "chin-grid-clean-nochair",
+      "prompt": "Precise-object-edit. Edit this existing 4-column2-row transparent animation atlas. Remove ONLY THE WOODEN STOOL/CHAIR visible behind the cat's skirt and boots in each of the8cells. Make the stool's seat rim and both slanted wooden stool legs transparent. KEEP the larger DESK/TABLE and its two vertical legs unchanged. Cat remains sitting in exactly the same position; the identical original stool will be composited back later as a fixed background prop. CRITICAL: preserve entire cat in every cell EXACTLY as drawn, including connected head and neck, whole body, NAVY SKIRT, two thick dark legs, both BROWN BOOTS WITH ALL OUTLINES, arms/paws, hair, eye/blink pose, naturally curved tail, all proportions and colors. Never erase boot pixels or cut holes into boots; never shrink or scale body parts. This is only wooden chair/stool removal. If removing it reveals tiny areas behind the cat, leave transparent. No character redesign, no new book or props. Preserve the 4x2 layout, same cell framing/margins, original tabletop/lamp/daisies, and transparent background. Whole cat stays coherent, nothing separated/repositioned."
+    },
+    {
+      "name": "close-nochair",
+      "prompt": "Precisely edit this4-column2-row animation atlas. Remove ONLY the small WOODEN STOOL/CHAIR behind the seated cat in all8cells: remove its seat rim and its two slanted tan legs to transparency. Keep the larger DESK/TABLE and its two vertical legs UNCHANGED. Preserve the entire cat EXACTLY as drawn in every frame, including head/neck/body/arms/paws/green-book closing gesture, navy skirt, thick dark legs, both BROWN BOOTS and their outlines, hair, eyes, curved tail, shape/position/colors. Do not cut holes into boots or erase any cat pixels. Same full coherent cat pose, no separated/scaled bodyparts. The original approved stool will later be restored as one fixed prop behind the cat. Preserve exactly the same4x2grid/cell framing/margins/transparent background. No book removal in this sheet; book is being held and closing. Only stool removal, no character redesign."
+    },
+    {
+      "name": "chin-repair-final (rejected)",
+      "prompt": "Precise-object-edit. Keep this existing4cols2rows animation atlas EXACTLY AS IT IS except remove two PROPS: (1) the closed green book on tabletop, reconstruct the small revealed white-shirt/tabletop area underneath (2) the small wooden STOOL behind cat legs: remove its seat rim and two slanted tan legs to transparency, but retain the larger DESK and its two vertical legs unchanged. CRITICAL KEEP ALL8WHOLE CATS in their EXACT original proportions and positions, all original head silhouettes, ears/cowlick heights, eye positions, palette, sleeve gestures, tail, navy skirt, thick legs and BROWN BOOTS. No cut holes in boots, no cat motion or scaling. Do not lengthen cowlick or raise head. This is PROP REMOVAL only, not a new character drawing. Keep the exact same4x2grid2:1ratio original cell framing and margins, transparent background. Preserve exactlytwo paws in every pose, original high-neck white shirt. Cat remains coherent/whole, no bodypart compositing. Original approved book/stool will be placed back later as separate fixed prop layers. No newbook/pages or background texture/noise."
+    },
+    {
+      "name": "chin-grid-clean",
+      "prompt": "Use case precise-object-edit identity-preserve. Edit this existing4cols2rows animation atlas, preserving exact cat head/shape/colors/poses, arms/hands, body/legs/tail and entire scene geometry. REMOVE ONLY THE GREEN CLOSED BOOK in all8cells. Reconstruct the small part of simple white highneck shirt and desktop revealed where book used to be. Do not change pose or move hands: first poses hands are beside vacated tabletop book location, later left paw gradually touches cheek. All8cats remain complete coherent whole drawings, exactlytwohands, natural neck/torso. Preserve exact head/cowlick size/position and gold palette from input, no detached/assembled parts. No replacement book or pages, since an original approved fixed book PROP will be composited there later. Furniture,lampOFF,daisies and chair unchanged. Same4x2grid2:1ratio transparent background. Clean solid color, no grain, no extra folds or decoration."
+    }
+  ],
+  "generated": [
+    {
+      "name": "close",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-4eea3cd2-1760-4d23-97a1-2b030c25fd78.png"
+    },
+    {
+      "name": "chin",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-7e7ceaba-af9c-4956-89a2-0d686437f66a.png"
+    },
+    {
+      "name": "chin-model"
+    },
+    {
+      "name": "chin-repair",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-ea1f371c-df8b-40db-ab0b-c9d13e57d429.png"
+    },
+    {
+      "name": "chin-grid",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-3b9f1e09-7162-40a0-8efb-332d80611387.png"
+    },
+    {
+      "name": "loop-a",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-29c5ae3c-6c25-47ed-8095-033af757cc45.png"
+    },
+    {
+      "name": "loop-b",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-2e62c361-5b16-42cf-b1b8-c6e2de176c80.png"
+    },
+    {
+      "name": "loop-c",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-071a4b83-9fa3-4135-a738-fef52de44a30.png"
+    },
+    {
+      "name": "loop-d",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-50e27ef7-13a6-410a-8281-30f28eea2c52.png"
+    },
+    {
+      "name": "loop-a-clean",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-e60e95e1-b92d-49e1-a6c5-d4646812fe22.png"
+    },
+    {
+      "name": "loop-b-clean",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-2d282c94-a14e-4afc-a333-daa91d21c222.png"
+    },
+    {
+      "name": "loop-c-clean",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-2b4070be-b80d-4752-ac47-61efdca2d4bd.png"
+    },
+    {
+      "name": "loop-d-clean",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-0368607d-5ae5-457d-8044-04b60e74db05.png"
+    },
+    {
+      "name": "chin-grid-clean",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-4ce2a72e-7b27-40a4-8a73-413f8cd24cdb.png"
+    },
+    {
+      "name": "close-nochair",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-7153ceb9-8410-4429-a2a2-6d8d7f632389.png"
+    },
+    {
+      "name": "loop-a-clean-nochair",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-b4207f86-9e4a-4c8a-ad58-bf469619bd57.png"
+    },
+    {
+      "name": "loop-b-clean-nochair",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-64824b2f-bc2f-4ed2-bcc2-5c1b4331dd00.png"
+    },
+    {
+      "name": "loop-c-clean-nochair",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-98d02bf7-ffa0-4694-ae59-1e54828f00e3.png"
+    },
+    {
+      "name": "loop-d-clean-nochair",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-5b9b64ce-2f2c-4baf-a669-4d62c2596b30.png"
+    },
+    {
+      "name": "chin-grid-clean-nochair",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-fbf502a4-c1bd-45f5-9cde-497dea264ada.png"
+    },
+    {
+      "name": "chin-repair-final",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-ad38a790-bc58-4f15-a29f-04afe6905ef4.png"
+    }
+  ],
+  "selected": [
+    {
+      "name": "close-nochair",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-7153ceb9-8410-4429-a2a2-6d8d7f632389.png"
+    },
+    {
+      "name": "loop-a-clean-nochair",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-b4207f86-9e4a-4c8a-ad58-bf469619bd57.png"
+    },
+    {
+      "name": "loop-b-clean-nochair",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-64824b2f-bc2f-4ed2-bcc2-5c1b4331dd00.png"
+    },
+    {
+      "name": "loop-c-clean-nochair",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-98d02bf7-ffa0-4694-ae59-1e54828f00e3.png"
+    },
+    {
+      "name": "loop-d-clean-nochair",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-5b9b64ce-2f2c-4baf-a669-4d62c2596b30.png"
+    },
+    {
+      "name": "chin-grid-clean-nochair",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-fbf502a4-c1bd-45f5-9cde-497dea264ada.png"
+    }
+  ],
+  "rejected": [
+    {
+      "name": "chin",
+      "reason": "Eyes shifted up about10–18pixels; whole-character redraw rejected."
+    },
+    {
+      "name": "chin-repair-final",
+      "reason": "Head height aligned but boot baseline/leg length changed; not selected."
+    },
+    {
+      "name": "color-only-chair-matte",
+      "reason": "Could not reliably distinguish dark chair ink and boots. Rejected preview and replaced with built-in prop removal, preserving whole character."
+    }
+  ],
+  "color_reference": "Approved reading frame000 only; external baseline illustration is not used as pause palette target.",
+  "permission": "User permits fixed props, full-character drawings, RGB-only calibration. All frames composited before review.",
+  "current_source_files": [
+    "sources/close-nochair.png",
+    "sources/loop-a-clean-nochair.png",
+    "sources/loop-b-clean-nochair.png",
+    "sources/loop-c-clean-nochair.png",
+    "sources/loop-d-clean-nochair.png",
+    "sources/chin-grid-clean-nochair.png"
+  ],
+  "history_note": "Unused generated intermediates and failed diagnostic images from this revision were removed (docs/cleanup.json). Cache originals are preserved at the generated paths above. Export uses the selected six atlas sources and approved resting book, not deleted draft sources.",
+  "RGB_clean_fill": "A second bounded RGB pass and one clean approved offwhite material base remove residual clothing grain; original ink/antialias, alpha, poses and timing are preserved. A noisy multi-shadow threshold attempt was rejected."
+}

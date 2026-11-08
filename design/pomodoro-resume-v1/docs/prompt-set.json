@@ -1,0 +1,71 @@
+{
+  "mode": "built-in",
+  "scope": "Artwork only, no runtime integration",
+  "prompts": [
+    {
+      "name": "reach",
+      "prompt": "Use case identity-preserve. Production ArcPet animation, continuation from approved paused scene to approved reading. Image1 is the exact 4-column2-row layout/camera template, image2 is approved paused starting pose, image3 is approved reading character/palette authority. Redraw eight closely spaced WHOLE CHARACTER poses, chronological4cols2rows at same2:1ratio. Transparent background. Every pose is one anatomically connected complete cat: head/neck/torso/arms/skirt/thick legs/brown boots/tail drawn together, no separate bodypart sprites or transforms.\nExport CAT ONLY, no desk, lamp, flowers, stool, book or shadow. Those static props will be composited back at unchanged coordinates. Complete character stays seated at exact same448cell coordinates: head/cowlick top76, head x132..330,y76..260, eyes near219, hips y350, thick boots bottom424. Do not recenter or enlarge cat after removing furniture! Retain template margins/positions. Draw simple plain highneck offwhite shirt [245,242,240], muted navy skirt [89,94,112], warm muted gold hair [239,193,157], peach skin [246,222,209], brown boots [107,84,77], original thin brown linework. No pale yellow hair, tiny head, raised head, long legs, black skirt, choker or Vneck, textured shading, white speckles.\nMotion A: release chin and reach for book, which is NOT drawn in this export. Frame1 starting viewer-LEFT paw supports cheek and right paw near tabletop atx276y307. Frame2 leftpaw releases cheek;3 leftpaw lowers a little;4 leftpaw halfway down toward tabletop;5 leftpaw approaches book left edge x193y309;6 leftpaw nearly touches;7 paw gently contacts book-cover location;8 BOTH paws ready to grasp book's two sides atx193/266,y309. Rightpaw moves only slightly inward to right bookedge. Elbow/sleeve/chest follow actual gentle motion. Keep same head silhouette, mouth, gaze and head size; only a subtle2px pupil gaze downward near final poses, never shift whole skull. Natural tiny whole-tail sway, clean continuous curve. Exactly two paws and connected cuffs. No floating extra hands. Full seated character, no table/objects/book, no crop."
+    },
+    {
+      "name": "grasp (rejected)",
+      "prompt": "Use case identity-preserve. Edit input1 (whole seated cat with hands lowered) into8closely spaced complete-cat poses on input2 exact4cols2rows layout. Input3 approved reading defines identity/palette and head/body ratio. Same2:1transparent atlas, same448cell coordinate system/margins, no recentering after furniture removal.\nWhole character + HELD GREEN BOOK ONLY. No table, lamp, flowers, chair/stool or floor. Each complete connected character redrawn coherently, no separate transformed parts. Head/cowlick/ears/face, head size and overall body dimensions match originals; don't lift/bob/stretch head or legs. Boots bottom424, eyes~219..221, body centerx230. Simple highneck offwhite shirt245/242/240, mutedgold239/193/157, peach246/222/209, navy89/94/112, brown boots107/84/77; thin brown cel ink, clean fills, no texture/noise or white holes.\nMotion B: Both paws grasp the ORIGINAL closed book on imaginary tabletop and lift it only a little before beginning to tilt it. Closed green book starts EXACTLY atx192..268,y301..325 on448cell (same original resting place), 76wide24thick. Pose1 palms touch left/right ends.2 fingers curl onto both edges.3 hands gently press grip,book still rests.4 book clears tabletop by2pixels.5 lift by4pixels.6 lift by6pixels.7 lift by8pixels.8 lift by10pixels and tilt front cover slightly toward viewer, only~15deg. Book's physical dimensions remain constant, don't grow or suddenly turn it upright; it remains CLOSED in all8poses. Each hand contacts/carries its side continuously; arms/elbows/sleeves move WITH the book, exactly2hands. The next segment will raise book upright. Eyes follow book via subtle pupils only, skull stays in place. Real subtle chest/sleeve breathing and very slight tail sway, not repeated frozen images. Transparent bg, fullboots/head/tail inside cells. No prop drift/no third hand/no detached neck/no crop."
+    },
+    {
+      "name": "open (rejected)",
+      "prompt": "Use case identity-preserve. Eight consecutive full-character ArcPet animation poses,4columns2rows,2:1 transparent atlas. Input1 fixes layout/camera and approved closed-book raised pose; input2 is approved reading endpoint and identity/palette authority. Keep character COMPLETE as one coherent drawing every frame, never detached/scaled/rotated parts.\nCAT AND HELD BOOK ONLY. Remove desk, lamp, daisies, stool entirely; preserve exact character coordinates, margins and scale of template. Do not recenter or enlarge after removing furniture. On448square head/cowlick top76, headx132..330,y76..260, eyes near219, hips350, thick brown boots bottom424. Match original muted warmgold239/193/157, peach246/222/209, plain highneck offwhite245/242/240, navy89/94/112, brown boots107/84/77. Thin soft brown ink, clean flat filled colors, no grain or white holes. No open neckline, choker, dark skirt or tiny head.\nMotion D: hold green book at chest, open covers smoothly into reading. Begin closed upright green book width~82, height~64, centeredx230, bottom320, cream pages at top. Eight close intermediate poses gradually open left and right covers to the approved reading spread width~130, height~66 (left164,right295,top254,bottom323). Each paw firmly contacts and carries its own cover, arms/sleeves move outward WITH covers; leftpaw movesx190→171,rightpaw270→289,y~295. Covers pivot physically at spine; pages supported, no autonomous opening, no book scaling, no extra hands. Do not expose strange upside down pages. Final pose EXACTLY matches approved reading image (cat/head/eyes/hips/boots same). Slight actual chest/shoulder breathing, tail remains soft curved behind right side, gentle tiny sway. Head stays still as original; eyes look naturally toward book using small pupil adjustment only. Eight unique hand/book positions; no repeated frozen cells. No furniture or shadows, no text/checkerboard/crop."
+    },
+    {
+      "name": "between-a",
+      "prompt": "Use case identity-preserve. Create EIGHT TRUE HAND-DRAWN INBETWEEN FRAMES for an already approved ArcPet animation. Input1 is a4column2row atlas of BEFORE key poses; input2 is the same grid of AFTER key poses, each cell paired by position. For EACH CELL draw one complete-cat pose HALFWAY between its before/after pair. Keep exactly the same4x2layout, cell coordinate system, camera and proportions;2:1transparent atlas. Do not copy before/after verbatim or rearrange cells. Draw each whole coherent cat anew, NEVER assemble/scal/rotate separate head/body/limbs.\nCat stays SEATED BEHIND DESK. Skull/face/ears/cowlick/head-to-body ratio must match corresponding inputs exactly: no raised head or tiny skull, no long thin legs, no wrong boots. Match APPROVED reading palette (image3): warm mutedgold239/193/157, skin246/222/209, plain highneck offwhite245/242/240, navy89/94/112, brown boots107/84/77. Thin brown cel ink, clean filled colors, NO white speckles/grain/holes, no stray white patches on paws/pages, no complex clothing seams.\nKeep the TABLE, OFF lamp and white mini daisies at exact input positions and dimensions as registration guides. REMOVE ONLY SMALL WOODEN STOOL/CHAIR (seat rim/slanted legs) behind cat's boots, leave that area transparent; preserve both brown boots and skirt intact. Original approved stool will be placed back as one static layer. Keep large desk/two vertical table legs. NEVER move furniture or resize book.\nEvery intermediate must maintain exact two paws with connected sleeves, clear hand-book contact, tiny real shoulder/sleeve breathing, tail continuously curved. Original held green book physically same size, no new pages/props/floating hands. Hands CARRY book/covers; book never moves itself. Full margins, no cropped head/feet, no text/checkerboard. Output midpoint for each numbered-by-position pair, NOT a new standalone choreography.\nEight paired midpoints of chin support→leftpaw releases→leftpaw lowers toward book→both paws grasp CLOSED book at original resting position x192..268,y301..325 on448cell. Book stays fixed on desk until the last paired midpoint begins pickup. No hand moves backward, no premature book opening."
+    },
+    {
+      "name": "between-b",
+      "prompt": "Use case identity-preserve. Create EIGHT TRUE HAND-DRAWN INBETWEEN FRAMES for an already approved ArcPet animation. Input1 is a4column2row atlas of BEFORE key poses; input2 is the same grid of AFTER key poses, each cell paired by position. For EACH CELL draw one complete-cat pose HALFWAY between its before/after pair. Keep exactly the same4x2layout, cell coordinate system, camera and proportions;2:1transparent atlas. Do not copy before/after verbatim or rearrange cells. Draw each whole coherent cat anew, NEVER assemble/scal/rotate separate head/body/limbs.\nCat stays SEATED BEHIND DESK. Skull/face/ears/cowlick/head-to-body ratio must match corresponding inputs exactly: no raised head or tiny skull, no long thin legs, no wrong boots. Match APPROVED reading palette (image3): warm mutedgold239/193/157, skin246/222/209, plain highneck offwhite245/242/240, navy89/94/112, brown boots107/84/77. Thin brown cel ink, clean filled colors, NO white speckles/grain/holes, no stray white patches on paws/pages, no complex clothing seams.\nKeep the TABLE, OFF lamp and white mini daisies at exact input positions and dimensions as registration guides. REMOVE ONLY SMALL WOODEN STOOL/CHAIR (seat rim/slanted legs) behind cat's boots, leave that area transparent; preserve both brown boots and skirt intact. Original approved stool will be placed back as one static layer. Keep large desk/two vertical table legs. NEVER move furniture or resize book.\nEvery intermediate must maintain exact two paws with connected sleeves, clear hand-book contact, tiny real shoulder/sleeve breathing, tail continuously curved. Original held green book physically same size, no new pages/props/floating hands. Hands CARRY book/covers; book never moves itself. Full margins, no cropped head/feet, no text/checkerboard. Output midpoint for each numbered-by-position pair, NOT a new standalone choreography.\nEight paired midpoints of picking CLOSED book from desk→raising/tilting it upright→hands carry left/right covers outward into open reading spread. Keep green book's top/bottom/width BETWEEN the corresponding input pair values, not larger or lower. Final pair transitions directly into approved reading. Do not let covers open with hands stationary."
+    },
+    {
+      "name": "reach-clean",
+      "prompt": "Precise-object-edit. Edit this existing4columns2rows animation atlas. REMOVE ONLY THE CLOSED GREEN BOOK from all8cells. Preserve all8COMPLETE CATS exactly: head/eyes/cowlick/face size and position, warmgold palette, skin, plain white highneck shirt, navy skirt, thick legs,both brown boots, tail, two paws and sleeve poses. Keep original tabletop, lampOFF,daisies,grid/camera/margins unchanged. Fill the tiny revealed shirt/tabletop area where book was. Do not move hands or redraw new poses; first cells paw near cheek, later cells paw lowers to tabletop. No furniture/stool added. Original approved book will be composited back at fixed original position. Exactlytwohands/no changed outlines/no resized bodyparts/no grain/white noise. Transparent background same2:1atlas. This is prop removal only, not new animation."
+    }
+  ],
+  "generated": [
+    {
+      "name": "reach",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-6c6e4b16-43c7-4a55-a525-8fcb92a0e52a.png"
+    },
+    {
+      "name": "grasp",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-89b58b63-9af1-440e-a919-51028c773b0d.png"
+    },
+    {
+      "name": "open",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-2fbd088c-4a42-4449-9e0c-724fbddc7986.png"
+    },
+    {
+      "name": "between-a",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-a7805f72-646a-4ee9-b7ba-0d14445816e8.png"
+    },
+    {
+      "name": "between-b",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-a44d88b9-a5a8-4740-a233-f62ff95f481a.png"
+    },
+    {
+      "name": "reach-clean",
+      "path": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-9178b3eb-2965-4be3-89bf-a4e0fa37cfa6.png"
+    }
+  ],
+  "selection": {
+    "new_sources": [
+      "reach-clean",
+      "between-b"
+    ],
+    "whole_pose_keys": "Approved pause full-scene pickup/open poses, rearranged toward reading, plus original reading breath/blink drawings",
+    "rejected": "Furniture-free reach/grasp/open candidates introduced book size/height or head/body drift. Replaced by scene-registered drawings and approved whole-pose keys."
+  },
+  "permissions": "Fixed original props and RGB-only material calibration authorized. Character always a coherent whole; no local part transforms.",
+  "export_notes": {
+    "reach": "Used as eight consecutive whole-character reach drawings, not paired midpoints. Source camera scale was about3% larger; all eight COMPLETE scenes share one fixed uniform registration before original props are composited. No local character-part transform.",
+    "keys": "Whole approved pickup/open poses and real reading breath/blink drawings reused. Authoring metadata identifies each source.",
+    "RGB": "Material matching and exported-copy palm/paper clean fill preserve registered alpha and dark ink.",
+    "scope": "No app/assets/runtime integration, pending visual approval."
+  }
+}

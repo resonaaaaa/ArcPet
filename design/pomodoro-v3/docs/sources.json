@@ -1,0 +1,16 @@
+{
+  "key-poses": {
+    "file": "design\\pomodoro-v3\\sources\\key-poses.png",
+    "generated_source_id": "exec-b8fe71b0-35b7-4170-b489-3677ea191be0.png",
+    "sha256": "10a459b5338c13370f8f459ebe0b28735a27915dfcdd76f3c5065ae6aac61456"
+  },
+  "start": {
+    "file": "design\\pomodoro-v3\\sources\\start.png",
+    "generated_source_id": "exec-024f29fb-1340-490a-9cef-ab674d69fce6.png",
+    "sha256": "f0268b889fef7ee54774288eb9e035db483e339db2ae9179a21285b8de4879fd"
+  },
+  "reference": {
+    "file": "sources/model-reference.webp",
+    "original": "User-provided d009b3de9c82d158ccbff7c6745e0ed8bc3eb135e435.webp"
+  }
+}

@@ -44,7 +44,7 @@ internal static class TravelTests
     }
     public static void Run(string assets,string scratch,Action<bool,string> check)
     {
-        all=new JsonAnimationCatalog(assets).LoadAll();check(all.Count==25,"all twenty-five registered clips load");
+        all=new JsonAnimationCatalog(assets).LoadAll();check(all.Count==32,"all thirty-two registered clips load");
         var padded=new TravelArea(0,1600,40,50);
         check(padded.SafeMinimum==40 && padded.SafeMaximum==1550,"asymmetric visible padding retains100px margins while preserving the full restorable window bounds");
         check(all["music"].Frames.Count==32 && all["exercise"].Frames.Count==224,"approved music/exercise frame counts retained");

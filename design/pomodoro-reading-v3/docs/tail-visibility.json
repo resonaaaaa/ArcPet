@@ -1,0 +1,136 @@
+{
+  "region": [
+    312,
+    251,
+    334,
+    279
+  ],
+  "minimum_gold_pixels": 90,
+  "assets": [
+    {
+      "asset": 0,
+      "visible_gold_in_tail_outer_arc": 252
+    },
+    {
+      "asset": 1,
+      "visible_gold_in_tail_outer_arc": 245
+    },
+    {
+      "asset": 2,
+      "visible_gold_in_tail_outer_arc": 244
+    },
+    {
+      "asset": 3,
+      "visible_gold_in_tail_outer_arc": 249
+    },
+    {
+      "asset": 4,
+      "visible_gold_in_tail_outer_arc": 259
+    },
+    {
+      "asset": 5,
+      "visible_gold_in_tail_outer_arc": 242
+    },
+    {
+      "asset": 6,
+      "visible_gold_in_tail_outer_arc": 255
+    },
+    {
+      "asset": 7,
+      "visible_gold_in_tail_outer_arc": 247
+    },
+    {
+      "asset": 8,
+      "visible_gold_in_tail_outer_arc": 247
+    },
+    {
+      "asset": 9,
+      "visible_gold_in_tail_outer_arc": 264
+    },
+    {
+      "asset": 10,
+      "visible_gold_in_tail_outer_arc": 253
+    },
+    {
+      "asset": 11,
+      "visible_gold_in_tail_outer_arc": 269
+    },
+    {
+      "asset": 12,
+      "visible_gold_in_tail_outer_arc": 243
+    },
+    {
+      "asset": 13,
+      "visible_gold_in_tail_outer_arc": 262
+    },
+    {
+      "asset": 14,
+      "visible_gold_in_tail_outer_arc": 258
+    },
+    {
+      "asset": 15,
+      "visible_gold_in_tail_outer_arc": 268
+    },
+    {
+      "asset": 16,
+      "visible_gold_in_tail_outer_arc": 260
+    },
+    {
+      "asset": 17,
+      "visible_gold_in_tail_outer_arc": 273
+    },
+    {
+      "asset": 18,
+      "visible_gold_in_tail_outer_arc": 290
+    },
+    {
+      "asset": 19,
+      "visible_gold_in_tail_outer_arc": 304
+    },
+    {
+      "asset": 20,
+      "visible_gold_in_tail_outer_arc": 309
+    },
+    {
+      "asset": 21,
+      "visible_gold_in_tail_outer_arc": 281
+    },
+    {
+      "asset": 22,
+      "visible_gold_in_tail_outer_arc": 284
+    },
+    {
+      "asset": 23,
+      "visible_gold_in_tail_outer_arc": 285
+    },
+    {
+      "asset": 24,
+      "visible_gold_in_tail_outer_arc": 290
+    },
+    {
+      "asset": 25,
+      "visible_gold_in_tail_outer_arc": 286
+    },
+    {
+      "asset": 26,
+      "visible_gold_in_tail_outer_arc": 306
+    },
+    {
+      "asset": 27,
+      "visible_gold_in_tail_outer_arc": 284
+    },
+    {
+      "asset": 28,
+      "visible_gold_in_tail_outer_arc": 292
+    },
+    {
+      "asset": 29,
+      "visible_gold_in_tail_outer_arc": 287
+    },
+    {
+      "asset": 30,
+      "visible_gold_in_tail_outer_arc": 300
+    }
+  ],
+  "note": "Diagnostic plus visual review; occlusion makes counts differ."
+}

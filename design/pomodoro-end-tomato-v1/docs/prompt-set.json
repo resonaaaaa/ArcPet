@@ -1,0 +1,67 @@
+{
+  "mode": "built-in",
+  "scope": "Ending part2 ART only; no app/runtime integration",
+  "prompts": [
+    {
+      "name": "keys",
+      "prompt": "Use case identity-preserve. ArcPet ending part2,8WHOLE CHARACTER KEY POSES in4columns2rows transparent2:1atlas. Input1 exact repeated approved end-of-stretch scene/template, input2 approved reading character style/palette. Keep cat seated BEHIND desk, same proportions/headshape/goldhair/simple white HIGHNECK shirt/navyskirt/thick darklegs/brownboots/tail. Mutedgold239/193/157,peach246/222/209,offwhite245/242/240,navy89/94/112,brown107/84/77. Fine brown cel ink, CLEAN flat fills no grains/holes. Each cat drawn as complete connected character, no bodypart assembly, no local transforms.\nScene coordinates in448cell: headx132..330,y~76..260,feet424,desk unchanged with OFF lamp left/WHITE mini daisies right. OMIT small wooden STOOL and OMIT BOOK (both approved props composited afterward). No ketchup or projectile in this sheet, only tomato held in paw. Keep all scene/cell framing, margin and scales.\n8chronological keys:1 EXACT relaxed starting closedeye pose, both paws near desk.2 eyes gently open to calm half-lidded red-pupil gaze, VIEWER-RIGHT arm reaches behind its own waist/back, leftpaw stays resting.3 rightpaw disappears behind body (natural sleeve connection), torso rotates only slightly, skull size fixed.4 rightpaw brings out ONE small ripe red tomato with green star calyx from behind its back, at right waist, clearly gripping fruit.5 raise tomato beside right shoulder, bent elbow, quiet deadpan face, stable seated body.6 short wind-up, rightforearm drawn slightly back, otherpaw braced on desk, no exaggerated twisting.7 rightarm thrusts FORWARD TOWARD VIEWER/screen center (foreshortened naturally), open hand just RELEASED tomato; NO tomato in this cell because projectile is a separate effect.8 follow-through, rightarm gently begins return, hand empty, calm catmouth.\nExactly two anatomically connected arms/paws, no paw through torso/head/flower/lamp, tomato begins behindback not appearing out of thinair. No changing clothes/head/body sizes. New tomato is red fruit, not a heart or meat. Fine sleeve/hair/tail response to throw, seated hips/boots anchored. No book,stool,splat, text, crop or background/checkerboard."
+    },
+    {
+      "name": "fetch",
+      "prompt": "Use case identity-preserve. ArcPet ending part2,8consecutive COMPLETE WHOLE CAT scenes4cols2rows,2:1transparent atlas. Input1 exact starting pose/layout, input2 ending pose, input3 approved prior ending boundary maintains character identity. Every pose drawn coherently as one complete cat, never assemble or individually transform head/torso/arms/legs.\nMatch exact original headshape/cowlick size/eye position, head-body ratio, short thick dark legs/brown boots, warm mutedgold hair, plain white HIGHNECK shirt and navyskirt. Calm deadpan half-lidded RED pupils/catmouth after eyes open. Fine warmbrown cel ink and clean flat fills, no grain/white holes/new shirt decoration. Keep cat SEATED BEHIND fixed desk; OFF lamp left, WHITE mini daisies right. OMIT book and small wooden stool (original fixed props added later). Entire scene same camera/scale/coordinates as inputs, no recentering or size drift. Exactly2connected paws, elbows and sleeves natural, no passing through own torso/props. Tomato is ONE small red ripe fruit with green star calyx, same size/color until released. Throwing paw is VIEWER-LEFT throughout; viewer-rightpaw stays braced near desktop. Natural small sleeve/hair/tail response, feet/hips anchored. Same cell margins, no cropped head/paws/boots, no ketchup, text, background/checkerboard.Start exact relaxed closedeye seated boundary.8smallsteps:1closedeyes/paws resting;2eyes begin opening;3half-lidded calm gaze and leftarm starts going behind waist;4leftpaw hidden behind back;5natural shoulder/elbow motion while gripping hidden fruit;6tomato starts emerging from BEHIND waist;7one tomato visibly held low beside leftside;8matches ending pose holding tomato near leftshoulder. Tomato never materializes without hand; no third paw."
+    },
+    {
+      "name": "windup",
+      "prompt": "Use case identity-preserve. ArcPet ending part2,8consecutive COMPLETE WHOLE CAT scenes4cols2rows,2:1transparent atlas. Input1 exact starting pose/layout, input2 ending pose, input3 approved prior ending boundary maintains character identity. Every pose drawn coherently as one complete cat, never assemble or individually transform head/torso/arms/legs.\nMatch exact original headshape/cowlick size/eye position, head-body ratio, short thick dark legs/brown boots, warm mutedgold hair, plain white HIGHNECK shirt and navyskirt. Calm deadpan half-lidded RED pupils/catmouth after eyes open. Fine warmbrown cel ink and clean flat fills, no grain/white holes/new shirt decoration. Keep cat SEATED BEHIND fixed desk; OFF lamp left, WHITE mini daisies right. OMIT book and small wooden stool (original fixed props added later). Entire scene same camera/scale/coordinates as inputs, no recentering or size drift. Exactly2connected paws, elbows and sleeves natural, no passing through own torso/props. Tomato is ONE small red ripe fruit with green star calyx, same size/color until released. Throwing paw is VIEWER-LEFT throughout; viewer-rightpaw stays braced near desktop. Natural small sleeve/hair/tail response, feet/hips anchored. Same cell margins, no cropped head/paws/boots, no ketchup, text, background/checkerboard.8smallsteps raise held tomato from near left chest toward leftshoulder, then draw forearm subtly back preparing a forward throw. Fingers/paw stay wrapped around tomato throughout; fruit follows paw, no floating. Keep it a brief restrained comedic wind-up, no large body twist/head bob. End matches input2 near shoulder."
+    },
+    {
+      "name": "throw",
+      "prompt": "Use case identity-preserve. ArcPet ending part2,8consecutive COMPLETE WHOLE CAT scenes4cols2rows,2:1transparent atlas. Input1 exact starting pose/layout, input2 ending pose, input3 approved prior ending boundary maintains character identity. Every pose drawn coherently as one complete cat, never assemble or individually transform head/torso/arms/legs.\nMatch exact original headshape/cowlick size/eye position, head-body ratio, short thick dark legs/brown boots, warm mutedgold hair, plain white HIGHNECK shirt and navyskirt. Calm deadpan half-lidded RED pupils/catmouth after eyes open. Fine warmbrown cel ink and clean flat fills, no grain/white holes/new shirt decoration. Keep cat SEATED BEHIND fixed desk; OFF lamp left, WHITE mini daisies right. OMIT book and small wooden stool (original fixed props added later). Entire scene same camera/scale/coordinates as inputs, no recentering or size drift. Exactly2connected paws, elbows and sleeves natural, no passing through own torso/props. Tomato is ONE small red ripe fruit with green star calyx, same size/color until released. Throwing paw is VIEWER-LEFT throughout; viewer-rightpaw stays braced near desktop. Natural small sleeve/hair/tail response, feet/hips anchored. Same cell margins, no cropped head/paws/boots, no ketchup, text, background/checkerboard.8smallsteps:poses1-3 leftarm moves forward holding tomato, with natural foreshortening toward lens;POSE4 release tomato toward screen center, hand now EMPTY;poses5-8 empty leftpaw follows through then relaxes toward desktop. Tomato is NOT drawn in poses4-8 because separate flight effect starts exactly at release. No tomato sitting on table or fruit left behind; only one tomato exists. Rounded cat paw, no detailed human fingers; keep actual sleeve/shoulder movement, calm half-lidded eyes throughout."
+    },
+    {
+      "name": "flight",
+      "prompt": "Illustration-story production animation VFX only. 6chronological hand-drawn sprites in3cols2rows transparent atlas, equal448logical square cells (3:2overall). A single ripe TOMATO flying directly toward camera and screen center. No cat, no hands,furniture,shadow,labels or background. Clean2D cel style, thin warmbrown outline, red fruit, small green star calyx, tiny cream specular highlight, NO face/blood/meat.\nDraw tomato EACH frame in perspective, not one repeated sprite. Frame1 fruit centered(260,235),diameter24.2(244,230),diameter38.3(232,226),diameter62.4(224,224),diameter100.5(224,224),diameter170.6(224,224),diameter280. Maintain fruit identity/color and green calyx orientation with tiny natural spin only. It approaches viewer, growing smoothly in perspective; no lateral jitter. Full tomato inside each cell; ample transparent edges, no cropping. Smooth arc toward dead center. Only6tomatoes total, no other elements."
+    },
+    {
+      "name": "splash",
+      "prompt": "Illustration-story2D animation VFX ONLY:8successive tomato-sauce-on-camera impact frames,4cols2rows atlas,2:1ratio,equal square cells. Transparent background outside sauce. NO character/hands/fruit whole/furniture/text. Clean cel cartoon in rich ripe-tomato RED and subtleorange-red highlights, cream-yellow tomato seeds, occasional tiny green calyx fragments; FOOD SAUCE, no blood/gore/meat.\nEvery cell is same fixed screen/lens coordinate system. Frame1 a small central wet impact starburst atcenter(224,224), radius65 on448square.2 expands irregular rounded red lobes radius115, a few tomato seeds.3 radius170, more thick pulp smears.4 radius230, broad coherent sticky smear with radial lobes and thick droplet blobs, center opaque.5 expands past screen edges, broad opaque tomato sauce covers nearly whole cell.6 covers entire square lens from edge to edge ALL CORNERS opaque red, a few lighter pulp streaks/seeds.7 same full-square coverage, smears settle slightly downward, distinct drawn drips.8 same full-square opaque red, subtle settled drips, last pose will fade later. NO transparent holes in center or the last3frames; last3cells are intentionally FULL SQUARE opaque sauce, touching cell boundaries. No black/white/checkerboard backdrop. Distinct drawn natural fluid motion across8poses, no mechanically scaled copy. Keep neighboring cells cleanly separated by grid boundaries; do not merge sauce across cells."
+    },
+    {
+      "name": "splash-flat",
+      "prompt": "Style-transfer edit of this8frame tomato sauce animation atlas. Preserve the exact4column2row layout, each frame's splash silhouette/coverage/progression/drips/seeds and transparent background. Convert ONLY rendering style from glossy textured realistic sauce into SIMPLE CLEAN 2D ANIME CEL EFFECT to match a desktop chibi animation: thin warmbrown/red outlines, flat warm ripe-red fill, just2or3 flat darker/lighter RED cel shapes, tiny cream-yellow tomato seeds and occasional flatgreen calyx pieces. NO photographic pulp texture, NO gradients/no shiny specular streaks/no grain/no white noise/no glow. This is TOMATO FOOD SAUCE, not blood. First frame small central impact, subsequent expanding rounded blobs, last3frames full rectangular opaque red lens edge-to-edge, same coverage as source. Keep all corners of last3frames opaque red. No character/whole tomato/words or new background. Same2:1transparent atlas."
+    }
+  ],
+  "generated": [
+    {
+      "name": "keys",
+      "cache_file": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-8de7a3ce-7721-4b58-bea1-ce47bb8c170c.png"
+    },
+    {
+      "name": "fetch",
+      "cache_file": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-6f694573-ab6f-4a8e-9e31-48389277127e.png"
+    },
+    {
+      "name": "windup",
+      "cache_file": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-cab2725b-3fbd-4225-be18-d2a9876ccf24.png"
+    },
+    {
+      "name": "throw",
+      "cache_file": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-10fe671d-e2e2-4727-bdb3-d01aa68fbd46.png"
+    },
+    {
+      "name": "flight",
+      "cache_file": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-4487d95a-92d9-45c9-bf33-c861faa0512e.png"
+    },
+    {
+      "name": "splash",
+      "cache_file": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-380acb63-89a6-4079-a606-97b957b7e61f.png"
+    },
+    {
+      "name": "splash-flat",
+      "cache_file": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-7bfa63f9-1b72-4a52-94f2-09d0dc99d3c4.png"
+    }
+  ],
+  "selected": "fetch/windup/throw whole scenes; flight original hand-drawn approach; splash.png uses flat cel style edit. Original glossy splash not selected.",
+  "composition": "Original approved props; complete actor pose order adjusted for monotonic hand movement; flight and sauce separate transparent layers. A solid sauce matte under last settled smear guarantees complete lens coverage before official idle appears, then opacity fades. Official idle only uniformly fit as a whole frame, source unchanged.",
+  "status": "Pending user visual approval; final whole scenes/actor and flight/impact/fade transitions inspected"
+}

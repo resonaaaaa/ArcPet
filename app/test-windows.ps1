@@ -1,4 +1,4 @@
-param([string]$Runtime='dist/ArcPet-v0.18',[string]$Report='docs/desktop-v0.18-validation',[switch]$MoodOnly,[switch]$RocketOnly,[switch]$DanceOnly,[switch]$TravelOnly)
+﻿param([string]$Runtime='dist/ArcPet-v0.20.1',[string]$Report='docs/desktop-v0.20.1-validation',[switch]$MoodOnly,[switch]$RocketOnly,[switch]$DanceOnly,[switch]$TravelOnly,[switch]$PomodoroOnly)
 $ErrorActionPreference='Stop'
 $arcRoot=Split-Path -Parent $PSScriptRoot
 $arcOutput=[IO.Path]::GetFullPath((Join-Path $arcRoot $Runtime))
@@ -12,7 +12,7 @@ foreach($arcLibrary in @('ArcPet.Animation.dll','ArcPet.Behavior.dll','ArcPet.Se
     $arcLibs+='/reference:'+(Join-Path $arcOutput $arcLibrary)
     Copy-Item -LiteralPath (Join-Path $arcOutput $arcLibrary) -Destination $arcBuild -Force
 }
-$arcCases=if($TravelOnly){@('TravelRegression')}elseif($DanceOnly){@('DanceRegression')}elseif($RocketOnly){@('RocketRegression')}elseif($MoodOnly){@('MoodRegression')}else{@('InputRegression','MoodRegression','RocketRegression','DanceRegression','SleepVariantRegression','TravelRegression')}
+$arcCases=if($PomodoroOnly){@('PomodoroRegression')}elseif($TravelOnly){@('TravelRegression')}elseif($DanceOnly){@('DanceRegression')}elseif($RocketOnly){@('RocketRegression')}elseif($MoodOnly){@('MoodRegression')}else{@('PomodoroRegression','InputRegression','MoodRegression','RocketRegression','DanceRegression','SleepVariantRegression','TravelRegression')}
 foreach($arcCase in $arcCases){
     $arcTest=Join-Path $arcBuild ($arcCase+'.exe')
     & $arcCompiler /nologo /noconfig /nostdlib+ /warnaserror+ /langversion:5 /target:exe "/out:$arcTest" @arcLibs (Join-Path $PSScriptRoot ('ArcPet.Desktop.Tests\'+$arcCase+'.cs'))

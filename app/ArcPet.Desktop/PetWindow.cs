@@ -55,6 +55,15 @@ namespace ArcPet.Desktop
         private readonly IDictionary<string,AnimationClip> clips;
         private readonly Dictionary<MovementMode,MenuItem> movementMenu=new Dictionary<MovementMode,MenuItem>();
         private readonly Dictionary<MovementMode,Forms.ToolStripMenuItem> trayMovement=new Dictionary<MovementMode,Forms.ToolStripMenuItem>();
+        private readonly PomodoroTimer pomodoro = new PomodoroTimer();
+        private readonly PomodoroSceneController pomodoroScene;
+        private BitmapSource hoverFrame;
+        private bool pomodoroArtwork;
+        private readonly Dictionary<int,MenuItem> pomodoroDurations = new Dictionary<int,MenuItem>();
+        private readonly Dictionary<int,Forms.ToolStripMenuItem> trayPomodoroDurations = new Dictionary<int,Forms.ToolStripMenuItem>();
+        private MenuItem pomodoroStatus, pomodoroPause, pomodoroEnd;
+        private Forms.ToolStripMenuItem trayPomodoroStatus, trayPomodoroPause, trayPomodoroEnd;
+        private long pomodoroMenuAt = -1;
         private string travelMonitor;
         private PetPreferences loadedPreferences;
         private bool settingsReady, saveWarningShown, shownOnStartup;
@@ -89,9 +98,12 @@ namespace ArcPet.Desktop
             this.preferencesStore=preferencesStore;this.diagnosticMode=diagnosticMode;
             this.startup=startup;
             this.clips=clips;
+            pomodoroScene=new PomodoroSceneController(clips);
+            pomodoroScene.PlaybackRequested += delegate(object sender,PlaybackRequestedEventArgs e) { behavior.PlayPomodoro(e.Clip,Now); };
+            pomodoroScene.Finished += delegate { behavior.FinishPomodoro(Now); SyncPomodoroMenus(); };
             preferencesWriter=new PreferencesSaveQueue(preferencesStore);
             cache = new FrameCache(clips.Values);
-            Title = "ArcPet 0.18 · 桌宠"; Width = 320; Height = 320;
+            Title = "ArcPet 0.20.1 · 桌宠"; Width = 320; Height = 320;
             using(var stream=typeof(PetWindow).Assembly.GetManifestResourceStream("ArcPet.Icon"))
             {
                 if(stream==null)throw new InvalidDataException("缺少猫姬图标资源。");
@@ -109,6 +121,7 @@ namespace ArcPet.Desktop
             rocketArtwork=new RocketArtworkWindow(this);
             IsVisibleChanged+=delegate {mood.Controller.SetAvailable(IsVisible,Now);mood.Render(Now);RenderExtendedArtwork();};
             CreateContextMenu();
+            pomodoro.Completed += OnPomodoroCompleted;
             MouseLeftButtonDown += OnPrimaryDown;
             MouseLeftButtonUp += OnPrimaryUp;
             MouseMove += OnPointerMove;
@@ -142,11 +155,28 @@ namespace ArcPet.Desktop
             var exit = new MenuItem { Header = "退出桌宠" }; exit.Click += delegate { Close(); };
             menu.Items.Add(lockMenu); menu.Items.Add(visibilityMenu); menu.Items.Add(sleepMenu);
             menu.Items.Add(new Separator());
+            var movementRoot = new MenuItem { Header = "移动" };
+            menu.Items.Add(movementRoot);
             foreach(MovementMode mode in new[]{MovementMode.Long,MovementMode.Short,MovementMode.Off})
             {
                 MovementMode selected=mode;var item=new MenuItem{Header=MovementLabel(mode),IsCheckable=true};
-                item.Click+=delegate{SetMovementMode(selected);};movementMenu.Add(mode,item);menu.Items.Add(item);
+                item.Click+=delegate{SetMovementMode(selected);};movementMenu.Add(mode,item);movementRoot.Items.Add(item);
             }
+            var pomodoroRoot = new MenuItem { Header = "番茄钟" };
+            menu.Items.Add(pomodoroRoot);
+            pomodoroStatus = new MenuItem { IsEnabled = false };
+            pomodoroRoot.Items.Add(pomodoroStatus);
+            foreach (int minutes in new[] {20,30,40,50,60})
+            {
+                int selected = minutes;
+                var item = new MenuItem { Header = minutes + "分钟" };
+                item.Click += delegate { StartPomodoro(selected); };
+                pomodoroDurations.Add(minutes,item); pomodoroRoot.Items.Add(item);
+            }
+            pomodoroRoot.Items.Add(new Separator());
+            pomodoroPause = new MenuItem(); pomodoroPause.Click += delegate { TogglePomodoroPause(); };
+            pomodoroEnd = new MenuItem { Header = "结束计时" }; pomodoroEnd.Click += delegate { EndPomodoro(); };
+            pomodoroRoot.Items.Add(pomodoroPause); pomodoroRoot.Items.Add(pomodoroEnd);
             menu.Items.Add(new Separator()); menu.Items.Add(startupMenu);
             menu.Items.Add(new Separator()); menu.Items.Add(exit);
             menu.Opened += delegate { behavior.Touch(Now); SyncMenus(); };
@@ -154,7 +184,7 @@ namespace ArcPet.Desktop
         }
         private void CreateTray()
         {
-            tray = new Forms.NotifyIcon { Icon = petIcon, Text = "ArcPet 0.18 · 双击显示或隐藏桌宠", Visible = true };
+            tray = new Forms.NotifyIcon { Icon = petIcon, Text = "ArcPet 0.20.1 · 双击显示或隐藏桌宠", Visible = true };
             var menu = new Forms.ContextMenuStrip();
             trayLock = new Forms.ToolStripMenuItem("锁定"); trayLock.Click += delegate { Dispatch(ToggleLock); };
             trayVisibility = new Forms.ToolStripMenuItem(); trayVisibility.Click += delegate { Dispatch(ToggleVisibility); };
@@ -163,11 +193,30 @@ namespace ArcPet.Desktop
             var exit = new Forms.ToolStripMenuItem("退出桌宠"); exit.Click += delegate { Dispatch(Close); };
             menu.Items.Add(trayLock); menu.Items.Add(trayVisibility); menu.Items.Add(traySleep);
             menu.Items.Add(new Forms.ToolStripSeparator());
+            var movementRoot = new Forms.ToolStripMenuItem("移动");
+            menu.Items.Add(movementRoot);
             foreach(MovementMode mode in new[]{MovementMode.Long,MovementMode.Short,MovementMode.Off})
             {
                 MovementMode selected=mode;var item=new Forms.ToolStripMenuItem(MovementLabel(mode));
-                item.Click+=delegate{Dispatch(delegate{SetMovementMode(selected);});};trayMovement.Add(mode,item);menu.Items.Add(item);
+                item.Click+=delegate{Dispatch(delegate{SetMovementMode(selected);});};trayMovement.Add(mode,item);movementRoot.DropDownItems.Add(item);
             }
+            var pomodoroRoot = new Forms.ToolStripMenuItem("番茄钟");
+            menu.Items.Add(pomodoroRoot);
+            trayPomodoroStatus = new Forms.ToolStripMenuItem { Enabled = false };
+            pomodoroRoot.DropDownItems.Add(trayPomodoroStatus);
+            foreach (int minutes in new[] {20,30,40,50,60})
+            {
+                int selected = minutes;
+                var item = new Forms.ToolStripMenuItem(minutes + "分钟");
+                item.Click += delegate { Dispatch(delegate { StartPomodoro(selected); }); };
+                trayPomodoroDurations.Add(minutes,item); pomodoroRoot.DropDownItems.Add(item);
+            }
+            pomodoroRoot.DropDownItems.Add(new Forms.ToolStripSeparator());
+            trayPomodoroPause = new Forms.ToolStripMenuItem();
+            trayPomodoroPause.Click += delegate { Dispatch(TogglePomodoroPause); };
+            trayPomodoroEnd = new Forms.ToolStripMenuItem("结束计时");
+            trayPomodoroEnd.Click += delegate { Dispatch(EndPomodoro); };
+            pomodoroRoot.DropDownItems.Add(trayPomodoroPause); pomodoroRoot.DropDownItems.Add(trayPomodoroEnd);
             menu.Items.Add(new Forms.ToolStripSeparator()); menu.Items.Add(trayStartup);
             menu.Items.Add(new Forms.ToolStripSeparator()); menu.Items.Add(exit);
             menu.Opening += delegate { behavior.Touch(Now); SyncMenus(); };
@@ -186,6 +235,7 @@ namespace ArcPet.Desktop
             sleepMenu.IsChecked = behavior.SleepEnabled;
             sleepMenu.Header = behavior.SleepEnabled ? "睡眠：启用" : "睡眠：关闭";
             foreach(var item in movementMenu)item.Value.IsChecked=item.Key==behavior.TravelMode;
+            SyncPomodoroMenus();
             if (tray == null) return;
             trayStartup.Enabled=readable;trayStartup.Checked=readable && enabled;trayStartup.Text=(string)startupMenu.Header;
             trayLock.Checked = behavior.IsLocked;
@@ -194,8 +244,54 @@ namespace ArcPet.Desktop
             traySleep.Text = behavior.SleepEnabled ? "睡眠：启用" : "睡眠：关闭";
             foreach(var item in trayMovement)item.Value.Checked=item.Key==behavior.TravelMode;
         }
+        private void StartPomodoro(int minutes)
+        {
+            if(pomodoroScene.IsActive)return;
+            pomodoro.Tick(Now);
+            if(pomodoro.Start(minutes,Now))
+            {
+                EndGesture(true);behavior.CancelRocket(Now);RestoreFlightOrigin();
+                pomodoroScene.Start(Now);
+            }
+            SyncPomodoroMenus();
+        }
+        private void TogglePomodoroPause()
+        {
+            if (pomodoro.State == PomodoroState.Paused) pomodoro.Resume(Now);
+            else pomodoro.Pause(Now);
+            pomodoroScene.SetPaused(pomodoro.State==PomodoroState.Paused);
+            SyncPomodoroMenus();
+        }
+        private void EndPomodoro() { pomodoro.End(); pomodoroScene.End(); UpdateTimerBubble(false); SyncPomodoroMenus(); }
+        private void OnPomodoroCompleted(object sender, EventArgs e)
+        {
+            pomodoroScene.End();UpdateTimerBubble(false);
+            SyncPomodoroMenus();
+            if (tray == null) return;
+            tray.BalloonTipTitle = "猫姬的番茄钟";
+            tray.BalloonTipText = pomodoro.Minutes + "分钟专注已完成，休息一下吧！";
+            tray.ShowBalloonTip(5000);
+        }
+        private void SyncPomodoroMenus()
+        {
+            long seconds = (pomodoro.RemainingMilliseconds(Now) + 999) / 1000;
+            string time = String.Format(CultureInfo.InvariantCulture,"{0:00}:{1:00}",seconds/60,seconds%60);
+            string status = pomodoro.State == PomodoroState.Running ? "剩余 " + time :
+                pomodoro.State == PomodoroState.Paused ? "已暂停 " + time :
+                pomodoro.State == PomodoroState.Completed ? "已完成 " + pomodoro.Minutes + "分钟" : pomodoroScene.IsActive ? "正在结束…" : "尚未开始";
+            pomodoroStatus.Header = status;
+            pomodoroPause.Header = pomodoro.State == PomodoroState.Paused ? "继续计时" : "暂停计时";
+            pomodoroPause.IsEnabled = pomodoroEnd.IsEnabled = pomodoro.IsActive;
+            foreach (var item in pomodoroDurations) item.Value.IsEnabled = !pomodoro.IsActive && !pomodoroScene.IsActive;
+            if (tray == null) return;
+            trayPomodoroStatus.Text = status; trayPomodoroPause.Text = (string)pomodoroPause.Header;
+            trayPomodoroPause.Enabled = trayPomodoroEnd.Enabled = pomodoro.IsActive;
+            foreach (var item in trayPomodoroDurations) item.Value.Enabled = !pomodoro.IsActive && !pomodoroScene.IsActive;
+            tray.Text = pomodoro.IsActive ? "ArcPet 0.20.1 · 番茄钟 " + status :
+                pomodoro.State == PomodoroState.Completed ? "ArcPet 0.20.1 · " + status : "ArcPet 0.20.1 · 双击显示或隐藏桌宠";
+        }
         private static string MovementLabel(MovementMode mode)
-        {return mode==MovementMode.Long ? "移动：长" : mode==MovementMode.Short ? "移动：短" : "移动：关闭";}
+        {return mode==MovementMode.Long ? "长" : mode==MovementMode.Short ? "短" : "关闭";}
         private void ToggleStartup()
         {
             bool enabled;string error;
@@ -395,23 +491,39 @@ namespace ArcPet.Desktop
         private void OnFrameChanged(object sender, AnimationFrameChangedEventArgs e)
         {
             BitmapSource frame=cache.Get(e.Frame.AssetPath);
+            hoverFrame=frame;pomodoroArtwork=e.Clip.Id.StartsWith("pomodoro_",StringComparison.Ordinal);
             rocketFrame=frame.PixelHeight>320 ? frame : null;
             dragArtwork = e.Clip.Id.StartsWith("drag_", StringComparison.Ordinal);
+            // A fully transparent layered owner HWND is skipped by Windows hit
+            // testing, even if WPF's visual tree is hit-testable. Paint the core
+            // on the input window; the passive overlay paints only overflow.
             if(rocketFrame==null)sprite.Source=frame;
-            sprite.Opacity=rocketFrame==null?1:0;RenderExtendedArtwork();renderedAction=e.Clip.Id;
+            else
+            {
+                int x=dragArtwork || pomodoroArtwork ? 32 : 0;
+                int y=dragArtwork || pomodoroArtwork ? 64 : 0;
+                var core=new CroppedBitmap(frame,new Int32Rect(x,y,320,320));core.Freeze();sprite.Source=core;
+            }
+            sprite.Opacity=1;RenderExtendedArtwork();renderedAction=e.Clip.Id;
             if (e.Clip.Id == "idle") idleSeen.Add(e.FrameIndex);
         }
         private void RenderExtendedArtwork()
-        { rocketArtwork.Render(rocketFrame, dragArtwork ? -32 : 0, dragArtwork ? -64 : 0); }
+        { rocketArtwork.Render(rocketFrame, dragArtwork || pomodoroArtwork ? -32 : 0, dragArtwork || pomodoroArtwork ? -64 : 0); }
         private void OnTick(object sender, EventArgs e)
         {
+            pomodoro.Tick(Now);pomodoroScene.Tick(Now);
+            if (Now >= pomodoroMenuAt) { SyncPomodoroMenus(); pomodoroMenuAt = Now + 250; }
             RefreshTravelAvailability();
             TryBeginDragLift();
             behavior.Tick(Now);
             UpdateTravel();
             UpdateFlight();
-            mood.Controller.Tick(Now);mood.Render(Now);
-            if (IsVisible) player.Update();
+            mood.Controller.Tick(Now);
+            if (IsVisible || pomodoroScene.IsActive) player.Update();
+            Point pointer=Mouse.GetPosition(this);
+            int px=(int)(pointer.X/layout.Scale)+(pomodoroArtwork || dragArtwork ? 32 : 0);
+            int py=(int)(pointer.Y/layout.Scale)+(pomodoroArtwork || dragArtwork ? 64 : 0);
+            UpdateTimerBubble(IsMouseOver && !ContextMenu.IsOpen && cache.IsOpaque(hoverFrame,px,py));
             UpdateLiftPosition(Now);
             if(saveAfter>=0 && Now>=saveAfter)SavePreferences();
             string saveError=preferencesWriter.TakeError();
@@ -419,6 +531,12 @@ namespace ArcPet.Desktop
             if(diagnosticMode=="--smoke-test")SmokeTick();
             else if(diagnosticMode=="--interrupt-test")InterruptTick();
             else if(diagnosticMode=="--settings-test-write" || diagnosticMode=="--settings-test-read")SettingsRestartTick();
+        }
+        private void UpdateTimerBubble(bool hovering)
+        {
+            mood.SetTimer(hovering && IsVisible && pomodoro.IsActive && !pomodoroScene.IsEnding,
+                pomodoro.RemainingMilliseconds(Now),Now);
+            mood.Render(Now);
         }
         private TravelArea GetTravelArea(string monitor,out string selected,string action=null)
         {
@@ -642,6 +760,7 @@ namespace ArcPet.Desktop
         private void OnClosed(object sender, EventArgs e)
         {
             timer.Stop(); timer.Tick -= OnTick;
+            pomodoro.Completed -= OnPomodoroCompleted; pomodoro.End();
             mood.Close();
             rocketArtwork.Close();
             behavior.PlaybackRequested -= OnPlaybackRequested;

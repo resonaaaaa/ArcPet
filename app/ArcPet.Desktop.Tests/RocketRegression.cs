@@ -59,7 +59,7 @@ internal static class RocketRegression
             Check(chargeSeen.Count==9,"all nine independent gradual-face frames actually rendered");
             Check(!motion.IsActive && behavior.Phase=="rocket_hold","held charged loop never launches by itself");
             Check(art.IsVisible && art.Owner==pet && !art.ShowInTaskbar && !art.IsHitTestVisible && !art.ShowActivated,"extended flame artwork uses passive owned window");
-            Check(pet.Width==w && pet.Height==w && art.Height==440*w/320 && sprite.Opacity==0,"fire does not shrink body or resize original input window");
+            Check(pet.Width==w && pet.Height==w && art.Height==440*w/320 && sprite.Opacity==1,"core remains painted for native input while fire overflows the original window");
             Save(Path.Combine(output,"rocket-ready.png"));Call("EndGesture",false);
             Until(()=>motion.IsActive,1000);Check(behavior.Phase=="rocket_launch","release starts motion through distinct upright transition");
             Pump(500);Check(pet.Top<y-20 && pet.Left==x && behavior.IsLocked,"rocket moves vertically despite manual position lock");

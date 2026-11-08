@@ -74,3 +74,26 @@
 !/docs/desktop-v0.18-validation/dance-window.json
 !/docs/desktop-v0.18-validation/sleep-variant-window.json
 !/docs/desktop-v0.18-validation/travel-window.json
+
+# Superseded local Pomodoro drafts; current accepted sources remain versioned.
+/design/pomodoro-pause-v1/
+/design/pomodoro-pause-v2/
+/design/pomodoro-reading-v2/
+/design/pomodoro-v1/
+/design/pomodoro-v2/
+
+# Current portable release evidence (machine-local handoff files stay ignored).
+!/docs/RELEASE-v0.20.1.md
+!/docs/desktop-v0.20.1-validation/
+/docs/desktop-v0.20.1-validation/*
+!/docs/desktop-v0.20.1-validation/core-tests.txt
+!/docs/desktop-v0.20.1-validation/routed-input.json
+!/docs/desktop-v0.20.1-validation/mood-window.json
+!/docs/desktop-v0.20.1-validation/rocket-window.json
+!/docs/desktop-v0.20.1-validation/dance-window.json
+!/docs/desktop-v0.20.1-validation/sleep-variant-window.json
+!/docs/desktop-v0.20.1-validation/travel-window.json
+!/docs/desktop-v0.20.1-validation/pomodoro-window-tests.txt
+!/docs/desktop-v0.20.1-validation/validation.json
+!/docs/desktop-v0.20.1-validation/package.json
+!/docs/desktop-v0.20.1-validation/pomodoro-hover.png

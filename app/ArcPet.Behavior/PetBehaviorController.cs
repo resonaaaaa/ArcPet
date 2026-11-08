@@ -58,6 +58,14 @@ namespace ArcPet.Behavior
         public bool IsLocked { get; private set; }
         public bool SleepEnabled { get; private set; }
         public bool IsSleeping { get { return Phase == "sleep"; } }
+        public bool IsPomodoro { get { return Phase == "pomodoro"; } }
+        public void PlayPomodoro(AnimationClip clip,long now)
+        {
+            pressed=pendingPress=rocketAfterDown=false;ClearTapHistory();
+            TravelAction=null;LastInteraction=now;Play("pomodoro",clip,now);
+        }
+        public void FinishPomodoro(long now)
+        { if(!IsPomodoro)return;pressed=pendingPress=false;ClearTapHistory();LastInteraction=now;EnterIdle(now); }
         public long LastInteraction { get; private set; }
         public long NextAutomaticAt { get; private set; }
         public AnimationClip CurrentClip { get; private set; }
@@ -312,6 +320,7 @@ namespace ArcPet.Behavior
         {if(!IsRocket)return;pressed=pendingPress=false;ClearTapHistory();LastInteraction=now;EnterIdle(now);}
         public void Tick(long now)
         {
+            if(IsPomodoro)return;
             if (IsDragAnimation)
             {
                 if (now - phaseStarted < phaseDuration) return;

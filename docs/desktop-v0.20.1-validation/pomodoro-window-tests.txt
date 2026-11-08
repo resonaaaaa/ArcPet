@@ -1,0 +1,70 @@
+PASS: no flat movement option at root
+PASS: no flat movement option at root
+PASS: no flat movement option at root
+PASS: no flat movement option at root
+PASS: no flat movement option at root
+PASS: no flat movement option at root
+PASS: no flat movement option at root
+PASS: movement submenu contains three vertical native items
+PASS: pomodoro submenu includes status, five presets and controls
+PASS: native movement submenu opens
+PASS: native pomodoro submenu opens
+PASS: desktop and tray offer all five presets
+PASS: desktop preset starts exact duration
+PASS: active session disables replacement in both menus
+PASS: pause changes to resume in desktop
+PASS: tray resumes same session
+PASS: tray end queues complete exit before re-enabling starts
+PASS: complete ending sequence returns idle
+PASS: duration selection restored after tomato fade
+PASS: desktop preset starts exact duration
+PASS: active session disables replacement in both menus
+PASS: pause changes to resume in desktop
+PASS: tray resumes same session
+PASS: tray end queues complete exit before re-enabling starts
+PASS: complete ending sequence returns idle
+PASS: duration selection restored after tomato fade
+PASS: desktop preset starts exact duration
+PASS: active session disables replacement in both menus
+PASS: pause changes to resume in desktop
+PASS: tray resumes same session
+PASS: tray end queues complete exit before re-enabling starts
+PASS: complete ending sequence returns idle
+PASS: duration selection restored after tomato fade
+PASS: desktop preset starts exact duration
+PASS: active session disables replacement in both menus
+PASS: pause changes to resume in desktop
+PASS: tray resumes same session
+PASS: tray end queues complete exit before re-enabling starts
+PASS: complete ending sequence returns idle
+PASS: duration selection restored after tomato fade
+PASS: desktop preset starts exact duration
+PASS: active session disables replacement in both menus
+PASS: pause changes to resume in desktop
+PASS: tray resumes same session
+PASS: tray end queues complete exit before re-enabling starts
+PASS: complete ending sequence returns idle
+PASS: duration selection restored after tomato fade
+PASS: tray duration starts shared timer
+PASS: timer controls drive the exclusive scene
+PASS: complete ending sequence returns idle
+PASS: start shows approved reading clip
+PASS: input HWND paints an opaque character surface during reading
+PASS: native owner has substantial painted alpha instead of an invisible input surface
+PASS: painted character has a WPF hit target
+PASS: passive artwork excludes the core instead of repainting its alpha
+PASS: reading does not consume the routed right button event
+PASS: hover displays time bubble
+PASS: hover digits count down
+PASS: paused hover freezes remaining time
+PASS: pause waits for full reading loop then places book
+PASS: chin-rest loop displayed
+PASS: leaving pet hides time immediately
+PASS: complete ending sequence returns idle
+PASS: pet hidden during timer
+PASS: hidden deadline completes once without forcing window visible
+PASS: completion remains visible in tray status
+PASS: completed controls disabled
+PASS: tray-only app preserved
+PASS: complete ending sequence returns idle
+PASS: natural completion retains timer result after exit animation

@@ -1,0 +1,236 @@
+{
+  "label": "整体重绘：坐下、呼吸、拿书、开书",
+  "loop": false,
+  "canvas": [
+    448,
+    448
+  ],
+  "frame_count": 32,
+  "duration_ms": 4000,
+  "frames": [
+    {
+      "file": "000.png",
+      "source": "start",
+      "source_pose": 0,
+      "phase": "sit",
+      "duration_ms": 100
+    },
+    {
+      "file": "001.png",
+      "source": "start",
+      "source_pose": 1,
+      "phase": "sit",
+      "duration_ms": 100
+    },
+    {
+      "file": "002.png",
+      "source": "start",
+      "source_pose": 2,
+      "phase": "sit",
+      "duration_ms": 100
+    },
+    {
+      "file": "003.png",
+      "source": "start",
+      "source_pose": 3,
+      "phase": "sit",
+      "duration_ms": 100
+    },
+    {
+      "file": "004.png",
+      "source": "start",
+      "source_pose": 4,
+      "phase": "sit",
+      "duration_ms": 100
+    },
+    {
+      "file": "005.png",
+      "source": "start",
+      "source_pose": 5,
+      "phase": "sit",
+      "duration_ms": 100
+    },
+    {
+      "file": "006.png",
+      "source": "start",
+      "source_pose": 6,
+      "phase": "breathe",
+      "duration_ms": 200
+    },
+    {
+      "file": "007.png",
+      "source": "start",
+      "source_pose": 7,
+      "phase": "breathe",
+      "duration_ms": 200
+    },
+    {
+      "file": "008.png",
+      "source": "start",
+      "source_pose": 8,
+      "phase": "breathe",
+      "duration_ms": 200
+    },
+    {
+      "file": "009.png",
+      "source": "start",
+      "source_pose": 9,
+      "phase": "breathe",
+      "duration_ms": 200
+    },
+    {
+      "file": "010.png",
+      "source": "start",
+      "source_pose": 10,
+      "phase": "breathe",
+      "duration_ms": 200
+    },
+    {
+      "file": "011.png",
+      "source": "start",
+      "source_pose": 11,
+      "phase": "breathe",
+      "duration_ms": 200
+    },
+    {
+      "file": "012.png",
+      "source": "start",
+      "source_pose": 12,
+      "phase": "breathe",
+      "duration_ms": 200
+    },
+    {
+      "file": "013.png",
+      "source": "start",
+      "source_pose": 13,
+      "phase": "breathe",
+      "duration_ms": 200
+    },
+    {
+      "file": "014.png",
+      "source": "start",
+      "source_pose": 14,
+      "phase": "reach",
+      "duration_ms": 100
+    },
+    {
+      "file": "015.png",
+      "source": "start",
+      "source_pose": 15,
+      "phase": "reach",
+      "duration_ms": 100
+    },
+    {
+      "file": "016.png",
+      "source": "start",
+      "source_pose": 16,
+      "phase": "reach",
+      "duration_ms": 100
+    },
+    {
+      "file": "017.png",
+      "source": "start",
+      "source_pose": 17,
+      "phase": "reach",
+      "duration_ms": 100
+    },
+    {
+      "file": "018.png",
+      "source": "start",
+      "source_pose": 18,
+      "phase": "lift",
+      "duration_ms": 100
+    },
+    {
+      "file": "019.png",
+      "source": "start",
+      "source_pose": 19,
+      "phase": "lift",
+      "duration_ms": 100
+    },
+    {
+      "file": "020.png",
+      "source": "start",
+      "source_pose": 20,
+      "phase": "lift",
+      "duration_ms": 100
+    },
+    {
+      "file": "021.png",
+      "source": "start",
+      "source_pose": 21,
+      "phase": "lift",
+      "duration_ms": 100
+    },
+    {
+      "file": "022.png",
+      "source": "start",
+      "source_pose": 22,
+      "phase": "lift",
+      "duration_ms": 100
+    },
+    {
+      "file": "023.png",
+      "source": "start",
+      "source_pose": 23,
+      "phase": "lift",
+      "duration_ms": 100
+    },
+    {
+      "file": "024.png",
+      "source": "start",
+      "source_pose": 24,
+      "phase": "open",
+      "duration_ms": 100
+    },
+    {
+      "file": "025.png",
+      "source": "start",
+      "source_pose": 25,
+      "phase": "open",
+      "duration_ms": 100
+    },
+    {
+      "file": "026.png",
+      "source": "start",
+      "source_pose": 26,
+      "phase": "open",
+      "duration_ms": 100
+    },
+    {
+      "file": "027.png",
+      "source": "start",
+      "source_pose": 27,
+      "phase": "open",
+      "duration_ms": 100
+    },
+    {
+      "file": "028.png",
+      "source": "start",
+      "source_pose": 28,
+      "phase": "open",
+      "duration_ms": 100
+    },
+    {
+      "file": "029.png",
+      "source": "start",
+      "source_pose": 29,
+      "phase": "open",
+      "duration_ms": 100
+    },
+    {
+      "file": "030.png",
+      "source": "start",
+      "source_pose": 30,
+      "phase": "open",
+      "duration_ms": 100
+    },
+    {
+      "file": "031.png",
+      "source": "start",
+      "source_pose": 31,
+      "phase": "open",
+      "duration_ms": 100
+    }
+  ]
+}

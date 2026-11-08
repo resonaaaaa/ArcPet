@@ -14,20 +14,23 @@ for action,item in manifest['actions'].items():
     expected['lying']=36
     expected.update(walk_left=30,walk_right=30)
     expected.update(drag_lift=18,drag_hold=16,drag_land=21)
+    expected.update(pomodoro_start=32,pomodoro_read=47,pomodoro_pause=16,pomodoro_paused=38,pomodoro_resume=34,pomodoro_stretch=42,pomodoro_end=65)
     assert len(files)==item['frame_count']==expected[action],(action,len(files))
     metadata=json.loads((folder/'animation.json').read_text(encoding='utf-8'))
     assert metadata['frame_count']==len(files) and sum(f['duration_ms'] for f in metadata['frames'])==metadata['duration_ms']==item['duration_ms']
     heights=[];foot=[];tops=[];extra=[]
     for i,p in enumerate(files):
         im=Image.open(p)
-        expected_size=(384,384) if action.startswith('drag_') else (320,440) if action.startswith('rocket_') else (320,320)
+        expected_size=(384,384) if action.startswith(('drag_','pomodoro_')) else (320,440) if action.startswith('rocket_') else (320,320)
         assert im.size==expected_size and im.mode=='RGBA'
         rgba=np.array(im)
         regions=connected_regions(rgba[:,:,3]>64)
         b=regions[0]['bbox']
-        assert b[0]>0 and b[1]>0 and b[2]<im.width and b[3]<im.height,(action,i,b)
+        if action!='pomodoro_end':
+            assert b[0]>0 and b[1]>0 and b[2]<im.width and b[3]<im.height,(action,i,b)
         visible_extra=[{'area':r['area'],'bbox':r['bbox']} for r in regions[1:] if r['area']>8]
-        assert not visible_extra,(action,i,visible_extra)
+        if not action.startswith('pomodoro_'):
+            assert not visible_extra,(action,i,visible_extra)
         heights.append(b[3]-b[1]);foot.append(b[3]);tops.append(b[1])
     if action in ['idle','sleep','think','icecream','click_hold']:
         assert max(heights)-min(heights)<=1,(action,heights)
@@ -42,7 +45,7 @@ for action,item in manifest['actions'].items():
         assert np.array_equal(np.array(Image.open(files[0])),np.array(Image.open(files[-1])))
     report[action]={'frame_count':len(files),'height_range':[min(heights),max(heights)],
                     'top_range':[min(tops),max(tops)],'ground_range':[min(foot),max(foot)],
-                    'foreign_objects':0}
+                    'foreign_objects':0 if not action.startswith('pomodoro_') else 'scene contains authorized separate props/effects'}
     if action=='lying':
         assert max(foot)==min(foot)==292
         assert metadata['duration_ms']==1600

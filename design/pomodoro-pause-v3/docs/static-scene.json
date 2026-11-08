@@ -1,0 +1,19 @@
+{
+  "source": "design\\pomodoro-reading-v3\\anime\\reading\\000.png",
+  "source_sha256": "aed126e36faaaf5cc468a3b443f1927b714516ca481fc323375834e827b90e81",
+  "permission": "User approved static-prop extraction and reuse; full-cat drawings remain intact.",
+  "desktop_repair_rect": [
+    156,
+    316,
+    313,
+    327
+  ],
+  "layer_sha256": {
+    "chair": "63b7e8078a9fb730bea66448138ea0da41f1adcd0e6743a2b064ce1072c5736f",
+    "table": "e18bc94b377f1119f0d47f10431129cd2c79463cb25fb4a5888e05815048b04f",
+    "lamp": "8c930f388e96083019f8459c4e693cd96f93f40ccc129f25b706d5d72bc71e12",
+    "flower": "057eb6d954ae0fa278e4efb234768aa0b7da9243d24577d3cbb34557f0d75850",
+    "book": "2fa0f05c5ffb922f255a8cd98bbc66382860b952c35e0ca5972ccbd00549840d"
+  },
+  "book_source": "references/approved-resting-book.png (approved start original resting book)"
+}

@@ -1,0 +1,76 @@
+{
+  "label": "番茄钟 · pause",
+  "canvas": [
+    384,
+    384
+  ],
+  "loop": false,
+  "frame_count": 16,
+  "duration_ms": 1760,
+  "frames": [
+    {
+      "file": "000.png",
+      "duration_ms": 120
+    },
+    {
+      "file": "001.png",
+      "duration_ms": 120
+    },
+    {
+      "file": "002.png",
+      "duration_ms": 120
+    },
+    {
+      "file": "003.png",
+      "duration_ms": 120
+    },
+    {
+      "file": "004.png",
+      "duration_ms": 120
+    },
+    {
+      "file": "005.png",
+      "duration_ms": 120
+    },
+    {
+      "file": "006.png",
+      "duration_ms": 120
+    },
+    {
+      "file": "007.png",
+      "duration_ms": 120
+    },
+    {
+      "file": "008.png",
+      "duration_ms": 100
+    },
+    {
+      "file": "009.png",
+      "duration_ms": 100
+    },
+    {
+      "file": "010.png",
+      "duration_ms": 100
+    },
+    {
+      "file": "011.png",
+      "duration_ms": 100
+    },
+    {
+      "file": "012.png",
+      "duration_ms": 100
+    },
+    {
+      "file": "013.png",
+      "duration_ms": 100
+    },
+    {
+      "file": "014.png",
+      "duration_ms": 100
+    },
+    {
+      "file": "015.png",
+      "duration_ms": 100
+    }
+  ]
+}

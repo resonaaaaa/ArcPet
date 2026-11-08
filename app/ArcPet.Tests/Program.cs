@@ -40,6 +40,8 @@ internal static class Program
             Check(loaded.Frames.Count==30 && loaded.DurationMilliseconds==2100 && loaded.Loop, "load real idle metadata");
             invalid=false; try { new JsonAnimationCatalog(args[0]).Load("missing"); } catch(InvalidDataException) { invalid=true; }
             Check(invalid, "unknown clip rejected");
+            PomodoroTests.Run(Check);
+            PomodoroSceneTests.Run(args[0],Check);
             BehaviorTests.Run(args[0], Check);
             SettingsTests.Run(args[0],args[1],Check);
             SaveQueueTests.Run(Check);

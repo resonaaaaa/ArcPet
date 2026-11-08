@@ -1,0 +1,132 @@
+{
+  "label": "actor",
+  "canvas": [
+    448,
+    448
+  ],
+  "loop": false,
+  "frame_count": 24,
+  "duration_ms": 1200,
+  "frames": [
+    {
+      "file": "000.png",
+      "duration_ms": 50,
+      "phase": "fetch"
+    },
+    {
+      "file": "001.png",
+      "duration_ms": 50,
+      "phase": "fetch"
+    },
+    {
+      "file": "002.png",
+      "duration_ms": 50,
+      "phase": "fetch"
+    },
+    {
+      "file": "003.png",
+      "duration_ms": 50,
+      "phase": "fetch"
+    },
+    {
+      "file": "004.png",
+      "duration_ms": 50,
+      "phase": "fetch"
+    },
+    {
+      "file": "005.png",
+      "duration_ms": 50,
+      "phase": "fetch"
+    },
+    {
+      "file": "006.png",
+      "duration_ms": 50,
+      "phase": "fetch"
+    },
+    {
+      "file": "007.png",
+      "duration_ms": 50,
+      "phase": "windup"
+    },
+    {
+      "file": "008.png",
+      "duration_ms": 50,
+      "phase": "windup"
+    },
+    {
+      "file": "009.png",
+      "duration_ms": 50,
+      "phase": "fetch"
+    },
+    {
+      "file": "010.png",
+      "duration_ms": 50,
+      "phase": "windup"
+    },
+    {
+      "file": "011.png",
+      "duration_ms": 50,
+      "phase": "windup"
+    },
+    {
+      "file": "012.png",
+      "duration_ms": 50,
+      "phase": "windup"
+    },
+    {
+      "file": "013.png",
+      "duration_ms": 50,
+      "phase": "windup"
+    },
+    {
+      "file": "014.png",
+      "duration_ms": 50,
+      "phase": "windup"
+    },
+    {
+      "file": "015.png",
+      "duration_ms": 50,
+      "phase": "windup"
+    },
+    {
+      "file": "016.png",
+      "duration_ms": 50,
+      "phase": "throw"
+    },
+    {
+      "file": "017.png",
+      "duration_ms": 50,
+      "phase": "throw"
+    },
+    {
+      "file": "018.png",
+      "duration_ms": 50,
+      "phase": "throw"
+    },
+    {
+      "file": "019.png",
+      "duration_ms": 50,
+      "phase": "throw"
+    },
+    {
+      "file": "020.png",
+      "duration_ms": 50,
+      "phase": "throw"
+    },
+    {
+      "file": "021.png",
+      "duration_ms": 50,
+      "phase": "throw"
+    },
+    {
+      "file": "022.png",
+      "duration_ms": 50,
+      "phase": "throw"
+    },
+    {
+      "file": "023.png",
+      "duration_ms": 50,
+      "phase": "throw"
+    }
+  ]
+}

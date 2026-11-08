@@ -1,0 +1,6070 @@
+{
+  "scope": "Art only, pending user visual review",
+  "protected_unchanged": true,
+  "reference": {
+    "path": "E:\\projects\\ArcPet\\design\\pomodoro-reading-v3\\anime\\reading\\000.png",
+    "materials": {
+      "hair": {
+        "pixels": 5888,
+        "median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ]
+      },
+      "skin": {
+        "pixels": 1017,
+        "median_rgb": [
+          246.0,
+          222.0,
+          209.0
+        ]
+      },
+      "white": {
+        "pixels": 332,
+        "median_rgb": [
+          245.0,
+          242.0,
+          240.0
+        ]
+      },
+      "navy": {
+        "pixels": 565,
+        "median_rgb": [
+          89.0,
+          94.0,
+          112.0
+        ]
+      },
+      "boots": {
+        "pixels": 1320,
+        "median_rgb": [
+          107.0,
+          84.0,
+          77.0
+        ]
+      }
+    },
+    "geometry": {
+      "head_bbox_diagnostic": [
+        131,
+        76,
+        331,
+        260
+      ],
+      "head_width_diagnostic": 200,
+      "eye_center_y": 218.38831615120276,
+      "hair_patch_median_rgb": [
+        238.0,
+        193.0,
+        157.0
+      ],
+      "skin_components_diagnostic": [
+        {
+          "area": 438,
+          "bbox": [
+            156,
+            282,
+            186,
+            308
+          ],
+          "center": [
+            171.0,
+            295.0
+          ]
+        },
+        {
+          "area": 416,
+          "bbox": [
+            273,
+            282,
+            304,
+            309
+          ],
+          "center": [
+            288.5,
+            295.5
+          ]
+        },
+        {
+          "area": 320,
+          "bbox": [
+            299,
+            262,
+            316,
+            311
+          ],
+          "center": [
+            307.5,
+            286.5
+          ]
+        }
+      ]
+    }
+  },
+  "sources": {
+    "chin-grid-clean-nochair": {
+      "source": "design\\pomodoro-pause-v3\\sources\\chin-grid-clean-nochair.png",
+      "sha256": "a87b02d21b944f537ef3a1bccd081aae73736e8908aeccff006832b9ce87c06d",
+      "uniform_scale": 1.0034843205574913,
+      "whole_scene_offsets": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "cell_audits": [
+        {
+          "cell": [
+            0,
+            0,
+            444,
+            444
+          ],
+          "regions": [
+            [
+              80,
+              68,
+              367,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            444,
+            0,
+            887,
+            444
+          ],
+          "regions": [
+            [
+              79,
+              67,
+              366,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            887,
+            0,
+            1330,
+            444
+          ],
+          "regions": [
+            [
+              80,
+              67,
+              366,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            1330,
+            0,
+            1774,
+            444
+          ],
+          "regions": [
+            [
+              80,
+              67,
+              367,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            0,
+            444,
+            444,
+            887
+          ],
+          "regions": [
+            [
+              80,
+              67,
+              366,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            444,
+            444,
+            887,
+            887
+          ],
+          "regions": [
+            [
+              79,
+              67,
+              366,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            887,
+            444,
+            1330,
+            887
+          ],
+          "regions": [
+            [
+              80,
+              67,
+              366,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            1330,
+            444,
+            1774,
+            887
+          ],
+          "regions": [
+            [
+              80,
+              67,
+              367,
+              429
+            ]
+          ]
+        }
+      ]
+    },
+    "close-nochair": {
+      "source": "design\\pomodoro-pause-v3\\sources\\close-nochair.png",
+      "sha256": "4bb150a60cbfd5f7ca1d0157bca34a80844ba44dd0c033c6ff022ced272a774a",
+      "uniform_scale": 1.0140845070422535,
+      "whole_scene_offsets": [
+        [
+          -2,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          -2,
+          -1
+        ],
+        [
+          -2,
+          -1
+        ],
+        [
+          -2,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ],
+        [
+          -2,
+          -1
+        ],
+        [
+          -2,
+          -1
+        ]
+      ],
+      "cell_audits": [
+        {
+          "cell": [
+            0,
+            0,
+            444,
+            444
+          ],
+          "regions": [
+            [
+              82,
+              73,
+              366,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            444,
+            0,
+            887,
+            444
+          ],
+          "regions": [
+            [
+              81,
+              73,
+              365,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            887,
+            0,
+            1330,
+            444
+          ],
+          "regions": [
+            [
+              82,
+              73,
+              366,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            1330,
+            0,
+            1774,
+            444
+          ],
+          "regions": [
+            [
+              81,
+              73,
+              366,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            0,
+            444,
+            444,
+            887
+          ],
+          "regions": [
+            [
+              82,
+              73,
+              366,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            444,
+            444,
+            887,
+            887
+          ],
+          "regions": [
+            [
+              81,
+              74,
+              365,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            887,
+            444,
+            1330,
+            887
+          ],
+          "regions": [
+            [
+              82,
+              74,
+              366,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            1330,
+            444,
+            1774,
+            887
+          ],
+          "regions": [
+            [
+              81,
+              74,
+              366,
+              429
+            ]
+          ]
+        }
+      ]
+    },
+    "loop-a-clean-nochair": {
+      "source": "design\\pomodoro-pause-v3\\sources\\loop-a-clean-nochair.png",
+      "sha256": "8f2e8d92a6c021789126791992d95175ea2ff5db06285a9b6a237c81d3e6ef81",
+      "uniform_scale": 1.0034843205574913,
+      "whole_scene_offsets": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "cell_audits": [
+        {
+          "cell": [
+            0,
+            0,
+            444,
+            444
+          ],
+          "regions": [
+            [
+              79,
+              73,
+              367,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            444,
+            0,
+            887,
+            444
+          ],
+          "regions": [
+            [
+              78,
+              73,
+              366,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            887,
+            0,
+            1330,
+            444
+          ],
+          "regions": [
+            [
+              79,
+              73,
+              366,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            1330,
+            0,
+            1774,
+            444
+          ],
+          "regions": [
+            [
+              79,
+              73,
+              366,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            0,
+            444,
+            444,
+            887
+          ],
+          "regions": [
+            [
+              79,
+              73,
+              366,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            444,
+            444,
+            887,
+            887
+          ],
+          "regions": [
+            [
+              78,
+              73,
+              365,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            887,
+            444,
+            1330,
+            887
+          ],
+          "regions": [
+            [
+              79,
+              73,
+              366,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            1330,
+            444,
+            1774,
+            887
+          ],
+          "regions": [
+            [
+              79,
+              73,
+              366,
+              429
+            ]
+          ]
+        }
+      ]
+    },
+    "loop-b-clean-nochair": {
+      "source": "design\\pomodoro-pause-v3\\sources\\loop-b-clean-nochair.png",
+      "sha256": "b61fb757ecaf56f86f7f491fa81b9bc1ce75ab632841dce11da9d3886bb0a05d",
+      "uniform_scale": 1.0105263157894737,
+      "whole_scene_offsets": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "cell_audits": [
+        {
+          "cell": [
+            0,
+            0,
+            444,
+            444
+          ],
+          "regions": [
+            [
+              79,
+              73,
+              364,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            444,
+            0,
+            887,
+            444
+          ],
+          "regions": [
+            [
+              78,
+              73,
+              363,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            887,
+            0,
+            1330,
+            444
+          ],
+          "regions": [
+            [
+              79,
+              73,
+              364,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            1330,
+            0,
+            1774,
+            444
+          ],
+          "regions": [
+            [
+              79,
+              73,
+              364,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            0,
+            444,
+            444,
+            887
+          ],
+          "regions": [
+            [
+              79,
+              73,
+              364,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            444,
+            444,
+            887,
+            887
+          ],
+          "regions": [
+            [
+              78,
+              73,
+              363,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            887,
+            444,
+            1330,
+            887
+          ],
+          "regions": [
+            [
+              79,
+              73,
+              364,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            1330,
+            444,
+            1774,
+            887
+          ],
+          "regions": [
+            [
+              79,
+              73,
+              364,
+              429
+            ]
+          ]
+        }
+      ]
+    },
+    "loop-c-clean-nochair": {
+      "source": "design\\pomodoro-pause-v3\\sources\\loop-c-clean-nochair.png",
+      "sha256": "cf691bef1551c9f61b3e1b126cfec0fa1dc999ddcb277fe1f826323b07dbc471",
+      "uniform_scale": 1.0034843205574913,
+      "whole_scene_offsets": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "cell_audits": [
+        {
+          "cell": [
+            0,
+            0,
+            444,
+            444
+          ],
+          "regions": [
+            [
+              79,
+              71,
+              366,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            444,
+            0,
+            887,
+            444
+          ],
+          "regions": [
+            [
+              78,
+              70,
+              365,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            887,
+            0,
+            1330,
+            444
+          ],
+          "regions": [
+            [
+              79,
+              70,
+              366,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            1330,
+            0,
+            1774,
+            444
+          ],
+          "regions": [
+            [
+              78,
+              70,
+              366,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            0,
+            444,
+            444,
+            887
+          ],
+          "regions": [
+            [
+              79,
+              70,
+              366,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            444,
+            444,
+            887,
+            887
+          ],
+          "regions": [
+            [
+              78,
+              70,
+              365,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            887,
+            444,
+            1330,
+            887
+          ],
+          "regions": [
+            [
+              79,
+              70,
+              366,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            1330,
+            444,
+            1774,
+            887
+          ],
+          "regions": [
+            [
+              79,
+              70,
+              366,
+              429
+            ]
+          ]
+        }
+      ]
+    },
+    "loop-d-clean-nochair": {
+      "source": "design\\pomodoro-pause-v3\\sources\\loop-d-clean-nochair.png",
+      "sha256": "2edd5f2358ce182c76a8f1c43eb035d8f7a5ff0c0cbe4af12dcaf14ca53e148b",
+      "uniform_scale": 1.0105263157894737,
+      "whole_scene_offsets": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "cell_audits": [
+        {
+          "cell": [
+            0,
+            0,
+            444,
+            444
+          ],
+          "regions": [
+            [
+              80,
+              72,
+              366,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            444,
+            0,
+            887,
+            444
+          ],
+          "regions": [
+            [
+              80,
+              71,
+              365,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            887,
+            0,
+            1330,
+            444
+          ],
+          "regions": [
+            [
+              80,
+              72,
+              366,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            1330,
+            0,
+            1774,
+            444
+          ],
+          "regions": [
+            [
+              81,
+              71,
+              366,
+              430
+            ]
+          ]
+        },
+        {
+          "cell": [
+            0,
+            444,
+            444,
+            887
+          ],
+          "regions": [
+            [
+              80,
+              72,
+              366,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            444,
+            444,
+            887,
+            887
+          ],
+          "regions": [
+            [
+              80,
+              72,
+              365,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            887,
+            444,
+            1330,
+            887
+          ],
+          "regions": [
+            [
+              81,
+              72,
+              366,
+              429
+            ]
+          ]
+        },
+        {
+          "cell": [
+            1330,
+            444,
+            1774,
+            887
+          ],
+          "regions": [
+            [
+              81,
+              72,
+              366,
+              429
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "pause_ms": 1760,
+  "loop_ms": 4400,
+  "pause_count": 16,
+  "loop_count": 38,
+  "frame_diagnostics": [
+    {
+      "source": [
+        "close-nochair",
+        0
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          130,
+          73,
+          329,
+          260
+        ],
+        "head_width_diagnostic": 199,
+        "eye_center_y": 217.76126126126127,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 343,
+            "bbox": [
+              296,
+              262,
+              314,
+              314
+            ],
+            "center": [
+              305.0,
+              288.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5935,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 915,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 773,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 601,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 332,
+          "median_rgb": [
+            108.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "close-nochair",
+        1
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          131,
+          73,
+          330,
+          260
+        ],
+        "head_width_diagnostic": 199,
+        "eye_center_y": 218.38308457711443,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 368,
+            "bbox": [
+              298,
+              262,
+              314,
+              314
+            ],
+            "center": [
+              306.0,
+              288.0
+            ]
+          },
+          {
+            "area": 176,
+            "bbox": [
+              157,
+              284,
+              184,
+              301
+            ],
+            "center": [
+              170.5,
+              292.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5982,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 997,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 718,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 578,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 823,
+          "median_rgb": [
+            108.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "close-nochair",
+        2
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          130,
+          73,
+          329,
+          260
+        ],
+        "head_width_diagnostic": 199,
+        "eye_center_y": 218.3577981651376,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 562,
+            "bbox": [
+              289,
+              262,
+              314,
+              314
+            ],
+            "center": [
+              301.5,
+              288.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 6071,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 864,
+          "median_rgb": [
+            246.0,
+            222.0,
+            208.0
+          ]
+        },
+        "white": {
+          "pixels": 601,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 576,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 586,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "close-nochair",
+        3
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          131,
+          73,
+          330,
+          260
+        ],
+        "head_width_diagnostic": 199,
+        "eye_center_y": 218.09405940594058,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 629,
+            "bbox": [
+              284,
+              262,
+              314,
+              314
+            ],
+            "center": [
+              299.0,
+              288.0
+            ]
+          },
+          {
+            "area": 148,
+            "bbox": [
+              258,
+              283,
+              277,
+              296
+            ],
+            "center": [
+              267.5,
+              289.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 6081,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 951,
+          "median_rgb": [
+            246.0,
+            221.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 515,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 593,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 784,
+          "median_rgb": [
+            107.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "close-nochair",
+        4
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          131,
+          73,
+          329,
+          260
+        ],
+        "head_width_diagnostic": 198,
+        "eye_center_y": 217.64197530864197,
+        "hair_patch_median_rgb": [
+          238.0,
+          193.0,
+          156.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 567,
+            "bbox": [
+              287,
+              262,
+              314,
+              314
+            ],
+            "center": [
+              300.5,
+              288.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5905,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 903,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 390,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 576,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 822,
+          "median_rgb": [
+            107.0,
+            84.0,
+            76.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "close-nochair",
+        5
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          131,
+          74,
+          329,
+          259
+        ],
+        "head_width_diagnostic": 198,
+        "eye_center_y": 217.42439024390245,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          156.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 596,
+            "bbox": [
+              289,
+              262,
+              314,
+              315
+            ],
+            "center": [
+              301.5,
+              288.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5960,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 938,
+          "median_rgb": [
+            245.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 945,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 595,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 547,
+          "median_rgb": [
+            108.0,
+            85.0,
+            78.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "close-nochair",
+        6
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          131,
+          74,
+          329,
+          260
+        ],
+        "head_width_diagnostic": 198,
+        "eye_center_y": 217.69907407407408,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 551,
+            "bbox": [
+              289,
+              262,
+              314,
+              314
+            ],
+            "center": [
+              301.5,
+              288.0
+            ]
+          },
+          {
+            "area": 155,
+            "bbox": [
+              263,
+              284,
+              280,
+              297
+            ],
+            "center": [
+              271.5,
+              290.5
+            ]
+          },
+          {
+            "area": 120,
+            "bbox": [
+              169,
+              289,
+              187,
+              301
+            ],
+            "center": [
+              178.0,
+              295.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 6003,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 882,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1875,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 574,
+          "median_rgb": [
+            90.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 731,
+          "median_rgb": [
+            107.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "close-nochair",
+        7
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          132,
+          74,
+          330,
+          260
+        ],
+        "head_width_diagnostic": 198,
+        "eye_center_y": 217.59405940594058,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 590,
+            "bbox": [
+              289,
+              262,
+              314,
+              315
+            ],
+            "center": [
+              301.5,
+              288.5
+            ]
+          },
+          {
+            "area": 167,
+            "bbox": [
+              257,
+              283,
+              277,
+              300
+            ],
+            "center": [
+              267.0,
+              291.5
+            ]
+          },
+          {
+            "area": 104,
+            "bbox": [
+              183,
+              281,
+              199,
+              291
+            ],
+            "center": [
+              191.0,
+              286.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 6029,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 917,
+          "median_rgb": [
+            246.0,
+            221.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1815,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 579,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 688,
+          "median_rgb": [
+            108.0,
+            84.0,
+            76.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "chin-grid-clean-nochair",
+        0
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          133,
+          72,
+          329,
+          259
+        ],
+        "head_width_diagnostic": 196,
+        "eye_center_y": 217.03284671532847,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 536,
+            "bbox": [
+              292,
+              262,
+              314,
+              312
+            ],
+            "center": [
+              303.0,
+              287.0
+            ]
+          },
+          {
+            "area": 300,
+            "bbox": [
+              167,
+              282,
+              198,
+              306
+            ],
+            "center": [
+              182.5,
+              294.0
+            ]
+          },
+          {
+            "area": 206,
+            "bbox": [
+              263,
+              292,
+              291,
+              310
+            ],
+            "center": [
+              277.0,
+              301.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 6103,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 994,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1649,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 695,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 951,
+          "median_rgb": [
+            108.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "chin-grid-clean-nochair",
+        1
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          134,
+          72,
+          329,
+          259
+        ],
+        "head_width_diagnostic": 195,
+        "eye_center_y": 217.01538461538462,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 435,
+            "bbox": [
+              269,
+              296,
+              303,
+              320
+            ],
+            "center": [
+              286.0,
+              308.0
+            ]
+          },
+          {
+            "area": 434,
+            "bbox": [
+              297,
+              262,
+              315,
+              306
+            ],
+            "center": [
+              306.0,
+              284.0
+            ]
+          },
+          {
+            "area": 356,
+            "bbox": [
+              156,
+              296,
+              187,
+              319
+            ],
+            "center": [
+              171.5,
+              307.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 6054,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1003,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1705,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 711,
+          "median_rgb": [
+            89.0,
+            93.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 1105,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "chin-grid-clean-nochair",
+        2
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          134,
+          72,
+          329,
+          259
+        ],
+        "head_width_diagnostic": 195,
+        "eye_center_y": 217.2183908045977,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 398,
+            "bbox": [
+              297,
+              262,
+              314,
+              303
+            ],
+            "center": [
+              305.5,
+              282.5
+            ]
+          },
+          {
+            "area": 103,
+            "bbox": [
+              274,
+              297,
+              288,
+              309
+            ],
+            "center": [
+              281.0,
+              303.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 6065,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1003,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1753,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 713,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 1288,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "chin-grid-clean-nochair",
+        4
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          133,
+          71,
+          329,
+          260
+        ],
+        "head_width_diagnostic": 196,
+        "eye_center_y": 217.5404255319149,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 400,
+            "bbox": [
+              297,
+              262,
+              315,
+              303
+            ],
+            "center": [
+              306.0,
+              282.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 6076,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 992,
+          "median_rgb": [
+            246.0,
+            222.0,
+            208.0
+          ]
+        },
+        "white": {
+          "pixels": 1457,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 653,
+          "median_rgb": [
+            89.0,
+            93.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 697,
+          "median_rgb": [
+            108.0,
+            85.0,
+            76.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "chin-grid-clean-nochair",
+        5
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          134,
+          71,
+          329,
+          258
+        ],
+        "head_width_diagnostic": 195,
+        "eye_center_y": 215.85897435897436,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 407,
+            "bbox": [
+              297,
+              262,
+              315,
+              304
+            ],
+            "center": [
+              306.0,
+              283.0
+            ]
+          },
+          {
+            "area": 116,
+            "bbox": [
+              272,
+              305,
+              289,
+              320
+            ],
+            "center": [
+              280.5,
+              312.5
+            ]
+          },
+          {
+            "area": 89,
+            "bbox": [
+              178,
+              262,
+              201,
+              268
+            ],
+            "center": [
+              189.5,
+              265.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 6073,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1072,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1455,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 646,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 701,
+          "median_rgb": [
+            108.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "chin-grid-clean-nochair",
+        3
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          134,
+          72,
+          330,
+          259
+        ],
+        "head_width_diagnostic": 196,
+        "eye_center_y": 216.95384615384614,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 407,
+            "bbox": [
+              297,
+              262,
+              316,
+              302
+            ],
+            "center": [
+              306.5,
+              282.0
+            ]
+          },
+          {
+            "area": 376,
+            "bbox": [
+              272,
+              295,
+              306,
+              322
+            ],
+            "center": [
+              289.0,
+              308.5
+            ]
+          },
+          {
+            "area": 134,
+            "bbox": [
+              175,
+              262,
+              203,
+              271
+            ],
+            "center": [
+              189.0,
+              266.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 6026,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 977,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1502,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 717,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 511,
+          "median_rgb": [
+            108.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "chin-grid-clean-nochair",
+        6
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          134,
+          71,
+          329,
+          259
+        ],
+        "head_width_diagnostic": 195,
+        "eye_center_y": 217.05882352941177,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 387,
+            "bbox": [
+              297,
+              262,
+              315,
+              303
+            ],
+            "center": [
+              306.0,
+              282.5
+            ]
+          },
+          {
+            "area": 125,
+            "bbox": [
+              274,
+              297,
+              290,
+              310
+            ],
+            "center": [
+              282.0,
+              303.5
+            ]
+          },
+          {
+            "area": 72,
+            "bbox": [
+              287,
+              312,
+              305,
+              323
+            ],
+            "center": [
+              296.0,
+              317.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 6064,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1073,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1487,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 651,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 701,
+          "median_rgb": [
+            108.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "chin-grid-clean-nochair",
+        7
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          131,
+          78,
+          353,
+          262
+        ],
+        "head_width_diagnostic": 222,
+        "eye_center_y": 220.18352059925093,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          156.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 496,
+            "bbox": [
+              297,
+              262,
+              314,
+              312
+            ],
+            "center": [
+              305.5,
+              287.0
+            ]
+          },
+          {
+            "area": 370,
+            "bbox": [
+              261,
+              299,
+              292,
+              320
+            ],
+            "center": [
+              276.5,
+              309.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5803,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1001,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1470,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 715,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 663,
+          "median_rgb": [
+            108.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-a-clean-nochair",
+        0
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          131,
+          78,
+          353,
+          262
+        ],
+        "head_width_diagnostic": 222,
+        "eye_center_y": 220.18352059925093,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          156.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 496,
+            "bbox": [
+              297,
+              262,
+              314,
+              312
+            ],
+            "center": [
+              305.5,
+              287.0
+            ]
+          },
+          {
+            "area": 370,
+            "bbox": [
+              261,
+              299,
+              292,
+              320
+            ],
+            "center": [
+              276.5,
+              309.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5803,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1001,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1470,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 715,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 663,
+          "median_rgb": [
+            108.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-a-clean-nochair",
+        1
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          131,
+          77,
+          353,
+          262
+        ],
+        "head_width_diagnostic": 222,
+        "eye_center_y": 220.1259259259259,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 498,
+            "bbox": [
+              297,
+              262,
+              316,
+              313
+            ],
+            "center": [
+              306.5,
+              287.5
+            ]
+          },
+          {
+            "area": 254,
+            "bbox": [
+              261,
+              305,
+              290,
+              319
+            ],
+            "center": [
+              275.5,
+              312.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5843,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 973,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1453,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 712,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 1134,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-a-clean-nochair",
+        2
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          132,
+          78,
+          356,
+          263
+        ],
+        "head_width_diagnostic": 224,
+        "eye_center_y": 221.01639344262296,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 485,
+            "bbox": [
+              294,
+              262,
+              312,
+              311
+            ],
+            "center": [
+              303.0,
+              286.5
+            ]
+          },
+          {
+            "area": 301,
+            "bbox": [
+              262,
+              299,
+              292,
+              320
+            ],
+            "center": [
+              277.0,
+              309.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5789,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1024,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1447,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 690,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 1191,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-a-clean-nochair",
+        3
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          132,
+          78,
+          356,
+          263
+        ],
+        "head_width_diagnostic": 224,
+        "eye_center_y": 220.6586345381526,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 507,
+            "bbox": [
+              294,
+              262,
+              312,
+              313
+            ],
+            "center": [
+              303.0,
+              287.5
+            ]
+          },
+          {
+            "area": 333,
+            "bbox": [
+              262,
+              300,
+              291,
+              320
+            ],
+            "center": [
+              276.5,
+              310.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5771,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1012,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1441,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 731,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 1325,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-a-clean-nochair",
+        4
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          133,
+          77,
+          345,
+          262
+        ],
+        "head_width_diagnostic": 212,
+        "eye_center_y": 220.22262773722628,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 477,
+            "bbox": [
+              294,
+              262,
+              312,
+              311
+            ],
+            "center": [
+              303.0,
+              286.5
+            ]
+          },
+          {
+            "area": 417,
+            "bbox": [
+              262,
+              299,
+              292,
+              321
+            ],
+            "center": [
+              277.0,
+              310.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5861,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1021,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1498,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 705,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 974,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-a-clean-nochair",
+        5
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          132,
+          77,
+          339,
+          262
+        ],
+        "head_width_diagnostic": 207,
+        "eye_center_y": 219.6987951807229,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 519,
+            "bbox": [
+              287,
+              262,
+              312,
+              312
+            ],
+            "center": [
+              299.5,
+              287.0
+            ]
+          },
+          {
+            "area": 321,
+            "bbox": [
+              262,
+              301,
+              290,
+              320
+            ],
+            "center": [
+              276.0,
+              310.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5838,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 986,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1452,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 671,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 631,
+          "median_rgb": [
+            108.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-a-clean-nochair",
+        6
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          132,
+          77,
+          339,
+          262
+        ],
+        "head_width_diagnostic": 207,
+        "eye_center_y": 220.05204460966542,
+        "hair_patch_median_rgb": [
+          238.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 498,
+            "bbox": [
+              288,
+              262,
+              310,
+              310
+            ],
+            "center": [
+              299.0,
+              286.0
+            ]
+          },
+          {
+            "area": 355,
+            "bbox": [
+              262,
+              299,
+              292,
+              321
+            ],
+            "center": [
+              277.0,
+              310.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5842,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1004,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1462,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 669,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 258,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-a-clean-nochair",
+        7
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          133,
+          77,
+          343,
+          261
+        ],
+        "head_width_diagnostic": 210,
+        "eye_center_y": 219.44957983193277,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 463,
+            "bbox": [
+              294,
+              262,
+              311,
+              310
+            ],
+            "center": [
+              302.5,
+              286.0
+            ]
+          },
+          {
+            "area": 401,
+            "bbox": [
+              262,
+              299,
+              292,
+              320
+            ],
+            "center": [
+              277.0,
+              309.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5872,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 986,
+          "median_rgb": [
+            246.0,
+            221.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1438,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 657,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 1386,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-a-clean-nochair",
+        6
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          132,
+          77,
+          339,
+          262
+        ],
+        "head_width_diagnostic": 207,
+        "eye_center_y": 220.05204460966542,
+        "hair_patch_median_rgb": [
+          238.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 498,
+            "bbox": [
+              288,
+              262,
+              310,
+              310
+            ],
+            "center": [
+              299.0,
+              286.0
+            ]
+          },
+          {
+            "area": 355,
+            "bbox": [
+              262,
+              299,
+              292,
+              321
+            ],
+            "center": [
+              277.0,
+              310.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5842,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1004,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1462,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 669,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 258,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-a-clean-nochair",
+        5
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          132,
+          77,
+          339,
+          262
+        ],
+        "head_width_diagnostic": 207,
+        "eye_center_y": 219.6987951807229,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 519,
+            "bbox": [
+              287,
+              262,
+              312,
+              312
+            ],
+            "center": [
+              299.5,
+              287.0
+            ]
+          },
+          {
+            "area": 321,
+            "bbox": [
+              262,
+              301,
+              290,
+              320
+            ],
+            "center": [
+              276.0,
+              310.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5838,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 986,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1452,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 671,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 631,
+          "median_rgb": [
+            108.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-a-clean-nochair",
+        4
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          133,
+          77,
+          345,
+          262
+        ],
+        "head_width_diagnostic": 212,
+        "eye_center_y": 220.22262773722628,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 477,
+            "bbox": [
+              294,
+              262,
+              312,
+              311
+            ],
+            "center": [
+              303.0,
+              286.5
+            ]
+          },
+          {
+            "area": 417,
+            "bbox": [
+              262,
+              299,
+              292,
+              321
+            ],
+            "center": [
+              277.0,
+              310.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5861,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1021,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1498,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 705,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 974,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-a-clean-nochair",
+        3
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          132,
+          78,
+          356,
+          263
+        ],
+        "head_width_diagnostic": 224,
+        "eye_center_y": 220.6586345381526,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 507,
+            "bbox": [
+              294,
+              262,
+              312,
+              313
+            ],
+            "center": [
+              303.0,
+              287.5
+            ]
+          },
+          {
+            "area": 333,
+            "bbox": [
+              262,
+              300,
+              291,
+              320
+            ],
+            "center": [
+              276.5,
+              310.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5771,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1012,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1441,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 731,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 1325,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-a-clean-nochair",
+        2
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          132,
+          78,
+          356,
+          263
+        ],
+        "head_width_diagnostic": 224,
+        "eye_center_y": 221.01639344262296,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 485,
+            "bbox": [
+              294,
+              262,
+              312,
+              311
+            ],
+            "center": [
+              303.0,
+              286.5
+            ]
+          },
+          {
+            "area": 301,
+            "bbox": [
+              262,
+              299,
+              292,
+              320
+            ],
+            "center": [
+              277.0,
+              309.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5789,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1024,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1447,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 690,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 1191,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-a-clean-nochair",
+        1
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          131,
+          77,
+          353,
+          262
+        ],
+        "head_width_diagnostic": 222,
+        "eye_center_y": 220.1259259259259,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 498,
+            "bbox": [
+              297,
+              262,
+              316,
+              313
+            ],
+            "center": [
+              306.5,
+              287.5
+            ]
+          },
+          {
+            "area": 254,
+            "bbox": [
+              261,
+              305,
+              290,
+              319
+            ],
+            "center": [
+              275.5,
+              312.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5843,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 973,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1453,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 712,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 1134,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-b-clean-nochair",
+        0
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          132,
+          74,
+          357,
+          261
+        ],
+        "head_width_diagnostic": 225,
+        "eye_center_y": 218.78947368421052,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 458,
+            "bbox": [
+              297,
+              262,
+              312,
+              310
+            ],
+            "center": [
+              304.5,
+              286.0
+            ]
+          },
+          {
+            "area": 364,
+            "bbox": [
+              262,
+              295,
+              291,
+              318
+            ],
+            "center": [
+              276.5,
+              306.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5869,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1116,
+          "median_rgb": [
+            246.0,
+            222.0,
+            208.0
+          ]
+        },
+        "white": {
+          "pixels": 1623,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 567,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 685,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-b-clean-nochair",
+        1
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          133,
+          74,
+          356,
+          260
+        ],
+        "head_width_diagnostic": 223,
+        "eye_center_y": 218.02173913043478,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          156.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 495,
+            "bbox": [
+              297,
+              262,
+              315,
+              310
+            ],
+            "center": [
+              306.0,
+              286.0
+            ]
+          },
+          {
+            "area": 298,
+            "bbox": [
+              263,
+              297,
+              291,
+              318
+            ],
+            "center": [
+              277.0,
+              307.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5976,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1107,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1605,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 558,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 377,
+          "median_rgb": [
+            108.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-b-clean-nochair",
+        2
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          133,
+          74,
+          357,
+          261
+        ],
+        "head_width_diagnostic": 224,
+        "eye_center_y": 218.56422018348624,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 459,
+            "bbox": [
+              297,
+              262,
+              314,
+              310
+            ],
+            "center": [
+              305.5,
+              286.0
+            ]
+          },
+          {
+            "area": 253,
+            "bbox": [
+              263,
+              295,
+              285,
+              318
+            ],
+            "center": [
+              274.0,
+              306.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5972,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1122,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1587,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 564,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 268,
+          "median_rgb": [
+            109.0,
+            85.5,
+            78.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-b-clean-nochair",
+        3
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          134,
+          74,
+          356,
+          260
+        ],
+        "head_width_diagnostic": 222,
+        "eye_center_y": 217.957805907173,
+        "hair_patch_median_rgb": [
+          238.0,
+          193.0,
+          156.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 477,
+            "bbox": [
+              298,
+              262,
+              314,
+              310
+            ],
+            "center": [
+              306.0,
+              286.0
+            ]
+          },
+          {
+            "area": 342,
+            "bbox": [
+              262,
+              295,
+              291,
+              318
+            ],
+            "center": [
+              276.5,
+              306.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5945,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1130,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1619,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 558,
+          "median_rgb": [
+            89.0,
+            95.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 725,
+          "median_rgb": [
+            107.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-b-clean-nochair",
+        4
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          133,
+          75,
+          356,
+          261
+        ],
+        "head_width_diagnostic": 223,
+        "eye_center_y": 219.0909090909091,
+        "hair_patch_median_rgb": [
+          239.0,
+          192.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 496,
+            "bbox": [
+              297,
+              262,
+              315,
+              311
+            ],
+            "center": [
+              306.0,
+              286.5
+            ]
+          },
+          {
+            "area": 437,
+            "bbox": [
+              262,
+              296,
+              292,
+              319
+            ],
+            "center": [
+              277.0,
+              307.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5835,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1080,
+          "median_rgb": [
+            246.0,
+            222.0,
+            208.0
+          ]
+        },
+        "white": {
+          "pixels": 1594,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 655,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 552,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-b-clean-nochair",
+        5
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          134,
+          75,
+          355,
+          260
+        ],
+        "head_width_diagnostic": 221,
+        "eye_center_y": 218.01673640167365,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 499,
+            "bbox": [
+              297,
+              262,
+              315,
+              311
+            ],
+            "center": [
+              306.0,
+              286.5
+            ]
+          },
+          {
+            "area": 325,
+            "bbox": [
+              263,
+              298,
+              291,
+              319
+            ],
+            "center": [
+              277.0,
+              308.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5852,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1102,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1563,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 655,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 1026,
+          "median_rgb": [
+            108.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-b-clean-nochair",
+        6
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          133,
+          75,
+          356,
+          261
+        ],
+        "head_width_diagnostic": 223,
+        "eye_center_y": 219.05627705627705,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 482,
+            "bbox": [
+              297,
+              262,
+              315,
+              311
+            ],
+            "center": [
+              306.0,
+              286.5
+            ]
+          },
+          {
+            "area": 323,
+            "bbox": [
+              262,
+              297,
+              291,
+              319
+            ],
+            "center": [
+              276.5,
+              308.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5941,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1071,
+          "median_rgb": [
+            245.0,
+            222.0,
+            208.0
+          ]
+        },
+        "white": {
+          "pixels": 1567,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 645,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 1249,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-b-clean-nochair",
+        7
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          134,
+          75,
+          355,
+          260
+        ],
+        "head_width_diagnostic": 221,
+        "eye_center_y": 218.20982142857142,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 479,
+            "bbox": [
+              298,
+              262,
+              315,
+              310
+            ],
+            "center": [
+              306.5,
+              286.0
+            ]
+          },
+          {
+            "area": 406,
+            "bbox": [
+              262,
+              297,
+              292,
+              319
+            ],
+            "center": [
+              277.0,
+              308.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5832,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1094,
+          "median_rgb": [
+            246.0,
+            221.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1530,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 648,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 496,
+          "median_rgb": [
+            109.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-c-clean-nochair",
+        0
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          129,
+          73,
+          358,
+          262
+        ],
+        "head_width_diagnostic": 229,
+        "eye_center_y": 220.23584905660377,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 473,
+            "bbox": [
+              293,
+              262,
+              310,
+              308
+            ],
+            "center": [
+              301.5,
+              285.0
+            ]
+          },
+          {
+            "area": 444,
+            "bbox": [
+              261,
+              295,
+              291,
+              319
+            ],
+            "center": [
+              276.0,
+              307.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5783,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1119,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1581,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 504,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 468,
+          "median_rgb": [
+            108.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-c-clean-nochair",
+        1
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          130,
+          73,
+          356,
+          261
+        ],
+        "head_width_diagnostic": 226,
+        "eye_center_y": 219.09756097560975,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          156.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 479,
+            "bbox": [
+              293,
+              262,
+              310,
+              309
+            ],
+            "center": [
+              301.5,
+              285.5
+            ]
+          },
+          {
+            "area": 316,
+            "bbox": [
+              261,
+              301,
+              290,
+              318
+            ],
+            "center": [
+              275.5,
+              309.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5956,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1112,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1572,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 515,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 1219,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-c-clean-nochair",
+        2
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          129,
+          73,
+          357,
+          262
+        ],
+        "head_width_diagnostic": 228,
+        "eye_center_y": 219.84579439252337,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 488,
+            "bbox": [
+              293,
+              262,
+              310,
+              309
+            ],
+            "center": [
+              301.5,
+              285.5
+            ]
+          },
+          {
+            "area": 416,
+            "bbox": [
+              261,
+              296,
+              291,
+              319
+            ],
+            "center": [
+              276.0,
+              307.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5794,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1108,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1540,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 503,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 565,
+          "median_rgb": [
+            109.0,
+            85.0,
+            78.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-c-clean-nochair",
+        3
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          130,
+          73,
+          357,
+          262
+        ],
+        "head_width_diagnostic": 227,
+        "eye_center_y": 219.54222222222222,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 491,
+            "bbox": [
+              293,
+              262,
+              311,
+              310
+            ],
+            "center": [
+              302.0,
+              286.0
+            ]
+          },
+          {
+            "area": 385,
+            "bbox": [
+              261,
+              297,
+              290,
+              318
+            ],
+            "center": [
+              275.5,
+              307.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5967,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1138,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1572,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 523,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 739,
+          "median_rgb": [
+            108.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-c-clean-nochair",
+        4
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          129,
+          72,
+          356,
+          261
+        ],
+        "head_width_diagnostic": 227,
+        "eye_center_y": 219.4059829059829,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 460,
+            "bbox": [
+              261,
+              295,
+              291,
+              318
+            ],
+            "center": [
+              276.0,
+              306.5
+            ]
+          },
+          {
+            "area": 451,
+            "bbox": [
+              293,
+              262,
+              310,
+              307
+            ],
+            "center": [
+              301.5,
+              284.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5786,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1104,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1559,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 521,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 906,
+          "median_rgb": [
+            107.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-c-clean-nochair",
+        5
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          129,
+          72,
+          355,
+          260
+        ],
+        "head_width_diagnostic": 226,
+        "eye_center_y": 218.2340425531915,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 457,
+            "bbox": [
+              294,
+              262,
+              313,
+              307
+            ],
+            "center": [
+              303.5,
+              284.5
+            ]
+          },
+          {
+            "area": 309,
+            "bbox": [
+              261,
+              302,
+              290,
+              318
+            ],
+            "center": [
+              275.5,
+              310.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5835,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1128,
+          "median_rgb": [
+            246.0,
+            221.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1596,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 524,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 1108,
+          "median_rgb": [
+            107.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-c-clean-nochair",
+        6
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          129,
+          72,
+          356,
+          261
+        ],
+        "head_width_diagnostic": 227,
+        "eye_center_y": 219.05194805194805,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 461,
+            "bbox": [
+              294,
+              262,
+              313,
+              307
+            ],
+            "center": [
+              303.5,
+              284.5
+            ]
+          },
+          {
+            "area": 435,
+            "bbox": [
+              260,
+              295,
+              291,
+              317
+            ],
+            "center": [
+              275.5,
+              306.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5838,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1089,
+          "median_rgb": [
+            246.0,
+            221.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1564,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 512,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 416,
+          "median_rgb": [
+            108.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-c-clean-nochair",
+        7
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          129,
+          72,
+          355,
+          260
+        ],
+        "head_width_diagnostic": 226,
+        "eye_center_y": 218.42056074766356,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 464,
+            "bbox": [
+              296,
+              262,
+              314,
+              307
+            ],
+            "center": [
+              305.0,
+              284.5
+            ]
+          },
+          {
+            "area": 345,
+            "bbox": [
+              261,
+              297,
+              290,
+              317
+            ],
+            "center": [
+              275.5,
+              307.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5896,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1129,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1595,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 524,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 608,
+          "median_rgb": [
+            108.0,
+            85.0,
+            78.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-d-clean-nochair",
+        0
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          132,
+          73,
+          358,
+          260
+        ],
+        "head_width_diagnostic": 226,
+        "eye_center_y": 218.33050847457628,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 458,
+            "bbox": [
+              300,
+              262,
+              316,
+              311
+            ],
+            "center": [
+              308.0,
+              286.5
+            ]
+          },
+          {
+            "area": 337,
+            "bbox": [
+              263,
+              297,
+              293,
+              319
+            ],
+            "center": [
+              278.0,
+              308.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5878,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1087,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1520,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 501,
+          "median_rgb": [
+            89.0,
+            94.0,
+            111.0
+          ]
+        },
+        "boots": {
+          "pixels": 1043,
+          "median_rgb": [
+            108.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-d-clean-nochair",
+        1
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          131,
+          73,
+          330,
+          261
+        ],
+        "head_width_diagnostic": 199,
+        "eye_center_y": 219.22672064777328,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 483,
+            "bbox": [
+              299,
+              262,
+              316,
+              311
+            ],
+            "center": [
+              307.5,
+              286.5
+            ]
+          },
+          {
+            "area": 118,
+            "bbox": [
+              264,
+              301,
+              290,
+              313
+            ],
+            "center": [
+              277.0,
+              307.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5923,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1051,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1483,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 531,
+          "median_rgb": [
+            89.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 826,
+          "median_rgb": [
+            108.0,
+            85.0,
+            78.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-d-clean-nochair",
+        2
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          132,
+          74,
+          360,
+          265
+        ],
+        "head_width_diagnostic": 228,
+        "eye_center_y": 223.12820512820514,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 470,
+            "bbox": [
+              297,
+              262,
+              313,
+              309
+            ],
+            "center": [
+              305.0,
+              285.5
+            ]
+          },
+          {
+            "area": 165,
+            "bbox": [
+              268,
+              297,
+              293,
+              317
+            ],
+            "center": [
+              280.5,
+              307.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5889,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1054,
+          "median_rgb": [
+            245.0,
+            222.0,
+            208.0
+          ]
+        },
+        "white": {
+          "pixels": 1519,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 532,
+          "median_rgb": [
+            90.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 303,
+          "median_rgb": [
+            110.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-d-clean-nochair",
+        3
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          133,
+          73,
+          357,
+          261
+        ],
+        "head_width_diagnostic": 224,
+        "eye_center_y": 219.0,
+        "hair_patch_median_rgb": [
+          238.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 475,
+            "bbox": [
+              297,
+              262,
+              314,
+              310
+            ],
+            "center": [
+              305.5,
+              286.0
+            ]
+          },
+          {
+            "area": 189,
+            "bbox": [
+              262,
+              299,
+              291,
+              320
+            ],
+            "center": [
+              276.5,
+              309.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5894,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1157,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1482,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 548,
+          "median_rgb": [
+            90.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 419,
+          "median_rgb": [
+            108.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-d-clean-nochair",
+        4
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          133,
+          74,
+          360,
+          263
+        ],
+        "head_width_diagnostic": 227,
+        "eye_center_y": 220.79710144927537,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 484,
+            "bbox": [
+              298,
+              262,
+              315,
+              311
+            ],
+            "center": [
+              306.5,
+              286.5
+            ]
+          },
+          {
+            "area": 155,
+            "bbox": [
+              267,
+              298,
+              292,
+              315
+            ],
+            "center": [
+              279.5,
+              306.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5895,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1042,
+          "median_rgb": [
+            246.0,
+            222.0,
+            208.5
+          ]
+        },
+        "white": {
+          "pixels": 1534,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 523,
+          "median_rgb": [
+            90.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 437,
+          "median_rgb": [
+            108.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-d-clean-nochair",
+        5
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          133,
+          74,
+          355,
+          260
+        ],
+        "head_width_diagnostic": 222,
+        "eye_center_y": 218.2048780487805,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 516,
+            "bbox": [
+              297,
+              262,
+              315,
+              312
+            ],
+            "center": [
+              306.0,
+              287.0
+            ]
+          },
+          {
+            "area": 304,
+            "bbox": [
+              261,
+              300,
+              292,
+              320
+            ],
+            "center": [
+              276.5,
+              310.0
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5922,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1054,
+          "median_rgb": [
+            246.0,
+            221.5,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1466,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 540,
+          "median_rgb": [
+            90.0,
+            94.0,
+            111.0
+          ]
+        },
+        "boots": {
+          "pixels": 482,
+          "median_rgb": [
+            108.0,
+            84.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-d-clean-nochair",
+        6
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          133,
+          74,
+          357,
+          261
+        ],
+        "head_width_diagnostic": 224,
+        "eye_center_y": 219.19742489270385,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 493,
+            "bbox": [
+              297,
+              262,
+              314,
+              311
+            ],
+            "center": [
+              305.5,
+              286.5
+            ]
+          },
+          {
+            "area": 303,
+            "bbox": [
+              261,
+              297,
+              292,
+              320
+            ],
+            "center": [
+              276.5,
+              308.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5954,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1037,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1472,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 506,
+          "median_rgb": [
+            90.0,
+            94.0,
+            111.0
+          ]
+        },
+        "boots": {
+          "pixels": 664,
+          "median_rgb": [
+            108.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    },
+    {
+      "source": [
+        "loop-d-clean-nochair",
+        7
+      ],
+      "geometry": {
+        "head_bbox_diagnostic": [
+          134,
+          74,
+          355,
+          260
+        ],
+        "head_width_diagnostic": 221,
+        "eye_center_y": 218.1448598130841,
+        "hair_patch_median_rgb": [
+          239.0,
+          193.0,
+          157.0
+        ],
+        "skin_components_diagnostic": [
+          {
+            "area": 503,
+            "bbox": [
+              298,
+              262,
+              315,
+              310
+            ],
+            "center": [
+              306.5,
+              286.0
+            ]
+          },
+          {
+            "area": 270,
+            "bbox": [
+              262,
+              299,
+              292,
+              320
+            ],
+            "center": [
+              277.0,
+              309.5
+            ]
+          }
+        ]
+      },
+      "materials": {
+        "hair": {
+          "pixels": 5917,
+          "median_rgb": [
+            239.0,
+            193.0,
+            157.0
+          ]
+        },
+        "skin": {
+          "pixels": 1054,
+          "median_rgb": [
+            246.0,
+            222.0,
+            209.0
+          ]
+        },
+        "white": {
+          "pixels": 1421,
+          "median_rgb": [
+            245.0,
+            242.0,
+            240.0
+          ]
+        },
+        "navy": {
+          "pixels": 523,
+          "median_rgb": [
+            90.0,
+            94.0,
+            112.0
+          ]
+        },
+        "boots": {
+          "pixels": 471,
+          "median_rgb": [
+            108.0,
+            85.0,
+            77.0
+          ]
+        }
+      }
+    }
+  ],
+  "GIF_decoded_pixels_match": true,
+  "JS_syntax": true,
+  "limits": "Numerical diagnostics do not replace visual acceptance. Browser playback not verified."
+}

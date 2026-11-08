@@ -1,5 +1,5 @@
 {
-  "version": "v18-drag-lift",
+  "version": "v20-pomodoro",
   "frame_size": [
     320,
     320
@@ -181,6 +181,55 @@
       "frame_count": 21,
       "loop": false,
       "duration_ms": 1040
+    },
+    "pomodoro_start": {
+      "path": "anime/pomodoro_start/animation.json",
+      "label": "番茄钟 · start",
+      "frame_count": 32,
+      "duration_ms": 4000,
+      "loop": false
+    },
+    "pomodoro_read": {
+      "path": "anime/pomodoro_read/animation.json",
+      "label": "番茄钟 · read",
+      "frame_count": 47,
+      "duration_ms": 5610,
+      "loop": true
+    },
+    "pomodoro_pause": {
+      "path": "anime/pomodoro_pause/animation.json",
+      "label": "番茄钟 · pause",
+      "frame_count": 16,
+      "duration_ms": 1760,
+      "loop": false
+    },
+    "pomodoro_paused": {
+      "path": "anime/pomodoro_paused/animation.json",
+      "label": "番茄钟 · paused",
+      "frame_count": 38,
+      "duration_ms": 4400,
+      "loop": true
+    },
+    "pomodoro_resume": {
+      "path": "anime/pomodoro_resume/animation.json",
+      "label": "番茄钟 · resume",
+      "frame_count": 34,
+      "duration_ms": 3570,
+      "loop": false
+    },
+    "pomodoro_stretch": {
+      "path": "anime/pomodoro_stretch/animation.json",
+      "label": "番茄钟 · stretch",
+      "frame_count": 42,
+      "duration_ms": 2730,
+      "loop": false
+    },
+    "pomodoro_end": {
+      "path": "anime/pomodoro_end/animation.json",
+      "label": "番茄钟 · end",
+      "frame_count": 65,
+      "duration_ms": 3550,
+      "loop": false
     }
   }
 }

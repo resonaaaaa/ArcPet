@@ -1,0 +1,15 @@
+{
+  "breath": {
+    "origin": "Copied approved existing reading breath atlas; original whole-person geometry retained"
+  },
+  "turn-keys": {
+    "generated_source_id": "exec-7008f659-892e-4311-b1da-c8b6c2812689.png"
+  },
+  "early": {
+    "generated_source_id": "exec-c2d83141-058b-4331-bac8-b42ea7b00420.png"
+  },
+  "late": {
+    "generated_source_id": "exec-f657f2a7-cc27-44c2-8661-e761bd3a0884.png"
+  },
+  "reference": "../pomodoro-v3/anime/start/031.png"
+}

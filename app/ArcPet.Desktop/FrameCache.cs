@@ -30,6 +30,12 @@ namespace ArcPet.Desktop
             }
         }
         public BitmapSource Get(string path) { return images[path]; }
+        public bool IsOpaque(BitmapSource image,int x,int y)
+        {
+            if(image==null || x<0 || y<0 || x>=image.PixelWidth || y>=image.PixelHeight)return false;
+            var rgba=new FormatConvertedBitmap(image,PixelFormats.Bgra32,null,0);var pixel=new byte[4];
+            rgba.CopyPixels(new Int32Rect(x,y,1,1),pixel,4,0);return pixel[3]>=64;
+        }
         public Rect VisibleBounds(AnimationClip clip)
         {
             Rect result=Rect.Empty;

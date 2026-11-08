@@ -1,0 +1,63 @@
+{
+  "mode": "built-in",
+  "scope": "Ending part1 only: put book down, close eyes, stretch and settle; no tomato, idle return, or runtime integration.",
+  "prompts": [
+    {
+      "name": "keys",
+      "prompt": "Use case identity-preserve. ArcPet production animation KEY POSES,8chronological scenes in4cols2rows transparent2:1atlas. Input1 exact scene/camera/grid template after book is put down. Input2 approved reading is absolute style/color/proportion authority. Draw each COMPLETE connected cat anew (head/neck/torso/arms/skirt/legs/boots/tail as coherent whole); never assemble or independently transform bodyparts.\nThe cat is SEATED BEHIND same wooden desk, lampOFF left, mini WHITE DAISIES right. Keep desk/lamp/flowers exact sizes and locations as template. Omit ONLY small wooden stool behind boots (original fixed stool added later). NO BOOK drawn anywhere: original closed book will be composited at its fixed original tabletop position. Keep full original character framing; head x132..330,y76..260, eyes around219, boots bottom424 per448cell. Maintain skull, head-body ratio, shoulder width, thick short legs, brown boots. Mutedgold239/193/157, peach246/222/209, simple plain HIGHNECK offwhite245/242/240, navy89/94/112, brown boots107/84/77. Fine brown cel linework, clean solid fills, no texture/white speckles/holes.\nAction: after putting book down, cat CLOSES EYES and stretches BOTH ARMS, peacefully satisfied, then relaxes, still seated. 1 hands resting near closed book location (book NOT drawn), eyes open.2 eyes half-close, hands release tabletop.3 eyes fully closed with clear fine dark lid lines on peach lids, elbows open outward, forearms rise.4 both paws at cheek/ear level, elbows bent naturally, shoulders lift very slightly.5 relaxed strong Y/V stretch, hands just above/beside ears, elbows remain anatomically plausible, shirt underarm/sleeve tension and 2–3px actual chest breath. DO NOT elongate arms/neck or enlarge head to reach high.6 hold stretch with tiny genuine chest/sleeve change and gentle tail flex.7 release tension and lower elbows, eyes stay closed.8 hands settle near tabletop, relaxed closed eyes and calm cat mouth, ready for next scene (NO tomato yet).\nNo book/tomato/splat, no standing up, no floating detached arms, no crossing through head or sleeves, exactly2hands. Head stays approximately level, original scale stable. Natural small hair tips/hem response during shoulder motion, tail remains continuous. Whole scene fits cell, all paws/ears/boots safely inside margins."
+    },
+    {
+      "name": "raise-a",
+      "prompt": "Use case identity-preserve. Production ArcPet animation, EIGHT UNIQUE consecutive WHOLE CHARACTER scenes4cols2rows2:1transparent atlas. Input1 exact8cell layout of starting pose, input2 ending pose, input3 APPROVED READING absolute color and identity authority. Draw a single chronological smooth motion from start to end over8small steps; preserve scale/camera/grid. Complete coherent cat every frame; NEVER transform/paste independent head/body/arms/legs.\nCat remains seated BEHIND same fixed desk, OFF lamp left and white mini daisies right, all same exact coordinates/dimensions as input guides. NO small wooden stool (added later) and NO BOOK (original fixed closed book added atx192..268,y301..325). No tomato or second ending action. Original warm mutedgold239/193/157, peach246/222/209, simple HIGHNECK offwhite245/242/240, navy89/94/112, brown boots107/84/77. Fine brown cel ink and CLEAN solid fills, no grain/white noise/holes. No added shirt seams/cuffs/ribbing/Vneck. Head/cowlick width/height, shoulder width, short thick legs, boots and whole head-body proportions match approved reading. Eyes near219 and cowlick near76, boots near424 in each448cell. Tiny genuine shoulder/chest/sleeve motion, no head/torso resizing or foot baseline jumps. Full margin around ALL paws,ears,tail,boots. Exactlytwohands, continuous tail curve, no forearms passing through head. Arms keep natural original segment lengths, bent elbows, no rubber elongation.\nPhase1: hands start beside closed-book position on desk; gradually release table and lift forearms up to cheeks with elbows opening. Poses1-2 eyes open,3 half-close,4close (clear fine curved dark lid lines on peach lids),5-8remainclosed. Ends with both paws beside lower cheeks as input2. Head stays level; use continuous subtle hair tips and sleeves."
+    },
+    {
+      "name": "raise-b",
+      "prompt": "Use case identity-preserve. Production ArcPet animation, EIGHT UNIQUE consecutive WHOLE CHARACTER scenes4cols2rows2:1transparent atlas. Input1 exact8cell layout of starting pose, input2 ending pose, input3 APPROVED READING absolute color and identity authority. Draw a single chronological smooth motion from start to end over8small steps; preserve scale/camera/grid. Complete coherent cat every frame; NEVER transform/paste independent head/body/arms/legs.\nCat remains seated BEHIND same fixed desk, OFF lamp left and white mini daisies right, all same exact coordinates/dimensions as input guides. NO small wooden stool (added later) and NO BOOK (original fixed closed book added atx192..268,y301..325). No tomato or second ending action. Original warm mutedgold239/193/157, peach246/222/209, simple HIGHNECK offwhite245/242/240, navy89/94/112, brown boots107/84/77. Fine brown cel ink and CLEAN solid fills, no grain/white noise/holes. No added shirt seams/cuffs/ribbing/Vneck. Head/cowlick width/height, shoulder width, short thick legs, boots and whole head-body proportions match approved reading. Eyes near219 and cowlick near76, boots near424 in each448cell. Tiny genuine shoulder/chest/sleeve motion, no head/torso resizing or foot baseline jumps. Full margin around ALL paws,ears,tail,boots. Exactlytwohands, continuous tail curve, no forearms passing through head. Arms keep natural original segment lengths, bent elbows, no rubber elongation.\nPhase2: eyes stay peacefully CLOSED all8poses. From bent forearms/paws beside cheeks, gradually extend both arms diagonally up/out into natural V stretch shown by input2, paws beside ears, NOT giant extended arms above frame. Elbows unbend evenly, chest gently lifts2–3pixels and shirt underarms/sleeves draw real tension. Skull stays level, no head flattening/size change."
+    },
+    {
+      "name": "release-a",
+      "prompt": "Use case identity-preserve. Production ArcPet animation, EIGHT UNIQUE consecutive WHOLE CHARACTER scenes4cols2rows2:1transparent atlas. Input1 exact8cell layout of starting pose, input2 ending pose, input3 APPROVED READING absolute color and identity authority. Draw a single chronological smooth motion from start to end over8small steps; preserve scale/camera/grid. Complete coherent cat every frame; NEVER transform/paste independent head/body/arms/legs.\nCat remains seated BEHIND same fixed desk, OFF lamp left and white mini daisies right, all same exact coordinates/dimensions as input guides. NO small wooden stool (added later) and NO BOOK (original fixed closed book added atx192..268,y301..325). No tomato or second ending action. Original warm mutedgold239/193/157, peach246/222/209, simple HIGHNECK offwhite245/242/240, navy89/94/112, brown boots107/84/77. Fine brown cel ink and CLEAN solid fills, no grain/white noise/holes. No added shirt seams/cuffs/ribbing/Vneck. Head/cowlick width/height, shoulder width, short thick legs, boots and whole head-body proportions match approved reading. Eyes near219 and cowlick near76, boots near424 in each448cell. Tiny genuine shoulder/chest/sleeve motion, no head/torso resizing or foot baseline jumps. Full margin around ALL paws,ears,tail,boots. Exactlytwohands, continuous tail curve, no forearms passing through head. Arms keep natural original segment lengths, bent elbows, no rubber elongation.\nPhase3: eyes stay CLOSED all8poses. First4poses maintain full V stretch while drawing real tiny chest/shoulder/sleeve inhalation/exhalation and slight hair/tail response; all4actually different, not frozen duplicate. Last4poses release tension, bend elbows and lower paws halfway toward desk, ending at input2. Maintain fixed head size and feet."
+    },
+    {
+      "name": "release-b",
+      "prompt": "Use case identity-preserve. Production ArcPet animation, EIGHT UNIQUE consecutive WHOLE CHARACTER scenes4cols2rows2:1transparent atlas. Input1 exact8cell layout of starting pose, input2 ending pose, input3 APPROVED READING absolute color and identity authority. Draw a single chronological smooth motion from start to end over8small steps; preserve scale/camera/grid. Complete coherent cat every frame; NEVER transform/paste independent head/body/arms/legs.\nCat remains seated BEHIND same fixed desk, OFF lamp left and white mini daisies right, all same exact coordinates/dimensions as input guides. NO small wooden stool (added later) and NO BOOK (original fixed closed book added atx192..268,y301..325). No tomato or second ending action. Original warm mutedgold239/193/157, peach246/222/209, simple HIGHNECK offwhite245/242/240, navy89/94/112, brown boots107/84/77. Fine brown cel ink and CLEAN solid fills, no grain/white noise/holes. No added shirt seams/cuffs/ribbing/Vneck. Head/cowlick width/height, shoulder width, short thick legs, boots and whole head-body proportions match approved reading. Eyes near219 and cowlick near76, boots near424 in each448cell. Tiny genuine shoulder/chest/sleeve motion, no head/torso resizing or foot baseline jumps. Full margin around ALL paws,ears,tail,boots. Exactlytwohands, continuous tail curve, no forearms passing through head. Arms keep natural original segment lengths, bent elbows, no rubber elongation.\nPhase4: eyes stay CLOSED all8poses. Lower bent arms gently from halfway pose to resting near closed-book position on desk. Elbows/sleeves settle with subtle hair tips and chest breath. Last pose calm closedeyes/catmouth, seated relaxed, ready for next clip; no hand behind back, no tomato. Smooth deceleration without sudden stop."
+    },
+    {
+      "name": "remove generated book in raise-a/release-b",
+      "prompt": "Precise-object-edit. Keep this existing4column2row animation atlas exactly unchanged except REMOVE THE CLOSED GREEN BOOK from every cell. Fill revealed small areas of white shirt or desktop naturally. The ORIGINAL fixed book will be composited later at its original place. Preserve EXACT whole cat geometry, proportions, head/cowlick, closed/half/open eye states in each cell, head position, two paws, sleeves, torso, navy skirt, short legs, both brown boots, tail, all palette/linework. Preserve furniture and layout. No added book,stool,tomato or new poses. Do not move any bodypart, do not crop or grow head, no grain/white noise. Same4x2grid2:1transparent image."
+    }
+  ],
+  "generated": [
+    {
+      "name": "keys",
+      "cache_file": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-dc8d6e3d-5eb8-47c4-8209-439fb8dd715b.png"
+    },
+    {
+      "name": "raise-a",
+      "cache_file": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-3b792516-531d-4714-bc06-15b82c0bc132.png"
+    },
+    {
+      "name": "raise-b",
+      "cache_file": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-ff6ff572-069b-4b8b-a290-44eba385f782.png"
+    },
+    {
+      "name": "release-a",
+      "cache_file": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-d4441fa7-1da5-4478-acb3-26443f16fbcd.png"
+    },
+    {
+      "name": "release-b",
+      "cache_file": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-07376884-8e5b-452f-af18-6f20810b62b2.png"
+    },
+    {
+      "name": "raise-a-clean",
+      "cache_file": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-f4a5696d-61df-4a82-a672-3788dde10fc8.png"
+    },
+    {
+      "name": "release-b-clean",
+      "cache_file": "C:\\Users\\24847\\.codex\\generated_images\\01a16de2-e5e3-7073-b492-a0f4bba2f20b\\exec-8a470417-2c07-4042-bd20-636730d1cd5c.png"
+    }
+  ],
+  "selected": "raise-a.png and release-b.png use their book-removal edit; raise-b/release-a use original complete-scene drawings. Original fixed closed book/props composited from approved pause-v3. Approved whole book gestures reused unchanged.",
+  "constraints": "Whole-cat drawings; no local part transforms. Approved reading palette is direct reference; RGB calibration retains registered alpha.",
+  "status": "Pending user visual approval; all full scenes reviewed on light/dark backgrounds"
+}

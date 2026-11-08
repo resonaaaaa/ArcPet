@@ -1,0 +1,90 @@
+[
+  {
+    "file": "sources\\between-a.png",
+    "bytes": 1256569
+  },
+  {
+    "file": "sources\\open.png",
+    "bytes": 1078039
+  },
+  {
+    "file": "sources\\reach.png",
+    "bytes": 1118238
+  },
+  {
+    "file": "references\\closed-raised-layout.png",
+    "bytes": 317608
+  },
+  {
+    "file": "references\\grasp-layout.png",
+    "bytes": 258077
+  },
+  {
+    "file": "references\\open-0.png",
+    "bytes": 103537
+  },
+  {
+    "file": "references\\open-7.png",
+    "bytes": 110633
+  },
+  {
+    "file": "references\\open-end-layout.png",
+    "bytes": 252421
+  },
+  {
+    "file": "references\\opening-layout.png",
+    "bytes": 322571
+  },
+  {
+    "file": "references\\paused-layout.png",
+    "bytes": 322923
+  },
+  {
+    "file": "references\\reach-0.png",
+    "bytes": 112631
+  },
+  {
+    "file": "references\\reach-1.png",
+    "bytes": 112708
+  },
+  {
+    "file": "references\\reach-2.png",
+    "bytes": 113366
+  },
+  {
+    "file": "references\\reach-3.png",
+    "bytes": 113528
+  },
+  {
+    "file": "references\\reach-4.png",
+    "bytes": 113562
+  },
+  {
+    "file": "references\\reach-5.png",
+    "bytes": 113775
+  },
+  {
+    "file": "references\\reach-6.png",
+    "bytes": 113373
+  },
+  {
+    "file": "references\\reach-7.png",
+    "bytes": 113398
+  },
+  {
+    "file": "references\\reading-layout.png",
+    "bytes": 343204
+  },
+  {
+    "file": "docs\\approved-lift-open.png",
+    "bytes": 1273513
+  },
+  {
+    "file": "docs\\open-raw.png",
+    "bytes": 699882
+  },
+  {
+    "file": "docs\\reach-raw.png",
+    "bytes": 736108
+  }
+]

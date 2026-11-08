@@ -1,0 +1,382 @@
+{
+  "label": "结束第一段 · 放书闭眼伸懒腰",
+  "loop": false,
+  "canvas": [
+    448,
+    448
+  ],
+  "frame_count": 42,
+  "unique_frame_count": 42,
+  "new_drawings": 32,
+  "duration_ms": 2730,
+  "frames": [
+    {
+      "file": "000.png",
+      "duration_ms": 120,
+      "source": {
+        "kind": "approved reading entry",
+        "file": "../pomodoro-reading-v3/anime/reading/000.png"
+      }
+    },
+    {
+      "file": "001.png",
+      "duration_ms": 90,
+      "source": {
+        "kind": "approved whole book gesture",
+        "file": "../pomodoro-pause-v3/anime/pause/000.png"
+      }
+    },
+    {
+      "file": "002.png",
+      "duration_ms": 90,
+      "source": {
+        "kind": "approved whole book gesture",
+        "file": "../pomodoro-pause-v3/anime/pause/001.png"
+      }
+    },
+    {
+      "file": "003.png",
+      "duration_ms": 90,
+      "source": {
+        "kind": "approved whole book gesture",
+        "file": "../pomodoro-pause-v3/anime/pause/002.png"
+      }
+    },
+    {
+      "file": "004.png",
+      "duration_ms": 90,
+      "source": {
+        "kind": "approved whole book gesture",
+        "file": "../pomodoro-pause-v3/anime/pause/003.png"
+      }
+    },
+    {
+      "file": "005.png",
+      "duration_ms": 90,
+      "source": {
+        "kind": "approved whole book gesture",
+        "file": "../pomodoro-pause-v3/anime/pause/004.png"
+      }
+    },
+    {
+      "file": "006.png",
+      "duration_ms": 90,
+      "source": {
+        "kind": "approved whole book gesture",
+        "file": "../pomodoro-pause-v3/anime/pause/005.png"
+      }
+    },
+    {
+      "file": "007.png",
+      "duration_ms": 90,
+      "source": {
+        "kind": "approved whole book gesture",
+        "file": "../pomodoro-pause-v3/anime/pause/006.png"
+      }
+    },
+    {
+      "file": "008.png",
+      "duration_ms": 90,
+      "source": {
+        "kind": "approved whole book gesture",
+        "file": "../pomodoro-pause-v3/anime/pause/007.png"
+      }
+    },
+    {
+      "file": "009.png",
+      "duration_ms": 90,
+      "source": {
+        "kind": "approved whole book gesture",
+        "file": "../pomodoro-pause-v3/anime/pause/008.png"
+      }
+    },
+    {
+      "file": "010.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-a",
+        "pose": 0
+      }
+    },
+    {
+      "file": "011.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-a",
+        "pose": 1
+      }
+    },
+    {
+      "file": "012.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-a",
+        "pose": 2
+      }
+    },
+    {
+      "file": "013.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-a",
+        "pose": 3
+      }
+    },
+    {
+      "file": "014.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-a",
+        "pose": 4
+      }
+    },
+    {
+      "file": "015.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-a",
+        "pose": 5
+      }
+    },
+    {
+      "file": "016.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-a",
+        "pose": 6
+      }
+    },
+    {
+      "file": "017.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-a",
+        "pose": 7
+      }
+    },
+    {
+      "file": "018.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-b",
+        "pose": 0
+      }
+    },
+    {
+      "file": "019.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-b",
+        "pose": 1
+      }
+    },
+    {
+      "file": "020.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-b",
+        "pose": 2
+      }
+    },
+    {
+      "file": "021.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-b",
+        "pose": 3
+      }
+    },
+    {
+      "file": "022.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-b",
+        "pose": 4
+      }
+    },
+    {
+      "file": "023.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-b",
+        "pose": 5
+      }
+    },
+    {
+      "file": "024.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-b",
+        "pose": 6
+      }
+    },
+    {
+      "file": "025.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "raise-b",
+        "pose": 7
+      }
+    },
+    {
+      "file": "026.png",
+      "duration_ms": 100,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-a",
+        "pose": 0
+      }
+    },
+    {
+      "file": "027.png",
+      "duration_ms": 100,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-a",
+        "pose": 1
+      }
+    },
+    {
+      "file": "028.png",
+      "duration_ms": 100,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-a",
+        "pose": 2
+      }
+    },
+    {
+      "file": "029.png",
+      "duration_ms": 100,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-a",
+        "pose": 3
+      }
+    },
+    {
+      "file": "030.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-a",
+        "pose": 4
+      }
+    },
+    {
+      "file": "031.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-a",
+        "pose": 5
+      }
+    },
+    {
+      "file": "032.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-a",
+        "pose": 6
+      }
+    },
+    {
+      "file": "033.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-a",
+        "pose": 7
+      }
+    },
+    {
+      "file": "034.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-b",
+        "pose": 0
+      }
+    },
+    {
+      "file": "035.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-b",
+        "pose": 1
+      }
+    },
+    {
+      "file": "036.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-b",
+        "pose": 2
+      }
+    },
+    {
+      "file": "037.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-b",
+        "pose": 3
+      }
+    },
+    {
+      "file": "038.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-b",
+        "pose": 4
+      }
+    },
+    {
+      "file": "039.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-b",
+        "pose": 5
+      }
+    },
+    {
+      "file": "040.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-b",
+        "pose": 6
+      }
+    },
+    {
+      "file": "041.png",
+      "duration_ms": 50,
+      "source": {
+        "kind": "new complete character",
+        "atlas": "release-b",
+        "pose": 7
+      }
+    }
+  ]
+}

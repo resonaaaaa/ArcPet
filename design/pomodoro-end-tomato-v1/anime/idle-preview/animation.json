@@ -1,0 +1,162 @@
+{
+  "label": "idle-preview",
+  "canvas": [
+    448,
+    448
+  ],
+  "loop": true,
+  "frame_count": 30,
+  "duration_ms": 2100,
+  "frames": [
+    {
+      "file": "000.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "001.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "002.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "003.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "004.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "005.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "006.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "007.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "008.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "009.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "010.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "011.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "012.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "013.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "014.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "015.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "016.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "017.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "018.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "019.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "020.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "021.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "022.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "023.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "024.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "025.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "026.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "027.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "028.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    },
+    {
+      "file": "029.png",
+      "duration_ms": 70,
+      "phase": "official idle whole-frame viewport"
+    }
+  ]
+}

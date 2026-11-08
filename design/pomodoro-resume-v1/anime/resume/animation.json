@@ -1,0 +1,300 @@
+{
+  "label": "继续 · 拿书并恢复阅读",
+  "loop": false,
+  "canvas": [
+    448,
+    448
+  ],
+  "unique_frame_count": 33,
+  "frame_count": 34,
+  "duration_ms": 3570,
+  "new_inbetweens": 16,
+  "approved_whole_keys": 17,
+  "frames": [
+    {
+      "file": "000.png",
+      "duration_ms": 120,
+      "kind": "approved paused entry",
+      "source": {
+        "source": "../pomodoro-pause-v3/anime/pause",
+        "file": "015.png"
+      }
+    },
+    {
+      "file": "001.png",
+      "duration_ms": 90,
+      "kind": "new whole-character reach",
+      "source": [
+        "reach-clean",
+        0
+      ]
+    },
+    {
+      "file": "002.png",
+      "duration_ms": 90,
+      "kind": "new whole-character reach",
+      "source": [
+        "reach-clean",
+        1
+      ]
+    },
+    {
+      "file": "003.png",
+      "duration_ms": 90,
+      "kind": "new whole-character reach",
+      "source": [
+        "reach-clean",
+        2
+      ]
+    },
+    {
+      "file": "004.png",
+      "duration_ms": 90,
+      "kind": "new whole-character reach",
+      "source": [
+        "reach-clean",
+        3
+      ]
+    },
+    {
+      "file": "005.png",
+      "duration_ms": 90,
+      "kind": "new whole-character reach",
+      "source": [
+        "reach-clean",
+        4
+      ]
+    },
+    {
+      "file": "006.png",
+      "duration_ms": 90,
+      "kind": "new whole-character reach",
+      "source": [
+        "reach-clean",
+        5
+      ]
+    },
+    {
+      "file": "007.png",
+      "duration_ms": 90,
+      "kind": "new whole-character reach",
+      "source": [
+        "reach-clean",
+        6
+      ]
+    },
+    {
+      "file": "008.png",
+      "duration_ms": 90,
+      "kind": "new whole-character reach",
+      "source": [
+        "reach-clean",
+        7
+      ]
+    },
+    {
+      "file": "009.png",
+      "duration_ms": 90,
+      "kind": "approved complete pickup/open key",
+      "source": {
+        "source": "../pomodoro-pause-v3/anime/pause",
+        "file": "007.png"
+      }
+    },
+    {
+      "file": "010.png",
+      "duration_ms": 70,
+      "kind": "new whole-character inbetween",
+      "source": [
+        "between-b",
+        0
+      ]
+    },
+    {
+      "file": "011.png",
+      "duration_ms": 90,
+      "kind": "approved complete pickup/open key",
+      "source": {
+        "source": "../pomodoro-pause-v3/anime/pause",
+        "file": "006.png"
+      }
+    },
+    {
+      "file": "012.png",
+      "duration_ms": 70,
+      "kind": "new whole-character inbetween",
+      "source": [
+        "between-b",
+        1
+      ]
+    },
+    {
+      "file": "013.png",
+      "duration_ms": 90,
+      "kind": "approved complete pickup/open key",
+      "source": {
+        "source": "../pomodoro-pause-v3/anime/pause",
+        "file": "005.png"
+      }
+    },
+    {
+      "file": "014.png",
+      "duration_ms": 70,
+      "kind": "new whole-character inbetween",
+      "source": [
+        "between-b",
+        2
+      ]
+    },
+    {
+      "file": "015.png",
+      "duration_ms": 90,
+      "kind": "approved complete pickup/open key",
+      "source": {
+        "source": "../pomodoro-pause-v3/anime/pause",
+        "file": "004.png"
+      }
+    },
+    {
+      "file": "016.png",
+      "duration_ms": 70,
+      "kind": "new whole-character inbetween",
+      "source": [
+        "between-b",
+        3
+      ]
+    },
+    {
+      "file": "017.png",
+      "duration_ms": 90,
+      "kind": "approved complete pickup/open key",
+      "source": {
+        "source": "../pomodoro-pause-v3/anime/pause",
+        "file": "003.png"
+      }
+    },
+    {
+      "file": "018.png",
+      "duration_ms": 70,
+      "kind": "new whole-character inbetween",
+      "source": [
+        "between-b",
+        4
+      ]
+    },
+    {
+      "file": "019.png",
+      "duration_ms": 90,
+      "kind": "approved complete pickup/open key",
+      "source": {
+        "source": "../pomodoro-pause-v3/anime/pause",
+        "file": "002.png"
+      }
+    },
+    {
+      "file": "020.png",
+      "duration_ms": 70,
+      "kind": "new whole-character inbetween",
+      "source": [
+        "between-b",
+        5
+      ]
+    },
+    {
+      "file": "021.png",
+      "duration_ms": 90,
+      "kind": "approved complete pickup/open key",
+      "source": {
+        "source": "../pomodoro-pause-v3/anime/pause",
+        "file": "001.png"
+      }
+    },
+    {
+      "file": "022.png",
+      "duration_ms": 70,
+      "kind": "new whole-character inbetween",
+      "source": [
+        "between-b",
+        6
+      ]
+    },
+    {
+      "file": "023.png",
+      "duration_ms": 90,
+      "kind": "approved complete pickup/open key",
+      "source": {
+        "source": "../pomodoro-pause-v3/anime/pause",
+        "file": "000.png"
+      }
+    },
+    {
+      "file": "024.png",
+      "duration_ms": 70,
+      "kind": "new whole-character inbetween",
+      "source": [
+        "between-b",
+        7
+      ]
+    },
+    {
+      "file": "025.png",
+      "duration_ms": 120,
+      "kind": "approved reading entry",
+      "source": {
+        "source": "../pomodoro-reading-v3/anime/reading",
+        "file": "000.png"
+      }
+    },
+    {
+      "file": "026.png",
+      "duration_ms": 250,
+      "kind": "approved breathing/blink pose",
+      "source": "../pomodoro-reading-v3/anime/reading/001.png"
+    },
+    {
+      "file": "027.png",
+      "duration_ms": 70,
+      "kind": "approved breathing/blink pose",
+      "source": "../pomodoro-reading-v3/anime/reading/002.png"
+    },
+    {
+      "file": "028.png",
+      "duration_ms": 70,
+      "kind": "approved breathing/blink pose",
+      "source": "../pomodoro-reading-v3/anime/reading/003.png"
+    },
+    {
+      "file": "029.png",
+      "duration_ms": 70,
+      "kind": "approved breathing/blink pose",
+      "source": "../pomodoro-reading-v3/anime/reading/004.png"
+    },
+    {
+      "file": "030.png",
+      "duration_ms": 250,
+      "kind": "approved breathing/blink pose",
+      "source": "../pomodoro-reading-v3/anime/reading/005.png"
+    },
+    {
+      "file": "031.png",
+      "duration_ms": 250,
+      "kind": "approved breathing/blink pose",
+      "source": "../pomodoro-reading-v3/anime/reading/006.png"
+    },
+    {
+      "file": "032.png",
+      "duration_ms": 250,
+      "kind": "approved breathing/blink pose",
+      "source": "../pomodoro-reading-v3/anime/reading/007.png"
+    },
+    {
+      "file": "033.png",
+      "duration_ms": 120,
+      "kind": "approved reading loop seam",
+      "source": {
+        "source": "../pomodoro-reading-v3/anime/reading",
+        "file": "000.png"
+      }
+    }
+  ]
+}

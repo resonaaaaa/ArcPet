@@ -24,6 +24,18 @@ namespace ArcPet.Desktop
         private readonly Dictionary<string,UIElement> layers=new Dictionary<string,UIElement>();
         private readonly Image icon;
         private string renderedContent;
+        private string timerText;
+        private long timerStarted;
+        internal bool TimerVisible { get { return timerText!=null; } }
+        internal string TimerText { get { return timerText; } }
+        internal void SetTimer(bool visible,long remaining,long now)
+        {
+            string text=visible ? PixelClock.Format(remaining) : null;
+            if(text==timerText)return;
+            if(timerText==null && text!=null)timerStarted=now;
+            timerText=text;renderedContent=null;
+            if(text!=null)icon.Source=PixelClock.Draw(text);
+        }
         internal MoodBubbleController Controller {get;private set;}
         internal Canvas Artwork {get{return canvas;}}
         [DllImport("user32.dll",EntryPoint="GetWindowLongW")]private static extern int GetWindowLong(IntPtr handle,int index);
@@ -75,13 +87,14 @@ namespace ArcPet.Desktop
         }
         internal void Render(long now)
         {
-            if(!pet.IsVisible || !Controller.IsVisible){if(IsVisible)Hide();return;}
+            if(!pet.IsVisible || (!TimerVisible && !Controller.IsVisible)){if(IsVisible)Hide();return;}
             if(Owner==null)Owner=pet;
-            if(renderedContent!=Controller.ContentId){icon.Source=icons[Controller.ContentId];renderedContent=Controller.ContentId;}
+            if(!TimerVisible && renderedContent!=Controller.ContentId){icon.Source=icons[Controller.ContentId];renderedContent=Controller.ContentId;}
             double scale=pet.Width/320.0;
             Left=pet.Left+data.Bounds.X*scale;Top=pet.Top+data.Bounds.Y*scale;
             Width=data.Bounds.Width*scale;Height=data.Bounds.Height*scale;Topmost=pet.Topmost;
-            foreach(var layer in data.Clouds)layers[layer.Id].Opacity=Controller.Opacity(now,layer.Start,layer.Fade);
+            foreach(var layer in data.Clouds)layers[layer.Id].Opacity=TimerVisible ?
+                Math.Max(0,Math.Min(1,(now-timerStarted-layer.Start)/(double)layer.Fade)) : Controller.Opacity(now,layer.Start,layer.Fade);
             if(!IsVisible)Show();
         }
         [DataContract]private sealed class MoodAssets

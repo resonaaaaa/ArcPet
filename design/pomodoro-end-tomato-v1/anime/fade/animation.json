@@ -1,0 +1,87 @@
+{
+  "label": "fade",
+  "canvas": [
+    448,
+    448
+  ],
+  "loop": false,
+  "frame_count": 15,
+  "duration_ms": 750,
+  "frames": [
+    {
+      "file": "000.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    },
+    {
+      "file": "001.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    },
+    {
+      "file": "002.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    },
+    {
+      "file": "003.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    },
+    {
+      "file": "004.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    },
+    {
+      "file": "005.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    },
+    {
+      "file": "006.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    },
+    {
+      "file": "007.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    },
+    {
+      "file": "008.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    },
+    {
+      "file": "009.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    },
+    {
+      "file": "010.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    },
+    {
+      "file": "011.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    },
+    {
+      "file": "012.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    },
+    {
+      "file": "013.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    },
+    {
+      "file": "014.png",
+      "duration_ms": 50,
+      "phase": "overlay opacity fade"
+    }
+  ]
+}

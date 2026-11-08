@@ -1,0 +1,190 @@
+[
+  {
+    "file": "sources\\chin-grid-clean.png",
+    "bytes": 1308536
+  },
+  {
+    "file": "sources\\chin-grid.png",
+    "bytes": 1327748
+  },
+  {
+    "file": "sources\\chin-repair-final.png",
+    "bytes": 1424759
+  },
+  {
+    "file": "sources\\chin-repair.png",
+    "bytes": 1539058
+  },
+  {
+    "file": "sources\\chin.png",
+    "bytes": 1640650
+  },
+  {
+    "file": "sources\\close.png",
+    "bytes": 1388096
+  },
+  {
+    "file": "sources\\loop-a-clean.png",
+    "bytes": 1294037
+  },
+  {
+    "file": "sources\\loop-a.png",
+    "bytes": 1319567
+  },
+  {
+    "file": "sources\\loop-b-clean.png",
+    "bytes": 1310893
+  },
+  {
+    "file": "sources\\loop-b.png",
+    "bytes": 1307003
+  },
+  {
+    "file": "sources\\loop-c-clean.png",
+    "bytes": 1323600
+  },
+  {
+    "file": "sources\\loop-c.png",
+    "bytes": 1386455
+  },
+  {
+    "file": "sources\\loop-d-clean.png",
+    "bytes": 1336945
+  },
+  {
+    "file": "sources\\loop-d.png",
+    "bytes": 1419002
+  },
+  {
+    "file": "references\\chin-0.png",
+    "bytes": 156645
+  },
+  {
+    "file": "references\\chin-1.png",
+    "bytes": 156608
+  },
+  {
+    "file": "references\\chin-2.png",
+    "bytes": 157030
+  },
+  {
+    "file": "references\\chin-3.png",
+    "bytes": 157281
+  },
+  {
+    "file": "references\\chin-4.png",
+    "bytes": 157293
+  },
+  {
+    "file": "references\\chin-5.png",
+    "bytes": 157677
+  },
+  {
+    "file": "references\\chin-6.png",
+    "bytes": 157449
+  },
+  {
+    "file": "references\\chin-7.png",
+    "bytes": 158592
+  },
+  {
+    "file": "references\\chin-layout.png",
+    "bytes": 359167
+  },
+  {
+    "file": "references\\close-0.png",
+    "bytes": 156688
+  },
+  {
+    "file": "references\\close-1.png",
+    "bytes": 155482
+  },
+  {
+    "file": "references\\close-2.png",
+    "bytes": 155403
+  },
+  {
+    "file": "references\\close-3.png",
+    "bytes": 153827
+  },
+  {
+    "file": "references\\close-4.png",
+    "bytes": 155384
+  },
+  {
+    "file": "references\\close-5.png",
+    "bytes": 153601
+  },
+  {
+    "file": "references\\close-6.png",
+    "bytes": 155692
+  },
+  {
+    "file": "docs\\chair-approved.png",
+    "bytes": 113396
+  },
+  {
+    "file": "docs\\chair-fixed.png",
+    "bytes": 60132
+  },
+  {
+    "file": "docs\\chin-grid-clean-nochair-registered.png",
+    "bytes": 960446
+  },
+  {
+    "file": "docs\\chin-raw.png",
+    "bytes": 581112
+  },
+  {
+    "file": "docs\\chin-repair-final-registered.png",
+    "bytes": 942922
+  },
+  {
+    "file": "docs\\chin-repair-registered.png",
+    "bytes": 977255
+  },
+  {
+    "file": "docs\\close-raw.png",
+    "bytes": 789765
+  },
+  {
+    "file": "docs\\close-registered.png",
+    "bytes": 1002791
+  },
+  {
+    "file": "docs\\loop-a-registered.png",
+    "bytes": 987864
+  },
+  {
+    "file": "docs\\loop-b-registered.png",
+    "bytes": 982712
+  },
+  {
+    "file": "docs\\loop-c-registered.png",
+    "bytes": 1002817
+  },
+  {
+    "file": "docs\\loop-d-registered.png",
+    "bytes": 1000008
+  },
+  {
+    "file": "docs\\matte-check.png",
+    "bytes": 147078
+  },
+  {
+    "file": "docs\\new-model-comparison.png",
+    "bytes": 244485
+  },
+  {
+    "file": "docs\\new-raw-all.png",
+    "bytes": 1808791
+  },
+  {
+    "file": "docs\\scene-reference.png",
+    "bytes": 375109
+  },
+  {
+    "file": "docs\\tail-contact.png",
+    "bytes": 220102
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "version": "0.20.1",
+  "files": 1223,
+  "bytes": 92503101,
+  "sha256": "6d33bb48e23ede44d44f99396df120020a899b384ab0ab0133a477a36c2fc0c7",
+  "package": "exports/ArcPet-v0.20.1.zip",
+  "settings_excluded": true,
+  "verified_against_tested_build": true
+}

@@ -1,0 +1,210 @@
+{
+  "bytes": 13440477.0,
+  "files": [
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\key-poses.png",
+      "bytes": 254328
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\start-frames.png",
+      "bytes": 225102
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\start.gif",
+      "bytes": 1016150
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\start.webp",
+      "bytes": 1072194
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\000.png",
+      "bytes": 108774
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\001.png",
+      "bytes": 107660
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\002.png",
+      "bytes": 105687
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\003.png",
+      "bytes": 104084
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\004.png",
+      "bytes": 104022
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\005.png",
+      "bytes": 103936
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\006.png",
+      "bytes": 103931
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\007.png",
+      "bytes": 103735
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\008.png",
+      "bytes": 103927
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\009.png",
+      "bytes": 103928
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\010.png",
+      "bytes": 103680
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\011.png",
+      "bytes": 103430
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\012.png",
+      "bytes": 103425
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\013.png",
+      "bytes": 103245
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\014.png",
+      "bytes": 102875
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\015.png",
+      "bytes": 103142
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\016.png",
+      "bytes": 103694
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\017.png",
+      "bytes": 103369
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\018.png",
+      "bytes": 103632
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\019.png",
+      "bytes": 103765
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\020.png",
+      "bytes": 103999
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\021.png",
+      "bytes": 104132
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\022.png",
+      "bytes": 104243
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\023.png",
+      "bytes": 104964
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\024.png",
+      "bytes": 104979
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\025.png",
+      "bytes": 105339
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\026.png",
+      "bytes": 105021
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\027.png",
+      "bytes": 105001
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\028.png",
+      "bytes": 104506
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\029.png",
+      "bytes": 104748
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\030.png",
+      "bytes": 104668
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\031.png",
+      "bytes": 104474
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\anime\\start\\animation.json",
+      "bytes": 5402
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\docs\\bodyA-inspection.png",
+      "bytes": 868877
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\docs\\bodyB-inspection.png",
+      "bytes": 908544
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\docs\\extraction.json",
+      "bytes": 4214
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\docs\\sources.json",
+      "bytes": 1072
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\docs\\verification.json",
+      "bytes": 8160
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\layers\\book.png",
+      "bytes": 1044
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\layers\\furniture.png",
+      "bytes": 43845
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\layers\\head.png",
+      "bytes": 45114
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\sources\\bodyA.png",
+      "bytes": 1338952
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\sources\\bodyB.png",
+      "bytes": 1268942
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\sources\\book.png",
+      "bytes": 630521
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\sources\\furniture.png",
+      "bytes": 1085735
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\design\\pomodoro-v2\\sources\\head.png",
+      "bytes": 1310589
+    },
+    {
+      "path": "E:\\projects\\ArcPet\\tools\\build_pomodoro_start_v2.py",
+      "bytes": 11677
+    }
+  ],
+  "reason": "Rejected split-character v2 replaced by whole-scene v3; preserve text and prompts"
+}

@@ -1,0 +1,141 @@
+{
+  "label": "pause",
+  "canvas": [
+    448,
+    448
+  ],
+  "loop": false,
+  "unique_frame_count": 16,
+  "frame_count": 16,
+  "duration_ms": 1760,
+  "frames": [
+    {
+      "file": "000.png",
+      "duration_ms": 120,
+      "source": [
+        "close-nochair",
+        0
+      ]
+    },
+    {
+      "file": "001.png",
+      "duration_ms": 120,
+      "source": [
+        "close-nochair",
+        1
+      ]
+    },
+    {
+      "file": "002.png",
+      "duration_ms": 120,
+      "source": [
+        "close-nochair",
+        2
+      ]
+    },
+    {
+      "file": "003.png",
+      "duration_ms": 120,
+      "source": [
+        "close-nochair",
+        3
+      ]
+    },
+    {
+      "file": "004.png",
+      "duration_ms": 120,
+      "source": [
+        "close-nochair",
+        4
+      ]
+    },
+    {
+      "file": "005.png",
+      "duration_ms": 120,
+      "source": [
+        "close-nochair",
+        5
+      ]
+    },
+    {
+      "file": "006.png",
+      "duration_ms": 120,
+      "source": [
+        "close-nochair",
+        6
+      ]
+    },
+    {
+      "file": "007.png",
+      "duration_ms": 120,
+      "source": [
+        "close-nochair",
+        7
+      ]
+    },
+    {
+      "file": "008.png",
+      "duration_ms": 100,
+      "source": [
+        "chin-grid-clean-nochair",
+        0
+      ]
+    },
+    {
+      "file": "009.png",
+      "duration_ms": 100,
+      "source": [
+        "chin-grid-clean-nochair",
+        1
+      ]
+    },
+    {
+      "file": "010.png",
+      "duration_ms": 100,
+      "source": [
+        "chin-grid-clean-nochair",
+        2
+      ]
+    },
+    {
+      "file": "011.png",
+      "duration_ms": 100,
+      "source": [
+        "chin-grid-clean-nochair",
+        4
+      ]
+    },
+    {
+      "file": "012.png",
+      "duration_ms": 100,
+      "source": [
+        "chin-grid-clean-nochair",
+        5
+      ]
+    },
+    {
+      "file": "013.png",
+      "duration_ms": 100,
+      "source": [
+        "chin-grid-clean-nochair",
+        3
+      ]
+    },
+    {
+      "file": "014.png",
+      "duration_ms": 100,
+      "source": [
+        "chin-grid-clean-nochair",
+        6
+      ]
+    },
+    {
+      "file": "015.png",
+      "duration_ms": 100,
+      "source": [
+        "chin-grid-clean-nochair",
+        7
+      ]
+    }
+  ]
+}

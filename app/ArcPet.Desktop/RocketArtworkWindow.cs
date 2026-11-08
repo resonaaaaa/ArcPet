@@ -28,6 +28,11 @@ namespace ArcPet.Desktop
             if(frame==null || !pet.IsVisible){if(IsVisible)Hide();return;}
             if(Owner==null)Owner=pet;
             double scale=pet.Width/320.0;Left=pet.Left+offsetX*scale;Top=pet.Top+offsetY*scale;Width=frame.PixelWidth*scale;Height=frame.PixelHeight*scale;Topmost=pet.Topmost;
+            // Never paint the same translucent edges twice. The input HWND
+            // renders this central 320px region and owns its native hit surface.
+            artwork.Clip=new CombinedGeometry(GeometryCombineMode.Exclude,
+                new RectangleGeometry(new Rect(0,0,frame.PixelWidth*scale,frame.PixelHeight*scale)),
+                new RectangleGeometry(new Rect(-offsetX*scale,-offsetY*scale,320*scale,320*scale)));
             artwork.Source=frame;if(!IsVisible)Show();
         }
     }
