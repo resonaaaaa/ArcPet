@@ -1,0 +1,26 @@
+{
+  "repository": "https://github.com/resonaaaaa/ArcPet",
+  "visibility": "public",
+  "commit": "eb9221d2e0673c5c273d3065691f955a000bf18d",
+  "tag": "v0.20.1",
+  "release_id": 438294761,
+  "assets": [
+    {
+      "name": "ArcPet-v0.20.1.zip",
+      "id": 724160532,
+      "bytes": 92503101,
+      "sha256": "6d33bb48e23ede44d44f99396df120020a899b384ab0ab0133a477a36c2fc0c7",
+      "url": "https://github.com/resonaaaaa/ArcPet/releases/download/untagged-9bce21d4e0f99b47bd42/ArcPet-v0.20.1.zip"
+    },
+    {
+      "name": "ArcPet-v0.20.1-SHA256.txt",
+      "id": 724162816,
+      "bytes": 86,
+      "sha256": "72970af5e4a45fa5c959f6fab8379709a5a3fda97801ce17f57d3a8a9732ad56",
+      "url": "https://github.com/resonaaaaa/ArcPet/releases/download/untagged-9bce21d4e0f99b47bd42/ArcPet-v0.20.1-SHA256.txt"
+    }
+  ],
+  "published": true,
+  "verified": true,
+  "release_url": "https://github.com/resonaaaaa/ArcPet/releases/tag/v0.20.1"
+}

@@ -15,6 +15,15 @@ def api(path,method='GET',data=None,raw=None,content_type=None):
     headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','User-Agent':'ArcPet-release','X-GitHub-Api-Version':'2022-11-28'}
     body=raw if raw is not None else json.dumps(data).encode('utf8') if data is not None else None
     if body is not None:headers['Content-Type']=content_type or 'application/json'
+    if raw is not None:
+        headers['Content-Length']=str(len(raw))
+        def chunks():
+            for offset in range(0,len(raw),256*1024):
+                yield raw[offset:offset+256*1024]
+                sent=min(offset+256*1024,len(raw))
+                if sent%(4*1024*1024)==0 or sent==len(raw):
+                    print(json.dumps({'uploaded_bytes':sent,'total_bytes':len(raw)}),flush=True)
+        body=chunks()
     try:
         with urllib.request.urlopen(urllib.request.Request(url,data=body,headers=headers,method=method),timeout=180) as response:return json.load(response)
     except urllib.error.HTTPError as e:raise RuntimeError('GitHub HTTP '+str(e.code)+' '+method+' '+url) from None
@@ -22,9 +31,10 @@ def save(v):STATE.write_text(json.dumps(v,ensure_ascii=False,indent=2),encoding=
 repo=api(BASE);assert repo['id']==1439618787 and repo['private'] is False
 if args.action=='inspect':
     print(json.dumps({'repository':repo['html_url'],'visibility':repo['visibility'],
-        'recent_releases':[{'tag':r['tag_name'],'draft':r['draft']} for r in api(BASE+'/releases?per_page=5')]}));raise SystemExit()
-commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
-assert api(BASE+'/git/ref/heads/main')['object']['sha']==commit,'Push main first'
+        'recent_releases':[{'tag':r['tag_name'],'draft':r['draft'],'assets':[{'name':a['name'],'size':a['size'],'state':a['state']} for a in r['assets']]} for r in api(BASE+'/releases?per_page=5')]}));raise SystemExit()
+commit=subprocess.check_output(['git','rev-parse',TAG],text=True).strip()
+comparison=api(BASE+'/compare/'+TAG+'...main')
+assert comparison['status'] in ['identical','ahead'],'Release commit must be present on main'
 assert api(BASE+'/git/ref/tags/'+TAG)['object']['sha']==commit,'Push the lightweight release tag first'
 if args.action=='draft':
     try:release=api(BASE+'/releases/tags/'+TAG)
@@ -39,6 +49,12 @@ if args.action=='draft':
     for name,kind in [('ArcPet-v0.20.1.zip','application/zip'),('ArcPet-v0.20.1-SHA256.txt','text/plain')]:
         p=ROOT/'exports'/name;digest=hashlib.sha256(p.read_bytes()).hexdigest()
         asset=existing.get(name)
+        # A failed upload may leave an incomplete temporary asset on this draft.
+        if asset is not None and asset['state']!='uploaded':
+            url='https://api.github.com'+BASE+'/releases/assets/'+str(asset['id'])
+            request=urllib.request.Request(url,headers={'Authorization':'Bearer '+token,'User-Agent':'ArcPet-release'},method='DELETE')
+            with urllib.request.urlopen(request,timeout=60) as response:assert response.status==204
+            asset=None
         if asset is None:asset=api(release['upload_url'].split('{')[0]+'?name='+name,'POST',raw=p.read_bytes(),content_type=kind)
         assert asset['size']==p.stat().st_size and asset['state']=='uploaded'
         assert asset.get('digest')=='sha256:'+digest,'Uploaded content digest must match'
