@@ -659,3 +659,5 @@ PomodoroSceneController独立管理播放阶段，计时仍由PomodoroTimer管�
 将阅读节奏调整纳入 v0.20.2。翻页间隔随机取 10～12 秒，眨眼频率减半。仓库及 Windows 便携包附带 MIT 许可证和版权声明。
 
 ArcPet 原创代码和相关文档采用 [MIT 许可证](LICENSE)。猫姬（Neco-Arc）的角色形象版权归属 **TYPE-MOON**。ArcPet 是非官方同人桌宠，角色形象和美术素材不属于 MIT 授权范围。[版权声明](NOTICE) · [TYPE-MOON 二次创作指引](https://typemoon.com/copyright)
+
+v0.20.2 已发布为最新公开版本。便携 ZIP 和 SHA-256 文件已上传并核验。908 项核心检查和 478 项 Windows 窗口检查通过。[GitHub Release](https://github.com/resonaaaaa/ArcPet/releases/tag/v0.20.2)

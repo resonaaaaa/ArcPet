@@ -185,4 +185,4 @@
 ## 2026-11-12 · v0.20.2
 
 - [x] 为原创代码补充 MIT 许可证，并明确猫姬角色形象版权归属 TYPE-MOON。
-- [ ] 验证 Windows 便携包及 GitHub Release。
+- [x] 验证 Windows 便携包，发布 v0.20.2 并核对 GitHub 上的附件。

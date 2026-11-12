@@ -266,3 +266,5 @@ PomodoroSceneController独立管理播放阶段，计时仍由PomodoroTimer管�
 ## 2026-11-12 · v0.20.2 阅读节奏与版权声明
 
 将阅读节奏调整纳入 v0.20.2。翻页间隔随机取 10～12 秒，眨眼频率减半。仓库及 Windows 便携包附带 MIT 许可证和版权声明。
+
+v0.20.2 已发布为最新公开版本。便携 ZIP 和 SHA-256 文件已上传并核验。908 项核心检查和 478 项 Windows 窗口检查通过。[GitHub Release](https://github.com/resonaaaaa/ArcPet/releases/tag/v0.20.2)
