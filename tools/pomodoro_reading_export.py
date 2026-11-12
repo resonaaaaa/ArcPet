@@ -11,7 +11,7 @@ from pomodoro_scene_helpers import desk_anchor, digest, opaque, encode, measurem
 from pomodoro_color_calibration import calibrate
 
 ROOT = Path(__file__).resolve().parent.parent
-DESIGN = ROOT / 'design/pomodoro-reading-v2'
+DESIGN = ROOT / 'design/pomodoro-reading-v3'
 START = ROOT / 'design/pomodoro-v3'
 
 

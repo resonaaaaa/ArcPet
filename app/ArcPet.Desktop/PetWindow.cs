@@ -103,7 +103,7 @@ namespace ArcPet.Desktop
             pomodoroScene.Finished += delegate { behavior.FinishPomodoro(Now); SyncPomodoroMenus(); };
             preferencesWriter=new PreferencesSaveQueue(preferencesStore);
             cache = new FrameCache(clips.Values);
-            Title = "ArcPet 0.20.1 · 桌宠"; Width = 320; Height = 320;
+            Title = "ArcPet 0.20.2 · 桌宠"; Width = 320; Height = 320;
             using(var stream=typeof(PetWindow).Assembly.GetManifestResourceStream("ArcPet.Icon"))
             {
                 if(stream==null)throw new InvalidDataException("缺少猫姬图标资源。");
@@ -184,7 +184,7 @@ namespace ArcPet.Desktop
         }
         private void CreateTray()
         {
-            tray = new Forms.NotifyIcon { Icon = petIcon, Text = "ArcPet 0.20.1 · 双击显示或隐藏桌宠", Visible = true };
+            tray = new Forms.NotifyIcon { Icon = petIcon, Text = "ArcPet 0.20.2 · 双击显示或隐藏桌宠", Visible = true };
             var menu = new Forms.ContextMenuStrip();
             trayLock = new Forms.ToolStripMenuItem("锁定"); trayLock.Click += delegate { Dispatch(ToggleLock); };
             trayVisibility = new Forms.ToolStripMenuItem(); trayVisibility.Click += delegate { Dispatch(ToggleVisibility); };
@@ -287,8 +287,8 @@ namespace ArcPet.Desktop
             trayPomodoroStatus.Text = status; trayPomodoroPause.Text = (string)pomodoroPause.Header;
             trayPomodoroPause.Enabled = trayPomodoroEnd.Enabled = pomodoro.IsActive;
             foreach (var item in trayPomodoroDurations) item.Value.Enabled = !pomodoro.IsActive && !pomodoroScene.IsActive;
-            tray.Text = pomodoro.IsActive ? "ArcPet 0.20.1 · 番茄钟 " + status :
-                pomodoro.State == PomodoroState.Completed ? "ArcPet 0.20.1 · " + status : "ArcPet 0.20.1 · 双击显示或隐藏桌宠";
+            tray.Text = pomodoro.IsActive ? "ArcPet 0.20.2 · 番茄钟 " + status :
+                pomodoro.State == PomodoroState.Completed ? "ArcPet 0.20.2 · " + status : "ArcPet 0.20.2 · 双击显示或隐藏桌宠";
         }
         private static string MovementLabel(MovementMode mode)
         {return mode==MovementMode.Long ? "长" : mode==MovementMode.Short ? "短" : "关闭";}

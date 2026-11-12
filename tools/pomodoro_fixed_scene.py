@@ -6,7 +6,7 @@ from pomodoro_scene_helpers import digest
 
 ROOT=Path(__file__).resolve().parent.parent
 SOURCE=ROOT/'design/pomodoro-v3/anime/start/000.png'
-DEST=ROOT/'design/pomodoro-pause-v2/layers'
+DEST=ROOT/'design/pomodoro-pause-v3/layers'
 
 
 def layer(source, mask):

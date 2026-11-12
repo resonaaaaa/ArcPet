@@ -7,16 +7,20 @@ from animation_geometry import connected_regions
 ROOT=Path(__file__).resolve().parent.parent
 manifest=json.loads((ROOT/'manifest.json').read_text(encoding='utf-8'))
 report={}
+referenced={}
 for action,item in manifest['actions'].items():
-    folder=ROOT/'anime'/action
-    files=sorted(folder.glob('[0-9][0-9][0-9].png'))
+    clip_path=ROOT/item['path']
+    folder=clip_path.parent
     expected={'idle':30,'sleep':30,'think':60,'icecream':30,'click_down':30,'click_hold':30,'click_release':30,'music':32,'exercise':224,'skateboard_left':34,'skateboard_right':34,'calling':40,'rocket_charge':9,'rocket_hold':9,'rocket_launch':6,'rocket_flight':7,'rocket_land':45,'dance':30,'dance_mirrored':30}
     expected['lying']=36
     expected.update(walk_left=30,walk_right=30)
     expected.update(drag_lift=18,drag_hold=16,drag_land=21)
-    expected.update(pomodoro_start=32,pomodoro_read=47,pomodoro_pause=16,pomodoro_paused=38,pomodoro_resume=34,pomodoro_stretch=42,pomodoro_end=65)
+    expected.update(pomodoro_start=32,pomodoro_read=5,pomodoro_read_blink=8,pomodoro_read_page=23,
+                    pomodoro_pause=16,pomodoro_paused=38,pomodoro_resume=34,pomodoro_stretch=42,pomodoro_end=65)
+    metadata=json.loads(clip_path.read_text(encoding='utf-8'))
+    files=[folder/f['file'] for f in metadata['frames']]
+    referenced.setdefault(folder,set()).update(files)
     assert len(files)==item['frame_count']==expected[action],(action,len(files))
-    metadata=json.loads((folder/'animation.json').read_text(encoding='utf-8'))
     assert metadata['frame_count']==len(files) and sum(f['duration_ms'] for f in metadata['frames'])==metadata['duration_ms']==item['duration_ms']
     heights=[];foot=[];tops=[];extra=[]
     for i,p in enumerate(files):
@@ -67,6 +71,9 @@ assert same('anime/click_release/029.png','anime/idle/000.png')
 report['shared_endpoints_match']=True
 report['total_frames']=sum(item['frame_count'] for item in manifest['actions'].values())
 assert report['total_frames']==sum(expected[action] for action in manifest['actions'])
+for folder,files in referenced.items():
+    assert set(folder.glob('[0-9][0-9][0-9].png'))==files,folder
+report['unique_png_files']=sum(map(len,referenced.values()))
 if 'skateboard_left' in manifest['actions']:
     for i in range(34):
         mirrored=ImageOps.mirror(Image.open(ROOT/f'anime/skateboard_left/{i:03}.png').convert('RGBA'))
@@ -106,6 +113,6 @@ clip=json.loads((ROOT/'anime/icecream/animation.json').read_text(encoding='utf-8
 assert clip['duration_ms']==2700 and all(f['duration_ms']==90 for f in clip['frames'])
 report['icecream_loop']={'playback_frames':30,'duration_ms':2700,'seam_pixel_difference':0,'return_transition_mean_rgba_difference':steps[23],'normal_forward_max_difference':normal_max,'return_path_complete':True,'first_and_final_step_difference':abs(steps[-1]-steps[0])}
 (ROOT/'docs/crop-repair-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
-print(json.dumps({'verified_clips':len(manifest['actions']),'verified_frames':report['total_frames'],'shared_endpoints_match':True},ensure_ascii=False))
+print(json.dumps({'verified_clips':len(manifest['actions']),'verified_frames':report['unique_png_files'],'shared_endpoints_match':True},ensure_ascii=False))
 
 

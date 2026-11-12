@@ -41,17 +41,16 @@ lying不进入60—90秒普通随机池；该池仍为进食、思考、音乐�
 ## 构建与验证
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File app/build.ps1 -Test -OutputDirectory dist/ArcPet-v0.18
-powershell -NoProfile -ExecutionPolicy Bypass -File app/test-windows.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File app/build.ps1 -Test -OutputDirectory dist/ArcPet-v0.20.2
+powershell -NoProfile -ExecutionPolicy Bypass -File app/test-windows.ps1 -Runtime dist/ArcPet-v0.20.2 -Report docs/desktop-v0.20.2-validation
 python -B tools/verify_animation.py
-python -B tools/package_desktop_v0_18.py --source dist/ArcPet-v0.18
 ```
 
-test-windows.ps1默认检查0.18独立构建，报告放docs/desktop-v0.18-validation；可用Runtime/Report参数或DanceOnly、MoodOnly、RocketOnly限制既有专项；TravelOnly单独检查两种移动动作。完整运行包含TravelRegression与SleepVariantRegression，覆盖三种抽选结果、两种锁定状态、真实帧显示、窗口位置/缩放不变、左右键唤醒、关闭睡眠与两分钟自然结束。
+test-windows.ps1默认检查0.20.1独立构建，报告放docs/desktop-v0.20.1-validation；可用Runtime/Report参数或DanceOnly、MoodOnly、RocketOnly限制既有专项；TravelOnly单独检查两种移动动作。完整运行包含TravelRegression与SleepVariantRegression，覆盖三种抽选结果、两种锁定状态、真实帧显示、窗口位置/缩放不变、左右键唤醒、关闭睡眠与两分钟自然结束。
 
 测试采用内存或隔离设置和自启动存储，不写用户真实偏好或开机启动项。锁定点击用WPF路由事件；未锁定拖动/缩放用生产适配器，因为合成事件不能改变物理按钮状态。边界时序由测试时钟推进，不伪称等待了两分钟或完成实物鼠标验收。
 
-package_desktop_v0_18.py验证旧资产未变、当前运行资产散列与测试报告，再生成按需ZIP；verify-only不生成ZIP。update_runtime_v0_18.ps1核验文件后正常退出旧程序、更新原路径，有运行实例时重启，并核对偏好和开机启动登记。分发包不带用户data。临时构建和更新备份确认后清理，当前包按需重建。
+package_desktop_v0_20_1.py核对当前安装目录dist/ArcPet-v0.9与0.20.1发布验证记录后，按需生成ZIP及SHA256文件；重新编译版本需重新建立验证记录。update_runtime_v0_20_1.ps1用于将已验证的0.20.1构建更新到原路径，保留设置及自启动。分发包不带data。旧版本打包/更新入口已清理，可从Git历史查看。
 
 
 ## 0.17 · 散步与滑板共享移动
@@ -79,9 +78,9 @@ PomodoroTimer独立放在ArcPet.Behavior，输入为单调毫秒时钟，不依�
 
 ## 0.20 · 番茄钟动画与悬停时间气泡
 
-已确认的开始v3、阅读v3、暂停v3、继续、伸懒腰及番茄糊镜头稿正式导入七段pomodoro_*动画。tools/import_pomodoro_v0_20.py对整场景使用同一个0.82等比视口变换及384px扩展画布；不改局部头身或原画。回待机的淡出以原生待机PNG垫底，结束末尾补足原循环后再回idle，避免二次缩放和重置姿势。
+已确认的开始v3、阅读v3、暂停v3、继续、伸懒腰及番茄糊镜头稿正式导入番茄钟七个阶段；阅读阶段使用三个片段共用同一组透明 PNG。tools/import_pomodoro_v0_20.py对整场景使用同一个0.82等比视口变换及384px扩展画布；不改局部头身或原画。回待机的淡出以原生待机PNG垫底，结束末尾补足原循环后再回idle，避免二次缩放和重置姿势。
 
-计时从选定时长立即开始。PomodoroSceneController独立管理阶段，PetBehaviorController在pomodoro阶段把播放权交给它。开始→阅读循环；暂停立即冻结计时，读完当前循环后放书→托腮循环；继续立即恢复计时，托腮循环结束后拿书→阅读。快速连点只更新期望状态，不裁断已开始的过渡。手动结束和自然到期都等待衔接点，再放书伸懒腰→掏番茄/糊屏停留1050ms/淡出750ms→待机。从托腮结束先拿书接回阅读，再完成同一退出链。结束期间禁用新一轮，最后刷新空闲时间，避免结束后立即睡觉。
+计时从选定时长立即开始。PomodoroSceneController独立管理阶段，PetBehaviorController在pomodoro阶段把播放权交给它。开始→阅读循环；暂停立即冻结计时，等当前呼吸、眨眼或翻页片段结束后放书→托腮循环；继续立即恢复计时，托腮循环结束后拿书→阅读。快速连点只更新期望状态，不裁断已开始的过渡。手动结束和自然到期都等待衔接点，再放书伸懒腰→掏番茄/糊屏停留1050ms/淡出750ms→待机。从托腮结束先拿书接回阅读，再完成同一退出链。结束期间禁用新一轮，最后刷新空闲时间，避免结束后立即睡觉。
 
 番茄钟场景优先于原随机动作、睡眠和双击/长按交互；右键可控制番茄钟、隐藏及原设置，Ctrl缩放仍有效。开始时停止旧滑行并保存当前位置，若原在火箭飞行则先还原原点；结束后原逻辑恢复。隐藏不暂停计时或场景推进，回到前台显示当前阶段；退出程序不恢复会话。
 
@@ -96,3 +95,5 @@ PomodoroTimer独立放在ArcPet.Behavior，输入为单调毫秒时钟，不依�
 修复为主窗口绘制实际帧的320×320核心区域，扩展窗口用排除几何只绘制核心以外的区域，既保留原生输入表面，也防止半透明边缘重复合成。位置、大小、384/440px外延及素材不变；所有扩展动画共用修复。
 
 新增主窗口渲染alpha、核心裁剪、辅助窗口排除核心及右键事件未被消费的回归。另用同一生产窗口的内存设置验收宿主，通过真实鼠标右键确认阅读中菜单展开，关菜单保持光标停在脸上可见时间气泡。验收宿主仅为便于工具发现而显示任务栏，不写真实配置；正式程序继续托盘运行。原开始/暂停/继续/结束时序未变。
+
+2026-11-10 阅读节奏：每次进入阅读以及翻页开始时分别抽取下一次翻页的 10～12 秒间隔，等待期间重复原呼吸姿势；翻页保留原 23 帧和时长。眨眼目标平均间隔约 3.74 秒，翻页期间延至下一组呼吸。当前本地验证版在 `dist/ArcPet-reading`，旧 v0.20.1 发布校验记录仍对应发布时的构建。

@@ -1,0 +1,104 @@
+{
+  "label": "番茄钟 · 阅读翻页",
+  "canvas": [
+    384,
+    384
+  ],
+  "loop": false,
+  "frame_count": 23,
+  "duration_ms": 1620,
+  "frames": [
+    {
+      "file": "024.png",
+      "duration_ms": 80
+    },
+    {
+      "file": "025.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "026.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "027.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "028.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "029.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "030.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "031.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "032.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "033.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "034.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "035.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "036.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "037.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "038.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "039.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "040.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "041.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "042.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "043.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "044.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "045.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "046.png",
+      "duration_ms": 70
+    }
+  ]
+}

@@ -31,17 +31,26 @@ $desktopArgs += @(('/win32icon:' + $icon), ('/resource:' + $icon + ',ArcPet.Icon
 if ($LASTEXITCODE -ne 0) { throw 'Desktop preview build failed.' }
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'ArcPet.Desktop\ArcPet.Preview.exe.config') -Destination $output -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'USAGE.txt') -Destination (Join-Path $output '使用说明.txt') -Force
+foreach ($notice in @('LICENSE','NOTICE')) {
+    Copy-Item -LiteralPath (Join-Path $projectRoot $notice) -Destination $output -Force
+}
 $assetRoot = Join-Path $output 'assets'
 $sourceManifest = Get-Content -LiteralPath (Join-Path $projectRoot 'manifest.json') -Raw -Encoding UTF8 | ConvertFrom-Json
+$copiedFrameFolders = @{}
 foreach ($action in $sourceManifest.actions.PSObject.Properties) {
-    $actionRoot = Join-Path $assetRoot ('anime\' + $action.Name)
-    New-Item -ItemType Directory -Path $actionRoot -Force | Out-Null
-    $sourceRoot = Join-Path $projectRoot ('anime\' + $action.Name)
-    foreach($oldFrame in (Get-ChildItem -LiteralPath $actionRoot -Filter '*.png' | Where-Object {$_.Name -match '^\d{3}\.png$'})) {
-        if(!(Test-Path -LiteralPath (Join-Path $sourceRoot $oldFrame.Name))){Remove-Item -LiteralPath $oldFrame.FullName -Force}
+    $clipPath = $action.Value.path
+    $frameFolder = Split-Path -Parent $clipPath
+    $actionRoot = Join-Path $assetRoot $frameFolder
+    if (!$copiedFrameFolders.ContainsKey($frameFolder)) {
+        New-Item -ItemType Directory -Path $actionRoot -Force | Out-Null
+        $sourceRoot = Join-Path $projectRoot $frameFolder
+        foreach($oldFrame in (Get-ChildItem -LiteralPath $actionRoot -Filter '*.png' | Where-Object {$_.Name -match '^\d{3}\.png$'})) {
+            if(!(Test-Path -LiteralPath (Join-Path $sourceRoot $oldFrame.Name))){Remove-Item -LiteralPath $oldFrame.FullName -Force}
+        }
+        Get-ChildItem -LiteralPath $sourceRoot -Filter '*.png' | Where-Object { $_.Name -match '^\d{3}\.png$' } | Copy-Item -Destination $actionRoot -Force
+        $copiedFrameFolders[$frameFolder] = $true
     }
-    Get-ChildItem -LiteralPath $sourceRoot -Filter '*.png' | Where-Object { $_.Name -match '^\d{3}\.png$' } | Copy-Item -Destination $actionRoot -Force
-    Copy-Item -LiteralPath (Join-Path $sourceRoot 'animation.json') -Destination $actionRoot -Force
+    Copy-Item -LiteralPath (Join-Path $projectRoot $clipPath) -Destination $actionRoot -Force
 }
 Copy-Item -LiteralPath (Join-Path $projectRoot 'manifest.json') -Destination $assetRoot -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'assets/moods') -Destination $assetRoot -Recurse -Force

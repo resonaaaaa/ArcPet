@@ -106,8 +106,12 @@ internal static class DanceRegression
                 Check(player.CurrentFrameIndex==index && Object.ReferenceEquals(sprite.Source,expected),"actual sprite renders the correct frame before/at each three-loop mirror boundary");
             }
             Check(requests==beforeSwitches,"mirror changes stay within one batch and never restart or queue playback");
+            var observed=(System.Diagnostics.Stopwatch)type.GetField("observed",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(window);
+            // Freeze real time so the one-millisecond boundary is set by Advance alone.
+            observed.Stop();
             Advance(start+11999);Check(pet.CurrentClip.Id.StartsWith("dance",StringComparison.Ordinal),"window batch does not end one millisecond early");
             Advance(start+12000);Check(pet.Phase=="idle","window ends twelve loops at the exact boundary");
+            observed.Start();
             var bmp=new RenderTargetBitmap((int)window.Width,(int)window.Height,96,96,PixelFormats.Pbgra32);
             Reset(false);Double();sprite.UpdateLayout();bmp.Render(sprite);var png=new PngBitmapEncoder();png.Frames.Add(BitmapFrame.Create(bmp));
             using(var s=File.Create(Path.Combine(output,"wpf-dance.png")))png.Save(s);

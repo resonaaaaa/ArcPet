@@ -1,6 +1,6 @@
 """Rebuild whole-character tail/blink repairs; share the validated exporter."""
 from pathlib import Path
-from build_pomodoro_reading_v2 import main
+from pomodoro_reading_export import main
 from build_pomodoro_start_v3 import contact
 from pomodoro_scene_helpers import opaque
 from PIL import Image

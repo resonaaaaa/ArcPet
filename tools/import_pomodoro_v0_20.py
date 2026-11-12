@@ -15,6 +15,29 @@ def fit(im):
         resample=Image.Resampling.BICUBIC)
 def native(index):
     out=Image.new('RGBA',(384,384));out.alpha_composite(Image.open(ROOT/f'anime/idle/{index:03}.png').convert('RGBA'),(32,64));return out
+def register_clip(out,filename,name,frames,loop,manifest,report,source,label=None):
+    clip={'label':label or '番茄钟 · '+name,'canvas':[384,384],'loop':loop,
+          'frame_count':len(frames),'duration_ms':sum(f['duration_ms'] for f in frames),'frames':frames}
+    dump(out/filename,clip)
+    manifest['actions']['pomodoro_'+name]={'path':f'anime/{out.name}/{filename}',
+        **{k:clip[k] for k in ['label','frame_count','duration_ms','loop']}}
+    report[name]={'source':source,'frames':len(frames),'duration_ms':clip['duration_ms']}
+def register_reading(out,frames,manifest,report,source):
+    # The approved timeline repeats the same blink/breath drawings three times
+    # before turning a page. Reuse those drawings in three independent sequences.
+    blink=frames[:8]
+    plain=[dict(blink[i],duration_ms=blink[i]['duration_ms']+extra)
+           for i,extra in [(0,0),(1,105),(5,105),(6,0),(7,0)]]
+    for filename,name,sequence,loop,label in [
+        ('animation.json','read',plain,True,'番茄钟 · 阅读呼吸'),
+        ('blink.json','read_blink',blink,False,'番茄钟 · 阅读眨眼'),
+        ('page.json','read_page',frames[24:],False,'番茄钟 · 阅读翻页')]:
+        register_clip(out,filename,name,sequence,loop,manifest,report,source,label)
+    duplicates=[(out/f'{i:03}.png',out/f'{i%8:03}.png') for i in range(8,24)]
+    for duplicate,original in duplicates:
+        assert not duplicate.exists() or digest(duplicate)==digest(original),duplicate
+    for duplicate,_ in duplicates:
+        duplicate.unlink(missing_ok=True)
 def main():
     before={str(p.relative_to(ROOT)):digest(p) for p in (ROOT/'anime').rglob('*') if p.is_file() and not p.parent.name.startswith('pomodoro_')}
     sources={
@@ -27,6 +50,10 @@ def main():
         folder=ROOT/'design'/source;meta=read(folder/'animation.json');out=ROOT/'anime'/('pomodoro_'+name);out.mkdir(exist_ok=True)
         frames=[];clock=0;impact=0;fade_at=0
         for i,f in enumerate(meta['frames']):
+            if name=='read' and 8<=i<24:
+                assert f==meta['frames'][i%8]
+                frames.append({'file':f'{i:03}.png','duration_ms':f['duration_ms']})
+                continue
             im=fit(Image.open(folder/f['file']).convert('RGBA'));phase=f.get('phase','')
             if name=='end':
                 if phase=='impact / lens coverage':
@@ -42,11 +69,8 @@ def main():
             while clock%2100:
                 i=len(frames);ms=70-clock%70;native(clock//70%30).save(out/f'{i:03}.png')
                 frames.append({'file':f'{i:03}.png','duration_ms':ms});clock+=ms
-        clip={'label':'番茄钟 · '+name,'canvas':[384,384],'loop':name in ['read','paused'],
-              'frame_count':len(frames),'duration_ms':sum(f['duration_ms'] for f in frames),'frames':frames}
-        dump(out/'animation.json',clip)
-        manifest['actions']['pomodoro_'+name]={'path':f'anime/pomodoro_{name}/animation.json',**{k:clip[k] for k in ['label','frame_count','duration_ms','loop']}}
-        report[name]={'source':source,'frames':len(frames),'duration_ms':clip['duration_ms']}
+        if name=='read':register_reading(out,frames,manifest,report,source)
+        else:register_clip(out,'animation.json',name,frames,name=='paused',manifest,report,source)
     manifest['version']='v20-pomodoro';dump(ROOT/'manifest.json',manifest)
     assert all(digest(ROOT/p)==h for p,h in before.items())
     dest=ROOT/'docs/desktop-v0.20-validation';dest.mkdir(exist_ok=True)

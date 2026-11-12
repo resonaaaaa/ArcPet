@@ -191,9 +191,9 @@
     },
     "pomodoro_read": {
       "path": "anime/pomodoro_read/animation.json",
-      "label": "番茄钟 · read",
-      "frame_count": 47,
-      "duration_ms": 5610,
+      "label": "番茄钟 · 阅读呼吸",
+      "frame_count": 5,
+      "duration_ms": 1330,
       "loop": true
     },
     "pomodoro_pause": {
@@ -229,6 +229,20 @@
       "label": "番茄钟 · end",
       "frame_count": 65,
       "duration_ms": 3550,
+      "loop": false
+    },
+    "pomodoro_read_blink": {
+      "path": "anime/pomodoro_read/blink.json",
+      "label": "番茄钟 · 阅读眨眼",
+      "frame_count": 8,
+      "duration_ms": 1330,
+      "loop": false
+    },
+    "pomodoro_read_page": {
+      "path": "anime/pomodoro_read/page.json",
+      "label": "番茄钟 · 阅读翻页",
+      "frame_count": 23,
+      "duration_ms": 1620,
       "loop": false
     }
   }
