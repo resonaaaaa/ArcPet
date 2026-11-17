@@ -1,6 +1,6 @@
-# ArcPet 0.20.1 · 桌面程序
+# ArcPet 0.21.1 · 桌面程序
 
-C# / WPF / .NET Framework 4.8，无新增NuGet依赖。安装继续使用dist/ArcPet-v0.9固定路径，以保留开机启动登记和根目录data偏好；文件版本为0.20.1。32段、1165个正式PNG播放位置以根anime为唯一程序资产来源。
+C# / WPF / .NET Framework 4.8，无新增NuGet依赖。安装继续使用dist/ArcPet-v0.9固定路径，以保留开机启动登记和根目录data偏好；文件版本为 0.21.1。37 个动画片段、1181 张正式 PNG，以根目录 anime 为唯一程序动画资产来源。
 
 ## 当前交互
 
@@ -41,16 +41,16 @@ lying不进入60—90秒普通随机池；该池仍为进食、思考、音乐�
 ## 构建与验证
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File app/build.ps1 -Test -OutputDirectory dist/ArcPet-v0.20.2
-powershell -NoProfile -ExecutionPolicy Bypass -File app/test-windows.ps1 -Runtime dist/ArcPet-v0.20.2 -Report docs/desktop-v0.20.2-validation
+powershell -NoProfile -ExecutionPolicy Bypass -File app/build.ps1 -Test -OutputDirectory dist/ArcPet-v0.21.1
+powershell -NoProfile -ExecutionPolicy Bypass -File app/test-windows.ps1 -Runtime dist/ArcPet-v0.21.1 -Report docs/desktop-v0.21.1-validation
 python -B tools/verify_animation.py
 ```
 
-test-windows.ps1默认检查0.20.1独立构建，报告放docs/desktop-v0.20.1-validation；可用Runtime/Report参数或DanceOnly、MoodOnly、RocketOnly限制既有专项；TravelOnly单独检查两种移动动作。完整运行包含TravelRegression与SleepVariantRegression，覆盖三种抽选结果、两种锁定状态、真实帧显示、窗口位置/缩放不变、左右键唤醒、关闭睡眠与两分钟自然结束。
+test-windows.ps1 默认检查固定安装目录，报告放 docs/desktop-validation；可用Runtime/Report参数或DanceOnly、MoodOnly、RocketOnly限制既有专项；TravelOnly单独检查两种移动动作。完整运行包含TravelRegression与SleepVariantRegression，覆盖三种抽选结果、两种锁定状态、真实帧显示、窗口位置/缩放不变、左右键唤醒、关闭睡眠与两分钟自然结束。
 
 测试采用内存或隔离设置和自启动存储，不写用户真实偏好或开机启动项。锁定点击用WPF路由事件；未锁定拖动/缩放用生产适配器，因为合成事件不能改变物理按钮状态。边界时序由测试时钟推进，不伪称等待了两分钟或完成实物鼠标验收。
 
-package_desktop_v0_20_1.py核对当前安装目录dist/ArcPet-v0.9与0.20.1发布验证记录后，按需生成ZIP及SHA256文件；重新编译版本需重新建立验证记录。update_runtime_v0_20_1.ps1用于将已验证的0.20.1构建更新到原路径，保留设置及自启动。分发包不带data。旧版本打包/更新入口已清理，可从Git历史查看。
+便携 ZIP 可用 `python tools/package_desktop.py 0.21.1 dist/ArcPet-v0.21.1` 从已验证的构建生成；封包前逐一比对素材和说明，封包后复核 ZIP 内容。不包含 data 个人设置。
 
 
 ## 0.17 · 散步与滑板共享移动
@@ -96,4 +96,12 @@ PomodoroTimer独立放在ArcPet.Behavior，输入为单调毫秒时钟，不依�
 
 新增主窗口渲染alpha、核心裁剪、辅助窗口排除核心及右键事件未被消费的回归。另用同一生产窗口的内存设置验收宿主，通过真实鼠标右键确认阅读中菜单展开，关菜单保持光标停在脸上可见时间气泡。验收宿主仅为便于工具发现而显示任务栏，不写真实配置；正式程序继续托盘运行。原开始/暂停/继续/结束时序未变。
 
-2026-11-10 阅读节奏：每次进入阅读以及翻页开始时分别抽取下一次翻页的 10～12 秒间隔，等待期间重复原呼吸姿势；翻页保留原 23 帧和时长。眨眼目标平均间隔约 3.74 秒，翻页期间延至下一组呼吸。当前本地验证版在 `dist/ArcPet-reading`，旧 v0.20.1 发布校验记录仍对应发布时的构建。
+2026-11-10 阅读节奏：每次进入阅读以及翻页开始时分别抽取下一次翻页的 10～12 秒间隔，等待期间重复原呼吸姿势；翻页保留原 23 帧和时长。眨眼目标平均间隔约 3.74 秒，翻页期间延至下一组呼吸。旧 v0.20.1 发布记录对应当时的构建。
+
+## 2026-11-15 · v0.21.0 抽签
+
+右键猫姬或托盘，选择「抽签」。使用已确认的 v4 动作，完成两轮摇筒后提签、睁眼，再在像素云中显示结果。结果有大吉、吉、中吉、小吉、末吉、凶、大凶七档。按本机系统日期计算，以每天 06:00 为分界，抽签时确定本次结果。当天可以反复重播，重启后结果也一致。换日后重新计算，仍可能抽到与上一天相同的签等。抽签和番茄钟各自播完再切换。
+
+## v0.21.1 · 自启动升级
+
+固定安装目录升级为 v0.21.1。便携版启动后，已有的当前用户 ArcPet 启动项如果指向更旧的版本或失效路径，会迁移到当前版本；同版、新版、未开启的启动项保持原样。窗口诊断不读写真实启动项。已从本机现有登记路径实际启动新版，并确认个人设置未变。

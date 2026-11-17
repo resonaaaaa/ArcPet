@@ -52,6 +52,68 @@ internal static class PomodoroRegression
         while(scene.IsActive && count++<10)Advance(pet.CurrentClip.DurationMilliseconds+1);
         Check(!scene.IsActive && pet.Phase=="idle","complete ending sequence returns idle");
     }
+    private static void VerifyFortune(MenuItem duration, string output)
+    {
+        Call("ToggleVisibility");
+        var draw = (MenuItem)Field("fortuneMenu");
+        var trayDraw = (Forms.ToolStripMenuItem)Field("trayFortune");
+        var bubble = (Window)Field("mood");
+        var result = bubble.GetType().GetProperty("FortuneText", BindingFlags.Instance|BindingFlags.NonPublic);
+        Check(window.ContextMenu.Items.Contains(draw) && (string)draw.Header=="抽签" && draw.IsEnabled,
+            "pet right-click menu has the draw action");
+        Click(draw);
+        string first = pet.FortuneResult;
+        Check(pet.Phase=="fortune_shake" && (string)result.GetValue(bubble,null)==null && !draw.IsEnabled,
+            "menu starts shaking without immediately revealing the result");
+        Check(!duration.IsEnabled && !trayDraw.Enabled,"both menus block overlapping scenes and draws");
+        Advance(pet.CurrentClip.DurationMilliseconds + 1);
+        Check(pet.Phase=="fortune_draw" && (string)result.GetValue(bubble,null)==null,
+            "result stays hidden while picking up the stick");
+        Advance(pet.CurrentClip.DurationMilliseconds + 1);
+        Advance(600);
+        Pump();
+        Check(pet.Phase=="fortune_reveal" && bubble.IsVisible && (string)result.GetValue(bubble,null)==first,
+            "approved open-eye pose is paired with today's result bubble");
+        var canvas = (Canvas)((Viewbox)bubble.Content).Child;
+        var label = (TextBlock)canvas.Children[3];
+        Check(label.Text==first && label.Opacity==1 && !((Viewbox)bubble.Content).IsHitTestVisible,
+            "result text is fully painted in a click-through bubble");
+        canvas.UpdateLayout();
+        var sprite = (Image)window.Content;
+        sprite.UpdateLayout();
+        var petImage = new RenderTargetBitmap(320,320,96,96,PixelFormats.Pbgra32);
+        var bubbleImage = new RenderTargetBitmap(161,114,96,96,PixelFormats.Pbgra32);
+        petImage.Render(sprite);bubbleImage.Render(canvas);
+        var preview = new DrawingVisual();
+        using (var dc = preview.RenderOpen())
+        {
+            dc.DrawRectangle(Brushes.OldLace,null,new Rect(0,0,416,320));
+            dc.DrawImage(petImage,new Rect(44,0,320,320));
+            dc.DrawImage(bubbleImage,new Rect(249,13,161,114));
+        }
+        var rendered = new RenderTargetBitmap(416,320,96,96,PixelFormats.Pbgra32);
+        rendered.Render(preview);
+        var png = new PngBitmapEncoder();
+        png.Frames.Add(BitmapFrame.Create(rendered));
+        using (var stream = File.Create(Path.Combine(output,"fortune-result.png"))) png.Save(stream);
+
+        Advance(pet.CurrentClip.DurationMilliseconds + 1);
+        Check(pet.Phase=="idle" && draw.IsEnabled && duration.IsEnabled &&
+            (string)result.GetValue(bubble,null)==null && !bubble.IsVisible,
+            "finishing closes the result bubble and re-enables both features");
+        trayDraw.PerformClick();Pump();
+        Check(pet.Phase=="fortune_shake" && pet.FortuneResult==first,
+            "tray can replay the same daily result");
+        Call("ToggleVisibility");
+        for (int i=0;i<3;i++) Advance(pet.CurrentClip.DurationMilliseconds + 1);
+        Check(pet.Phase=="idle" && !window.IsVisible && !bubble.IsVisible,
+            "hidden draw completes without forcing either window visible");
+        Call("ToggleVisibility");
+        Click(duration);
+        Check(!draw.IsEnabled && !trayDraw.Enabled,"active focus timer also disables drawing");
+        Click((MenuItem)Field("pomodoroEnd"));
+        FinishScene();
+    }
     private static void Screenshot(string output)
     {
         var overlay=(Window)Field("rocketArtwork");var mood=(Window)Field("mood");
@@ -150,6 +212,7 @@ internal static class PomodoroRegression
             Check(!((MenuItem)Field("pomodoroPause")).IsEnabled && !((MenuItem)Field("pomodoroEnd")).IsEnabled,"completed controls disabled");
             Check(!window.ShowInTaskbar && tray.Visible,"tray-only app preserved");
             FinishScene();Check(timer.State==PomodoroState.Completed,"natural completion retains timer result after exit animation");
+            VerifyFortune(durations[20],args[1]);
             window.Close();window=null;
             File.WriteAllLines(Path.Combine(args[1],"pomodoro-window-tests.txt"),log);
             Console.WriteLine("PASS: "+checks+" pomodoro and nested-menu window checks.");return 0;

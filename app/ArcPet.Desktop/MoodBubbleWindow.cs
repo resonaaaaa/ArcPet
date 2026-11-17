@@ -20,12 +20,27 @@ namespace ArcPet.Desktop
         private readonly MoodAssets data;
         private readonly Window pet;
         private readonly Canvas canvas=new Canvas();
+        private readonly Canvas fortuneCanvas=new Canvas { Width=161, Height=114 };
+        private readonly UIElement[] fortuneClouds=new UIElement[3];
+        private readonly TextBlock fortuneLabel=new TextBlock();
+        private readonly Viewbox view;
         private readonly Dictionary<string,BitmapImage> icons=new Dictionary<string,BitmapImage>();
         private readonly Dictionary<string,UIElement> layers=new Dictionary<string,UIElement>();
         private readonly Image icon;
         private string renderedContent;
         private string timerText;
         private long timerStarted;
+        private long fortuneStarted;
+        private Rect fortuneWorkArea;
+        internal string FortuneText { get; private set; }
+        internal void SetFortune(string result, long now, Rect workArea)
+        {
+            if (FortuneText == result) return;
+            FortuneText = result;
+            fortuneLabel.Text = result;
+            fortuneStarted = now;
+            fortuneWorkArea = workArea;
+        }
         internal bool TimerVisible { get { return timerText!=null; } }
         internal string TimerText { get { return timerText; } }
         internal void SetTimer(bool visible,long remaining,long now)
@@ -52,7 +67,7 @@ namespace ArcPet.Desktop
             AllowsTransparency=true;Background=Brushes.Transparent;ShowInTaskbar=false;ShowActivated=false;
             Topmost=owner.Topmost;IsHitTestVisible=false;Focusable=false;
             canvas.Width=data.Bounds.Width;canvas.Height=data.Bounds.Height;
-            var box=new Viewbox{Stretch=Stretch.Fill,Child=canvas,IsHitTestVisible=false};Content=box;
+            view=new Viewbox{Stretch=Stretch.Fill,Child=canvas,IsHitTestVisible=false};Content=view;
             var main=new Canvas{Width=data.Bounds.Width,Height=data.Bounds.Height,IsHitTestVisible=false};
             RenderOptions.SetEdgeMode(canvas,EdgeMode.Aliased);
             foreach(var layer in data.Clouds)
@@ -64,6 +79,14 @@ namespace ArcPet.Desktop
             }
             if(!layers.ContainsKey("small") || !layers.ContainsKey("medium") || !layers.ContainsKey("main"))throw new InvalidDataException("Missing cloud layer.");
             icon=MakeImage(null,data.Icon.Width,data.Icon.Height,data.Icon.X,data.Icon.Y);main.Children.Add(icon);canvas.Children.Add(main);
+            AddFortuneCloud(0, 0, 102, 15, 12, (Image)layers["small"]);
+            AddFortuneCloud(1, 17, 84, 25, 20, (Image)layers["medium"]);
+            AddFortuneCloud(2, 33, 0, 128, 103, (Image)main.Children[0]);
+            fortuneLabel.Width=108;fortuneLabel.Height=30;fortuneLabel.TextAlignment=TextAlignment.Center;
+            fortuneLabel.FontSize=23;fortuneLabel.FontWeight=FontWeights.Bold;
+            fortuneLabel.Foreground=new SolidColorBrush(Color.FromRgb(81,53,46));
+            Canvas.SetLeft(fortuneLabel,43);Canvas.SetTop(fortuneLabel,35);
+            fortuneCanvas.Children.Add(fortuneLabel);
             SourceInitialized+=delegate
             {
                 IntPtr handle=new WindowInteropHelper(this).Handle;
@@ -71,6 +94,12 @@ namespace ArcPet.Desktop
                 SetWindowLong(handle,-20,GetWindowLong(handle,-20)|0x20|0x08000000|0x80);
             };
             Controller.SetAvailable(owner.IsVisible,0);
+        }
+        private void AddFortuneCloud(int index, double x, double y, double width, double height, Image original)
+        {
+            var image=MakeImage(original.Source,width,height,x+data.Bounds.X,y+data.Bounds.Y);
+            fortuneCanvas.Children.Add(image);
+            fortuneClouds[index]=image;
         }
         private static BitmapImage Load(string root,string relative)
         {
@@ -87,6 +116,8 @@ namespace ArcPet.Desktop
         }
         internal void Render(long now)
         {
+            if(FortuneText!=null && pet.IsVisible){RenderFortune(now);return;}
+            if(view.Child!=canvas)view.Child=canvas;
             if(!pet.IsVisible || (!TimerVisible && !Controller.IsVisible)){if(IsVisible)Hide();return;}
             if(Owner==null)Owner=pet;
             if(!TimerVisible && renderedContent!=Controller.ContentId){icon.Source=icons[Controller.ContentId];renderedContent=Controller.ContentId;}
@@ -97,6 +128,35 @@ namespace ArcPet.Desktop
                 Math.Max(0,Math.Min(1,(now-timerStarted-layer.Start)/(double)layer.Fade)) : Controller.Opacity(now,layer.Start,layer.Fade);
             if(!IsVisible)Show();
         }
+        private void RenderFortune(long now)
+        {
+            if(view.Child!=fortuneCanvas)view.Child=fortuneCanvas;
+            if(Owner==null)Owner=pet;
+            double scale=pet.Width/320.0;
+            Width=fortuneCanvas.Width*scale;Height=fortuneCanvas.Height*scale;
+            bool mirror=!fortuneWorkArea.IsEmpty && pet.Left+366*scale>fortuneWorkArea.Right &&
+                pet.Left-96*scale>=fortuneWorkArea.Left;
+            double left=pet.Left+(mirror?-96:205)*scale;
+            double top=pet.Top+13*scale;
+            if(!fortuneWorkArea.IsEmpty)
+            {
+                left=Math.Max(fortuneWorkArea.Left,Math.Min(left,fortuneWorkArea.Right-Width));
+                top=Math.Max(fortuneWorkArea.Top,Math.Min(top,fortuneWorkArea.Bottom-Height));
+            }
+            Left=left;Top=top;Topmost=pet.Topmost;
+            Canvas.SetLeft(fortuneClouds[0],mirror?146:0);
+            Canvas.SetLeft(fortuneClouds[1],mirror?119:17);
+            Canvas.SetLeft(fortuneClouds[2],mirror?0:33);
+            Canvas.SetLeft(fortuneLabel,mirror?10:43);
+            double elapsed=now-fortuneStarted;
+            fortuneClouds[0].Opacity=Fade(elapsed);
+            fortuneClouds[1].Opacity=Fade(elapsed-110);
+            fortuneClouds[2].Opacity=Fade(elapsed-230);
+            fortuneLabel.Opacity=Fade(elapsed-300);
+            if(!IsVisible)Show();
+        }
+        private static double Fade(double elapsed)
+        { return Math.Max(0,Math.Min(1,elapsed/210)); }
         [DataContract]private sealed class MoodAssets
         {
             [DataMember(Name="version")]public int Version {get;set;}

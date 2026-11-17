@@ -63,6 +63,8 @@ namespace ArcPet.Desktop
         private readonly Dictionary<int,Forms.ToolStripMenuItem> trayPomodoroDurations = new Dictionary<int,Forms.ToolStripMenuItem>();
         private MenuItem pomodoroStatus, pomodoroPause, pomodoroEnd;
         private Forms.ToolStripMenuItem trayPomodoroStatus, trayPomodoroPause, trayPomodoroEnd;
+        private MenuItem fortuneMenu;
+        private Forms.ToolStripMenuItem trayFortune;
         private long pomodoroMenuAt = -1;
         private string travelMonitor;
         private PetPreferences loadedPreferences;
@@ -103,7 +105,7 @@ namespace ArcPet.Desktop
             pomodoroScene.Finished += delegate { behavior.FinishPomodoro(Now); SyncPomodoroMenus(); };
             preferencesWriter=new PreferencesSaveQueue(preferencesStore);
             cache = new FrameCache(clips.Values);
-            Title = "ArcPet 0.20.2 · 桌宠"; Width = 320; Height = 320;
+            Title = "ArcPet " + typeof(PetWindow).Assembly.GetName().Version.ToString(3) + " · 桌宠"; Width = 320; Height = 320;
             using(var stream=typeof(PetWindow).Assembly.GetManifestResourceStream("ArcPet.Icon"))
             {
                 if(stream==null)throw new InvalidDataException("缺少猫姬图标资源。");
@@ -177,6 +179,9 @@ namespace ArcPet.Desktop
             pomodoroPause = new MenuItem(); pomodoroPause.Click += delegate { TogglePomodoroPause(); };
             pomodoroEnd = new MenuItem { Header = "结束计时" }; pomodoroEnd.Click += delegate { EndPomodoro(); };
             pomodoroRoot.Items.Add(pomodoroPause); pomodoroRoot.Items.Add(pomodoroEnd);
+            fortuneMenu = new MenuItem { Header = "抽签" };
+            fortuneMenu.Click += delegate { StartFortune(); };
+            menu.Items.Add(fortuneMenu);
             menu.Items.Add(new Separator()); menu.Items.Add(startupMenu);
             menu.Items.Add(new Separator()); menu.Items.Add(exit);
             menu.Opened += delegate { behavior.Touch(Now); SyncMenus(); };
@@ -184,7 +189,7 @@ namespace ArcPet.Desktop
         }
         private void CreateTray()
         {
-            tray = new Forms.NotifyIcon { Icon = petIcon, Text = "ArcPet 0.20.2 · 双击显示或隐藏桌宠", Visible = true };
+            tray = new Forms.NotifyIcon { Icon = petIcon, Text = "ArcPet 0.21.0 · 双击显示或隐藏桌宠", Visible = true };
             var menu = new Forms.ContextMenuStrip();
             trayLock = new Forms.ToolStripMenuItem("锁定"); trayLock.Click += delegate { Dispatch(ToggleLock); };
             trayVisibility = new Forms.ToolStripMenuItem(); trayVisibility.Click += delegate { Dispatch(ToggleVisibility); };
@@ -217,6 +222,9 @@ namespace ArcPet.Desktop
             trayPomodoroEnd = new Forms.ToolStripMenuItem("结束计时");
             trayPomodoroEnd.Click += delegate { Dispatch(EndPomodoro); };
             pomodoroRoot.DropDownItems.Add(trayPomodoroPause); pomodoroRoot.DropDownItems.Add(trayPomodoroEnd);
+            trayFortune = new Forms.ToolStripMenuItem("抽签");
+            trayFortune.Click += delegate { Dispatch(StartFortune); };
+            menu.Items.Add(trayFortune);
             menu.Items.Add(new Forms.ToolStripSeparator()); menu.Items.Add(trayStartup);
             menu.Items.Add(new Forms.ToolStripSeparator()); menu.Items.Add(exit);
             menu.Opening += delegate { behavior.Touch(Now); SyncMenus(); };
@@ -246,13 +254,19 @@ namespace ArcPet.Desktop
         }
         private void StartPomodoro(int minutes)
         {
-            if(pomodoroScene.IsActive)return;
+            if(pomodoroScene.IsActive || behavior.IsFortune)return;
             pomodoro.Tick(Now);
             if(pomodoro.Start(minutes,Now))
             {
                 EndGesture(true);behavior.CancelRocket(Now);RestoreFlightOrigin();
                 pomodoroScene.Start(Now);
             }
+            SyncPomodoroMenus();
+        }
+        private void StartFortune()
+        {
+            if (!IsVisible || pomodoroScene.IsActive || !behavior.CanDrawFortune) return;
+            behavior.TryDrawFortune(Now, DateTime.Now);
             SyncPomodoroMenus();
         }
         private void TogglePomodoroPause()
@@ -282,13 +296,17 @@ namespace ArcPet.Desktop
             pomodoroStatus.Header = status;
             pomodoroPause.Header = pomodoro.State == PomodoroState.Paused ? "继续计时" : "暂停计时";
             pomodoroPause.IsEnabled = pomodoroEnd.IsEnabled = pomodoro.IsActive;
-            foreach (var item in pomodoroDurations) item.Value.IsEnabled = !pomodoro.IsActive && !pomodoroScene.IsActive;
+            bool canStartPomodoro = !pomodoro.IsActive && !pomodoroScene.IsActive && !behavior.IsFortune;
+            bool canDraw = IsVisible && !pomodoroScene.IsActive && behavior.CanDrawFortune;
+            fortuneMenu.IsEnabled = canDraw;
+            foreach (var item in pomodoroDurations) item.Value.IsEnabled = canStartPomodoro;
             if (tray == null) return;
             trayPomodoroStatus.Text = status; trayPomodoroPause.Text = (string)pomodoroPause.Header;
             trayPomodoroPause.Enabled = trayPomodoroEnd.Enabled = pomodoro.IsActive;
-            foreach (var item in trayPomodoroDurations) item.Value.Enabled = !pomodoro.IsActive && !pomodoroScene.IsActive;
-            tray.Text = pomodoro.IsActive ? "ArcPet 0.20.2 · 番茄钟 " + status :
-                pomodoro.State == PomodoroState.Completed ? "ArcPet 0.20.2 · " + status : "ArcPet 0.20.2 · 双击显示或隐藏桌宠";
+            trayFortune.Enabled = canDraw;
+            foreach (var item in trayPomodoroDurations) item.Value.Enabled = canStartPomodoro;
+            tray.Text = pomodoro.IsActive ? "ArcPet 0.21.0 · 番茄钟 " + status :
+                pomodoro.State == PomodoroState.Completed ? "ArcPet 0.21.0 · " + status : "ArcPet 0.21.0 · 双击显示或隐藏桌宠";
         }
         private static string MovementLabel(MovementMode mode)
         {return mode==MovementMode.Long ? "长" : mode==MovementMode.Short ? "短" : "关闭";}
@@ -324,13 +342,13 @@ namespace ArcPet.Desktop
         }
         private void OnPrimaryDown(object sender, MouseButtonEventArgs e)
         {
-            if (gesture != null || behavior.Touch(Now) || behavior.IsDragAnimation) { e.Handled = true; return; }
+            if (gesture != null || behavior.Touch(Now) || behavior.IsDragAnimation || behavior.IsFortune) { e.Handled = true; return; }
             BeginPrimaryGesture(PointerInScreenDips(e),(Keyboard.Modifiers & ModifierKeys.Control)!=0);
             CaptureMouse(); e.Handled = true;
         }
         private void BeginPrimaryGesture(Point pointer,bool control)
         {
-            if (behavior.IsDragAnimation) return;
+            if (behavior.IsDragAnimation || behavior.IsFortune) return;
             gestureMoved = false;
             initialPointer = latestPointer = pointer;
             gestureStarted = Now;
@@ -482,6 +500,12 @@ namespace ArcPet.Desktop
             // Behavior settles priorities first. The overlay only observes the
             // chosen clip, so it can never pause or enqueue the pet's playback.
             mood.Controller.Enter(behavior.Phase,e.Clip.Id,e.Clip.Id=="think" ? clips["think"].DurationMilliseconds : 0,Now);
+            if (behavior.Phase == "fortune_reveal")
+            {
+                var area = PlacementPolicy.Choose(GetDisplayAreas(), Left, Top, Width);
+                mood.SetFortune(behavior.FortuneResult, Now, new Rect(area.Left,area.Top,area.Width,area.Height));
+            }
+            else mood.SetFortune(null, Now, Rect.Empty);
             mood.Render(Now);
             if(travel!=null && travel.IsActive && !behavior.IsTraveling)
             {travel.Stop();travelMonitor=null;SavePreferences();}
@@ -515,11 +539,13 @@ namespace ArcPet.Desktop
             if (Now >= pomodoroMenuAt) { SyncPomodoroMenus(); pomodoroMenuAt = Now + 250; }
             RefreshTravelAvailability();
             TryBeginDragLift();
+            bool drawingFortune = behavior.IsFortune;
             behavior.Tick(Now);
+            if (drawingFortune && !behavior.IsFortune) SyncPomodoroMenus();
             UpdateTravel();
             UpdateFlight();
             mood.Controller.Tick(Now);
-            if (IsVisible || pomodoroScene.IsActive) player.Update();
+            if (IsVisible || pomodoroScene.IsActive || behavior.IsFortune) player.Update();
             Point pointer=Mouse.GetPosition(this);
             int px=(int)(pointer.X/layout.Scale)+(pomodoroArtwork || dragArtwork ? 32 : 0);
             int py=(int)(pointer.Y/layout.Scale)+(pomodoroArtwork || dragArtwork ? 64 : 0);

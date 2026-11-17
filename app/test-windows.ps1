@@ -1,4 +1,4 @@
-﻿param([string]$Runtime='dist/ArcPet-v0.20.1',[string]$Report='docs/desktop-v0.20.1-validation',[switch]$MoodOnly,[switch]$RocketOnly,[switch]$DanceOnly,[switch]$TravelOnly,[switch]$PomodoroOnly)
+﻿param([string]$Runtime='dist/ArcPet-v0.9',[string]$Report='docs/desktop-validation',[switch]$MoodOnly,[switch]$RocketOnly,[switch]$DanceOnly,[switch]$TravelOnly,[switch]$PomodoroOnly)
 $ErrorActionPreference='Stop'
 $arcRoot=Split-Path -Parent $PSScriptRoot
 $arcOutput=[IO.Path]::GetFullPath((Join-Path $arcRoot $Runtime))

@@ -33,7 +33,13 @@ namespace ArcPet.Desktop
                 var startup=new StartupRegistration(startupStore,System.Reflection.Assembly.GetExecutingAssembly().Location);
                 var window=new PetWindow(player,behavior,clips,preferences,diagnosticOutput,mode,startup);
                 app.MainWindow=window;
-                app.Startup += delegate { window.Start(); };
+                app.Startup += delegate
+                {
+                    window.Start();
+                    string error;
+                    if(!diagnostic && !startup.TryMigrate(out error))
+                        System.Diagnostics.Trace.TraceWarning("Could not migrate the ArcPet startup entry: {0}",error);
+                };
                 return app.Run();
             }
             catch (Exception exception)

@@ -1,0 +1,630 @@
+{
+  "whole_character_drawings": 32,
+  "shake_duration_ms": 1291,
+  "draw_duration_ms": 1167,
+  "preview_duration_ms": 5679,
+  "preview_frame_count": 57,
+  "source_poses": {
+    "plain-01": {
+      "atlas": "plain",
+      "cell": 1,
+      "source_box": [
+        0,
+        0,
+        313,
+        313
+      ],
+      "bbox": [
+        51,
+        42,
+        221,
+        292
+      ],
+      "boot_spacing_px": 56.2,
+      "pupil_spacing_px": null
+    },
+    "plain-02": {
+      "atlas": "plain",
+      "cell": 2,
+      "source_box": [
+        313,
+        0,
+        627,
+        313
+      ],
+      "bbox": [
+        51,
+        43,
+        217,
+        292
+      ],
+      "boot_spacing_px": 56.2,
+      "pupil_spacing_px": null
+    },
+    "plain-03": {
+      "atlas": "plain",
+      "cell": 3,
+      "source_box": [
+        627,
+        0,
+        940,
+        313
+      ],
+      "bbox": [
+        45,
+        44,
+        214,
+        292
+      ],
+      "boot_spacing_px": 55.76,
+      "pupil_spacing_px": null
+    },
+    "plain-04": {
+      "atlas": "plain",
+      "cell": 4,
+      "source_box": [
+        940,
+        0,
+        1254,
+        313
+      ],
+      "bbox": [
+        43,
+        44,
+        215,
+        292
+      ],
+      "boot_spacing_px": 56.64,
+      "pupil_spacing_px": null
+    },
+    "plain-05": {
+      "atlas": "plain",
+      "cell": 5,
+      "source_box": [
+        0,
+        313,
+        313,
+        627
+      ],
+      "bbox": [
+        43,
+        44,
+        216,
+        292
+      ],
+      "boot_spacing_px": 57.08,
+      "pupil_spacing_px": null
+    },
+    "plain-06": {
+      "atlas": "plain",
+      "cell": 6,
+      "source_box": [
+        313,
+        313,
+        627,
+        627
+      ],
+      "bbox": [
+        41,
+        46,
+        215,
+        292
+      ],
+      "boot_spacing_px": 56.64,
+      "pupil_spacing_px": null
+    },
+    "plain-07": {
+      "atlas": "plain",
+      "cell": 7,
+      "source_box": [
+        627,
+        313,
+        940,
+        627
+      ],
+      "bbox": [
+        41,
+        45,
+        217,
+        292
+      ],
+      "boot_spacing_px": 56.64,
+      "pupil_spacing_px": null
+    },
+    "plain-08": {
+      "atlas": "plain",
+      "cell": 8,
+      "source_box": [
+        940,
+        313,
+        1254,
+        627
+      ],
+      "bbox": [
+        40,
+        45,
+        218,
+        292
+      ],
+      "boot_spacing_px": 57.97,
+      "pupil_spacing_px": null
+    },
+    "plain-09": {
+      "atlas": "plain",
+      "cell": 9,
+      "source_box": [
+        0,
+        627,
+        313,
+        940
+      ],
+      "bbox": [
+        43,
+        46,
+        217,
+        292
+      ],
+      "boot_spacing_px": 56.64,
+      "pupil_spacing_px": null
+    },
+    "plain-10": {
+      "atlas": "plain",
+      "cell": 10,
+      "source_box": [
+        313,
+        627,
+        627,
+        940
+      ],
+      "bbox": [
+        45,
+        45,
+        218,
+        292
+      ],
+      "boot_spacing_px": 56.64,
+      "pupil_spacing_px": null
+    },
+    "plain-11": {
+      "atlas": "plain-11",
+      "cell": 1,
+      "source_box": [
+        0,
+        0,
+        311,
+        311
+      ],
+      "bbox": [
+        47,
+        47,
+        217,
+        292
+      ],
+      "boot_spacing_px": 55.76,
+      "pupil_spacing_px": null
+    },
+    "plain-12": {
+      "atlas": "plain",
+      "cell": 12,
+      "source_box": [
+        940,
+        627,
+        1254,
+        940
+      ],
+      "bbox": [
+        52,
+        44,
+        221,
+        292
+      ],
+      "boot_spacing_px": 57.52,
+      "pupil_spacing_px": null
+    },
+    "plain-13": {
+      "atlas": "plain",
+      "cell": 13,
+      "source_box": [
+        0,
+        940,
+        313,
+        1254
+      ],
+      "bbox": [
+        53,
+        44,
+        220,
+        292
+      ],
+      "boot_spacing_px": 57.08,
+      "pupil_spacing_px": null
+    },
+    "plain-14": {
+      "atlas": "plain",
+      "cell": 14,
+      "source_box": [
+        313,
+        940,
+        627,
+        1254
+      ],
+      "bbox": [
+        51,
+        45,
+        220,
+        292
+      ],
+      "boot_spacing_px": 57.52,
+      "pupil_spacing_px": null
+    },
+    "plain-15": {
+      "atlas": "plain",
+      "cell": 15,
+      "source_box": [
+        627,
+        940,
+        940,
+        1254
+      ],
+      "bbox": [
+        46,
+        44,
+        219,
+        292
+      ],
+      "boot_spacing_px": 57.52,
+      "pupil_spacing_px": null
+    },
+    "plain-16": {
+      "atlas": "plain",
+      "cell": 16,
+      "source_box": [
+        940,
+        940,
+        1254,
+        1254
+      ],
+      "bbox": [
+        45,
+        44,
+        219,
+        292
+      ],
+      "boot_spacing_px": 58.41,
+      "pupil_spacing_px": null
+    },
+    "draw-01": {
+      "atlas": "draw",
+      "cell": 1,
+      "source_box": [
+        0,
+        0,
+        313,
+        313
+      ],
+      "bbox": [
+        52,
+        43,
+        223,
+        292
+      ],
+      "boot_spacing_px": 56.2,
+      "pupil_spacing_px": null
+    },
+    "draw-02": {
+      "atlas": "draw",
+      "cell": 2,
+      "source_box": [
+        313,
+        0,
+        627,
+        313
+      ],
+      "bbox": [
+        50,
+        43,
+        221,
+        292
+      ],
+      "boot_spacing_px": 55.31,
+      "pupil_spacing_px": null
+    },
+    "draw-03": {
+      "atlas": "draw",
+      "cell": 3,
+      "source_box": [
+        627,
+        0,
+        940,
+        313
+      ],
+      "bbox": [
+        46,
+        43,
+        221,
+        292
+      ],
+      "boot_spacing_px": 56.2,
+      "pupil_spacing_px": null
+    },
+    "draw-04": {
+      "atlas": "draw",
+      "cell": 4,
+      "source_box": [
+        940,
+        0,
+        1254,
+        313
+      ],
+      "bbox": [
+        46,
+        43,
+        218,
+        292
+      ],
+      "boot_spacing_px": 56.2,
+      "pupil_spacing_px": null
+    },
+    "draw-05": {
+      "atlas": "draw",
+      "cell": 5,
+      "source_box": [
+        0,
+        313,
+        313,
+        627
+      ],
+      "bbox": [
+        47,
+        43,
+        220,
+        292
+      ],
+      "boot_spacing_px": 56.2,
+      "pupil_spacing_px": null
+    },
+    "draw-06": {
+      "atlas": "draw",
+      "cell": 6,
+      "source_box": [
+        313,
+        313,
+        627,
+        627
+      ],
+      "bbox": [
+        46,
+        43,
+        220,
+        292
+      ],
+      "boot_spacing_px": 56.2,
+      "pupil_spacing_px": null
+    },
+    "draw-07": {
+      "atlas": "draw",
+      "cell": 7,
+      "source_box": [
+        627,
+        313,
+        940,
+        627
+      ],
+      "bbox": [
+        44,
+        42,
+        219,
+        292
+      ],
+      "boot_spacing_px": 56.64,
+      "pupil_spacing_px": null
+    },
+    "draw-08": {
+      "atlas": "draw",
+      "cell": 8,
+      "source_box": [
+        940,
+        313,
+        1254,
+        627
+      ],
+      "bbox": [
+        45,
+        42,
+        220,
+        292
+      ],
+      "boot_spacing_px": 56.2,
+      "pupil_spacing_px": null
+    },
+    "draw-09": {
+      "atlas": "draw",
+      "cell": 9,
+      "source_box": [
+        0,
+        627,
+        313,
+        940
+      ],
+      "bbox": [
+        45,
+        42,
+        219,
+        292
+      ],
+      "boot_spacing_px": 56.2,
+      "pupil_spacing_px": null
+    },
+    "draw-10": {
+      "atlas": "draw",
+      "cell": 10,
+      "source_box": [
+        313,
+        627,
+        627,
+        940
+      ],
+      "bbox": [
+        46,
+        43,
+        220,
+        292
+      ],
+      "boot_spacing_px": 56.2,
+      "pupil_spacing_px": null
+    },
+    "draw-11": {
+      "atlas": "draw",
+      "cell": 11,
+      "source_box": [
+        627,
+        627,
+        940,
+        940
+      ],
+      "bbox": [
+        45,
+        43,
+        219,
+        292
+      ],
+      "boot_spacing_px": 56.64,
+      "pupil_spacing_px": null
+    },
+    "draw-12": {
+      "atlas": "draw",
+      "cell": 12,
+      "source_box": [
+        940,
+        627,
+        1254,
+        940
+      ],
+      "bbox": [
+        45,
+        43,
+        219,
+        292
+      ],
+      "boot_spacing_px": 56.2,
+      "pupil_spacing_px": null
+    },
+    "draw-13": {
+      "atlas": "draw",
+      "cell": 13,
+      "source_box": [
+        0,
+        940,
+        313,
+        1254
+      ],
+      "bbox": [
+        45,
+        43,
+        218,
+        292
+      ],
+      "boot_spacing_px": 56.2,
+      "pupil_spacing_px": null
+    },
+    "draw-14": {
+      "atlas": "draw",
+      "cell": 14,
+      "source_box": [
+        313,
+        940,
+        627,
+        1254
+      ],
+      "bbox": [
+        46,
+        43,
+        220,
+        292
+      ],
+      "boot_spacing_px": 56.64,
+      "pupil_spacing_px": null
+    },
+    "draw-15": {
+      "atlas": "draw",
+      "cell": 15,
+      "source_box": [
+        627,
+        940,
+        940,
+        1254
+      ],
+      "bbox": [
+        45,
+        43,
+        219,
+        292
+      ],
+      "boot_spacing_px": 56.64,
+      "pupil_spacing_px": 43.37
+    },
+    "draw-16": {
+      "atlas": "draw",
+      "cell": 16,
+      "source_box": [
+        940,
+        940,
+        1254,
+        1254
+      ],
+      "bbox": [
+        46,
+        43,
+        219,
+        292
+      ],
+      "boot_spacing_px": 56.2,
+      "pupil_spacing_px": 43.37
+    }
+  },
+  "shake_frame_mean_rgba_changes": [
+    8.69,
+    10.77,
+    9.0,
+    7.37,
+    8.75,
+    7.13,
+    6.52,
+    8.77,
+    8.0,
+    6.1,
+    12.09,
+    8.07,
+    8.12,
+    10.19,
+    5.4,
+    11.21
+  ],
+  "draw_and_reveal_mean_rgba_changes": [
+    6.13,
+    8.67,
+    7.69,
+    4.46,
+    4.48,
+    4.65,
+    5.04,
+    3.19,
+    4.96,
+    4.29,
+    3.02,
+    1.92,
+    3.58,
+    4.84,
+    3.41,
+    2.18,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "webp_decode_and_frame_times_verified": true
+}

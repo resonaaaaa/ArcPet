@@ -244,6 +244,27 @@
       "frame_count": 23,
       "duration_ms": 1620,
       "loop": false
+    },
+    "fortune_shake": {
+      "path": "anime/fortune/shake.json",
+      "label": "抽签 · 摇签筒",
+      "frame_count": 16,
+      "duration_ms": 1291,
+      "loop": true
+    },
+    "fortune_draw": {
+      "path": "anime/fortune/draw.json",
+      "label": "抽签 · 提签",
+      "frame_count": 17,
+      "duration_ms": 1167,
+      "loop": false
+    },
+    "fortune_reveal": {
+      "path": "anime/fortune/reveal.json",
+      "label": "抽签 · 亮签",
+      "frame_count": 8,
+      "duration_ms": 1930,
+      "loop": false
     }
   }
 }

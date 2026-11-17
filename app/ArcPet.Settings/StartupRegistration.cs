@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Security;
 using Microsoft.Win32;
@@ -46,16 +47,55 @@ namespace ArcPet.Settings
     public sealed class StartupRegistration
     {
         private readonly IStartupValueStore store;
+        private readonly string executable;
+        private readonly Func<string,Version> readVersion;
         public string Command {get;private set;}
-        public StartupRegistration(IStartupValueStore store,string executable)
+        public StartupRegistration(IStartupValueStore store,string executable) : this(store,executable,ReadFileVersion) { }
+        public StartupRegistration(IStartupValueStore store,string executable,Func<string,Version> readVersion)
         {
             if(store==null)throw new ArgumentNullException("store");
+            if(readVersion==null)throw new ArgumentNullException("readVersion");
             if(String.IsNullOrWhiteSpace(executable) || executable.IndexOf('"')>=0)
                 throw new ArgumentException("Invalid executable path.","executable");
-            this.store=store;Command="\""+Path.GetFullPath(executable)+"\"";
+            this.store=store;this.readVersion=readVersion;this.executable=Path.GetFullPath(executable);
+            Command="\""+this.executable+"\"";
+        }
+        private static Version ReadFileVersion(string path)
+        {
+            var info=FileVersionInfo.GetVersionInfo(path);
+            return String.IsNullOrEmpty(info.FileVersion) ? null : new Version(info.FileMajorPart,info.FileMinorPart,info.FileBuildPart,info.FilePrivatePart);
         }
         private static bool Expected(Exception e)
         {return e is IOException || e is UnauthorizedAccessException || e is SecurityException;}
+        // Migrate only the existing ArcPet entry and only towards a newer version.
+        // Leave Windows' separate startup approval and unfamiliar commands untouched.
+        public bool TryMigrate(out string error)
+        {
+            error=null;
+            try
+            {
+                string previous=store.Read();
+                if(String.IsNullOrWhiteSpace(previous) || String.Equals(previous,Command,StringComparison.OrdinalIgnoreCase))return true;
+                if(previous.Length<3 || previous[0]!='"' || previous[previous.Length-1]!='"' || previous.IndexOf('"',1)!=previous.Length-1)return true;
+                string oldPath=previous.Substring(1,previous.Length-2);
+                try
+                {
+                    if(!Path.IsPathRooted(oldPath) || !String.Equals(Path.GetFullPath(oldPath),oldPath,StringComparison.OrdinalIgnoreCase) ||
+                        !String.Equals(Path.GetFileName(oldPath),Path.GetFileName(executable),StringComparison.OrdinalIgnoreCase))return true;
+                }
+                catch(ArgumentException){return true;}
+                catch(NotSupportedException){return true;}
+                Version current=readVersion(executable);
+                if(current==null)return true;
+                Version oldVersion;
+                try{oldVersion=readVersion(oldPath);}
+                catch(FileNotFoundException){return TrySet(true,out error);}
+                catch(DirectoryNotFoundException){return TrySet(true,out error);}
+                if(oldVersion!=null && current>oldVersion)return TrySet(true,out error);
+                return true;
+            }
+            catch(Exception e){if(!Expected(e))throw;error=e.Message;return false;}
+        }
         public bool TryRead(out bool enabled,out string error)
         {
             enabled=false;error=null;

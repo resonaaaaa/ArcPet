@@ -42,5 +42,36 @@ internal static class StartupTests
         check(!startup.TrySet(false,out error) && error!=null,"verification detects ignored registration removal");
         bool invalid=false;try{new StartupRegistration(store,"bad\"path");}catch(ArgumentException){invalid=true;}
         check(invalid,"invalid quoting in executable path is rejected");
+
+        string other=Path.Combine(Path.GetTempPath(),"Another ArcPet","ArcPet.Preview.exe");
+        string previous="\""+other+"\"";
+        var current=new Version(0,21,1,0);var registered=new Version(0,20,2,0);
+        bool missing=false;
+        Func<string,Version> versions=path=>{
+            if(path==executable)return current;
+            if(path!=other)throw new InvalidOperationException("Unexpected version probe");
+            if(missing)throw new FileNotFoundException();
+            return registered;
+        };
+        startup=new StartupRegistration(store,executable,versions);
+        check(startup.TryMigrate(out error) && store.Command==null,"launching a new version never enables startup when it is off");
+        store.Command=previous;
+        check(startup.TryMigrate(out error) && store.Command==startup.Command,"a newer version takes over the existing startup entry");
+        check(startup.TryMigrate(out error) && store.Command==startup.Command,"an already current entry stays intact");
+        store.Command=previous;registered=new Version(0,22,0,0);
+        check(startup.TryMigrate(out error) && store.Command==previous,"launching an older version cannot take over from a newer entry");
+        registered=current;
+        check(startup.TryMigrate(out error) && store.Command==previous,"an equal version in a different folder keeps the installed entry");
+        registered=null;
+        check(startup.TryMigrate(out error) && store.Command==previous,"an unknown file version is left untouched");
+        store.Command=previous+" --custom";
+        check(startup.TryMigrate(out error) && store.Command==previous+" --custom","a custom startup command isn't rewritten");
+        store.Command="\"C:relative\\ArcPet.Preview.exe\"";
+        check(startup.TryMigrate(out error) && store.Command.StartsWith("\"C:relative"),"a drive-relative registration isn't probed or rewritten");
+        store.Command=previous;missing=true;
+        check(startup.TryMigrate(out error) && store.Command==startup.Command,"moving the installed copy repairs its missing old path");
+        failure.Value=previous;failure.IgnoreWrite=false;failure.DenyWrite=true;
+        startup=new StartupRegistration(failure,executable,versions);
+        check(!startup.TryMigrate(out error) && error!=null && failure.Value==previous,"denied migration leaves the previous entry and reports the error");
     }
 }

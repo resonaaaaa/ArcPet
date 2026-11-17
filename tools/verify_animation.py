@@ -17,6 +17,7 @@ for action,item in manifest['actions'].items():
     expected.update(drag_lift=18,drag_hold=16,drag_land=21)
     expected.update(pomodoro_start=32,pomodoro_read=5,pomodoro_read_blink=8,pomodoro_read_page=23,
                     pomodoro_pause=16,pomodoro_paused=38,pomodoro_resume=34,pomodoro_stretch=42,pomodoro_end=65)
+    expected.update(fortune_shake=16,fortune_draw=17,fortune_reveal=8)
     metadata=json.loads(clip_path.read_text(encoding='utf-8'))
     files=[folder/f['file'] for f in metadata['frames']]
     referenced.setdefault(folder,set()).update(files)
@@ -53,6 +54,8 @@ for action,item in manifest['actions'].items():
     if action=='lying':
         assert max(foot)==min(foot)==292
         assert metadata['duration_ms']==1600
+    if action.startswith('fortune_'):
+        assert max(foot)-min(foot)<=1
     if action in ['walk_left','walk_right']:
         assert metadata['duration_ms']==1200 and metadata['handoff_frames']==[0,15]
         assert max(foot)-min(foot)<=2

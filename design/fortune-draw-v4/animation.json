@@ -1,0 +1,186 @@
+{
+  "canvas": [
+    320,
+    320
+  ],
+  "shake": {
+    "loop": true,
+    "frames": [
+      {
+        "file": "frames/plain-01.png",
+        "duration_ms": 74
+      },
+      {
+        "file": "frames/plain-02.png",
+        "duration_ms": 76
+      },
+      {
+        "file": "frames/plain-03.png",
+        "duration_ms": 82
+      },
+      {
+        "file": "frames/plain-04.png",
+        "duration_ms": 87
+      },
+      {
+        "file": "frames/plain-05.png",
+        "duration_ms": 94
+      },
+      {
+        "file": "frames/plain-06.png",
+        "duration_ms": 83
+      },
+      {
+        "file": "frames/plain-07.png",
+        "duration_ms": 76
+      },
+      {
+        "file": "frames/plain-08.png",
+        "duration_ms": 81
+      },
+      {
+        "file": "frames/plain-09.png",
+        "duration_ms": 80
+      },
+      {
+        "file": "frames/plain-10.png",
+        "duration_ms": 78
+      },
+      {
+        "file": "frames/plain-11.png",
+        "duration_ms": 76
+      },
+      {
+        "file": "frames/plain-12.png",
+        "duration_ms": 87
+      },
+      {
+        "file": "frames/plain-13.png",
+        "duration_ms": 88
+      },
+      {
+        "file": "frames/plain-14.png",
+        "duration_ms": 82
+      },
+      {
+        "file": "frames/plain-15.png",
+        "duration_ms": 75
+      },
+      {
+        "file": "frames/plain-16.png",
+        "duration_ms": 72
+      }
+    ]
+  },
+  "draw": {
+    "loop": false,
+    "frames": [
+      {
+        "file": "frames/plain-01.png",
+        "duration_ms": 82
+      },
+      {
+        "file": "frames/draw-01.png",
+        "duration_ms": 75
+      },
+      {
+        "file": "frames/draw-02.png",
+        "duration_ms": 70
+      },
+      {
+        "file": "frames/draw-03.png",
+        "duration_ms": 62
+      },
+      {
+        "file": "frames/draw-04.png",
+        "duration_ms": 58
+      },
+      {
+        "file": "frames/draw-05.png",
+        "duration_ms": 60
+      },
+      {
+        "file": "frames/draw-06.png",
+        "duration_ms": 58
+      },
+      {
+        "file": "frames/draw-07.png",
+        "duration_ms": 62
+      },
+      {
+        "file": "frames/draw-08.png",
+        "duration_ms": 64
+      },
+      {
+        "file": "frames/draw-09.png",
+        "duration_ms": 62
+      },
+      {
+        "file": "frames/draw-10.png",
+        "duration_ms": 62
+      },
+      {
+        "file": "frames/draw-11.png",
+        "duration_ms": 68
+      },
+      {
+        "file": "frames/draw-12.png",
+        "duration_ms": 76
+      },
+      {
+        "file": "frames/draw-13.png",
+        "duration_ms": 72
+      },
+      {
+        "file": "frames/draw-14.png",
+        "duration_ms": 72
+      },
+      {
+        "file": "frames/draw-15.png",
+        "duration_ms": 74
+      },
+      {
+        "file": "frames/draw-16.png",
+        "duration_ms": 90
+      }
+    ]
+  },
+  "reveal": {
+    "loop": false,
+    "frames": [
+      {
+        "file": "frames/draw-16.png",
+        "duration_ms": 70
+      },
+      {
+        "file": "frames/draw-16.png",
+        "duration_ms": 70
+      },
+      {
+        "file": "frames/draw-16.png",
+        "duration_ms": 70
+      },
+      {
+        "file": "frames/draw-16.png",
+        "duration_ms": 70
+      },
+      {
+        "file": "frames/draw-16.png",
+        "duration_ms": 70
+      },
+      {
+        "file": "frames/draw-16.png",
+        "duration_ms": 70
+      },
+      {
+        "file": "frames/draw-16.png",
+        "duration_ms": 70
+      },
+      {
+        "file": "frames/draw-16.png",
+        "duration_ms": 1440
+      }
+    ],
+    "bubble_starts_on_entry": true
+  }
+}

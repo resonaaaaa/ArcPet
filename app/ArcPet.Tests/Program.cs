@@ -42,6 +42,7 @@ internal static class Program
             Check(invalid, "unknown clip rejected");
             PomodoroTests.Run(Check);
             PomodoroSceneTests.Run(args[0],Check);
+            FortuneTests.Run(args[0],Check);
             BehaviorTests.Run(args[0], Check);
             SettingsTests.Run(args[0],args[1],Check);
             SaveQueueTests.Run(Check);

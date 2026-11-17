@@ -59,6 +59,27 @@ namespace ArcPet.Behavior
         public bool SleepEnabled { get; private set; }
         public bool IsSleeping { get { return Phase == "sleep"; } }
         public bool IsPomodoro { get { return Phase == "pomodoro"; } }
+        public bool IsFortune { get { return Phase != null && Phase.StartsWith("fortune_", StringComparison.Ordinal); } }
+        public string FortuneResult { get; private set; }
+        public bool CanDrawFortune
+        {
+            get
+            {
+                return !busy && (Phase == "idle" || Phase == "automatic" || Phase == "sleep") &&
+                    clips.ContainsKey("fortune_shake") && clips.ContainsKey("fortune_draw") &&
+                    clips.ContainsKey("fortune_reveal");
+            }
+        }
+        public bool TryDrawFortune(long now, DateTime localTime)
+        {
+            if (!CanDrawFortune) return false;
+            pressed = pendingPress = rocketAfterDown = false;
+            ClearTapHistory();
+            LastInteraction = now;
+            FortuneResult = DailyFortune.ResultFor(localTime);
+            Play("fortune_shake", Finite(clips["fortune_shake"], 2), now);
+            return true;
+        }
         public void PlayPomodoro(AnimationClip clip,long now)
         {
             pressed=pendingPress=rocketAfterDown=false;ClearTapHistory();
@@ -77,7 +98,7 @@ namespace ArcPet.Behavior
             this.clips = clips; this.random = random; SleepEnabled = true;
         }
         public void Start(long now)
-        { pressed = pendingPress = false; ClearTapHistory(); LastInteraction = now; EnterIdle(now); }
+        { pressed = pendingPress = false; FortuneResult = null; ClearTapHistory(); LastInteraction = now; EnterIdle(now); }
         private void ScheduleAutomatic(long now)
         { NextAutomaticAt = checked(now + random.Next(MinimumIdleMilliseconds, MaximumIdleMilliseconds + 1)); }
         private void Play(string phase, AnimationClip clip, long now)
@@ -321,6 +342,19 @@ namespace ArcPet.Behavior
         public void Tick(long now)
         {
             if(IsPomodoro)return;
+            if (IsFortune)
+            {
+                if (now - phaseStarted < phaseDuration) return;
+                if (Phase == "fortune_shake") Play("fortune_draw", clips["fortune_draw"], now);
+                else if (Phase == "fortune_draw") Play("fortune_reveal", clips["fortune_reveal"], now);
+                else
+                {
+                    FortuneResult = null;
+                    LastInteraction = now;
+                    EnterIdle(now);
+                }
+                return;
+            }
             if (IsDragAnimation)
             {
                 if (now - phaseStarted < phaseDuration) return;

@@ -1,0 +1,44 @@
+{
+  "label": "抽签 · 亮签",
+  "frame_count": 8,
+  "duration_ms": 1930,
+  "loop": false,
+  "canvas": [
+    320,
+    320
+  ],
+  "frames": [
+    {
+      "file": "031.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "031.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "031.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "031.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "031.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "031.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "031.png",
+      "duration_ms": 70
+    },
+    {
+      "file": "031.png",
+      "duration_ms": 1440
+    }
+  ]
+}
